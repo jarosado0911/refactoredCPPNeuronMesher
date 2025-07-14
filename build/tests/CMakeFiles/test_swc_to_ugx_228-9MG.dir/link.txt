@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test_swc_to_ugx_228-9MG.dir/test_swc_to_ugx_228-9MG.cpp.o CMakeFiles/test_swc_to_ugx_228-9MG.dir/__/src/neurongraph.cpp.o -o test_swc_to_ugx_228-9MG  -ltinyxml2 
