@@ -452,3 +452,55 @@ TEST_CASE("Assemble Resampled Trunks and Refine - Multiple Neurons"){
         cnt++;
     }
 }
+
+TEST_CASE("Cubic Resample Trunks"){
+    std::string inputfile = getExecutableDir() + "/../data/neuron.ugx";
+    std::string outputfolder = getExecutableDir() + "/../output/neuron_trunks_resampled_cubic";
+    checkFolder(outputfolder);
+
+    NeuronGraph g(inputfile);
+    g.setNodes(g.removeSomaSegment());
+
+    // the indices of each trunk will start at 1 (true)
+    // the indices of each trunk will correspond to the original geometry 0 (false)
+    // if (false) you will not be able to open the geometries in ProMesh
+    bool resetIndex = true; // needs to be set to false when reassembling
+    auto trunks = g.getTrunks(resetIndex);
+    std::map<int,std::map<int, SWCNode>> resampledTrunks;
+
+    double delta = 2.0;
+
+    for(auto& [id,trunk] : trunks){
+        resampledTrunks[id] = g.cubicSplineResampleTrunk(trunk, delta);
+        g.writeToFile(resampledTrunks[id],outputfolder+"/trunk_"+std::to_string(id)+".swc");
+    }
+    CHECK(resampledTrunks.size()==trunks.size());
+}
+
+TEST_CASE("Assemble CUBIC Resampled Trunks And Refine"){
+    std::string inputfile = getExecutableDir() + "/../data/neuron.ugx";
+    std::string outputfolder = getExecutableDir() + "/../output/test_resampled_cubic";
+    checkFolder(outputfolder);
+
+    NeuronGraph g(inputfile);
+    g.setNodes(g.removeSomaSegment());
+
+    bool resetIndex = false;
+    auto trunks = g.getTrunks(resetIndex);
+
+    std::map<int,std::map<int, SWCNode>> resampledTrunks;
+    double delta = 64.0;
+
+    for(int i = 0; i <= 12; ++i)
+    {
+        resampledTrunks = g.allCubicSplineResampledTrunks(trunks,delta);
+
+        auto trunkParentMap = g.getTrunkParentMap(g.getNodes(),trunks);
+        auto nodeSet = g.assembleTrunks(resampledTrunks,trunkParentMap);
+        g.writeToFile(nodeSet,outputfolder+"/neuron_cubic_resampled_refinement_"+std::to_string(i+1)+".swc");
+        
+        delta = delta/2.0;
+        resampledTrunks.clear();
+        CHECK(nodeSet.size() > 0);
+    }
+}
