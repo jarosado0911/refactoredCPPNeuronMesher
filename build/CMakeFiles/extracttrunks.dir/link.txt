@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/extracttrunks.dir/scripts/extracttrunks.cpp.o CMakeFiles/extracttrunks.dir/src/neurongraph.cpp.o CMakeFiles/extracttrunks.dir/src/utils.cpp.o -o ../bin/extracttrunks  -ltinyxml2 

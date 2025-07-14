@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test_neurongraph.dir/test_neurongraph.cpp.o CMakeFiles/test_neurongraph.dir/__/src/neurongraph.cpp.o -o ../../bin/test_neurongraph  -ltinyxml2 
