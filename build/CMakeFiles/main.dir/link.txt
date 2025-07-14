@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/main.dir/scripts/main.cpp.o CMakeFiles/main.dir/src/neurongraph.cpp.o CMakeFiles/main.dir/src/utils.cpp.o -o ../bin/main  -ltinyxml2 

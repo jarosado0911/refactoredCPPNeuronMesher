@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/splitrefineset.dir/scripts/splitrefineSET.cpp.o CMakeFiles/splitrefineset.dir/src/neurongraph.cpp.o CMakeFiles/splitrefineset.dir/src/utils.cpp.o -o ../bin/splitrefineset  -ltinyxml2 
