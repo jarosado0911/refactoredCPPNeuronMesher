@@ -123,6 +123,10 @@ class NeuronGraph {
 		// linear resample trunks
 		std::map<int, SWCNode> linearSplineResampleTrunk(const std::map<int, SWCNode>& trunk, double& delta) const;
 		std::map<int, std::map<int, SWCNode>> allLinearSplineResampledTrunks(std::map<int, std::map<int, SWCNode>>& trunks, double& delta) const;
+
+		// cubic resample trunks
+		std::map<int, SWCNode> cubicSplineResampleTrunk(const std::map<int, SWCNode>& trunk, double& delta) const;
+		std::map<int, std::map<int, SWCNode>> allCubicSplineResampledTrunks(std::map<int, std::map<int, SWCNode>>& trunks, double& delta) const;
 };
 
 #endif // end of the neurongraph header file

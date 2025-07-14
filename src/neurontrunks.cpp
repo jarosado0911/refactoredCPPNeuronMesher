@@ -146,6 +146,17 @@ std::map<int, std::map<int, SWCNode>> NeuronGraph::allLinearSplineResampledTrunk
     return resampledTrunks;
 }
 
+std::map<int, std::map<int, SWCNode>> NeuronGraph::allCubicSplineResampledTrunks(std::map<int, std::map<int, SWCNode>>& trunks, double& delta) const {
+    std::map<int, std::map<int, SWCNode>> resampledTrunks;
+    resampledTrunks.clear();
+
+    for(auto& [id,trunk] : trunks){
+            resampledTrunks[id] = cubicSplineResampleTrunk(trunk, delta);
+    }
+
+    return resampledTrunks;
+}
+
 std::map<int, SWCNode> NeuronGraph::linearSplineResampleTrunk(const std::map<int, SWCNode>& trunk, double& delta) const {
     std::map<int, SWCNode> newNodes;
     std::vector<SWCNode> sampledNodes;
@@ -207,6 +218,118 @@ std::map<int, SWCNode> NeuronGraph::linearSplineResampleTrunk(const std::map<int
         }
 
         newNodes[newId++] = interp;
+    }
+
+    return newNodes;
+}
+
+// Cubic spline resampling (arc-length parameterized)
+std::map<int, SWCNode> NeuronGraph::cubicSplineResampleTrunk(const std::map<int, SWCNode>& trunk, double& delta) const {
+    std::vector<SWCNode> sampledNodes;
+    std::map<int, SWCNode> newNodes;
+    std::map<int, int> typeCount;
+
+    // Convert trunk map to ordered vector of nodes
+    for (const auto& [id, node] : trunk) {
+        sampledNodes.push_back(node);
+        typeCount[node.type]++;
+    }
+
+    if (sampledNodes.size() < 2) return newNodes;
+
+    int dominantType = sampledNodes[0].type;
+    int maxCount = 0;
+    for (const auto& [type, count] : typeCount) {
+        if (count > maxCount) {
+            dominantType = type;
+            maxCount = count;
+        }
+    }
+
+    std::vector<double> arcLength = {0.0};
+    for (size_t i = 1; i < sampledNodes.size(); ++i) {
+        double dx = sampledNodes[i].x - sampledNodes[i - 1].x;
+        double dy = sampledNodes[i].y - sampledNodes[i - 1].y;
+        double dz = sampledNodes[i].z - sampledNodes[i - 1].z;
+        arcLength.push_back(arcLength.back() + std::sqrt(dx * dx + dy * dy + dz * dz));
+    }
+    double totalLength = arcLength.back();
+
+    int N =  static_cast<int>(std::round(totalLength / delta));
+    if (N <= 3) N = 4;
+
+    std::vector<double> ts(N);
+    for (int i = 0; i < N; ++i) ts[i] = i * totalLength / (N - 1);
+
+    auto cubicSpline = [](const std::vector<double>& x, const std::vector<double>& y, const std::vector<double>& ts) {
+        int n = x.size();
+        std::vector<double> h(n - 1), alpha(n - 1), l(n), mu(n), z(n);
+        std::vector<double> b(n - 1), c(n), d(n - 1);
+
+        for (int i = 0; i < n - 1; ++i)
+            h[i] = x[i + 1] - x[i];
+
+        for (int i = 1; i < n - 1; ++i)
+            alpha[i] = (3.0 / h[i]) * (y[i + 1] - y[i]) - (3.0 / h[i - 1]) * (y[i] - y[i - 1]);
+
+        l[0] = 1; mu[0] = z[0] = 0;
+        for (int i = 1; i < n - 1; ++i) {
+            l[i] = 2 * (x[i + 1] - x[i - 1]) - h[i - 1] * mu[i - 1];
+            mu[i] = h[i] / l[i];
+            z[i] = (alpha[i] - h[i - 1] * z[i - 1]) / l[i];
+        }
+        l[n - 1] = 1; z[n - 1] = c[n - 1] = 0;
+
+        for (int j = n - 2; j >= 0; --j) {
+            c[j] = z[j] - mu[j] * c[j + 1];
+            b[j] = (y[j + 1] - y[j]) / h[j] - h[j] * (c[j + 1] + 2 * c[j]) / 3.0;
+            d[j] = (c[j + 1] - c[j]) / (3.0 * h[j]);
+        }
+
+        std::vector<double> result;
+        for (double xq : ts) {
+            int i = 0;
+            while (i < n - 2 && xq > x[i + 1]) ++i;
+            double dx = xq - x[i];
+            result.push_back(y[i] + b[i] * dx + c[i] * dx * dx + d[i] * dx * dx * dx);
+        }
+        return result;
+    };
+
+    std::vector<double> xs, ys, zs, rs;
+    for (const auto& p : sampledNodes) {
+        xs.push_back(p.x);
+        ys.push_back(p.y);
+        zs.push_back(p.z);
+        rs.push_back(p.radius);
+    }
+
+    auto xNew = cubicSpline(arcLength, xs, ts);
+    auto yNew = cubicSpline(arcLength, ys, ts);
+    auto zNew = cubicSpline(arcLength, zs, ts);
+    auto rNew = cubicSpline(arcLength, rs, ts);
+
+    //double avgRadius = std::accumulate(rs.begin(), rs.end(), 0.0) / rs.size();
+    double minRadius = *std::min_element(rs.begin(), rs.end());
+    double clampRadius = 1.05 * minRadius;
+
+    int newId = 1;
+    for (int i = 0; i < N; ++i) {
+        SWCNode node;
+        if (i == 0 || i == N - 1) {
+            node = sampledNodes[i == 0 ? 0 : sampledNodes.size() - 1];
+            node.id = newId;
+            node.pid = (i == 0) ? -1 : newId - 1;
+        } else {
+            node.id = newId;
+            node.pid = newId - 1;
+            node.type = dominantType;
+            node.x = xNew[i];
+            node.y = yNew[i];
+            node.z = zNew[i];
+            node.radius = std::max(std::abs(rNew[i]), clampRadius);
+        }
+        newNodes[newId++] = node;
     }
 
     return newNodes;
@@ -282,7 +405,7 @@ std::map<int, SWCNode> NeuronGraph::assembleTrunks(const std::map<int, std::map<
         return std::sqrt(dx * dx + dy * dy + dz * dz);
     };
 
-    // now go back a connect the branches correctly
+    // now go back and connect the branches correctly
     for(auto& [trunkId, _] : resampledTrunks){
         if (std::find(doneTrunks.begin(), doneTrunks.end(), trunkId) != doneTrunks.end()) {
             continue;
