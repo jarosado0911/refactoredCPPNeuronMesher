@@ -72,3 +72,5 @@ target_link_libraries(extracttrunks PRIVATE tinyxml2)
 # === TESTING ===
 add_subdirectory(tests)
 
+# === SWCViewer ===
+add_subdirectory(scripts/swcviewer)

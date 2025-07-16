@@ -18,7 +18,7 @@ BIN_DIR := bin
 build:
 	@mkdir -p $(BUILD_DIR)
 	@mkdir -p $(BIN_DIR)
-	@cd $(BUILD_DIR) && cmake .. -DCMAKE_VERBOSE_MAKEFILE=ON && make -j4
+	@cd $(BUILD_DIR) && cmake .. -DCMAKE_VERBOSE_MAKEFILE=ON && make -j6
 
 # Clean build
 clean:
