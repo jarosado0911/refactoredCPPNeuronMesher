@@ -1,5 +1,6 @@
 #include <GLFW/glfw3.h>
 #include <GL/glu.h>
+#include "tinyfiledialogs.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -8,11 +9,27 @@
 #include <algorithm>
 #include <map>
 #include <array>
+#include <tuple>
+
+void printHelpText() {
+    std::cout << "\n=== SWC Viewer Controls ===\n";
+    std::cout << "Key/Mouse     | Function\n";
+    std::cout << "1 - 6         | Change render mode\n";
+    std::cout << "O             | Open SWC file\n";
+    std::cout << "R             | Reset camera view\n";
+    std::cout << "Mouse Drag    | Rotate scene (Left Button)\n";
+    std::cout << "Mouse Drag    | Pan scene (Right Button)\n";
+    std::cout << "Scroll Wheel  | Zoom in/out\n";
+    std::cout << "ESC           | Exit viewer\n\n";
+}
 
 int renderMode = 1;
 
 float rotateX = 0.0f, rotateY = 0.0f, zoom = 1.0f;
+float panX = 0.0f, panY = 0.0f;
+
 bool dragging = false;
+bool rightDragging = false;
 double lastX, lastY;
 
 struct SWCNode {
@@ -42,6 +59,36 @@ std::vector<SWCNode> loadSWC(const std::string& filename) {
     return nodes;
 }
 
+void computeBounds(const std::vector<SWCNode>& nodes, float& minX, float& maxX, float& minY, float& maxY, float& minZ, float& maxZ, float& centerX, float& centerY, float& centerZ, float& radius) {
+    if (nodes.empty()) return;
+
+    minX = maxX = nodes[0].x;
+    minY = maxY = nodes[0].y;
+    minZ = maxZ = nodes[0].z;
+
+    for (const auto& n : nodes) {
+        minX = std::min(minX, n.x); maxX = std::max(maxX, n.x);
+        minY = std::min(minY, n.y); maxY = std::max(maxY, n.y);
+        minZ = std::min(minZ, n.z); maxZ = std::max(maxZ, n.z);
+    }
+
+    centerX = (minX + maxX) / 2.0f;
+    centerY = (minY + maxY) / 2.0f;
+    centerZ = (minZ + maxZ) / 2.0f;
+    radius = std::max({ maxX - minX, maxY - minY, maxZ - minZ });
+}
+
+void openNeuronFile(std::vector<SWCNode>& nodes, float& minX, float& maxX, float& minY, float& maxY, float& minZ, float& maxZ, float& centerX, float& centerY, float& centerZ, float& radius) {
+    const char* filters[] = { "*.swc" };
+    const char* file = tinyfd_openFileDialog("Open SWC File", "", 1, filters, "SWC files", 0);
+
+    if (file) {
+        std::cout << "Loading: " << file << "\n";
+        nodes = loadSWC(file);
+        computeBounds(nodes, minX, maxX, minY, maxY, minZ, maxZ, centerX, centerY, centerZ, radius);
+    }
+}
+
 void setColorByType(int type) {
     static std::map<int, std::array<float, 3>> colorMap = {
         {1, {1.0f, 0.0f, 0.0f}}, {2, {0.0f, 1.0f, 0.0f}}, {3, {0.0f, 0.0f, 1.0f}},
@@ -52,16 +99,6 @@ void setColorByType(int type) {
         glColor3f(it->second[0], it->second[1], it->second[2]);
     else
         glColor3f(1.0f, 1.0f, 1.0f);
-}
-
-void drawSphere(const SWCNode& node, int slices = 6, int stacks = 6) {
-    glPushMatrix();
-    glTranslatef(node.x, node.y, node.z);
-    GLUquadric* quad = gluNewQuadric();
-    gluQuadricNormals(quad, GLU_SMOOTH);
-    gluSphere(quad, node.radius, slices, stacks);
-    gluDeleteQuadric(quad);
-    glPopMatrix();
 }
 
 void drawSimpleSphere(const SWCNode& node, float size = 0.5f) {
@@ -78,6 +115,16 @@ void drawSimpleLine(const SWCNode& a, const SWCNode& b) {
     glVertex3f(a.x, a.y, a.z);
     glVertex3f(b.x, b.y, b.z);
     glEnd();
+}
+
+void drawSphere(const SWCNode& node, int slices = 6, int stacks = 6) {
+    glPushMatrix();
+    glTranslatef(node.x, node.y, node.z);
+    GLUquadric* quad = gluNewQuadric();
+    gluQuadricNormals(quad, GLU_SMOOTH);
+    gluSphere(quad, node.radius, slices, stacks);
+    gluDeleteQuadric(quad);
+    glPopMatrix();
 }
 
 void drawCylinder(const SWCNode& a, const SWCNode& b, int segments = 6) {
@@ -152,6 +199,21 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
         if (key >= GLFW_KEY_1 && key <= GLFW_KEY_6) {
             renderMode = key - GLFW_KEY_0;
             std::cout << "Switched to render mode " << renderMode << "\n";
+        } else if (key == GLFW_KEY_O) {
+            auto data = reinterpret_cast<std::tuple<std::vector<SWCNode>*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*>*>(glfwGetWindowUserPointer(window));
+            if (data) {
+                auto& [nodes, minX, maxX, minY, maxY, minZ, maxZ, centerX, centerY, centerZ, radius] = *data;
+                openNeuronFile(*nodes, *minX, *maxX, *minY, *maxY, *minZ, *maxZ, *centerX, *centerY, *centerZ, *radius);
+            }
+        } else if (key == GLFW_KEY_R) {
+            std::cout << "Resetting camera view\n";
+            rotateX = 0.0f;
+            rotateY = 0.0f;
+            zoom = 1.0f;
+            panX = panY = 0.0f;
+            std::cout << "Camera view reset.\n";
+        } else if (key == GLFW_KEY_H) {
+            printHelpText();
         }
     }
 }
@@ -164,6 +226,13 @@ void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
         } else if (action == GLFW_RELEASE) {
             dragging = false;
         }
+    } else if (button == GLFW_MOUSE_BUTTON_RIGHT) {
+        if (action == GLFW_PRESS) {
+            rightDragging = true;
+            glfwGetCursorPos(window, &lastX, &lastY);
+        } else if (action == GLFW_RELEASE) {
+            rightDragging = false;
+        }
     }
 }
 
@@ -175,7 +244,15 @@ void cursorPosCallback(GLFWwindow* window, double xpos, double ypos) {
         rotateX += static_cast<float>(dy) * 0.3f;
         lastX = xpos;
         lastY = ypos;
+    } else if (rightDragging) {
+        double dx = xpos - lastX;
+        double dy = ypos - lastY;
+        panX += static_cast<float>(dx) * 1.5f;
+        panY -= static_cast<float>(dy) * 1.5f;
     }
+    lastX = xpos;
+    lastY = ypos;
+
 }
 
 void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
@@ -211,23 +288,9 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    std::vector<SWCNode> nodes = loadSWC(argv[1]);
-    if (nodes.empty()) return 1;
-    std::cout << "Loaded " << nodes.size() << " nodes.\n";
-
-    float minX = nodes[0].x, maxX = nodes[0].x;
-    float minY = nodes[0].y, maxY = nodes[0].y;
-    float minZ = nodes[0].z, maxZ = nodes[0].z;
-    for (const auto& n : nodes) {
-        minX = std::min(minX, n.x); maxX = std::max(maxX, n.x);
-        minY = std::min(minY, n.y); maxY = std::max(maxY, n.y);
-        minZ = std::min(minZ, n.z); maxZ = std::max(maxZ, n.z);
-    }
-
-    float centerX = (minX + maxX) / 2.0f;
-    float centerY = (minY + maxY) / 2.0f;
-    float centerZ = (minZ + maxZ) / 2.0f;
-    float radius = std::max({ maxX - minX, maxY - minY, maxZ - minZ });
+    static std::vector<SWCNode> nodes = loadSWC(argv[1]);
+    static float minX, maxX, minY, maxY, minZ, maxZ, centerX, centerY, centerZ, radius;
+    computeBounds(nodes, minX, maxX, minY, maxY, minZ, maxZ, centerX, centerY, centerZ, radius);
 
     if (!glfwInit()) return -1;
     GLFWwindow* window = glfwCreateWindow(800, 800, "SWC Viewer", nullptr, nullptr);
@@ -237,6 +300,9 @@ int main(int argc, char** argv) {
     }
 
     glfwMakeContextCurrent(window);
+    static auto sharedData = std::make_tuple(&nodes, &minX, &maxX, &minY, &maxY, &minZ, &maxZ, &centerX, &centerY, &centerZ, &radius);
+    glfwSetWindowUserPointer(window, &sharedData);
+
     glfwSwapInterval(1);
     glfwSetMouseButtonCallback(window, mouseButtonCallback);
     glfwSetCursorPosCallback(window, cursorPosCallback);
@@ -257,7 +323,9 @@ int main(int argc, char** argv) {
         setupCamera(centerX, centerY, centerZ, radius, width, height);
 
         glPushMatrix();
-        glTranslatef(centerX, centerY, centerZ);
+        //glTranslatef(centerX, centerY, centerZ);
+        glTranslatef(panX, panY, -5.0f / zoom);
+
         glRotatef(rotateX, 1.0f, 0.0f, 0.0f);
         glRotatef(rotateY, 0.0f, 1.0f, 0.0f);
         glTranslatef(-centerX, -centerY, -centerZ);
@@ -266,7 +334,6 @@ int main(int argc, char** argv) {
         renderSWC(nodes);
 
         glPopMatrix();
-
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
