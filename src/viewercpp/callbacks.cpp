@@ -1,3 +1,5 @@
+// call back functions
+#include "callbacks.h"
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
     if (action == GLFW_PRESS) {
@@ -5,7 +7,7 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
             renderMode = key - GLFW_KEY_0;
             std::cout << "Switched to render mode " << renderMode << "\n";
         } else if (key == GLFW_KEY_O) {
-            auto data = reinterpret_cast<std::tuple<std::vector<SWCNode>*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*>*>(glfwGetWindowUserPointer(window));
+            auto data = reinterpret_cast<std::tuple<std::vector<SWCNode>*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*>*>(glfwGetWindowUserPointer(window));
             if (data) {
                 auto& [nodes, minX, maxX, minY, maxY, minZ, maxZ, centerX, centerY, centerZ, radius] = *data;
                 openNeuronFile(*nodes, *minX, *maxX, *minY, *maxY, *minZ, *maxZ, *centerX, *centerY, *centerZ, *radius);
@@ -45,15 +47,15 @@ void cursorPosCallback(GLFWwindow* window, double xpos, double ypos) {
     if (dragging) {
         double dx = xpos - lastX;
         double dy = ypos - lastY;
-        rotateY += static_cast<float>(dx) * 0.3f;
-        rotateX += static_cast<float>(dy) * 0.3f;
+        rotateY += static_cast<double>(dx) * 0.3f;
+        rotateX += static_cast<double>(dy) * 0.3f;
         lastX = xpos;
         lastY = ypos;
     } else if (rightDragging) {
         double dx = xpos - lastX;
         double dy = ypos - lastY;
-        panX += static_cast<float>(dx) * 1.5f;
-        panY -= static_cast<float>(dy) * 1.5f;
+        panX += static_cast<double>(dx) * 1.5f;
+        panY -= static_cast<double>(dy) * 1.5f;
     }
     lastX = xpos;
     lastY = ypos;
@@ -62,5 +64,5 @@ void cursorPosCallback(GLFWwindow* window, double xpos, double ypos) {
 
 void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
     zoom *= std::pow(1.1f, yoffset);
-    zoom = std::clamp(zoom, 0.05f, 10.0f);
+    zoom = std::clamp(static_cast<float>(zoom), 0.05f, 10.0f);
 }

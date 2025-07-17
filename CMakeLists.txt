@@ -72,5 +72,8 @@ target_link_libraries(extracttrunks PRIVATE tinyxml2)
 # === TESTING ===
 add_subdirectory(tests)
 
+# === NeuronViewer ===
+add_subdirectory(scripts/app_neuronviewer)
+
 # === SWCViewer ===
 add_subdirectory(scripts/swcviewer)
