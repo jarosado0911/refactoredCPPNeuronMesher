@@ -17,6 +17,7 @@ void renderHelpWindow(GLFWwindow* window) {
         "=== SWC Viewer Controls ===\n"
         "1 - 6         | Change render mode\n"
         "F             | Refine geometry (cubic spline)\n"
+        "Ctrl + F      | Coarsen geometry (cubic spline)\n"
         "O             | Open SWC file\n"
         "R             | Reset camera view\n"
         "Mouse Drag    | Rotate scene (Left Button)\n"
