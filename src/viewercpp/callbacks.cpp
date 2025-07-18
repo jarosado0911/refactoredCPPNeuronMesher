@@ -3,6 +3,51 @@
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
     if (action == GLFW_PRESS) {
+        if (key == GLFW_KEY_F) {
+            auto sharedData = static_cast<std::tuple<
+                std::vector<SWCNode>*,
+                double*, double*, double*, double*, double*, double*,
+                double*, double*, double*, double*>*>(glfwGetWindowUserPointer(window));
+
+            auto& nodes = *std::get<0>(*sharedData);
+
+            std::map<int, SWCNode> originalNodeMap;
+            for (const auto& n : nodes)
+                originalNodeMap[n.id] = n;
+
+            NeuronGraph graph;
+            graph.setNodes(originalNodeMap);
+
+            auto trunks = graph.getTrunks(false);
+
+            if (mods & GLFW_MOD_CONTROL) {
+                // Ctrl+F → double delta
+                refineDelta = std::min(refineDelta * 2.0, 64.0);
+                std::cout << "[Refinement] Coarsening with delta = " << refineDelta << "\n";
+            } else {
+                // F → halve delta
+                refineDelta = std::max(refineDelta * 0.5, 0.2);
+                std::cout << "[Refinement] Refining with delta = " << refineDelta << "\n";
+            }
+
+            auto refined = graph.allCubicSplineResampledTrunks(trunks, refineDelta);
+            auto trunkParentMap = graph.getTrunkParentMap(originalNodeMap, trunks);
+            auto assembled = graph.assembleTrunks(refined, trunkParentMap);
+
+            nodes.clear();
+            for (const auto& [_, n] : assembled)
+                nodes.push_back(n);
+
+            computeBounds(nodes,
+                          *std::get<1>(*sharedData), *std::get<2>(*sharedData),
+                          *std::get<3>(*sharedData), *std::get<4>(*sharedData),
+                          *std::get<5>(*sharedData), *std::get<6>(*sharedData),
+                          *std::get<7>(*sharedData), *std::get<8>(*sharedData),
+                          *std::get<9>(*sharedData), *std::get<10>(*sharedData));
+
+            std::cout << "[Done] Geometry updated. Current delta: " << refineDelta << "\n";
+        }
+
         if (key >= GLFW_KEY_1 && key <= GLFW_KEY_6) {
             renderMode = key - GLFW_KEY_0;
             std::cout << "Switched to render mode " << renderMode << "\n";

@@ -33,37 +33,69 @@ void NeuronGraph::addNode(const SWCNode& node){
 
 std::map<int, SWCNode> NeuronGraph::preprocess(const std::map<int, SWCNode> & nodeSet) const {
 			// check soma properties
-			std::map<int, SWCNode> preprocessedNeuron;
-        	if (this->isSomaMissing(nodeSet)) preprocessedNeuron=this->setSoma(nodeSet);
-			if (this->hasSomaSegment(nodeSet)) preprocessedNeuron=this->removeSomaSegment(nodeSet);
-			return preprocessedNeuron;
+			std::map<int, SWCNode> result = nodeSet;
+			if (this->isSomaMissing(result)){
+				result = this->setSoma(result);
+			}
+			if (this->hasSomaSegment(result)){
+				result = this->removeSomaSegment(result);
+			}
+			return result;
 }
 
-void NeuronGraph::readFromFile(const std::string& filename){
-	nodes.clear(); // clear the nodes
-	edges.clear(); // clear the edges
-	
-	std::ifstream infile(filename);
-	if (!infile.is_open()){
-		std::cerr << "Failed to open file: " << filename << std::endl;
-		return;
-	}
+void NeuronGraph::readFromFile(const std::string& filename) {
+    nodes.clear();
+    edges.clear();
 
-	std::string line;
-	while(std::getline(infile,line)) {
-	    if(line.empty() || line[0] == '#') continue;
+    std::ifstream infile(filename);
+    if (!infile.is_open()) {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+        return;
+    }
 
-	    std::istringstream iss(line);
-	    SWCNode node;
+    std::string line;
+    int lineNum = 0;
+    while (std::getline(infile, line)) {
+        ++lineNum;
 
-	    if ( !(iss >> node.id >> node.type >> node.x >> node.y >> node.z >> node.radius >> node.pid)) {
-	    	std::cerr << "Malformed line: " << line << std::endl;
-		continue;
-	    }
-	    addNode(node);
-	}
-	std::cout << "Read SWC ..." << filename << std::endl;
+        // Skip empty or comment-only lines
+        if (line.empty() || line[0] == '#') continue;
+
+        // Strip inline comments
+        auto commentPos = line.find('#');
+        if (commentPos != std::string::npos)
+            line = line.substr(0, commentPos);
+
+        // Trim leading/trailing whitespace
+        // Trim leading whitespace
+		line.erase(0, line.find_first_not_of(" \t\r\n"));
+
+		// Trim trailing whitespace only if line is not empty
+		if (!line.empty()) {
+			size_t end = line.find_last_not_of(" \t\r\n");
+			if (end != std::string::npos)
+				line.erase(end + 1);
+		}
+
+		// Replace tabs with spaces
+		std::replace(line.begin(), line.end(), '\t', ' ');
+
+        if (line.empty()) continue;  // was all comment or whitespace
+
+        std::istringstream iss(line);
+        SWCNode node;
+
+        if (!(iss >> node.id >> node.type >> node.x >> node.y >> node.z >> node.radius >> node.pid)) {
+            std::cerr << "[Parse Error] Line " << lineNum << ": '" << line << "'\n";
+            continue;
+        }
+
+        addNode(node);
+    }
+
+    std::cout << "Read SWC ... " << filename << " with " << nodes.size() << " nodes.\n";
 }
+
 
 void NeuronGraph::writeToFile(const std::map<int, SWCNode> & nodeSet,
 		              const std::string& filename){
