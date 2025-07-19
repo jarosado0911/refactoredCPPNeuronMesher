@@ -6,15 +6,7 @@
 std::string currentLoadedFile = "";
 
 void printHelpText() {
-    std::cout << "\n=== SWC Viewer Controls ===\n";
-    std::cout << "Key/Mouse     | Function\n";
-    std::cout << "1 - 6         | Change render mode\n";
-    std::cout << "O             | Open SWC file\n";
-    std::cout << "R             | Reset camera view\n";
-    std::cout << "Mouse Drag    | Rotate scene (Left Button)\n";
-    std::cout << "Mouse Drag    | Pan scene (Right Button)\n";
-    std::cout << "Scroll Wheel  | Zoom in/out\n";
-    std::cout << "ESC           | Exit viewer\n\n";
+    std::cout << help;
 }
 
 std::vector<SWCNode> loadSWC(const std::string& filename) {
@@ -101,20 +93,3 @@ void openNeuronFile(std::vector<SWCNode>& nodes,
     refineDelta = 8.0;
     std::cout << "[Reset] refineDelta = 8.0\n";
 }
-
-
-/*
-void openNeuronFile(std::vector<SWCNode>& nodes, double& minX, double& maxX, double& minY, double& maxY, double& minZ, double& maxZ, double& centerX, double& centerY, double& centerZ, double& radius) {
-    const char* filters[] = { "*.swc" };
-    const char* file = tinyfd_openFileDialog("Open SWC File", "", 1, filters, "SWC files", 0);
-    //refineDelta = 8.0;
-    //std::cout << "[Reset] refineDelta set to 8.0 on new neuron load.\n";
-
-    if (file) {
-        std::cout << "Loading: " << file << "\n";
-        currentLoadedFile = file; 
-        nodes = loadSWC(file);
-        computeBounds(nodes, minX, maxX, minY, maxY, minZ, maxZ, centerX, centerY, centerZ, radius);
-    }
-}
-*/

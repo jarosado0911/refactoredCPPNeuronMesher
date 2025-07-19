@@ -1,4 +1,5 @@
 // globals
+#include <string>
 #include "globals.h"
 
 int renderMode = 1;
@@ -8,3 +9,14 @@ bool dragging = false, rightDragging = false;
 double lastX, lastY;
 
 double refineDelta = 8.0; // start coarse
+
+std::string help = "=== SWC Viewer Controls ===\n"
+                   "1 - 6         | Change render mode\n"
+                   "F             | Refine geometry (cubic spline)\n"
+                   "Ctrl + F      | Coarsen geometry (cubic spline)\n"
+                   "O             | Open SWC file\n"
+                   "R             | Reset camera view\n"
+                   "Mouse Drag    | Rotate scene (Left Button)\n"
+                   "Mouse Drag    | Pan scene (Right Button)\n"
+                   "Scroll Wheel  | Zoom in/out\n"
+                   "ESC           | Exit viewer";

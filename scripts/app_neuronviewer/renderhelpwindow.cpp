@@ -1,3 +1,5 @@
+#include "globals.h"
+
 void renderHelpWindow(GLFWwindow* window) {
     int width, height;
     glfwGetFramebufferSize(window, &width, &height);
@@ -12,18 +14,6 @@ void renderHelpWindow(GLFWwindow* window) {
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-
-    std::string help =
-        "=== SWC Viewer Controls ===\n"
-        "1 - 6         | Change render mode\n"
-        "F             | Refine geometry (cubic spline)\n"
-        "Ctrl + F      | Coarsen geometry (cubic spline)\n"
-        "O             | Open SWC file\n"
-        "R             | Reset camera view\n"
-        "Mouse Drag    | Rotate scene (Left Button)\n"
-        "Mouse Drag    | Pan scene (Right Button)\n"
-        "Scroll Wheel  | Zoom in/out\n"
-        "ESC           | Exit viewer";
 
     std::string fileInfo = "Current file: " + (currentLoadedFile.empty() ? "[none]" : currentLoadedFile);
 
