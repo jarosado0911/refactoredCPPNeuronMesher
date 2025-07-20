@@ -12,3 +12,4 @@ extern double refineDelta;
 extern std::string help;
 extern std::vector<SWCNode> currentNodes;
 extern GLFWwindow* helpWindow;
+extern NeuronGraph graph;

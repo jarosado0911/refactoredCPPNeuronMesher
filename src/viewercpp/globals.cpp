@@ -25,4 +25,4 @@ std::string help = "=== SWC Viewer Controls ===\n"
 std::vector<SWCNode> currentNodes;
 
 GLFWwindow* helpWindow = nullptr;
-
+NeuronGraph graph;

@@ -11,7 +11,7 @@ void printHelpText() {
 
 std::vector<SWCNode> loadSWC(const std::string& filename) {
     std::vector<SWCNode> nodes;
-    NeuronGraph graph;
+    //NeuronGraph graph;
     graph.readFromFileUGXorSWC(filename);
     auto prenodes = graph.getNodes();
     prenodes = graph.preprocess(prenodes);

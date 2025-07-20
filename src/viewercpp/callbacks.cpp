@@ -16,7 +16,7 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
             for (const auto& n : nodes)
                 originalNodeMap[n.id] = n;
 
-            NeuronGraph graph;
+            //NeuronGraph graph;
             graph.setNodes(originalNodeMap);
 
             auto trunks = graph.getTrunks(false);
@@ -47,6 +47,7 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
                           *std::get<9>(*sharedData), *std::get<10>(*sharedData));
 
             std::cout << "[Done] Geometry updated. Current delta: " << refineDelta << "\n";
+            graph.setNodes(assembled);
         }
 
         if (key >= GLFW_KEY_1 && key <= GLFW_KEY_6) {
@@ -84,7 +85,29 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
             } else {
                 std::cout << "[Help] Help window already open.\n";
             }
-        } 
+        } else if (key == GLFW_KEY_S) {
+            const char* filters[] = { "*.swc", "*.ugx" };
+            const char* savePath = tinyfd_saveFileDialog(
+                "Save Neuron File",
+                "output.swc",
+                2,
+                filters,
+                "SWC or UGX files"
+            );
+
+            if (savePath) {
+                std::string pathStr = savePath;
+                if (pathStr.size() >= 4 && pathStr.compare(pathStr.size() - 4, 4, ".swc") == 0) {
+                    graph.writeToFile(pathStr);
+                } else if (pathStr.size() >= 4 && pathStr.compare(pathStr.size() - 4, 4, ".ugx") == 0) {
+                    graph.writeToFileUGX(pathStr);
+                } else {
+                    tinyfd_messageBox("Unsupported Format",
+                                      "Please use a .swc or .ugx extension.",
+                                      "ok", "error", 1);
+                }
+            }
+        }
     }
 }
 
