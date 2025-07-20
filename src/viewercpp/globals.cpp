@@ -16,7 +16,13 @@ std::string help = "=== SWC Viewer Controls ===\n"
                    "Ctrl + F      | Coarsen geometry (cubic spline)\n"
                    "O             | Open SWC file\n"
                    "R             | Reset camera view\n"
+                   "H             | Help screen\n"
                    "Mouse Drag    | Rotate scene (Left Button)\n"
                    "Mouse Drag    | Pan scene (Right Button)\n"
                    "Scroll Wheel  | Zoom in/out\n"
                    "ESC           | Exit viewer";
+
+std::vector<SWCNode> currentNodes;
+
+GLFWwindow* helpWindow = nullptr;
+

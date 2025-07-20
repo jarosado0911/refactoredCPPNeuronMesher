@@ -1,4 +1,5 @@
 // call back functions
+#include "globals.h"
 #include "callbacks.h"
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
@@ -37,7 +38,7 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
             nodes.clear();
             for (const auto& [_, n] : assembled)
                 nodes.push_back(n);
-
+            currentNodes = nodes;
             computeBounds(nodes,
                           *std::get<1>(*sharedData), *std::get<2>(*sharedData),
                           *std::get<3>(*sharedData), *std::get<4>(*sharedData),
@@ -66,7 +67,24 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
             std::cout << "Camera view reset.\n";
         } else if (key == GLFW_KEY_H) {
             printHelpText();
-        }
+            if (!helpWindow || glfwWindowShouldClose(helpWindow)) {
+                if (helpWindow) {
+                    glfwDestroyWindow(helpWindow);
+                    helpWindow = nullptr;
+                }
+
+                helpWindow = glfwCreateWindow(500, 300, "Help", nullptr, nullptr);
+                if (!helpWindow) {
+                    std::cerr << "Failed to create help window.\n";
+                } else {
+                    glfwMakeContextCurrent(helpWindow);
+                    glfwSwapInterval(1);
+                    std::cout << "[Help] Help window created.\n";
+                }
+            } else {
+                std::cout << "[Help] Help window already open.\n";
+            }
+        } 
     }
 }
 

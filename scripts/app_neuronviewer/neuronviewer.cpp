@@ -51,6 +51,8 @@ int main(int argc, char** argv) {
 
     static std::vector<SWCNode> nodes = loadSWC(argv[1]);
     currentLoadedFile = argv[1];
+    currentNodes = nodes;
+
     static double minX, maxX, minY, maxY, minZ, maxZ, centerX, centerY, centerZ, radius;
     computeBounds(nodes, minX, maxX, minY, maxY, minZ, maxZ, centerX, centerY, centerZ, radius);
 
@@ -61,7 +63,7 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    GLFWwindow* helpWindow = glfwCreateWindow(500, 300, "Help", nullptr, nullptr);
+    helpWindow = glfwCreateWindow(500, 300, "Help", nullptr, nullptr);
     if (!helpWindow) {
         std::cerr << "Failed to create help window.\n";
     } else {

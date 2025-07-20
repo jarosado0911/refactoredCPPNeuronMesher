@@ -60,7 +60,8 @@ void openNeuronFile(std::vector<SWCNode>& nodes,
                     double& centerX, double& centerY,
                     double& centerZ, double& radius)
 {
-    const char* file = tinyfd_openFileDialog("Open SWC", "", 0, nullptr, nullptr, 0);
+    const char* filters[] = { "*.swc", "*.ugx" };
+    const char* file = tinyfd_openFileDialog("Open 1D Neuron File", "", 2, filters, "SWC or UGX Files", 0);
     if (!file) {
         std::cout << "[Info] No file selected.\n";
         return;
@@ -71,6 +72,7 @@ void openNeuronFile(std::vector<SWCNode>& nodes,
 
     // Load and assign directly
     nodes = loadSWC(filename);
+    currentNodes = nodes; 
 
     std::cout << "[Loaded] " << filename << " with " << nodes.size() << " nodes.\n";
 
