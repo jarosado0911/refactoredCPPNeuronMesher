@@ -1,6 +1,14 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(NeuronGraph)
+
+# Get the correct Python extension suffix for the platform
+execute_process(
+    COMMAND python3 -c "import sysconfig; print(sysconfig.get_config_var('EXT_SUFFIX'))"
+    OUTPUT_VARIABLE PYTHON_SUFFIX
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
 set(CMAKE_VERBOSE_MAKEFILE OFF)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -77,3 +85,27 @@ add_subdirectory(scripts/app_neuronviewer)
 
 # === SWCViewer ===
 add_subdirectory(scripts/swcviewer)
+
+# === Pybind11 ===
+# Fetch pybind11
+include(FetchContent)
+FetchContent_Declare(
+	pybind11
+	GIT_REPOSITORY https://github.com/pybind/pybind11.git
+	GIT_TAG	       v2.12.0
+)
+FetchContent_MakeAvailable(pybind11)
+
+add_library(neurongraph SHARED
+	src/bindings.cpp
+	src/neurongraph.cpp
+)
+
+set_target_properties(neurongraph PROPERTIES
+    PREFIX ""                                     # no lib prefix
+    SUFFIX "${PYTHON_SUFFIX}"                    # correct .so suffix
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"  # place it in ../bin
+)
+
+target_include_directories(neurongraph PRIVATE .)
+target_link_libraries(neurongraph PRIVATE pybind11::module tinyxml2)
