@@ -23,6 +23,9 @@ build:
 # Clean build
 clean:
 	@rm -rf $(BUILD_DIR) $(BIN_DIR)
+	@rm -rf __pycache__ *.egg-info
+	@find . -name "*.pyc" -delete
+	@find . -type d -name "__pycache__" -exec rm -r {} +
 
 # Run Tests via ctest
 ctest:
@@ -41,11 +44,24 @@ doctest:
 	@cd $(BIN_DIR) && ./doctest --no-breaks --success --no-line-numbers --no-path-in-filenames
 
 # make all
-all: build doctest clean
+all: build doctest clean install
 
 # rebuild
 rebuild: clean build
 remake: rebuild
+
+# set python interpreter
+PYTHON ?= python3
+
+# Install Python module (editable mode recommended during dev)
+installe:
+	cd $(CURDIR) && $(PYTHON) -m pip install -e .
+
+install:
+	cd $(CURDIR) && $(PYTHON) -m pip install -r requirements.txt
+
+testpy:
+	pytest -s --rich python_package/test/ -v
 
 # help and usage
 help:
@@ -60,4 +76,9 @@ help:
 	@echo "  all         - Run build, doctest, and then clean"
 	@echo "  rebuild     - Clean then build"
 	@echo "  remake      - Alias for rebuild"
+	@echo "  install     - Install Python Module"
+	@echo "  installe    - Install Python Module (dev mode)"
 	@echo "  help        - Show this help message"
+
+
+.PHONY: installe install

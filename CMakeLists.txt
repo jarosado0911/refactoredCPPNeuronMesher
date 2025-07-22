@@ -104,7 +104,7 @@ add_library(neurongraph SHARED
 set_target_properties(neurongraph PROPERTIES
     PREFIX ""                                     # no lib prefix
     SUFFIX "${PYTHON_SUFFIX}"                    # correct .so suffix
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"  # place it in ../bin
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/python_package"  # place it in ../python_package
 )
 
 target_include_directories(neurongraph PRIVATE .)
