@@ -167,32 +167,34 @@ void NeuronGraph::readFromFileUGX(const std::string& filename)
 
     XMLDocument doc;
     if (doc.LoadFile(filename.c_str()) != XML_SUCCESS) {
-        std::cerr << "Failed to load UGX file: " << filename << std::endl;
+        std::cerr << "[UGX Error] Failed to load: " << filename << std::endl;
         return;
     }
 
     XMLElement* root = doc.FirstChildElement("grid");
     if (!root) {
-        std::cerr << "Invalid UGX file: no <grid> found.\n";
+        std::cerr << "[UGX Error] Missing <grid> root element.\n";
         return;
     }
 
     // --- 1. Extract coordinates ---
-    XMLElement* vertsElem = root->FirstChildElement("vertices");
     std::vector<std::array<double, 3>> positions;
-
-    if (vertsElem) {
-        const char* coordsText = vertsElem->GetText();
-        std::istringstream iss(coordsText);
-        double x, y, z;
-        while (iss >> x >> y >> z)
-            positions.push_back({x, y, z});
+    XMLElement* vertsElem = root->FirstChildElement("vertices");
+    if (!vertsElem || !vertsElem->GetText()) {
+        std::cerr << "[UGX Warning] No vertex data found.\n";
+        return;
     }
 
+    std::istringstream coordStream(vertsElem->GetText());
+    double x, y, z;
+    while (coordStream >> x >> y >> z) {
+        positions.push_back({x, y, z});
+    }
     int numVertices = static_cast<int>(positions.size());
+    std::cout << "[UGX] Parsed " << numVertices << " vertices.\n";
 
     // --- 2. Extract diameters ---
-    std::vector<double> diameters(numVertices, 1.0);  // default radius
+    std::vector<double> diameters(numVertices, 1.0);  // fallback default
     for (XMLElement* va = root->FirstChildElement("vertex_attachment"); va; va = va->NextSiblingElement("vertex_attachment")) {
         const char* name = va->Attribute("name");
         if (name && std::string(name) == "diameter") {
@@ -201,24 +203,28 @@ void NeuronGraph::readFromFileUGX(const std::string& filename)
                 std::istringstream dStream(dText);
                 for (int i = 0; i < numVertices && dStream; ++i)
                     dStream >> diameters[i];
+                std::cout << "[UGX] Parsed diameter values.\n";
             }
             break;
         }
     }
 
-    // --- 3. Extract edges (i j pairs) ---
+    // --- 3. Extract edges ---
     std::vector<std::pair<int, int>> edgeList;
     XMLElement* edgesElem = root->FirstChildElement("edges");
     if (edgesElem && edgesElem->GetText()) {
-        std::istringstream es(edgesElem->GetText());
+        std::istringstream edgeStream(edgesElem->GetText());
         int from, to;
-        while (es >> from >> to)
+        while (edgeStream >> from >> to) {
             edgeList.emplace_back(from, to);
+        }
+        std::cout << "[UGX] Parsed " << edgeList.size() << " edges.\n";
+    } else {
+        std::cout << "[UGX] No edge list found.\n";
     }
 
     // --- 4. Extract subset types ---
-    std::vector<int> types(numVertices, 0);  // default to 0 (undefined)
-
+    std::vector<int> types(numVertices, 0);  // default type 0 (undefined)
     XMLElement* subsetHandler = root->FirstChildElement("subset_handler");
     if (subsetHandler) {
         for (XMLElement* subset = subsetHandler->FirstChildElement("subset"); subset; subset = subset->NextSiblingElement("subset")) {
@@ -226,13 +232,13 @@ void NeuronGraph::readFromFileUGX(const std::string& filename)
             int typeCode = 0;
             if (name) {
                 std::string sname(name);
-                if (sname == "soma") typeCode = 1;
-                else if (sname == "axon") typeCode = 2;
-                else if (sname == "dend") typeCode = 3;
-                else if (sname == "apic") typeCode = 4;
-                else if (sname == "fork") typeCode = 5;
-                else if (sname == "end")  typeCode = 6;
-                else                      typeCode = 7;
+                if      (sname == "soma")  typeCode = 1;
+                else if (sname == "axon")  typeCode = 2;
+                else if (sname == "dend")  typeCode = 3;
+                else if (sname == "apic")  typeCode = 4;
+                else if (sname == "fork")  typeCode = 5;
+                else if (sname == "end")   typeCode = 6;
+                else                       typeCode = 7; // unknown but labeled
             }
 
             XMLElement* vElem = subset->FirstChildElement("vertices");
@@ -242,12 +248,14 @@ void NeuronGraph::readFromFileUGX(const std::string& filename)
                 while (vs >> vi) {
                     if (vi >= 0 && vi < numVertices)
                         types[vi] = typeCode;
+                    else
+                        std::cerr << "[UGX Warning] Invalid vertex index in subset: " << vi << "\n";
                 }
             }
         }
     }
 
-    // --- 5. Build SWC nodes directly into `nodes` ---
+    // --- 5. Create SWCNodes ---
     for (int i = 0; i < numVertices; ++i) {
         SWCNode node;
         node.id     = i + 1;
@@ -256,18 +264,24 @@ void NeuronGraph::readFromFileUGX(const std::string& filename)
         node.y      = positions[i][1];
         node.z      = positions[i][2];
         node.radius = diameters[i];
-        node.pid    = -1;  // will be set via edgeList below
+        node.pid    = -1;
         nodes[node.id] = node;
     }
 
-    // --- 6. Populate `edges` and update parent ids ---
+    // --- 6. Build edges + set parents ---
     for (const auto& [from, to] : edgeList) {
         int parentId = from + 1;
         int childId  = to + 1;
 
-        nodes[childId].pid = parentId;
-        edges[parentId].push_back(childId);
+        if (nodes.count(childId) && nodes.count(parentId)) {
+            nodes[childId].pid = parentId;
+            edges[parentId].push_back(childId);
+        } else {
+            std::cerr << "[UGX Warning] Invalid edge (" << from << " → " << to << ")\n";
+        }
     }
 
-    std::cout << "Read UGX ..." << filename << std::endl;
+    std::cout << "Read UGX ... " << filename << " with "
+              << nodes.size() << " nodes and "
+              << edges.size() << " parent entries.\n";
 }

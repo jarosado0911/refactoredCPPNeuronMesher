@@ -25,3 +25,6 @@
 	echo "=========================================================="
 
 } | tee logs/system_info.log
+
+# Save detailed project structure (including hidden files)
+tree -a > logs/project_structure.log
