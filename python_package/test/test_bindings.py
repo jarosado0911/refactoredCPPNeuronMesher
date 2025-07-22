@@ -96,6 +96,37 @@ def test_write_to_ugx(graph):
     print(f"[blue] TEST {fn}:[/] [yellow] WRT:[/] {before}, [yellow] READ:[/] {after}")
     assert after == before
 
+def test_save_preprocess(graph):
+    fn = inspect.currentframe().f_code.co_name
+    outfilename = get_output_dir()+"/test/preprocessSWC.swc"
+    before = graph.getNodes()
+    after = graph.preprocess(before)
+    graph.writeToFile(after,outfilename)
+    print(f"[blue] TEST {fn}:[/] [yellow] Pre:[/] {len(before)}, [yellow] Post:[/] {len(after)}")
+    assert len(before) > len(after)
+
+def test_splitedges(graph):
+    fn = inspect.currentframe().f_code.co_name
+    outfilename = get_output_dir()+"/test/splitSWC.swc"
+    before = graph.getNodes()
+    after = graph.splitEdges()
+    graph.writeToFile(after,outfilename)
+    print(f"[blue] TEST {fn}:[/] [yellow] Pre:[/] {len(before)}, [yellow] Post:[/] {len(after)}")
+    assert len(after) > len(before)
+
+def test_splitedgesN(graph):
+    fn = inspect.currentframe().f_code.co_name
+    before = graph.getNodes()
+    N = 4
+    afterset = graph.splitEdgesN(N)
+    for i, after in enumerate(afterset):
+        outfilename = get_output_dir()+"/test/splitSWC_"+str(i)+".ugx"
+        graph.writeToFileUGX(after,outfilename)
+        print(f"[blue] TEST {fn}:[/] [yellow] Pre:[/] {len(before)}, [yellow] Post:[/] {len(after)}")
+        assert len(after) >= len(before)
+
+
+
 
 
     
