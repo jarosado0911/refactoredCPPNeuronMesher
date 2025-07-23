@@ -9,6 +9,8 @@ def get_test_data_path(filename):
 def get_output_dir():
     return os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'output'))
 
+delta = 2.0
+
 @pytest.fixture(scope="module")
 def graph():
     g = ng.NeuronGraph()
@@ -125,7 +127,61 @@ def test_splitedgesN(graph):
         print(f"[blue] TEST {fn}:[/] [yellow] Pre:[/] {len(before)}, [yellow] Post:[/] {len(after)}")
         assert len(after) >= len(before)
 
+def test_get_trunks(graph):
+    fn = inspect.currentframe().f_code.co_name
+    trunks = graph.getTrunks(False)
+    print(f"[blue] TEST {fn}:[/] [yellow] Num. Trunks:[/] {len(trunks)}")
+    assert len(trunks) > 0
 
+def test_assemble_trunks(graph):
+    fn = inspect.currentframe().f_code.co_name
+    trunks = graph.getTrunks(False)
+    assembled = graph.assembleTrunks(trunks)
+    print(f"[blue] TEST {fn}:[/] [yellow] #nodes:[/] {len(assembled)}")
+    assert len(assembled) == graph.numberOfNodes()
+
+    outfilename = get_output_dir()+"/test/reassembled1.swc"
+    graph.writeToFile(assembled,outfilename)
+    assert True
+
+def test_assemble_trunks2(graph):
+    fn = inspect.currentframe().f_code.co_name
+    trunks = graph.getTrunks(False)
+    trunkmap = graph.getTrunkParentMap(graph.getNodes(),trunks)
+    trunks = graph.getTrunks(True)
+    assembled = graph.assembleTrunks(trunks,trunkmap)
+    print(f"[blue] TEST {fn}:[/] [yellow] #nodes:[/] {len(assembled)}")
+    assert len(assembled) == graph.numberOfNodes()
+
+    outfilename = get_output_dir()+"/test/reassembled2.swc"
+    graph.writeToFile(assembled,outfilename)
+    assert True
+
+def test_assemble_linear_resample(graph):
+    fn = inspect.currentframe().f_code.co_name
+    trunks = graph.getTrunks(False)
+    trunkmap = graph.getTrunkParentMap(graph.getNodes(),trunks)
+    resampled = graph.allLinearSplineResampledTrunks(trunks,delta)
+    assembled = graph.assembleTrunks(resampled,trunkmap)
+    print(f"[blue] TEST {fn}:[/] [yellow] #nodes:[/] {len(assembled)}")
+    assert len(assembled) != graph.numberOfNodes()
+
+    outfilename = get_output_dir()+"/test/reassembledlinear.swc"
+    graph.writeToFile(assembled,outfilename)
+    assert True
+
+def test_assemble_cubic_resample(graph):
+    fn = inspect.currentframe().f_code.co_name
+    trunks = graph.getTrunks(False)
+    trunkmap = graph.getTrunkParentMap(graph.getNodes(),trunks)
+    resampled = graph.allCubicSplineResampledTrunks(trunks,delta)
+    assembled = graph.assembleTrunks(resampled,trunkmap)
+    print(f"[blue] TEST {fn}:[/] [yellow] #nodes:[/] {len(assembled)}")
+    assert len(assembled) != graph.numberOfNodes()
+
+    outfilename = get_output_dir()+"/test/reassembledcubic.swc"
+    graph.writeToFile(assembled,outfilename)
+    assert True
 
 
 
