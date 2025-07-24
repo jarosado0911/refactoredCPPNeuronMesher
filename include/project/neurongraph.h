@@ -127,6 +127,11 @@ class NeuronGraph {
 		// cubic resample trunks
 		std::map<int, SWCNode> cubicSplineResampleTrunk(const std::map<int, SWCNode>& trunk, double& delta) const;
 		std::map<int, std::map<int, SWCNode>> allCubicSplineResampledTrunks(std::map<int, std::map<int, SWCNode>>& trunks, double& delta) const;
+
+		// generate refinements
+		std::map<int, std::map<int,SWCNode>> generateRefinements(const std::map<int,SWCNode>& nodeSet, 
+																 double& delta, int& N, std::string& method);
+		std::map<int, std::map<int,SWCNode>> generateRefinements(double& delta, int& N, std::string& method){return this->generateRefinements(this->nodes,delta,N,method); };
 };
 
 #endif // end of the neurongraph header file
