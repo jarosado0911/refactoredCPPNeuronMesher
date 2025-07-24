@@ -57,5 +57,9 @@ PYBIND11_MODULE(neurongraph, m){
         .def("linearSplineResampleTrunk", &NeuronGraph::linearSplineResampleTrunk)
         .def("allLinearSplineResampledTrunks", &NeuronGraph::allLinearSplineResampledTrunks)
         .def("cubicSplineResampleTrunk", &NeuronGraph::cubicSplineResampleTrunk)
-        .def("allCubicSplineResampledTrunks", &NeuronGraph::allCubicSplineResampledTrunks);
+        .def("allCubicSplineResampledTrunks", &NeuronGraph::allCubicSplineResampledTrunks)
+        .def("generateRefinements",py::overload_cast<const std::map<int, SWCNode>&, double&, int&, std::string&>(&NeuronGraph::generateRefinements),
+     py::arg("nodeSet"), py::arg("delta"), py::arg("N"), py::arg("method"))
+        .def("generateRefinements",py::overload_cast<double&, int&, std::string&>(&NeuronGraph::generateRefinements),
+     py::arg("delta"), py::arg("N"), py::arg("method"));
 }

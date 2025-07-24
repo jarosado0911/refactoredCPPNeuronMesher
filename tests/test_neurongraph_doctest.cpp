@@ -504,3 +504,57 @@ TEST_CASE("Assemble CUBIC Resampled Trunks And Refine"){
         CHECK(nodeSet.size() > 0);
     }
 }
+
+TEST_CASE("GenerateRefinements CUBIC"){
+    std::string inputfile = getExecutableDir() + "/../data/neuron.ugx";
+    std::string outputfolder = getExecutableDir() + "/../output/test_refinements_cubic";
+    checkFolder(outputfolder);
+
+    NeuronGraph g(inputfile);
+    g.setNodes(g.removeSomaSegment());
+
+    double delta = 12;
+    int N = 6;
+    std::string method = "cubic";
+    auto refinements = g.generateRefinements(g.getNodes(),delta,N,method);
+    CHECK( refinements.size() == N);
+    for(auto [i,nodeSet] : refinements){
+        g.writeToFile(nodeSet,outputfolder+"/refinement_"+std::to_string(i)+".swc");
+        CHECK (nodeSet.size() >= g.numberOfNodes());
+    }
+}
+
+TEST_CASE("GenerateRefinements CUBIC overload"){
+    std::string inputfile = getExecutableDir() + "/../data/neuron.swc";
+    
+    NeuronGraph g(inputfile);
+    g.setNodes(g.removeSomaSegment());
+
+    double delta = 12;
+    int N = 6;
+    std::string method = "cubic";
+    auto refinements = g.generateRefinements(delta,N,method);
+    CHECK( refinements.size() == N);
+    for(auto [i,nodeSet] : refinements){
+        CHECK (nodeSet.size() >= g.numberOfNodes());
+    }
+}
+
+TEST_CASE("GenerateRefinements LINEAR"){
+    std::string inputfile = getExecutableDir() + "/../data/neuron.ugx";
+    std::string outputfolder = getExecutableDir() + "/../output/test_refinements_linear";
+    checkFolder(outputfolder);
+
+    NeuronGraph g(inputfile);
+    g.setNodes(g.removeSomaSegment());
+
+    double delta = 12;
+    int N = 6;
+    std::string method = "linear";
+    auto refinements = g.generateRefinements(g.getNodes(),delta,N,method);
+    CHECK( refinements.size() == N);
+    for(auto [i,nodeSet] : refinements){
+        g.writeToFile(nodeSet,outputfolder+"/refinement_"+std::to_string(i)+".swc");
+        CHECK (nodeSet.size() >= g.numberOfNodes());
+    }
+}

@@ -217,3 +217,21 @@ def test_ugx_to_swc(graph):
     after = graph.numberOfNodes()
     print(f"\n[blue] TEST {fn}:[/] [yellow] UGX:[/] {before}, [yellow] SWC:[/] {after}")
     assert after == before
+
+def test_generate_refinements_cubic(graph):
+    fn = inspect.currentframe().f_code.co_name
+    delta,N,method = 12.0,6,"cubic"
+    before = graph.getNodes()
+    refinements = graph.generateRefinements(before,delta,N,method)
+    for _,after in refinements.items():
+        print(f"\n[blue] TEST {fn}:[/] [yellow] before:[/] {len(before)}, [yellow] after:[/] {len(after)}")
+        assert len(after) >= len(before)
+
+def test_generate_refinements_linear(graph):
+    fn = inspect.currentframe().f_code.co_name
+    delta,N,method = 12.0,6,"linear"
+    before = graph.getNodes()
+    refinements = graph.generateRefinements(before,delta,N,method)
+    for _,after in refinements.items():
+        print(f"\n[blue] TEST {fn}:[/] [yellow] before:[/] {len(before)}, [yellow] after:[/] {len(after)}")
+        assert len(after) >= len(before)

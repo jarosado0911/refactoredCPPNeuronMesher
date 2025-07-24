@@ -428,3 +428,27 @@ std::map<int, SWCNode> NeuronGraph::assembleTrunks(const std::map<int, std::map<
 
     return finalNodes;
 }
+
+std::map<int, std::map<int,SWCNode>> NeuronGraph::generateRefinements(const std::map<int,SWCNode>& nodeSet, 
+																      double& delta, int& N, std::string& method){
+    bool resetIndex = false;
+    auto trunks = getTrunks(nodeSet,resetIndex);
+    auto trunkParentMap = getTrunkParentMap(nodeSet,trunks);
+    std::map<int,std::map<int,SWCNode>> refinements;
+    std::map<int,std::map<int, SWCNode>> resampledTrunks;
+
+    for(int i=0; i < N; ++i){
+        if (method == "cubic"){
+            resampledTrunks = allCubicSplineResampledTrunks(trunks,delta);
+        } else if (method == "linear") {
+            resampledTrunks = allLinearSplineResampledTrunks(trunks,delta);
+        } else {
+            resampledTrunks = allLinearSplineResampledTrunks(trunks,delta);
+        }
+        auto newNodes = assembleTrunks(resampledTrunks,trunkParentMap);
+        refinements[i]=newNodes;
+        delta = delta/2;
+    }
+
+    return refinements;
+}
