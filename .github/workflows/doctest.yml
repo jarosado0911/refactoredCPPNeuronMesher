@@ -1,0 +1,39 @@
+name: Doctest
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  doctest:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libtinyxml2-dev \
+          libglfw3-dev \
+          libgl1-mesa-dev \
+          libglu1-mesa-dev \
+          cmake \
+          g++
+
+    - name: Configure CMake
+      run: cmake -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+
+    - name: Build project
+      run: cmake --build build --config ${{env.BUILD_TYPE}}
+
+    - name: Run doctests
+      run: make doctest

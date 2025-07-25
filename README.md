@@ -21,4 +21,6 @@
 ![GitHub Release](https://img.shields.io/github/v/release/jarosado0911/refactoredCPPNeuronMesher?include_prereleases)
 ![GitHub Stars](https://img.shields.io/github/stars/jarosado0911/refactoredCPPNeuronMesher?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/jarosado0911/refactoredCPPNeuronMesher?style=social)
+[![Doctest](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml)
+
 <br/>
