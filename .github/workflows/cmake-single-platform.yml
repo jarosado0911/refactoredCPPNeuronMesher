@@ -39,3 +39,9 @@ jobs:
 
     - name: Run bigtests
       run: make doctest
+
+    - name: Install .so
+      run: make install
+
+    - name: Run PyTest
+      run: make testpy
