@@ -2,3 +2,7 @@ pytest
 rich
 pytest-rich
 networkx
+PyQt5
+PyOpenGL 
+PyOpenGL_accelerate
+imgui[glfw]

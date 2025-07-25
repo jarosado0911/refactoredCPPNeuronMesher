@@ -47,7 +47,7 @@ doctest:
 all: build doctest clean install
 
 # rebuild
-rebuild: clean build
+rebuild: clean build install
 remake: rebuild
 
 # set python interpreter
@@ -78,6 +78,7 @@ help:
 	@echo "  remake      - Alias for rebuild"
 	@echo "  install     - Install Python Module"
 	@echo "  installe    - Install Python Module (dev mode)"
+	@echo "  testpy      - Test the Python functionality"
 	@echo "  help        - Show this help message"
 
 
