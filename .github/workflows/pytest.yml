@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install pytest-rich
-         run: pip install pytest-rich
+        run: pip3 install pytest-rich
       - name: Install Python & dependencies
         run: |
           sudo apt-get update
