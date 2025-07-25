@@ -58,7 +58,7 @@ installe:
 	cd $(CURDIR) && $(PYTHON) -m pip install -e .
 
 install:
-	cd $(CURDIR) && $(PYTHON) -m pip install -r requirements.txt
+	cd $(CURDIR) && $(PYTHON) -m pip install -r requirements.txt --user
 
 testpy:
 	pytest --rich python_package/test/ -v -s
