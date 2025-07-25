@@ -1,4 +1,4 @@
-name: CMake Build and Test
+name: CMake Build, Test, and SonarCloud
 
 on:
   push:
@@ -27,6 +27,11 @@ jobs:
           libgl1-mesa-dev \
           libglu1-mesa-dev
 
+    - name: Set up Java (for SonarCloud)
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+
     - name: Configure CMake
       run: cmake -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
@@ -45,3 +50,12 @@ jobs:
 
     - name: Run PyTest
       run: make testpy
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      with:
+        args: >
+          -Dsonar.projectKey=jarosado0911_refactoredCPPNeuronMesher
+          -Dsonar.organization=jarosado0911
+          -Dsonar.host.url=https://sonarcloud.io
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
