@@ -15,7 +15,7 @@ setup(
     author_email='your.email@example.com',
     description='Python bindings for NeuronGraph using pybind11',
     packages=find_packages(where='.'),  # Automatically finds 'python_package' and submodules
-    package_data={'python_package': ['neurongraph*.so']
+    package_data={'python_package': ['neurongraph*.so'],
                   'python_package.bin':['pyneuronviewer']},
     include_package_data=True,
     cmdclass={'build_ext': NoopBuildExt},
