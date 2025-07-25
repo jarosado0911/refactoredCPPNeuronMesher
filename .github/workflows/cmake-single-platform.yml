@@ -36,3 +36,12 @@ jobs:
     - name: Run tests
       working-directory: build
       run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
+
+    - name: Run bigtests
+      run: make doctest
+
+    - name: Install .so
+      run: make install
+
+    - name: Run PyTest
+      run: make testpy
