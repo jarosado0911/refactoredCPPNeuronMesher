@@ -1,4 +1,5 @@
 // draw utilities
+#include <array>
 #include "draw_utils.h"
 
 void drawSimpleSphere(const SWCNode& node, double size) {

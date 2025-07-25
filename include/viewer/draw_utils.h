@@ -1,5 +1,6 @@
 // draw utilities
 #pragma once
+#include <array>
 #include <GLFW/glfw3.h>
 #include <GL/glu.h>
 #include <vector>
