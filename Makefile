@@ -61,7 +61,7 @@ install:
 	cd $(CURDIR) && $(PYTHON) -m pip install -r requirements.txt
 
 testpy:
-	pytest -s --rich python_package/test/ -v
+	pytest --rich python_package/test/ -v -s
 
 # help and usage
 help:
