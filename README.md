@@ -1,4 +1,4 @@
-# refactoredCPPNeuronMesher
+# `C++` Neuron Geometry Analyzer and Mesh Generator
 
 <!-- ✅ CI & Quality -->
 [![Build](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/cmake-single-platform.yml)
