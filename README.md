@@ -1,12 +1,13 @@
 # `C++` Neuron Geometry Analyzer and Mesh Generator
 
 <!-- ✅ CI & Quality -->
-[![Build](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/cmake-single-platform.yml)
-[![Doctest](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml)
-[![Clang-Tidy](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/clang-tidy.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/clang-tidy.yml)
-[![Codacy](https://app.codacy.com/project/badge/Grade/72da00b5a0934821b462e2e0134d4c9b)](https://app.codacy.com)
-[![Alert Status](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
-
+[![🛠️ Build](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/cmake-single-platform.yml)
+[![🧪 Doctest](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml)
+[![🐍 PyTest](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/pytest.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/pytest.yml)
+[![🔍 Clang-Tidy](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/clang-tidy.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/clang-tidy.yml)
+[![☁️ SonarCloud Scan](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/sonarcloud.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/sonarcloud.yml)
+[![Codacy Grade](https://app.codacy.com/project/badge/Grade/72da00b5a0934821b462e2e0134d4c9b)](https://app.codacy.com/gh/jarosado0911/refactoredCPPNeuronMesher/dashboard?utm_source=github.com&utm_medium=referral&utm_content=jarosado0911/refactoredCPPNeuronMesher&utm_campaign=Badge_Grade)
+[![SonarCloud Alerts](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 <!-- 📊 Repository Stats -->
 ![Top Language](https://img.shields.io/github/languages/top/jarosado0911/refactoredCPPNeuronMesher)
 ![Languages](https://img.shields.io/github/languages/count/jarosado0911/refactoredCPPNeuronMesher)
@@ -14,11 +15,11 @@
 ![Contributors](https://img.shields.io/github/contributors/jarosado0911/refactoredCPPNeuronMesher)
 ![PRs](https://img.shields.io/github/issues-pr/jarosado0911/refactoredCPPNeuronMesher)
 ![Last Commit](https://img.shields.io/github/last-commit/jarosado0911/refactoredCPPNeuronMesher)
-
 <!-- 📦 GitHub Metadata -->
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Release](https://img.shields.io/github/v/release/jarosado0911/refactoredCPPNeuronMesher?include_prereleases) 
+![License: MIT](https://img.shields.io/github/license/jarosado0911/refactoredCPPNeuronMesher)
+![Release](https://img.shields.io/github/v/release/jarosado0911/refactoredCPPNeuronMesher?include_prereleases)
 ![Stars](https://img.shields.io/github/stars/jarosado0911/refactoredCPPNeuronMesher?style=social)
 ![Forks](https://img.shields.io/github/forks/jarosado0911/refactoredCPPNeuronMesher?style=social)
-
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher) [![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jarosado0911_refactoredCPPNeuronMesher)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
+<!-- 📡 Static Analysis Summary -->
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jarosado0911_refactoredCPPNeuronMesher)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
