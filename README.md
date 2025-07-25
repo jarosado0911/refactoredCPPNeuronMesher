@@ -17,6 +17,8 @@
 [![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jarosado0911_refactoredCPPNeuronMesher)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 <!-- GitHub -->
+![License](https://img.shields.io/github/license/jarosado0911/refactoredCPPNeuronMesher)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/jarosado0911/refactoredCPPNeuronMesher)
 ![GitHub stars](https://img.shields.io/github/stars/jarosado0911/refactoredCPPNeuronMesher?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/jarosado0911/refactoredCPPNeuronMesher?style=social)
 <br/>
