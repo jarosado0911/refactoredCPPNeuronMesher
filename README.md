@@ -5,6 +5,8 @@
 [![Language](https://img.shields.io/github/languages/top/jarosado0911/refactoredCPPNeuronMesher)](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
 ![Last Commit](https://img.shields.io/github/last-commit/jarosado0911/refactoredCPPNeuronMesher)
 ![Repo Size](https://img.shields.io/github/repo-size/jarosado0911/refactoredCPPNeuronMesher)
+![Languages Count](https://img.shields.io/github/languages/count/jarosado0911/refactoredCPPNeuronMesher)
+
 
 
 This project ...
