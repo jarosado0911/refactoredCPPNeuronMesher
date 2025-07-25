@@ -1,3 +1,4 @@
+#include <array>
 #include "neurongraph.h"
 #include <numeric>
 #include <tinyxml2.h>

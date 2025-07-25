@@ -1,3 +1,4 @@
+#include <unordered_map>
 #include "neurongraph.h"
 
 std::map<int, SWCNode> NeuronGraph::removeSomaSegment(const std::map<int, SWCNode>& inputNodes) const {
