@@ -48,6 +48,7 @@ Main features include:
 - [Build Instructions](#build-instructions)
 - [Using the Makefile](#using-the-makefile)
 - [Python Bindings and Notebook](#python-bindings-and-notebook)
+  - [The NeuronGraph Class](#the-neurongraph-class)
 - [Running the Tools](#running-the-tools)
 - [Neuron Viewer](#neuron-viewer)
 - [SWC File Format](#swc-file-format)
@@ -167,7 +168,11 @@ make help
 The Makefile is designed to streamline both C++ and Python development workflows in this repository.
 
 ---
+## The `NeuronGraph` Class
 
+The `NeuronGraph` class is the central data structure for representing, manipulating, and analyzing neuron morphologies within the toolkit. It models a neuron as a directed graph, where each node represents a structural element (such as a soma or neurite segment) and edges capture the connectivity between these elements. Internally, the class maintains a map of nodes (each keyed by a unique integer identifier and storing 3D position, radius, and type information) and a map of edges (where each node index maps to a list of its child node indices). The `NeuronGraph` class provides multiple constructors for initializing an empty graph, loading from SWC or UGX morphology files, or directly from a node set. Its extensive API supports reading and writing morphologies, topological sorting, soma detection and manipulation, preprocessing (such as cleaning or normalizing the graph), and various forms of mesh refinement and trunk extraction. Key methods include `readFromFile`, `writeToFile`, `getNodes`, `setNodes`, `preprocess`, `splitEdges`, and `getTrunks`, among others. The class is designed for both high-level batch processing and fine-grained interactive use, and is fully exposed to Python via pybind11 bindings, making it accessible in scripts, pipelines, or Jupyter notebooks. Typical use cases include loading neuron data, processing or refining its structure, analyzing branches and connectivity, and exporting results for visualization or simulation.
+
+---
 ## Python Bindings and Notebook
 
 This repository provides Python bindings for its core C++ neuron analysis and meshing functionality through a shared library called `neurongraph`. The bindings are implemented using `pybind11`, enabling Python code to directly access high-performance C++ routines for neuron graph construction, file I/O, and mesh operations. These bindings are ideal for users who want to leverage the speed of C++ but prefer the flexibility and interactive environment of Python.
