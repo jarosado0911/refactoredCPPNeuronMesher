@@ -1,5 +1,5 @@
 # `C++` Neuron Geometry Analyzer and Mesh Generator
-refactoredCPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
+CPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
 - GitHub Repository: [CPPNeuronMesher](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
 - GitHub Pages: [CPPNeuronMesher](https://jarosado0911.github.io/refactoredCPPNeuronMesher)
 
@@ -11,6 +11,7 @@ The CI & Quality badges show the current build status, test results, and automat
 [![🧪 Doctest](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml)
 [![Codacy Grade](https://app.codacy.com/project/badge/Grade/72da00b5a0934821b462e2e0134d4c9b)](https://app.codacy.com/gh/jarosado0911/refactoredCPPNeuronMesher/dashboard?utm_source=github.com&utm_medium=referral&utm_content=jarosado0911/refactoredCPPNeuronMesher&utm_campaign=Badge_Grade)
 [![SonarCloud Alerts](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher) 
+![Code Scanning - Action](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/codeql.yml/badge.svg)
 ### *️⃣ Detailed Quality
 The Detailed Quality badges provide in-depth information about the project’s software health, including reliability, security, vulnerabilities, bugs, and code smells, as assessed by SonarCloud. These metrics help developers and users identify potential risks and areas for improvement in the codebase.
 
@@ -44,7 +45,7 @@ The Static Analysis Summary badges indicate the results of automated code analys
 [![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jarosado0911_refactoredCPPNeuronMesher)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 ## Overview
 
-**refactoredCPPNeuronMesher** is a C++ toolkit for analyzing neuron geometries and generating computational meshes from neuron morphology data (primarily in the `.swc` format). The project provides both command-line tools for mesh operations, and a lightweight OpenGL-based 3D viewer for visualizing neuron structures.
+**CPPNeuronMesher** is a C++ toolkit for analyzing neuron geometries and generating computational meshes from neuron morphology data (primarily in the `.swc` format). The project provides both command-line tools for mesh operations, and a lightweight OpenGL-based 3D viewer for visualizing neuron structures.
 
 Main features include:
 - Parsing and analyzing neuron morphologies in `.swc` format.
