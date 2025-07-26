@@ -5,21 +5,21 @@
 [![🧪 Doctest](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml)
 [![Codacy Grade](https://app.codacy.com/project/badge/Grade/72da00b5a0934821b462e2e0134d4c9b)](https://app.codacy.com/gh/jarosado0911/refactoredCPPNeuronMesher/dashboard?utm_source=github.com&utm_medium=referral&utm_content=jarosado0911/refactoredCPPNeuronMesher&utm_campaign=Badge_Grade)
 [![SonarCloud Alerts](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher) 
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=bugs)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 ### Detailed Quality
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
-### 📊 Repository Stats
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=bugs)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
+### 📊 Repository Statistics
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 ![Top Language](https://img.shields.io/github/languages/top/jarosado0911/refactoredCPPNeuronMesher)
 ![Languages](https://img.shields.io/github/languages/count/jarosado0911/refactoredCPPNeuronMesher)
 ![Repo Size](https://img.shields.io/github/repo-size/jarosado0911/refactoredCPPNeuronMesher)
 ![Contributors](https://img.shields.io/github/contributors/jarosado0911/refactoredCPPNeuronMesher)
 ![PRs](https://img.shields.io/github/issues-pr/jarosado0911/refactoredCPPNeuronMesher)
 ![Last Commit](https://img.shields.io/github/last-commit/jarosado0911/refactoredCPPNeuronMesher)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 ### 📦 GitHub Metadata
 ![License: MIT](https://img.shields.io/github/license/jarosado0911/refactoredCPPNeuronMesher)
 ![Release](https://img.shields.io/github/v/release/jarosado0911/refactoredCPPNeuronMesher?include_prereleases)
@@ -28,7 +28,6 @@
 ### 📡 Static Analysis Summary
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jarosado0911_refactoredCPPNeuronMesher)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
-
 ## Overview
 
 **refactoredCPPNeuronMesher** is a C++ toolkit for analyzing neuron geometries and generating computational meshes from neuron morphology data (primarily in the `.swc` format). The project provides both command-line tools for mesh operations, and a lightweight OpenGL-based 3D viewer for visualizing neuron structures.
@@ -48,6 +47,8 @@ Main features include:
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Build Instructions](#build-instructions)
+- [Using the Makefile](#using-the-makefile)
+- [Python Bindings and Notebook](#python-bindings-and-notebook)
 - [Running the Tools](#running-the-tools)
 - [Neuron Viewer](#neuron-viewer)
 - [SWC File Format](#swc-file-format)
@@ -116,6 +117,63 @@ make -j$(nproc)
 cd scripts/app_neuronviewer
 g++ -O3 -std=c++17 -o swc_viewer swc_viewer.cpp -lGL -lGLU -lglfw
 ```
+
+---
+
+## Using the Makefile
+
+This repository includes a top-level Makefile that provides convenient shortcuts for building, testing, cleaning, and installing the project and its Python modules.
+
+### Common Targets
+
+- `make` or `make build`: Configure and build the project using CMake in the `./build/` directory. Binaries are placed in `./bin/`.
+- `make clean`: Remove the `build/` and `bin/` directories and all Python cache/egg-info files.
+- `make ctest`: Build the project and run CTest-based unit tests (legacy test system).
+- `make doctest`: Build (if necessary) and run all C++ doctests (recommended for full coverage).
+- `make all`: Run build, doctest, and then clean up intermediate files.
+- `make rebuild` or `make remake`: Clean everything, then build from scratch.
+- `make install`: Install required Python dependencies using `requirements.txt`.
+- `make installe`: Install the Python package in "editable" development mode.
+- `make testpy`: Run Python tests in `python_package/test/` with pytest.
+- `make help`: Display all available make targets with a short description.
+
+### Example Usage
+
+```bash
+# Build the project
+make
+
+# Run all C++ doctests
+make doctest
+
+# Clean the build and binary directories
+make clean
+
+# Install Python requirements
+make install
+
+# Install the Python package in editable mode (for development)
+make installe
+
+# Run Python tests
+make testpy
+```
+
+For advanced or troubleshooting usage, consult the help target:
+
+```bash
+make help
+```
+
+The Makefile is designed to streamline both C++ and Python development workflows in this repository.
+
+---
+
+## Python Bindings and Notebook
+
+This repository provides Python bindings for its core C++ neuron analysis and meshing functionality through a shared library called `neurongraph`. The bindings are implemented using `pybind11`, enabling Python code to directly access high-performance C++ routines for neuron graph construction, file I/O, and mesh operations. These bindings are ideal for users who want to leverage the speed of C++ but prefer the flexibility and interactive environment of Python.
+
+To illustrate the use of these bindings, a Jupyter notebook is provided: [Tutorial - NeuronGraph.ipynb](https://github.com/jarosado0911/refactoredCPPNeuronMesher/blob/main/python_package/notebooks/Tutorial%20-%20NeuronGraph.ipynb). This notebook demonstrates how to import and use the `neurongraph` module, including constructing neuron graphs, reading morphology files, and performing analyses in Python. The notebook also shows how to integrate with Python scientific libraries such as `numpy`, `trimesh`, and `pythreejs` for advanced analysis and interactive 3D visualization. By following the notebook, users can learn how to harness the full power of the C++ backend within their Python-based computational workflows.
 
 ---
 
