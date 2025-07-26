@@ -3,6 +3,8 @@ CPPNeuronMesher is a C++ project designed for the geometric analysis and mesh ge
 - GitHub Repository: [CPPNeuronMesher](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
 - GitHub Pages: [CPPNeuronMesher](https://jarosado0911.github.io/refactoredCPPNeuronMesher)
 
+<video width="320" height="180" autoplay loop muted playsinline controls> <source src="media/neuronviewer.mp4" type="video/mp4"> Your browser does not support the video tag. </video> <p><em>Demonstration of the neuron viewer in action.</em></p>
+
 The badges at the top of this README provide at-a-glance insights into the health, quality, and activity of the project. Build and test status badges (from GitHub Actions and Doctest) show whether the code compiles and passes its tests. Quality and analysis badges from Codacy and SonarCloud summarize code reliability, security, vulnerabilities, bugs, and code smells, while repository statistics badges reveal language usage, code volume, contributor activity, release status, and recent updates. Together, these metrics help users and contributors quickly assess the project's current state and ongoing maintenance.
 ### ✅ CI & Quality 
 The CI & Quality badges show the current build status, test results, and automated code quality checks, giving a quick snapshot of whether the project is compiling, passing its tests, and meeting quality standards.
