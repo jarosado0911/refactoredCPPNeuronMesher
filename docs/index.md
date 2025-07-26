@@ -18,6 +18,33 @@ Main features include:
 - Modular CMake build system with continuous integration and quality analysis.
 - Example scripts and utilities for advanced mesh and data manipulation.
 
+## Examples
+In this section we discuss the example scripts and show the `neuronviewer` application I designed for visualizing `.swc` and `.ugx` neuron geometry specifications.
+### NeuronViewer: A 3D Visualization Tool for Neuronal Morphology
+`neuronviewer` is a lightweight, OpenGL-powered interactive application designed for real-time visualization of neuron morphologies encoded in `.swc` and `.ugx` formats. Built with C++ and GLFW, it allows researchers to explore neuron structures through intuitive 3D navigation and rich rendering options.
+
+🧠 Core Features
+Real-time 3D rendering of .swc neuron files using OpenGL.
+- Interactive controls:
+- Rotate with mouse drag
+- Zoom with scroll wheel
+- Pan and explore 3D space
+- Multi-mode rendering with six distinct visual styles:
+- Edges only (uniform)
+- Nodes only (uniform or by radius)
+- Edges and nodes (with or without radius-based scaling)
+- Automatic lighting, bounding box, and color-coded nodes by SWC type.
+- Dynamic help window showing usage instructions and current file metadata.
+
+🎥 Demonstration
+<video width="640" height="360" autoplay loop muted playsinline controls> <source src="media/neuronviewer.mp4" type="video/mp4"> Your browser does not support the video tag. </video> <p><em>Demonstration of the neuron viewer in action.</em></p>
+🧰 Technical Highlights
+- Utilizes GLFW for window and input management.
+- Uses GLU to draw spheres and cylinders representing nodes and neurites.
+- Employs a modular rendering pipeline with lighting and material settings.
+- Efficient font rendering using stb_easy_font for overlay/help text.
+- Help window rendered via a second GLFW context (renderhelpwindow.cpp) with orthographic projection and line-by-line formatting.
+
 ## MetaData
 ### ✅ CI & Quality 
 The CI & Quality badges show the current build status, test results, and automated code quality checks, giving a quick snapshot of whether the project is compiling, passing its tests, and meeting quality standards.

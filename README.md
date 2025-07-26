@@ -232,7 +232,11 @@ A lightweight 3D OpenGL-based viewer to render `.swc` neuron morphology files wi
 ### Running the Viewer
 
 ```bash
-./swc_viewer path/to/neuron.swc
+./neuronviewer path/to/neuron.swc
+```
+or from the root directory of the project
+```bash
+./bin/neuronviewer path/to/neuron.swc
 ```
 
 #### Interactive Controls
