@@ -23,9 +23,9 @@ In this section we discuss the example scripts and show the `neuronviewer` appli
 ### NeuronViewer
 <video width="640" height="360" autoplay loop muted playsinline>
   <source src="media/neuronviewer.mp4" type="video/mp4">
-  Demonstration of the neuron viewer.
+  Your browser does not support the video tag.
 </video>
-
+<p><em>Demonstration of the neuron viewer.</em></p>
 
 ## MetaData
 ### ✅ CI & Quality 
