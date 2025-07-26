@@ -1,4 +1,7 @@
 # `C++` Neuron Geometry Analyzer and Mesh Generator
+refactoredCPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
+GitHub Repository: [https://github.com/jarosado0911/refactoredCPPNeuronMesher](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
+
 The badges at the top of this README provide at-a-glance insights into the health, quality, and activity of the project. Build and test status badges (from GitHub Actions and Doctest) show whether the code compiles and passes its tests. Quality and analysis badges from Codacy and SonarCloud summarize code reliability, security, vulnerabilities, bugs, and code smells, while repository statistics badges reveal language usage, code volume, contributor activity, release status, and recent updates. Together, these metrics help users and contributors quickly assess the project's current state and ongoing maintenance.
 ### ✅ CI & Quality 
 The CI & Quality badges show the current build status, test results, and automated code quality checks, giving a quick snapshot of whether the project is compiling, passing its tests, and meeting quality standards.
