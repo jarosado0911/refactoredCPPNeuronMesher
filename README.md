@@ -1,5 +1,5 @@
 # `C++` Neuron Geometry Analyzer and Mesh Generator
-refactoredCPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
+CPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
 - GitHub Repository: [CPPNeuronMesher](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
 - GitHub Pages: [CPPNeuronMesher](https://jarosado0911.github.io/refactoredCPPNeuronMesher)
 
@@ -45,7 +45,7 @@ The Static Analysis Summary badges indicate the results of automated code analys
 [![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jarosado0911_refactoredCPPNeuronMesher)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 ## Overview
 
-**refactoredCPPNeuronMesher** is a C++ toolkit for analyzing neuron geometries and generating computational meshes from neuron morphology data (primarily in the `.swc` format). The project provides both command-line tools for mesh operations, and a lightweight OpenGL-based 3D viewer for visualizing neuron structures.
+**CPPNeuronMesher** is a C++ toolkit for analyzing neuron geometries and generating computational meshes from neuron morphology data (primarily in the `.swc` format). The project provides both command-line tools for mesh operations, and a lightweight OpenGL-based 3D viewer for visualizing neuron structures.
 
 Main features include:
 - Parsing and analyzing neuron morphologies in `.swc` format.
