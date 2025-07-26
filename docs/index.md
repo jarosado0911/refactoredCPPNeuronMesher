@@ -1,4 +1,4 @@
-# refactoredCPPNeuronMesher
+# CPPNeuronMesher
 
 Welcome to the documentation and website for the refactoredCPPNeuronMesher project!
 
