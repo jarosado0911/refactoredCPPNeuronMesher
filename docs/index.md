@@ -18,6 +18,15 @@ Main features include:
 - Modular CMake build system with continuous integration and quality analysis.
 - Example scripts and utilities for advanced mesh and data manipulation.
 
+## Examples
+In this section we discuss the example scripts and show the `neuronviewer` application I designed for visualizing `.swc` and `.ugx` neuron geometry specifications.
+### NeuronViewer
+<video width="640" height="360" autoplay loop muted playsinline>
+  <source src="media/neuronviewer.mp4" type="video/mp4">
+  Demonstration of the neuron viewer.
+</video>
+
+
 ## MetaData
 ### ✅ CI & Quality 
 The CI & Quality badges show the current build status, test results, and automated code quality checks, giving a quick snapshot of whether the project is compiling, passing its tests, and meeting quality standards.
