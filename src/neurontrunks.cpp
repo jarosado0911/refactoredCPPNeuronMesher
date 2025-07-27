@@ -1,3 +1,28 @@
+/**
+ * @file neurontrunks.cpp
+ * @brief Implementation of neuron trunk processing and resampling functionality
+ * 
+ * This file contains the implementation of methods for processing neuron morphologies,
+ * with a focus on trunk extraction, resampling, and refinement. It provides functionality
+ * to break down complex neuron structures into simpler linear segments (trunks) and
+ * process them for various applications such as mesh generation and visualization.
+ *
+ * Key features include:
+ * - Trunk extraction from neuron morphologies
+ * - Linear and cubic spline resampling of trunks
+ * - Multi-level refinement of neuron structures
+ * - Topology-preserving transformations
+ *
+ * The code is part of the CPPNeuronMesher project and is designed to work with
+ * SWC (Standard Worm Connectome) format neuron representations.
+ *
+ * @author CPPNeuronMesher Team
+ * @date 2025-07-26
+ * @version 1.0
+ * @copyright MIT License
+ * @see https://github.com/yourusername/refactoredCPPNeuronMesher
+ */
+
 #include "neurongraph.h"
 
 /**
