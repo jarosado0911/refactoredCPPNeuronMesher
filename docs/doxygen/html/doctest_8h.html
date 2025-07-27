@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('doctest_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_91b078f1eb6e4b953f00b93ae608f5df.html">externals</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -179,6 +195,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html">doctest::detail::Result</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Expression__lhs.html">doctest::detail::Expression_lhs&lt; L &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1ExpressionDecomposer.html">doctest::detail::ExpressionDecomposer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a></td></tr>
@@ -186,6 +204,18 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1TestCase.html">doctest::detail::TestCase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator.html">doctest::detail::RelationalComparator&lt; int, L, R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_010_00_01L_00_01R_01_4.html">doctest::detail::RelationalComparator&lt; 0, L, R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_011_00_01L_00_01R_01_4.html">doctest::detail::RelationalComparator&lt; 1, L, R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_012_00_01L_00_01R_01_4.html">doctest::detail::RelationalComparator&lt; 2, L, R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_013_00_01L_00_01R_01_4.html">doctest::detail::RelationalComparator&lt; 3, L, R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_014_00_01L_00_01R_01_4.html">doctest::detail::RelationalComparator&lt; 4, L, R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_015_00_01L_00_01R_01_4.html">doctest::detail::RelationalComparator&lt; 5, L, R &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1ResultBuilder.html">doctest::detail::ResultBuilder</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,6 +229,24 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1detail_1_1ContextScope.html">doctest::detail::ContextScope&lt; L &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1MessageBuilder.html">doctest::detail::MessageBuilder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1test__suite.html">doctest::test_suite</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1description.html">doctest::description</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1skip.html">doctest::skip</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1no__breaks.html">doctest::no_breaks</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1no__output.html">doctest::no_output</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1timeout.html">doctest::timeout</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1may__fail.html">doctest::may_fail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1should__fail.html">doctest::should_fail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1expected__failures.html">doctest::expected_failures</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1Context.html">doctest::Context</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,15 +263,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedoctest"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html">doctest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedoctest_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html">doctest::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedoctest_1_1Color"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1Color.html">doctest::Color</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedoctest_1_1assertType"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1assertType.html">doctest::assertType</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedoctest_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html">doctest::detail</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedoctest_1_1detail_1_1types"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail_1_1types.html">doctest::detail::types</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -438,8 +486,8 @@ Macros</h2></td></tr>
 <tr class="separator:aa64ce392f41c8ba1d22cfb5b83847f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64f9649162581c1c24a78e65cf01492f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a64f9649162581c1c24a78e65cf01492f">DOCTEST_TEST_SUITE_BEGIN</a>(decorators)</td></tr>
 <tr class="separator:a64f9649162581c1c24a78e65cf01492f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ca1fc8ae12659768e3226db19a2c7ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a3ca1fc8ae12659768e3226db19a2c7ee">DOCTEST_TEST_SUITE_END</a></td></tr>
-<tr class="separator:a3ca1fc8ae12659768e3226db19a2c7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39047b0a7b7ceca753fa85e47b2e48e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#ab39047b0a7b7ceca753fa85e47b2e48e">DOCTEST_TEST_SUITE_END</a></td></tr>
+<tr class="separator:ab39047b0a7b7ceca753fa85e47b2e48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1462272403885d4f5749449535a7897e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a1462272403885d4f5749449535a7897e">DOCTEST_REGISTER_EXCEPTION_TRANSLATOR_IMPL</a>(translatorName,  signature)</td></tr>
 <tr class="separator:a1462272403885d4f5749449535a7897e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac61710def0b8698d89bce297532d0017"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#ac61710def0b8698d89bce297532d0017">DOCTEST_REGISTER_EXCEPTION_TRANSLATOR</a>(signature)</td></tr>
@@ -728,7 +776,7 @@ Macros</h2></td></tr>
 <tr class="separator:af640e6ea35d0c6511986d40ce36e2afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a771cd576e69a29d09b6695c9b8631b33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a771cd576e69a29d09b6695c9b8631b33">TEST_SUITE_BEGIN</a>(name)&#160;&#160;&#160;<a class="el" href="doctest_8h.html#a64f9649162581c1c24a78e65cf01492f">DOCTEST_TEST_SUITE_BEGIN</a>(name)</td></tr>
 <tr class="separator:a771cd576e69a29d09b6695c9b8631b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b41014a9f6a32210a8eecbe8fea3c76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a3b41014a9f6a32210a8eecbe8fea3c76">TEST_SUITE_END</a>&#160;&#160;&#160;<a class="el" href="doctest_8h.html#a3ca1fc8ae12659768e3226db19a2c7ee">DOCTEST_TEST_SUITE_END</a></td></tr>
+<tr class="memitem:a3b41014a9f6a32210a8eecbe8fea3c76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a3b41014a9f6a32210a8eecbe8fea3c76">TEST_SUITE_END</a>&#160;&#160;&#160;<a class="el" href="doctest_8h.html#ab39047b0a7b7ceca753fa85e47b2e48e">DOCTEST_TEST_SUITE_END</a></td></tr>
 <tr class="separator:a3b41014a9f6a32210a8eecbe8fea3c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f7616cc57079fbcd459e73d64ce52e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a4f7616cc57079fbcd459e73d64ce52e3">REGISTER_EXCEPTION_TRANSLATOR</a>(signature)&#160;&#160;&#160;<a class="el" href="doctest_8h.html#ac61710def0b8698d89bce297532d0017">DOCTEST_REGISTER_EXCEPTION_TRANSLATOR</a>(signature)</td></tr>
 <tr class="separator:a4f7616cc57079fbcd459e73d64ce52e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -969,6 +1017,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a296151d397b21a9ce755b0e6ed2d1f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae874422747acbc77c0d512f11800fdf9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#ae874422747acbc77c0d512f11800fdf9">doctest::detail::reporterCreatorFunc</a> = IReporter *(*)(const ContextOptions &amp;)</td></tr>
 <tr class="separator:ae874422747acbc77c0d512f11800fdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b64609ab3b7120bf7d2a09263c15be3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a6b64609ab3b7120bf7d2a09263c15be3">DOCTEST_ANON_FOR_SEMICOLON___LINE__</a> = int()</td></tr>
+<tr class="separator:a6b64609ab3b7120bf7d2a09263c15be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -1108,56 +1158,54 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5bada44bccc9e60dcd57ef2b75430546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#aaa68efffb0caa0ca168f1caecaba0f55">DOCTEST_SUPPRESS_COMMON_WARNINGS_PUSH</a> <a class="el" href="doctest_8h.html#a628491cf2971a026350d5401986bf6d3">DOCTEST_CLANG_SUPPRESS_WARNING_PUSH</a> <a class="el" href="doctest_8h.html#a8015d10af2883db80a955ce0d523886d">DOCTEST_GCC_SUPPRESS_WARNING_PUSH</a> <a class="el" href="doctest_8h.html#aec6d713a9dde361b8e68afe78c5bf3cf">DOCTEST_MSVC_SUPPRESS_WARNING_PUSH</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#a5bada44bccc9e60dcd57ef2b75430546">DOCTEST_MSVC_SUPPRESS_WARNING</a> (4623) namespace doctest</td></tr>
-<tr class="separator:a5bada44bccc9e60dcd57ef2b75430546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69bae4d605f9ca3b46f99b8464306bf9"><td class="memTemplParams" colspan="2">template&lt;class traits &gt; </td></tr>
 <tr class="memitem:a69bae4d605f9ca3b46f99b8464306bf9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classstd_1_1basic__ostream.html">basic_ostream</a>&lt; char, traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#a69bae4d605f9ca3b46f99b8464306bf9">std::operator&lt;&lt;</a> (<a class="el" href="classstd_1_1basic__ostream.html">basic_ostream</a>&lt; char, traits &gt; &amp;, const char *)</td></tr>
 <tr class="separator:a69bae4d605f9ca3b46f99b8464306bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e6e927e850a36fa569c08011fde2a49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a4e6e927e850a36fa569c08011fde2a49">doctest::operator+</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:a4e6e927e850a36fa569c08011fde2a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae332e5e775f83a532884303780f79f9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ae332e5e775f83a532884303780f79f9f">doctest::operator==</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:ae332e5e775f83a532884303780f79f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9a88e4c19857cd86a0f037d27bcad72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ab9a88e4c19857cd86a0f037d27bcad72">doctest::operator!=</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:ab9a88e4c19857cd86a0f037d27bcad72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa15b277b9a277793b7adf129e0128d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#afa15b277b9a277793b7adf129e0128d9">doctest::operator&lt;</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:afa15b277b9a277793b7adf129e0128d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acef5990b03a973c74ff2dd6cfc112913"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#acef5990b03a973c74ff2dd6cfc112913">doctest::operator&gt;</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:acef5990b03a973c74ff2dd6cfc112913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27c6c308e814ad9384499bafc03f9e39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a27c6c308e814ad9384499bafc03f9e39">doctest::operator&lt;=</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:a27c6c308e814ad9384499bafc03f9e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac32accb42e937cf870de2f6865ea236a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ac32accb42e937cf870de2f6865ea236a">doctest::operator&gt;=</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:ac32accb42e937cf870de2f6865ea236a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8d23a352e257456ffed49cb3ac11b4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#af8d23a352e257456ffed49cb3ac11b4e">doctest::toString</a> (const Contains &amp;in)</td></tr>
-<tr class="separator:af8d23a352e257456ffed49cb3ac11b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab014e201f8c86823a763beaf8da5dbf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ab014e201f8c86823a763beaf8da5dbf1">doctest::operator==</a> (const String &amp;lhs, const Contains &amp;rhs)</td></tr>
-<tr class="separator:ab014e201f8c86823a763beaf8da5dbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0607d91cd645129372a57329cdd0e4a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a0607d91cd645129372a57329cdd0e4a8">doctest::operator==</a> (const Contains &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:a0607d91cd645129372a57329cdd0e4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd38f81ff821b9296e768e834af13ae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#abd38f81ff821b9296e768e834af13ae0">doctest::operator!=</a> (const String &amp;lhs, const Contains &amp;rhs)</td></tr>
-<tr class="separator:abd38f81ff821b9296e768e834af13ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a820c5e748e427ef3f5ccf48da73abf5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a820c5e748e427ef3f5ccf48da73abf5c">doctest::operator!=</a> (const Contains &amp;lhs, const String &amp;rhs)</td></tr>
-<tr class="separator:a820c5e748e427ef3f5ccf48da73abf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a675253fc8ae3b6d67b40649f3ee7fccf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> <a class="el" href="namespacestd.html#a6d1736434ff6d516a3df38cbb7487ea5">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1Color.html#a675253fc8ae3b6d67b40649f3ee7fccf">doctest::Color::operator&lt;&lt;</a> (<a class="el" href="namespacestd.html#a6d1736434ff6d516a3df38cbb7487ea5">std::ostream</a> &amp;s, Color::Enum code)</td></tr>
-<tr class="separator:a675253fc8ae3b6d67b40649f3ee7fccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa51be8558a5ec9675a77d2ecbc08e663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#aa51be8558a5ec9675a77d2ecbc08e663">doctest::assertString</a> (assertType::Enum at)</td></tr>
-<tr class="separator:aa51be8558a5ec9675a77d2ecbc08e663"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d2d487c802fb0e66172a0ed2c9f76db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a9d2d487c802fb0e66172a0ed2c9f76db">doctest::failureString</a> (assertType::Enum at)</td></tr>
-<tr class="separator:a9d2d487c802fb0e66172a0ed2c9f76db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb4ee7dd3659dcc165944d73f6e29199"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#adb4ee7dd3659dcc165944d73f6e29199">doctest::skipPathFromFilename</a> (const char *file)</td></tr>
-<tr class="separator:adb4ee7dd3659dcc165944d73f6e29199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826506344e5292ae5f116ec696b5287b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a826506344e5292ae5f116ec696b5287b">doctest::operator+</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:a826506344e5292ae5f116ec696b5287b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7143d14de60632b916b4f64b70a80a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a8b7143d14de60632b916b4f64b70a80a">doctest::operator==</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:a8b7143d14de60632b916b4f64b70a80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7fc63c6dd217094f23abb39360c13a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#adf7fc63c6dd217094f23abb39360c13a">doctest::operator!=</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:adf7fc63c6dd217094f23abb39360c13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b991961770bb0a7eb605074d8435ee2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a1b991961770bb0a7eb605074d8435ee2">doctest::operator&lt;</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:a1b991961770bb0a7eb605074d8435ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb6c3e2693095fb8432db9f803c8083"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a1cb6c3e2693095fb8432db9f803c8083">doctest::operator&gt;</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:a1cb6c3e2693095fb8432db9f803c8083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede609a4c54099610c93449a325d0518"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#aede609a4c54099610c93449a325d0518">doctest::operator&lt;=</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:aede609a4c54099610c93449a325d0518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa7f3cf88f5351370810693c845c903c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#aaa7f3cf88f5351370810693c845c903c">doctest::operator&gt;=</a> (const String &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:aaa7f3cf88f5351370810693c845c903c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2170c65bd2640dbd52c13c514b3f88c7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a2170c65bd2640dbd52c13c514b3f88c7">doctest::toString</a> (const Contains &amp;in)</td></tr>
+<tr class="separator:a2170c65bd2640dbd52c13c514b3f88c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2428e47cd32faf9ec2ec7025118f283d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a2428e47cd32faf9ec2ec7025118f283d">doctest::operator==</a> (const String &amp;lhs, const Contains &amp;rhs)</td></tr>
+<tr class="separator:a2428e47cd32faf9ec2ec7025118f283d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411e2a01ee89e4d44488f32010af37f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a411e2a01ee89e4d44488f32010af37f6">doctest::operator==</a> (const Contains &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:a411e2a01ee89e4d44488f32010af37f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44b55e69faf021d284108ec4e101ee9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ab44b55e69faf021d284108ec4e101ee9">doctest::operator!=</a> (const String &amp;lhs, const Contains &amp;rhs)</td></tr>
+<tr class="separator:ab44b55e69faf021d284108ec4e101ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882464a0896c6c92e7879c01edcc6d1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a882464a0896c6c92e7879c01edcc6d1d">doctest::operator!=</a> (const Contains &amp;lhs, const String &amp;rhs)</td></tr>
+<tr class="separator:a882464a0896c6c92e7879c01edcc6d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab802700a3503c100ccb931a7e20a6b1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacestd.html#a6d1736434ff6d516a3df38cbb7487ea5">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1Color.html#ab802700a3503c100ccb931a7e20a6b1f">doctest::Color::operator&lt;&lt;</a> (<a class="el" href="namespacestd.html#a6d1736434ff6d516a3df38cbb7487ea5">std::ostream</a> &amp;s, Color::Enum code)</td></tr>
+<tr class="separator:ab802700a3503c100ccb931a7e20a6b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ebca39a78708034a32e8f88933ab1b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a25ebca39a78708034a32e8f88933ab1b">doctest::assertString</a> (assertType::Enum at)</td></tr>
+<tr class="separator:a25ebca39a78708034a32e8f88933ab1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1906b07ed338e0c38a6fc28ef64f8543"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a1906b07ed338e0c38a6fc28ef64f8543">doctest::failureString</a> (assertType::Enum at)</td></tr>
+<tr class="separator:a1906b07ed338e0c38a6fc28ef64f8543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd682777df5add1ec2d182ffdeb5a4b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a6cd682777df5add1ec2d182ffdeb5a4b">doctest::skipPathFromFilename</a> (const char *file)</td></tr>
+<tr class="separator:a6cd682777df5add1ec2d182ffdeb5a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab60ed87072d57dc65559089d26c98327"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab60ed87072d57dc65559089d26c98327"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#ab60ed87072d57dc65559089d26c98327">doctest::detail::declval</a> ()</td></tr>
 <tr class="separator:ab60ed87072d57dc65559089d26c98327"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9817985488551f16ddd7be48bda0e186"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a9817985488551f16ddd7be48bda0e186"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#aee641471649bcbf309630a54063b4e0d">DOCTEST_CONSTEXPR_FUNC</a> T &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a9817985488551f16ddd7be48bda0e186">doctest::detail::forward</a> (typename types::remove_reference&lt; T &gt;::type &amp;t) <a class="el" href="doctest_8h.html#a0a3c492342c533baad7b21af7903e6b4">DOCTEST_NOEXCEPT</a></td></tr>
-<tr class="separator:a9817985488551f16ddd7be48bda0e186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dc6fba20b3dbcaa5b9698e18e953129"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a5dc6fba20b3dbcaa5b9698e18e953129"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#aee641471649bcbf309630a54063b4e0d">DOCTEST_CONSTEXPR_FUNC</a> T &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a5dc6fba20b3dbcaa5b9698e18e953129">doctest::detail::forward</a> (typename types::remove_reference&lt; T &gt;::type &amp;&amp;t) <a class="el" href="doctest_8h.html#a0a3c492342c533baad7b21af7903e6b4">DOCTEST_NOEXCEPT</a></td></tr>
-<tr class="separator:a5dc6fba20b3dbcaa5b9698e18e953129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06d0e122cc3acfbadcfad03067c66854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> <a class="el" href="namespacestd.html#a6d1736434ff6d516a3df38cbb7487ea5">std::ostream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a06d0e122cc3acfbadcfad03067c66854">doctest::detail::tlssPush</a> ()</td></tr>
-<tr class="separator:a06d0e122cc3acfbadcfad03067c66854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8304147da6105e3359ba7ec124837669"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a8304147da6105e3359ba7ec124837669">doctest::detail::tlssPop</a> ()</td></tr>
-<tr class="separator:a8304147da6105e3359ba7ec124837669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d1cd90aa4961947b7d18dffcc8026f2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a4d1cd90aa4961947b7d18dffcc8026f2"><td class="memTemplItemLeft" align="right" valign="top">constexpr T &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a4d1cd90aa4961947b7d18dffcc8026f2">doctest::detail::forward</a> (typename types::remove_reference&lt; T &gt;::type &amp;t) noexcept</td></tr>
+<tr class="separator:a4d1cd90aa4961947b7d18dffcc8026f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0047334eb745e71d914d42beeada2a25"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a0047334eb745e71d914d42beeada2a25"><td class="memTemplItemLeft" align="right" valign="top">constexpr T &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a0047334eb745e71d914d42beeada2a25">doctest::detail::forward</a> (typename types::remove_reference&lt; T &gt;::type &amp;&amp;t) noexcept</td></tr>
+<tr class="separator:a0047334eb745e71d914d42beeada2a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55e9571f422d33882cc41ec5e1dc7c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacestd.html#a6d1736434ff6d516a3df38cbb7487ea5">std::ostream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#aa55e9571f422d33882cc41ec5e1dc7c6">doctest::detail::tlssPush</a> ()</td></tr>
+<tr class="separator:aa55e9571f422d33882cc41ec5e1dc7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0021fc6af32b7beb6836573d2d59782"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#af0021fc6af32b7beb6836573d2d59782">doctest::detail::tlssPop</a> ()</td></tr>
+<tr class="separator:af0021fc6af32b7beb6836573d2d59782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d66bdaf42017e18b4a08849c13a72bf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2d66bdaf42017e18b4a08849c13a72bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a2d66bdaf42017e18b4a08849c13a72bf">doctest::detail::filloss</a> (<a class="el" href="namespacestd.html#a6d1736434ff6d516a3df38cbb7487ea5">std::ostream</a> *stream, const T &amp;in)</td></tr>
 <tr class="separator:a2d66bdaf42017e18b4a08849c13a72bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1170,111 +1218,109 @@ Functions</h2></td></tr>
 <tr class="memitem:ad4b29418fb58bb6c7cfdbefe2d8f7714"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad4b29418fb58bb6c7cfdbefe2d8f7714"><td class="memTemplItemLeft" align="right" valign="top">String&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ad4b29418fb58bb6c7cfdbefe2d8f7714">doctest::toString</a> ()</td></tr>
 <tr class="separator:ad4b29418fb58bb6c7cfdbefe2d8f7714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a468ff6c2b0a692bcf88a7a97a5de0a53"><td class="memTemplParams" colspan="2">template&lt;typename T , typename detail::types::enable_if&lt;!detail::should_stringify_as_underlying_type&lt; T &gt;::value, bool &gt;::type  = true&gt; </td></tr>
-<tr class="memitem:a468ff6c2b0a692bcf88a7a97a5de0a53"><td class="memTemplItemLeft" align="right" valign="top">String&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a468ff6c2b0a692bcf88a7a97a5de0a53">doctest::toString</a> (const <a class="el" href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a>(T) value)</td></tr>
-<tr class="separator:a468ff6c2b0a692bcf88a7a97a5de0a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab501200c3c97a66dd592acafcc6f1a95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ab501200c3c97a66dd592acafcc6f1a95">doctest::toString</a> (String in)</td></tr>
-<tr class="separator:ab501200c3c97a66dd592acafcc6f1a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bb27d33f7b25b3ff5fc6872f47f329b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a6bb27d33f7b25b3ff5fc6872f47f329b">doctest::toString</a> (<a class="el" href="namespacestd.html#a434932eec359f259df5e75c242397884">std::nullptr_t</a>)</td></tr>
-<tr class="separator:a6bb27d33f7b25b3ff5fc6872f47f329b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70fd23e88074d38b9d61476005305df5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a70fd23e88074d38b9d61476005305df5">doctest::toString</a> (bool in)</td></tr>
-<tr class="separator:a70fd23e88074d38b9d61476005305df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68660ce630bd88a551ab3108709e6592"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a68660ce630bd88a551ab3108709e6592">doctest::toString</a> (float in)</td></tr>
-<tr class="separator:a68660ce630bd88a551ab3108709e6592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43b51978c9505f682cbff9462a02f8af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a43b51978c9505f682cbff9462a02f8af">doctest::toString</a> (double in)</td></tr>
-<tr class="separator:a43b51978c9505f682cbff9462a02f8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4e12dd9865bb31f417f9df0c41813cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ae4e12dd9865bb31f417f9df0c41813cf">doctest::toString</a> (double long in)</td></tr>
-<tr class="separator:ae4e12dd9865bb31f417f9df0c41813cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af106dff2a0c068d301349b754c466378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#af106dff2a0c068d301349b754c466378">doctest::toString</a> (char in)</td></tr>
-<tr class="separator:af106dff2a0c068d301349b754c466378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f910fdc13d84a538090b959a97a6fa5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a1f910fdc13d84a538090b959a97a6fa5">doctest::toString</a> (char signed in)</td></tr>
-<tr class="separator:a1f910fdc13d84a538090b959a97a6fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2c3e60e3ee32da5d8fc4f778b7a225a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ae2c3e60e3ee32da5d8fc4f778b7a225a">doctest::toString</a> (char unsigned in)</td></tr>
-<tr class="separator:ae2c3e60e3ee32da5d8fc4f778b7a225a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03688f50a1c6c85c68d24d1280f66626"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a03688f50a1c6c85c68d24d1280f66626">doctest::toString</a> (short in)</td></tr>
-<tr class="separator:a03688f50a1c6c85c68d24d1280f66626"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a952f661f63e4c76d8025da928632e98c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a952f661f63e4c76d8025da928632e98c">doctest::toString</a> (short unsigned in)</td></tr>
-<tr class="separator:a952f661f63e4c76d8025da928632e98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd1337b597e5968eb9be5b585a16ea8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#abd1337b597e5968eb9be5b585a16ea8f">doctest::toString</a> (signed in)</td></tr>
-<tr class="separator:abd1337b597e5968eb9be5b585a16ea8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2e7368b576fc0ca420b92c0042498e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ad2e7368b576fc0ca420b92c0042498e8">doctest::toString</a> (unsigned in)</td></tr>
-<tr class="separator:ad2e7368b576fc0ca420b92c0042498e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a042e53409374cba1ba423c57d3a58a6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a042e53409374cba1ba423c57d3a58a6f">doctest::toString</a> (long in)</td></tr>
-<tr class="separator:a042e53409374cba1ba423c57d3a58a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ebcd3a7a6807c5bd2b960736851225c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a6ebcd3a7a6807c5bd2b960736851225c">doctest::toString</a> (long unsigned in)</td></tr>
-<tr class="separator:a6ebcd3a7a6807c5bd2b960736851225c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a5486a03f9ff2a7c311df0dc6c1b149"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a0a5486a03f9ff2a7c311df0dc6c1b149">doctest::toString</a> (long long in)</td></tr>
-<tr class="separator:a0a5486a03f9ff2a7c311df0dc6c1b149"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13e028fb8470e4f87fe8e41f5300364e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a13e028fb8470e4f87fe8e41f5300364e">doctest::toString</a> (long long unsigned in)</td></tr>
-<tr class="separator:a13e028fb8470e4f87fe8e41f5300364e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63aa06a8555c5aa34a7a6e76e87a3bca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a63aa06a8555c5aa34a7a6e76e87a3bca">doctest::toString</a> (const Approx &amp;in)</td></tr>
-<tr class="separator:a63aa06a8555c5aa34a7a6e76e87a3bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ff2f40fd17351e182820848e27e6c79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> const ContextOptions *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a1ff2f40fd17351e182820848e27e6c79">doctest::getContextOptions</a> ()</td></tr>
-<tr class="separator:a1ff2f40fd17351e182820848e27e6c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542bab2e5cb29a07cf5939362d2e6bdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a542bab2e5cb29a07cf5939362d2e6bdc">doctest::toString</a> (IsNaN&lt; float &gt; in)</td></tr>
-<tr class="separator:a542bab2e5cb29a07cf5939362d2e6bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e0bd449e6b10c53aab4af2957a1f45f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a5e0bd449e6b10c53aab4af2957a1f45f">doctest::toString</a> (IsNaN&lt; double &gt; in)</td></tr>
-<tr class="separator:a5e0bd449e6b10c53aab4af2957a1f45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa7161751ef3e45340183ada2b8b11bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#afa7161751ef3e45340183ada2b8b11bc">doctest::toString</a> (IsNaN&lt; double long &gt; in)</td></tr>
-<tr class="separator:afa7161751ef3e45340183ada2b8b11bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acec9ff072dd86af95225a8beb9c57298"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#acec9ff072dd86af95225a8beb9c57298">doctest::detail::checkIfShouldThrow</a> (assertType::Enum at)</td></tr>
-<tr class="separator:acec9ff072dd86af95225a8beb9c57298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60ffd50b9ee7adfcafc078f333aac8b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a60ffd50b9ee7adfcafc078f333aac8b6">doctest::detail::throwException</a> ()</td></tr>
-<tr class="separator:a60ffd50b9ee7adfcafc078f333aac8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6879a79aea397a22e296e4afd0a90e3b"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
-<tr class="memitem:a6879a79aea397a22e296e4afd0a90e3b"><td class="memTemplItemLeft" align="right" valign="top">String&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a6879a79aea397a22e296e4afd0a90e3b">doctest::detail::stringifyBinaryExpr</a> (const <a class="el" href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a>(L) lhs, const char *op, const <a class="el" href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a>(R) rhs)</td></tr>
-<tr class="separator:a6879a79aea397a22e296e4afd0a90e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b966d87ac1e25498fae773355c43d90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a628491cf2971a026350d5401986bf6d3">DOCTEST_CLANG_SUPPRESS_WARNING_PUSH</a> <a class="el" href="doctest_8h.html#a8015d10af2883db80a955ce0d523886d">DOCTEST_GCC_SUPPRESS_WARNING_PUSH</a> <a class="el" href="doctest_8h.html#aec6d713a9dde361b8e68afe78c5bf3cf">DOCTEST_MSVC_SUPPRESS_WARNING_PUSH</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a3b966d87ac1e25498fae773355c43d90">doctest::detail::DOCTEST_MSVC_SUPPRESS_WARNING</a> (4388) DOCTEST_MSVC_SUPPRESS_WARNING(4389) DOCTEST_MSVC_SUPPRESS_WARNING(4018) template&lt; typename L &gt; struct Expression_lhs</td></tr>
-<tr class="separator:a3b966d87ac1e25498fae773355c43d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00f99edefb8490a8e2602d58c96431f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a00f99edefb8490a8e2602d58c96431f4">doctest::detail::regTest</a> (const TestCase &amp;tc)</td></tr>
-<tr class="separator:a00f99edefb8490a8e2602d58c96431f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae79cb8df06d35468dd0ba9f04c85802c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#ae79cb8df06d35468dd0ba9f04c85802c">doctest::detail::setTestSuite</a> (const TestSuite &amp;ts)</td></tr>
-<tr class="separator:ae79cb8df06d35468dd0ba9f04c85802c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a013828c4e677241cc26aeea33f762710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a013828c4e677241cc26aeea33f762710">doctest::detail::isDebuggerActive</a> ()</td></tr>
-<tr class="separator:a013828c4e677241cc26aeea33f762710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a674d22e1be9cb421e8606fdeeae02267"><td class="memTemplParams" colspan="2">template&lt;typename T , typename detail::types::enable_if&lt;!detail::should_stringify_as_underlying_type&lt; T &gt;::value, bool &gt;::type  = true&gt; </td></tr>
+<tr class="memitem:a674d22e1be9cb421e8606fdeeae02267"><td class="memTemplItemLeft" align="right" valign="top">String&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a674d22e1be9cb421e8606fdeeae02267">doctest::toString</a> (const T &amp;value)</td></tr>
+<tr class="separator:a674d22e1be9cb421e8606fdeeae02267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0d71e009a2a842e5df9cb405e0b256"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a6b0d71e009a2a842e5df9cb405e0b256">doctest::toString</a> (String in)</td></tr>
+<tr class="separator:a6b0d71e009a2a842e5df9cb405e0b256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5946411fca13a147c7749e60dc3474"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#aee5946411fca13a147c7749e60dc3474">doctest::toString</a> (<a class="el" href="namespacestd.html#a434932eec359f259df5e75c242397884">std::nullptr_t</a>)</td></tr>
+<tr class="separator:aee5946411fca13a147c7749e60dc3474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b87106e4a923ffb96c5ea797e5ac46"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ae0b87106e4a923ffb96c5ea797e5ac46">doctest::toString</a> (bool in)</td></tr>
+<tr class="separator:ae0b87106e4a923ffb96c5ea797e5ac46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd3c931a91074a37ad8e59fa583e9365"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#afd3c931a91074a37ad8e59fa583e9365">doctest::toString</a> (float in)</td></tr>
+<tr class="separator:afd3c931a91074a37ad8e59fa583e9365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae35434acc90085a899a841623714581d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ae35434acc90085a899a841623714581d">doctest::toString</a> (double in)</td></tr>
+<tr class="separator:ae35434acc90085a899a841623714581d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9e7209d004803d1c8a903c33aab6e3"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#acd9e7209d004803d1c8a903c33aab6e3">doctest::toString</a> (double long in)</td></tr>
+<tr class="separator:acd9e7209d004803d1c8a903c33aab6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32cf2d33acc9bda896b317c42866388f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a32cf2d33acc9bda896b317c42866388f">doctest::toString</a> (char in)</td></tr>
+<tr class="separator:a32cf2d33acc9bda896b317c42866388f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2f9b0ab7bae5812b27437a4b2689e7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a6d2f9b0ab7bae5812b27437a4b2689e7">doctest::toString</a> (char signed in)</td></tr>
+<tr class="separator:a6d2f9b0ab7bae5812b27437a4b2689e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0105a08a8d3678a9640c68aee2a6f0"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a9a0105a08a8d3678a9640c68aee2a6f0">doctest::toString</a> (char unsigned in)</td></tr>
+<tr class="separator:a9a0105a08a8d3678a9640c68aee2a6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37519c3e52d190b281570326543c373e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a37519c3e52d190b281570326543c373e">doctest::toString</a> (short in)</td></tr>
+<tr class="separator:a37519c3e52d190b281570326543c373e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad1ce3cc33d628d26508913fd68e17a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a7ad1ce3cc33d628d26508913fd68e17a">doctest::toString</a> (short unsigned in)</td></tr>
+<tr class="separator:a7ad1ce3cc33d628d26508913fd68e17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d0afe01ceebca2f39aac5e319068b1"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ae5d0afe01ceebca2f39aac5e319068b1">doctest::toString</a> (signed in)</td></tr>
+<tr class="separator:ae5d0afe01ceebca2f39aac5e319068b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba0a3d1dae35de00cb1bebe948387cf"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#aaba0a3d1dae35de00cb1bebe948387cf">doctest::toString</a> (unsigned in)</td></tr>
+<tr class="separator:aaba0a3d1dae35de00cb1bebe948387cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827d4f9834a10b704d325935af874a2a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a827d4f9834a10b704d325935af874a2a">doctest::toString</a> (long in)</td></tr>
+<tr class="separator:a827d4f9834a10b704d325935af874a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115bf05627998cb143f2d93b34183c60"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a115bf05627998cb143f2d93b34183c60">doctest::toString</a> (long unsigned in)</td></tr>
+<tr class="separator:a115bf05627998cb143f2d93b34183c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abacf65d62cd4f392ef3dc188532e3934"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#abacf65d62cd4f392ef3dc188532e3934">doctest::toString</a> (long long in)</td></tr>
+<tr class="separator:abacf65d62cd4f392ef3dc188532e3934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106d94d49f86cfba9dd36dfb04cd25b8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a106d94d49f86cfba9dd36dfb04cd25b8">doctest::toString</a> (long long unsigned in)</td></tr>
+<tr class="separator:a106d94d49f86cfba9dd36dfb04cd25b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705eed6f772492b6fdfc616510ed6fcd"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a705eed6f772492b6fdfc616510ed6fcd">doctest::toString</a> (const Approx &amp;in)</td></tr>
+<tr class="separator:a705eed6f772492b6fdfc616510ed6fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27afbd1ff6e5c2b18c53bbd27196a73"><td class="memItemLeft" align="right" valign="top">const ContextOptions *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ab27afbd1ff6e5c2b18c53bbd27196a73">doctest::getContextOptions</a> ()</td></tr>
+<tr class="separator:ab27afbd1ff6e5c2b18c53bbd27196a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefcb2909c3df04527feafe52fc1bbe41"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#aefcb2909c3df04527feafe52fc1bbe41">doctest::toString</a> (IsNaN&lt; float &gt; in)</td></tr>
+<tr class="separator:aefcb2909c3df04527feafe52fc1bbe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c6555be4cfd4b3562a25b20bfd309e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ab4c6555be4cfd4b3562a25b20bfd309e">doctest::toString</a> (IsNaN&lt; double &gt; in)</td></tr>
+<tr class="separator:ab4c6555be4cfd4b3562a25b20bfd309e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34e1365e28174803c5541060394b7591"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a34e1365e28174803c5541060394b7591">doctest::toString</a> (IsNaN&lt; double long &gt; in)</td></tr>
+<tr class="separator:a34e1365e28174803c5541060394b7591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37fb12184f6bac0e07ab434b4f264d08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a37fb12184f6bac0e07ab434b4f264d08">doctest::detail::checkIfShouldThrow</a> (assertType::Enum at)</td></tr>
+<tr class="separator:a37fb12184f6bac0e07ab434b4f264d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d793dbfd1e2f86a3d9f5c6666d2c10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a52d793dbfd1e2f86a3d9f5c6666d2c10">doctest::detail::throwException</a> ()</td></tr>
+<tr class="separator:a52d793dbfd1e2f86a3d9f5c6666d2c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f20c21e775d7ca55e5205072e15c32c"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
+<tr class="memitem:a8f20c21e775d7ca55e5205072e15c32c"><td class="memTemplItemLeft" align="right" valign="top">String&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a8f20c21e775d7ca55e5205072e15c32c">doctest::detail::stringifyBinaryExpr</a> (const L &amp;lhs, const char *op, const R &amp;rhs)</td></tr>
+<tr class="separator:a8f20c21e775d7ca55e5205072e15c32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee21f6a8fdddb74655d67e5a4cc0946"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
+<tr class="memitem:afee21f6a8fdddb74655d67e5a4cc0946"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#afee21f6a8fdddb74655d67e5a4cc0946">doctest::detail::eq</a> (const L &amp;lhs, const R &amp;rhs)</td></tr>
+<tr class="separator:afee21f6a8fdddb74655d67e5a4cc0946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab404413c3c1aa9daf2dd366332591069"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
+<tr class="memitem:ab404413c3c1aa9daf2dd366332591069"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#ab404413c3c1aa9daf2dd366332591069">doctest::detail::ne</a> (const L &amp;lhs, const R &amp;rhs)</td></tr>
+<tr class="separator:ab404413c3c1aa9daf2dd366332591069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b69ac9f24851ab4173775b050fcb247"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
+<tr class="memitem:a7b69ac9f24851ab4173775b050fcb247"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a7b69ac9f24851ab4173775b050fcb247">doctest::detail::lt</a> (const L &amp;lhs, const R &amp;rhs)</td></tr>
+<tr class="separator:a7b69ac9f24851ab4173775b050fcb247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6a44bcefeb1c334ba762da38ae5350"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
+<tr class="memitem:a5f6a44bcefeb1c334ba762da38ae5350"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a5f6a44bcefeb1c334ba762da38ae5350">doctest::detail::gt</a> (const L &amp;lhs, const R &amp;rhs)</td></tr>
+<tr class="separator:a5f6a44bcefeb1c334ba762da38ae5350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f156a188f366f3bf1b716bd1b1f44e"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
+<tr class="memitem:aa6f156a188f366f3bf1b716bd1b1f44e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#aa6f156a188f366f3bf1b716bd1b1f44e">doctest::detail::le</a> (const L &amp;lhs, const R &amp;rhs)</td></tr>
+<tr class="separator:aa6f156a188f366f3bf1b716bd1b1f44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71e8d309e6c0a2ed5b4b00ba29bde07"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
+<tr class="memitem:ad71e8d309e6c0a2ed5b4b00ba29bde07"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#ad71e8d309e6c0a2ed5b4b00ba29bde07">doctest::detail::ge</a> (const L &amp;lhs, const R &amp;rhs)</td></tr>
+<tr class="separator:ad71e8d309e6c0a2ed5b4b00ba29bde07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848a393508240d3ab4680a88e2622cbe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a848a393508240d3ab4680a88e2622cbe">doctest::detail::regTest</a> (const TestCase &amp;tc)</td></tr>
+<tr class="separator:a848a393508240d3ab4680a88e2622cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e7d7a3a29691b5a4b7ce4192463649"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a43e7d7a3a29691b5a4b7ce4192463649">doctest::detail::setTestSuite</a> (const TestSuite &amp;ts)</td></tr>
+<tr class="separator:a43e7d7a3a29691b5a4b7ce4192463649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6c91abdca286b09b41f77ab3b67cad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#abb6c91abdca286b09b41f77ab3b67cad">doctest::detail::isDebuggerActive</a> ()</td></tr>
+<tr class="separator:abb6c91abdca286b09b41f77ab3b67cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad401b097a9af4df1d4a9d0911957c0f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aad401b097a9af4df1d4a9d0911957c0f"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#aad401b097a9af4df1d4a9d0911957c0f">doctest::detail::instantiationHelper</a> (const T &amp;)</td></tr>
 <tr class="separator:aad401b097a9af4df1d4a9d0911957c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ff832be68bf666d856aefd539e1ce81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a0ff832be68bf666d856aefd539e1ce81">doctest::detail::failed_out_of_a_testing_context</a> (const AssertData &amp;ad)</td></tr>
-<tr class="separator:a0ff832be68bf666d856aefd539e1ce81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a562fae1586f144b6aa1506bb6f07bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a2a562fae1586f144b6aa1506bb6f07bd">doctest::detail::decomp_assert</a> (assertType::Enum at, const char *file, int line, const char *expr, const Result &amp;result)</td></tr>
-<tr class="separator:a2a562fae1586f144b6aa1506bb6f07bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e295c708d2de0e47ac89c1632211159"><td class="memTemplParams" colspan="2">template&lt;int comparison, typename L , typename R &gt; </td></tr>
-<tr class="memitem:a1e295c708d2de0e47ac89c1632211159"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a47e9d3609dfcc90b9a630ff33b9524d6">DOCTEST_NOINLINE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a1e295c708d2de0e47ac89c1632211159">doctest::detail::binary_assert</a> (assertType::Enum at, const char *file, int line, const char *expr, const <a class="el" href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a>(L) lhs, const <a class="el" href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a>(R) rhs)</td></tr>
-<tr class="separator:a1e295c708d2de0e47ac89c1632211159"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ffd8b760c2a9b355a1df02470fe2281"><td class="memTemplParams" colspan="2">template&lt;typename L &gt; </td></tr>
-<tr class="memitem:a0ffd8b760c2a9b355a1df02470fe2281"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a47e9d3609dfcc90b9a630ff33b9524d6">DOCTEST_NOINLINE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a0ffd8b760c2a9b355a1df02470fe2281">doctest::detail::unary_assert</a> (assertType::Enum at, const char *file, int line, const char *expr, const <a class="el" href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a>(L) val)</td></tr>
-<tr class="separator:a0ffd8b760c2a9b355a1df02470fe2281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3887426da16e0d12e6f0e270a767a6a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a3887426da16e0d12e6f0e270a767a6a5">doctest::detail::registerExceptionTranslatorImpl</a> (const IExceptionTranslator *et)</td></tr>
-<tr class="separator:a3887426da16e0d12e6f0e270a767a6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca81477c7facf2aeccd6b22dd34740e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a6ca81477c7facf2aeccd6b22dd34740e">doctest::detail::failed_out_of_a_testing_context</a> (const AssertData &amp;ad)</td></tr>
+<tr class="separator:a6ca81477c7facf2aeccd6b22dd34740e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7ee45e2dceca4a4d8339d2912780a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#acb7ee45e2dceca4a4d8339d2912780a0">doctest::detail::decomp_assert</a> (assertType::Enum at, const char *file, int line, const char *expr, const Result &amp;result)</td></tr>
+<tr class="separator:acb7ee45e2dceca4a4d8339d2912780a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc25d8dfa5fd419e5a9c1ab2906951c8"><td class="memTemplParams" colspan="2">template&lt;int comparison, typename L , typename R &gt; </td></tr>
+<tr class="memitem:abc25d8dfa5fd419e5a9c1ab2906951c8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#abc25d8dfa5fd419e5a9c1ab2906951c8">doctest::detail::__attribute__</a> ((noinline)) bool binary_assert(assertType</td></tr>
+<tr class="separator:abc25d8dfa5fd419e5a9c1ab2906951c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae116973e7f049d12fed0434f05301da4"><td class="memTemplParams" colspan="2">template&lt;typename L &gt; </td></tr>
+<tr class="memitem:ae116973e7f049d12fed0434f05301da4"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#ae116973e7f049d12fed0434f05301da4">doctest::detail::__attribute__</a> ((noinline)) bool unary_assert(assertType</td></tr>
+<tr class="separator:ae116973e7f049d12fed0434f05301da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a27eeafc609b54c8a34a63d9ad350b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a7a27eeafc609b54c8a34a63d9ad350b7">doctest::detail::registerExceptionTranslatorImpl</a> (const IExceptionTranslator *et)</td></tr>
+<tr class="separator:a7a27eeafc609b54c8a34a63d9ad350b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a193493f40330f096b9e1b78557a832a3"><td class="memTemplParams" colspan="2">template&lt;typename L &gt; </td></tr>
 <tr class="memitem:a193493f40330f096b9e1b78557a832a3"><td class="memTemplItemLeft" align="right" valign="top">ContextScope&lt; L &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a193493f40330f096b9e1b78557a832a3">doctest::detail::MakeContextScope</a> (const L &amp;lambda)</td></tr>
 <tr class="separator:a193493f40330f096b9e1b78557a832a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a104a0e533475e45acbddd9266c4d687e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a104a0e533475e45acbddd9266c4d687e">doctest::DOCTEST_DEFINE_DECORATOR</a> (test_suite, const char *, &quot;&quot;)</td></tr>
-<tr class="separator:a104a0e533475e45acbddd9266c4d687e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07f4a26e2b7cce41abb7d71124951792"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a07f4a26e2b7cce41abb7d71124951792">doctest::DOCTEST_DEFINE_DECORATOR</a> (description, const char *, &quot;&quot;)</td></tr>
-<tr class="separator:a07f4a26e2b7cce41abb7d71124951792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ce903d8e37a8fdc185f6e8c73f9b1dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a0ce903d8e37a8fdc185f6e8c73f9b1dd">doctest::DOCTEST_DEFINE_DECORATOR</a> (skip, bool, true)</td></tr>
-<tr class="separator:a0ce903d8e37a8fdc185f6e8c73f9b1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a676e4a5ac5927180d445cf8d15d5e723"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a676e4a5ac5927180d445cf8d15d5e723">doctest::DOCTEST_DEFINE_DECORATOR</a> (no_breaks, bool, true)</td></tr>
-<tr class="separator:a676e4a5ac5927180d445cf8d15d5e723"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa95f6124caa21081e93dc81eee67d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#affa95f6124caa21081e93dc81eee67d6">doctest::DOCTEST_DEFINE_DECORATOR</a> (no_output, bool, true)</td></tr>
-<tr class="separator:affa95f6124caa21081e93dc81eee67d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09d01a6e97677b7bb508bf925e421963"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a09d01a6e97677b7bb508bf925e421963">doctest::DOCTEST_DEFINE_DECORATOR</a> (timeout, double, 0)</td></tr>
-<tr class="separator:a09d01a6e97677b7bb508bf925e421963"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44ea7d81a1561f2222b8ffa69eecc599"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a44ea7d81a1561f2222b8ffa69eecc599">doctest::DOCTEST_DEFINE_DECORATOR</a> (may_fail, bool, true)</td></tr>
-<tr class="separator:a44ea7d81a1561f2222b8ffa69eecc599"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da07f59e77fcb14943788b2c85e2355"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a0da07f59e77fcb14943788b2c85e2355">doctest::DOCTEST_DEFINE_DECORATOR</a> (should_fail, bool, true)</td></tr>
-<tr class="separator:a0da07f59e77fcb14943788b2c85e2355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1678966da9d93629130f083220403da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ab1678966da9d93629130f083220403da">doctest::DOCTEST_DEFINE_DECORATOR</a> (expected_failures, int, 0)</td></tr>
-<tr class="separator:ab1678966da9d93629130f083220403da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e23e6bb4c6982688652060dbe41385d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8e23e6bb4c6982688652060dbe41385d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a8e23e6bb4c6982688652060dbe41385d">doctest::registerExceptionTranslator</a> (String(*translateFunction)(T))</td></tr>
 <tr class="separator:a8e23e6bb4c6982688652060dbe41385d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a236c82d51cd3622d14b00aa145df94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> <a class="el" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest__detail__test__suite__ns.html#a3a236c82d51cd3622d14b00aa145df94">doctest_detail_test_suite_ns::getCurrentTestSuite</a> ()</td></tr>
-<tr class="separator:a3a236c82d51cd3622d14b00aa145df94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a828e011bb6028ab94eb14a3c7d8bd2c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a828e011bb6028ab94eb14a3c7d8bd2c4">doctest::detail::registerReporterImpl</a> (const char *name, int prio, reporterCreatorFunc c, bool isReporter)</td></tr>
-<tr class="separator:a828e011bb6028ab94eb14a3c7d8bd2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c74e31a17fa9d6e424d9093549fb38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest__detail__test__suite__ns.html#a57c74e31a17fa9d6e424d9093549fb38">doctest_detail_test_suite_ns::getCurrentTestSuite</a> ()</td></tr>
+<tr class="separator:a57c74e31a17fa9d6e424d9093549fb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36945fae4bbeabe5598670ece216c23c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a36945fae4bbeabe5598670ece216c23c">doctest::detail::registerReporterImpl</a> (const char *name, int prio, reporterCreatorFunc c, bool isReporter)</td></tr>
+<tr class="separator:a36945fae4bbeabe5598670ece216c23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a575cd92f018bfe3c702432a2144ebaca"><td class="memTemplParams" colspan="2">template&lt;typename Reporter &gt; </td></tr>
 <tr class="memitem:a575cd92f018bfe3c702432a2144ebaca"><td class="memTemplItemLeft" align="right" valign="top">IReporter *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a575cd92f018bfe3c702432a2144ebaca">doctest::detail::reporterCreator</a> (const ContextOptions &amp;o)</td></tr>
 <tr class="separator:a575cd92f018bfe3c702432a2144ebaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1288,16 +1334,8 @@ Variables</h2></td></tr>
 <tr class="separator:a434932eec359f259df5e75c242397884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc27271d5708e23ddd424987ab96c71b"><td class="memItemLeft" align="right" valign="top">decltype(sizeof(void *)) typede&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#adc27271d5708e23ddd424987ab96c71b">std::size_t</a> )</td></tr>
 <tr class="separator:adc27271d5708e23ddd424987ab96c71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b03060093b3894c976b6ae84e55f3f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a0b03060093b3894c976b6ae84e55f3f2">doctest::is_running_in_test</a></td></tr>
-<tr class="separator:a0b03060093b3894c976b6ae84e55f3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade1619b532a3d3e6f19ee1187ff3c514"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="doctest_8h.html#a9c16ffc635ec47f07797d21ede26b1a5">DOCTEST_INTERFACE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#ade1619b532a3d3e6f19ee1187ff3c514">doctest::detail::TestCase</a></td></tr>
-<tr class="separator:ade1619b532a3d3e6f19ee1187ff3c514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae635964db555b85aefd7874bc9cc7b51"><td class="memItemLeft" align="right" valign="top">template struct <a class="el" href="doctest_8h.html#a423c7e3dc94b0f49db2d45be8c65c921">DOCTEST_INTERFACE_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#ae635964db555b85aefd7874bc9cc7b51">doctest::IsNaN&lt; float &gt;</a></td></tr>
-<tr class="separator:ae635964db555b85aefd7874bc9cc7b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4084d3d9bcaef83013a4789c1f41666b"><td class="memItemLeft" align="right" valign="top">template struct <a class="el" href="doctest_8h.html#a423c7e3dc94b0f49db2d45be8c65c921">DOCTEST_INTERFACE_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a4084d3d9bcaef83013a4789c1f41666b">doctest::IsNaN&lt; double &gt;</a></td></tr>
-<tr class="separator:a4084d3d9bcaef83013a4789c1f41666b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82230b0925bdd6dffac05c78f8f2d1b9"><td class="memItemLeft" align="right" valign="top">template struct <a class="el" href="doctest_8h.html#a423c7e3dc94b0f49db2d45be8c65c921">DOCTEST_INTERFACE_DECL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a82230b0925bdd6dffac05c78f8f2d1b9">doctest::IsNaN&lt; long double &gt;</a></td></tr>
-<tr class="separator:a82230b0925bdd6dffac05c78f8f2d1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257144d27898c6057ed16f0d0205c3a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a257144d27898c6057ed16f0d0205c3a2">doctest::is_running_in_test</a></td></tr>
+<tr class="separator:a257144d27898c6057ed16f0d0205c3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1937649cc9503739c20b3c81b97b5e5d"></a>
@@ -2298,14 +2336,14 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    ResultBuilder rb(at, file, line, expr);                                                        \</div>
 <div class="line">    rb.m_failed = failed;                                                                          \</div>
-<div class="line">    if(rb.m_failed || <a class="code" href="namespacedoctest.html#a1ff2f40fd17351e182820848e27e6c79">getContextOptions</a>()-&gt;success)                                                \</div>
+<div class="line">    if(rb.m_failed || <a class="code" href="namespacedoctest.html#ab27afbd1ff6e5c2b18c53bbd27196a73">getContextOptions</a>()-&gt;success)                                                \</div>
 <div class="line">        rb.m_decomp = decomp;                                                                      \</div>
 <div class="line">    if(rb.log())                                                                                   \</div>
 <div class="line">        DOCTEST_BREAK_INTO_DEBUGGER();                                                             \</div>
-<div class="line">    if(rb.m_failed &amp;&amp; <a class="code" href="namespacedoctest_1_1detail.html#acec9ff072dd86af95225a8beb9c57298">checkIfShouldThrow</a>(at))                                                      \</div>
+<div class="line">    if(rb.m_failed &amp;&amp; <a class="code" href="namespacedoctest_1_1detail.html#a37fb12184f6bac0e07ab434b4f264d08">checkIfShouldThrow</a>(at))                                                      \</div>
 <div class="line">    throwException()</div>
-<div class="ttc" id="anamespacedoctest_1_1detail_html_acec9ff072dd86af95225a8beb9c57298"><div class="ttname"><a href="namespacedoctest_1_1detail.html#acec9ff072dd86af95225a8beb9c57298">doctest::detail::checkIfShouldThrow</a></div><div class="ttdeci">DOCTEST_INTERFACE bool checkIfShouldThrow(assertType::Enum at)</div></div>
-<div class="ttc" id="anamespacedoctest_html_a1ff2f40fd17351e182820848e27e6c79"><div class="ttname"><a href="namespacedoctest.html#a1ff2f40fd17351e182820848e27e6c79">doctest::getContextOptions</a></div><div class="ttdeci">DOCTEST_INTERFACE const ContextOptions * getContextOptions()</div></div>
+<div class="ttc" id="anamespacedoctest_1_1detail_html_a37fb12184f6bac0e07ab434b4f264d08"><div class="ttname"><a href="namespacedoctest_1_1detail.html#a37fb12184f6bac0e07ab434b4f264d08">doctest::detail::checkIfShouldThrow</a></div><div class="ttdeci">bool checkIfShouldThrow(assertType::Enum at)</div></div>
+<div class="ttc" id="anamespacedoctest_html_ab27afbd1ff6e5c2b18c53bbd27196a73"><div class="ttname"><a href="namespacedoctest.html#ab27afbd1ff6e5c2b18c53bbd27196a73">doctest::getContextOptions</a></div><div class="ttdeci">const ContextOptions * getContextOptions()</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2347,22 +2385,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                                                                           \</div>
-<div class="line">        if(!<a class="code" href="namespacedoctest.html#a0b03060093b3894c976b6ae84e55f3f2">is_running_in_test</a>) {                                                                  \</div>
+<div class="line">        if(!<a class="code" href="namespacedoctest.html#a257144d27898c6057ed16f0d0205c3a2">is_running_in_test</a>) {                                                                  \</div>
 <div class="line">            if(failed) {                                                                           \</div>
 <div class="line">                ResultBuilder rb(at, file, line, expr);                                            \</div>
 <div class="line">                rb.m_failed = failed;                                                              \</div>
 <div class="line">                rb.m_decomp = decomp;                                                              \</div>
 <div class="line">                failed_out_of_a_testing_context(rb);                                               \</div>
-<div class="line">                if(<a class="code" href="namespacedoctest_1_1detail.html#a013828c4e677241cc26aeea33f762710">isDebuggerActive</a>() &amp;&amp; !<a class="code" href="namespacedoctest.html#a1ff2f40fd17351e182820848e27e6c79">getContextOptions</a>()-&gt;no_breaks)                          \</div>
+<div class="line">                if(<a class="code" href="namespacedoctest_1_1detail.html#abb6c91abdca286b09b41f77ab3b67cad">isDebuggerActive</a>() &amp;&amp; !<a class="code" href="namespacedoctest.html#ab27afbd1ff6e5c2b18c53bbd27196a73">getContextOptions</a>()-&gt;no_breaks)                          \</div>
 <div class="line">                    DOCTEST_BREAK_INTO_DEBUGGER();                                                 \</div>
-<div class="line">                if(<a class="code" href="namespacedoctest_1_1detail.html#acec9ff072dd86af95225a8beb9c57298">checkIfShouldThrow</a>(at))                                                         \</div>
+<div class="line">                if(<a class="code" href="namespacedoctest_1_1detail.html#a37fb12184f6bac0e07ab434b4f264d08">checkIfShouldThrow</a>(at))                                                         \</div>
 <div class="line">                    throwException();                                                              \</div>
 <div class="line">            }                                                                                      \</div>
 <div class="line">            return !failed;                                                                        \</div>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    } <span class="keywordflow">while</span>(<span class="keyword">false</span>)</div>
-<div class="ttc" id="anamespacedoctest_1_1detail_html_a013828c4e677241cc26aeea33f762710"><div class="ttname"><a href="namespacedoctest_1_1detail.html#a013828c4e677241cc26aeea33f762710">doctest::detail::isDebuggerActive</a></div><div class="ttdeci">DOCTEST_INTERFACE bool isDebuggerActive()</div></div>
-<div class="ttc" id="anamespacedoctest_html_a0b03060093b3894c976b6ae84e55f3f2"><div class="ttname"><a href="namespacedoctest.html#a0b03060093b3894c976b6ae84e55f3f2">doctest::is_running_in_test</a></div><div class="ttdeci">DOCTEST_INTERFACE bool is_running_in_test</div></div>
+<div class="ttc" id="anamespacedoctest_1_1detail_html_abb6c91abdca286b09b41f77ab3b67cad"><div class="ttname"><a href="namespacedoctest_1_1detail.html#abb6c91abdca286b09b41f77ab3b67cad">doctest::detail::isDebuggerActive</a></div><div class="ttdeci">bool isDebuggerActive()</div></div>
+<div class="ttc" id="anamespacedoctest_html_a257144d27898c6057ed16f0d0205c3a2"><div class="ttname"><a href="namespacedoctest.html#a257144d27898c6057ed16f0d0205c3a2">doctest::is_running_in_test</a></div><div class="ttdeci">bool is_running_in_test</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3491,7 +3529,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> f();                                                                               \</div>
 <div class="line">    DOCTEST_REGISTER_FUNCTION(<a class="code" href="doctest_8h.html#ab46a6d1a6d00f0bda5fcf8b93966a20a">DOCTEST_EMPTY</a>, f, decorators)                                        \</div>
 <div class="line">    static <span class="keywordtype">void</span> f()</div>
-<div class="ttc" id="adoctest_8h_html_ab46a6d1a6d00f0bda5fcf8b93966a20a"><div class="ttname"><a href="doctest_8h.html#ab46a6d1a6d00f0bda5fcf8b93966a20a">DOCTEST_EMPTY</a></div><div class="ttdeci">#define DOCTEST_EMPTY</div></div>
+<div class="ttc" id="adoctest_8h_html_ab46a6d1a6d00f0bda5fcf8b93966a20a"><div class="ttname"><a href="doctest_8h.html#ab46a6d1a6d00f0bda5fcf8b93966a20a">DOCTEST_EMPTY</a></div><div class="ttdeci">#define DOCTEST_EMPTY</div><div class="ttdef"><b>Definition:</b> doctest.h:347</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3593,10 +3631,9 @@ Variables</h2></td></tr>
 <div class="line">        type data;                                                                                 \</div>
 <div class="line">        name(type in = def)                                                                        \</div>
 <div class="line">                : data(in) {}                                                                      \</div>
-<div class="line">        void fill(<a class="code" href="namespacedoctest_1_1detail.html#ade1619b532a3d3e6f19ee1187ff3c514">detail::TestCase</a>&amp; state)<span class="keyword"> const </span>{ state.DOCTEST_CAT(m_, name) = data; }           \</div>
+<div class="line">        void fill(detail::TestCase&amp; state)<span class="keyword"> const </span>{ state.DOCTEST_CAT(m_, name) = data; }           \</div>
 <div class="line">        void fill(detail::TestSuite&amp; state)<span class="keyword"> const </span>{ state.DOCTEST_CAT(m_, name) = data; }          \</div>
 <div class="line">    }</div>
-<div class="ttc" id="anamespacedoctest_1_1detail_html_ade1619b532a3d3e6f19ee1187ff3c514"><div class="ttname"><a href="namespacedoctest_1_1detail.html#ade1619b532a3d3e6f19ee1187ff3c514">doctest::detail::TestCase</a></div><div class="ttdeci">struct DOCTEST_INTERFACE TestCase</div><div class="ttdef"><b>Definition:</b> doctest.h:890</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3654,13 +3691,13 @@ Variables</h2></td></tr>
 <div class="line">    bool res = op_macro(doctest::detail::forward&lt;const L&gt;(lhs), doctest::detail::forward&lt;R&gt;(rhs)); \</div>
 <div class="line">        if(m_at &amp; <a class="code" href="namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3a6539bad84e35008dc4a4a2c2d0793318">assertType::is_false</a>)                                                            \</div>
 <div class="line">            res = !res;                                                                            \</div>
-<div class="line">        if(!res || <a class="code" href="namespacedoctest.html#a1ff2f40fd17351e182820848e27e6c79">doctest::getContextOptions</a>()-&gt;success)                                          \</div>
-<div class="line">            return Result(res, <a class="code" href="namespacedoctest_1_1detail.html#a6879a79aea397a22e296e4afd0a90e3b">stringifyBinaryExpr</a>(lhs, op_str, rhs));                             \</div>
+<div class="line">        if(!res || <a class="code" href="namespacedoctest.html#ab27afbd1ff6e5c2b18c53bbd27196a73">doctest::getContextOptions</a>()-&gt;success)                                          \</div>
+<div class="line">            return Result(res, <a class="code" href="namespacedoctest_1_1detail.html#a8f20c21e775d7ca55e5205072e15c32c">stringifyBinaryExpr</a>(lhs, op_str, rhs));                             \</div>
 <div class="line">        return Result(res);                                                                        \</div>
 <div class="line">    }</div>
 <div class="ttc" id="adoctest_8h_html_ad668a8259af64e2e74d56358fd57253a"><div class="ttname"><a href="doctest_8h.html#ad668a8259af64e2e74d56358fd57253a">SFINAE_OP</a></div><div class="ttdeci">#define SFINAE_OP(ret, op)</div><div class="ttdef"><b>Definition:</b> doctest.h:1371</div></div>
 <div class="ttc" id="anamespacedoctest_1_1assertType_html_ae1bb5bed722f34f1c38b83cb19d326d3a6539bad84e35008dc4a4a2c2d0793318"><div class="ttname"><a href="namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3a6539bad84e35008dc4a4a2c2d0793318">doctest::assertType::is_false</a></div><div class="ttdeci">@ is_false</div><div class="ttdef"><b>Definition:</b> doctest.h:728</div></div>
-<div class="ttc" id="anamespacedoctest_1_1detail_html_a6879a79aea397a22e296e4afd0a90e3b"><div class="ttname"><a href="namespacedoctest_1_1detail.html#a6879a79aea397a22e296e4afd0a90e3b">doctest::detail::stringifyBinaryExpr</a></div><div class="ttdeci">String stringifyBinaryExpr(const DOCTEST_REF_WRAP(L) lhs, const char *op, const DOCTEST_REF_WRAP(R) rhs)</div><div class="ttdef"><b>Definition:</b> doctest.h:1355</div></div>
+<div class="ttc" id="anamespacedoctest_1_1detail_html_a8f20c21e775d7ca55e5205072e15c32c"><div class="ttname"><a href="namespacedoctest_1_1detail.html#a8f20c21e775d7ca55e5205072e15c32c">doctest::detail::stringifyBinaryExpr</a></div><div class="ttdeci">String stringifyBinaryExpr(const L &amp;lhs, const char *op, const R &amp;rhs)</div><div class="ttdef"><b>Definition:</b> doctest.h:1355</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4350,7 +4387,7 @@ Variables</h2></td></tr>
 <div class="line">        DOCTEST_REGISTER_FUNCTION(<a class="code" href="doctest_8h.html#ab46a6d1a6d00f0bda5fcf8b93966a20a">DOCTEST_EMPTY</a>, func, decorators)                                 \</div>
 <div class="line">    }                                                                                              \</div>
 <div class="line">    DOCTEST_INLINE_NOINLINE <span class="keywordtype">void</span> der::f()</div>
-<div class="ttc" id="adoctest_8h_html_a747b5dff90ae60f6f1636ebbe065a9da"><div class="ttname"><a href="doctest_8h.html#a747b5dff90ae60f6f1636ebbe065a9da">DOCTEST_INLINE_NOINLINE</a></div><div class="ttdeci">#define DOCTEST_INLINE_NOINLINE</div></div>
+<div class="ttc" id="adoctest_8h_html_a747b5dff90ae60f6f1636ebbe065a9da"><div class="ttname"><a href="doctest_8h.html#a747b5dff90ae60f6f1636ebbe065a9da">DOCTEST_INLINE_NOINLINE</a></div><div class="ttdeci">#define DOCTEST_INLINE_NOINLINE</div><div class="ttdef"><b>Definition:</b> doctest.h:366</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4373,7 +4410,7 @@ Variables</h2></td></tr>
 <div class="line">                      <a class="code" href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a>(DOCTEST_CAPTURE_OTHER_),                                   \</div>
 <div class="line">                      __VA_ARGS__)</div>
 <div class="ttc" id="adoctest_8h_html_a8276ab10adaeea48c75edebac611e763"><div class="ttname"><a href="doctest_8h.html#a8276ab10adaeea48c75edebac611e763">DOCTEST_INFO_IMPL</a></div><div class="ttdeci">#define DOCTEST_INFO_IMPL(mb_name, s_name,...)</div><div class="ttdef"><b>Definition:</b> doctest.h:2351</div></div>
-<div class="ttc" id="adoctest_8h_html_ac2799231daab4b10ca221f997ef94981"><div class="ttname"><a href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a></div><div class="ttdeci">#define DOCTEST_ANONYMOUS(x)</div></div>
+<div class="ttc" id="adoctest_8h_html_ac2799231daab4b10ca221f997ef94981"><div class="ttname"><a href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a></div><div class="ttdeci">#define DOCTEST_ANONYMOUS(x)</div><div class="ttdef"><b>Definition:</b> doctest.h:424</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4795,14 +4832,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    global_prefix <a class="code" href="doctest_8h.html#a14d41f3ce8df5419a66ac0c8bdf33b0d">DOCTEST_GLOBAL_NO_WARNINGS</a>(<a class="code" href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a>(DOCTEST_ANON_VAR_), <span class="comment">/* NOLINT */</span>    \</div>
-<div class="line">            <a class="code" href="namespacedoctest_1_1detail.html#a00f99edefb8490a8e2602d58c96431f4">doctest::detail::regTest</a>(                                                              \</div>
+<div class="line">            <a class="code" href="namespacedoctest_1_1detail.html#a848a393508240d3ab4680a88e2622cbe">doctest::detail::regTest</a>(                                                              \</div>
 <div class="line">                    <a class="code" href="structdoctest_1_1detail_1_1TestCase.html">doctest::detail::TestCase</a>(                                                     \</div>
 <div class="line">                            f, __FILE__, __LINE__,                                                 \</div>
-<div class="line">                            <a class="code" href="namespacedoctest__detail__test__suite__ns.html#a3a236c82d51cd3622d14b00aa145df94">doctest_detail_test_suite_ns::getCurrentTestSuite</a>()) *                 \</div>
+<div class="line">                            <a class="code" href="namespacedoctest__detail__test__suite__ns.html#a57c74e31a17fa9d6e424d9093549fb38">doctest_detail_test_suite_ns::getCurrentTestSuite</a>()) *                 \</div>
 <div class="line">                    decorators))</div>
 <div class="ttc" id="adoctest_8h_html_a14d41f3ce8df5419a66ac0c8bdf33b0d"><div class="ttname"><a href="doctest_8h.html#a14d41f3ce8df5419a66ac0c8bdf33b0d">DOCTEST_GLOBAL_NO_WARNINGS</a></div><div class="ttdeci">#define DOCTEST_GLOBAL_NO_WARNINGS(var,...)</div><div class="ttdef"><b>Definition:</b> doctest.h:450</div></div>
-<div class="ttc" id="anamespacedoctest_1_1detail_html_a00f99edefb8490a8e2602d58c96431f4"><div class="ttname"><a href="namespacedoctest_1_1detail.html#a00f99edefb8490a8e2602d58c96431f4">doctest::detail::regTest</a></div><div class="ttdeci">DOCTEST_INTERFACE int regTest(const TestCase &amp;tc)</div></div>
-<div class="ttc" id="anamespacedoctest__detail__test__suite__ns_html_a3a236c82d51cd3622d14b00aa145df94"><div class="ttname"><a href="namespacedoctest__detail__test__suite__ns.html#a3a236c82d51cd3622d14b00aa145df94">doctest_detail_test_suite_ns::getCurrentTestSuite</a></div><div class="ttdeci">DOCTEST_INTERFACE doctest::detail::TestSuite &amp; getCurrentTestSuite()</div></div>
+<div class="ttc" id="anamespacedoctest_1_1detail_html_a848a393508240d3ab4680a88e2622cbe"><div class="ttname"><a href="namespacedoctest_1_1detail.html#a848a393508240d3ab4680a88e2622cbe">doctest::detail::regTest</a></div><div class="ttdeci">int regTest(const TestCase &amp;tc)</div></div>
+<div class="ttc" id="anamespacedoctest__detail__test__suite__ns_html_a57c74e31a17fa9d6e424d9093549fb38"><div class="ttname"><a href="namespacedoctest__detail__test__suite__ns.html#a57c74e31a17fa9d6e424d9093549fb38">doctest_detail_test_suite_ns::getCurrentTestSuite</a></div><div class="ttdeci">doctest::detail::TestSuite &amp; getCurrentTestSuite()</div></div>
 <div class="ttc" id="astructdoctest_1_1detail_1_1TestCase_html"><div class="ttname"><a href="structdoctest_1_1detail_1_1TestCase.html">doctest::detail::TestCase</a></div><div class="ttdef"><b>Definition:</b> doctest.h:1616</div></div>
 </div><!-- fragment -->
 </div>
@@ -4911,7 +4948,7 @@ Variables</h2></td></tr>
 <div class="line">                                        <span class="keyword">const</span> <a class="code" href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a>(R) rhs) {                           \</div>
 <div class="line">        return lhs op rhs;                                                                         \</div>
 <div class="line">    }</div>
-<div class="ttc" id="adoctest_8h_html_af2901cafb023c57fb672ccb1bf14f2eb"><div class="ttname"><a href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a></div><div class="ttdeci">#define DOCTEST_REF_WRAP(x)</div></div>
+<div class="ttc" id="adoctest_8h_html_af2901cafb023c57fb672ccb1bf14f2eb"><div class="ttname"><a href="doctest_8h.html#af2901cafb023c57fb672ccb1bf14f2eb">DOCTEST_REF_WRAP</a></div><div class="ttdeci">#define DOCTEST_REF_WRAP(x)</div><div class="ttdef"><b>Definition:</b> doctest.h:428</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5762,7 +5799,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span>(<span class="keyword">const</span> <a class="code" href="structdoctest_1_1detail_1_1Subcase.html">doctest::detail::Subcase</a> &amp; <a class="code" href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a>(DOCTEST_ANON_SUBCASE_) <a class="code" href="doctest_8h.html#a478c7f3eb127a7edbcc8577154deebba">DOCTEST_UNUSED</a> =  \</div>
 <div class="line">               <a class="code" href="structdoctest_1_1detail_1_1Subcase.html">doctest::detail::Subcase</a>(name, __FILE__, __LINE__))</div>
-<div class="ttc" id="adoctest_8h_html_a478c7f3eb127a7edbcc8577154deebba"><div class="ttname"><a href="doctest_8h.html#a478c7f3eb127a7edbcc8577154deebba">DOCTEST_UNUSED</a></div><div class="ttdeci">#define DOCTEST_UNUSED</div></div>
+<div class="ttc" id="adoctest_8h_html_a478c7f3eb127a7edbcc8577154deebba"><div class="ttname"><a href="doctest_8h.html#a478c7f3eb127a7edbcc8577154deebba">DOCTEST_UNUSED</a></div><div class="ttdeci">#define DOCTEST_UNUSED</div><div class="ttdef"><b>Definition:</b> doctest.h:359</div></div>
 <div class="ttc" id="astructdoctest_1_1detail_1_1Subcase_html"><div class="ttname"><a href="structdoctest_1_1detail_1_1Subcase.html">doctest::detail::Subcase</a></div><div class="ttdef"><b>Definition:</b> doctest.h:1337</div></div>
 </div><!-- fragment -->
 </div>
@@ -5992,7 +6029,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="doctest_8h.html#a1e7dceba02e92851f643bb02f1d11323">DOCTEST_TEST_CASE_TEMPLATE_DEFINE_IMPL</a>(dec, T, <a class="code" href="doctest_8h.html#aa13d3659f8aef0e4de7eab8eb5a70888">DOCTEST_CAT</a>(<span class="keywordtype">id</span>, ITERATOR),                      \</div>
 <div class="line">                                           <a class="code" href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a>(DOCTEST_ANON_TMP_))</div>
 <div class="ttc" id="adoctest_8h_html_a1e7dceba02e92851f643bb02f1d11323"><div class="ttname"><a href="doctest_8h.html#a1e7dceba02e92851f643bb02f1d11323">DOCTEST_TEST_CASE_TEMPLATE_DEFINE_IMPL</a></div><div class="ttdeci">#define DOCTEST_TEST_CASE_TEMPLATE_DEFINE_IMPL(dec, T, iter, func)</div><div class="ttdef"><b>Definition:</b> doctest.h:2225</div></div>
-<div class="ttc" id="adoctest_8h_html_aa13d3659f8aef0e4de7eab8eb5a70888"><div class="ttname"><a href="doctest_8h.html#aa13d3659f8aef0e4de7eab8eb5a70888">DOCTEST_CAT</a></div><div class="ttdeci">#define DOCTEST_CAT(s1, s2)</div></div>
+<div class="ttc" id="adoctest_8h_html_aa13d3659f8aef0e4de7eab8eb5a70888"><div class="ttname"><a href="doctest_8h.html#aa13d3659f8aef0e4de7eab8eb5a70888">DOCTEST_CAT</a></div><div class="ttdeci">#define DOCTEST_CAT(s1, s2)</div><div class="ttdef"><b>Definition:</b> doctest.h:420</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -6041,9 +6078,9 @@ Variables</h2></td></tr>
 <div class="line">        template &lt;<span class="keyword">typename</span> Type, <span class="keyword">typename</span>... Rest&gt;                                                 \</div>
 <div class="line">        struct iter&lt;<a class="code" href="classstd_1_1tuple.html">std::tuple</a>&lt;Type, Rest...&gt;&gt;                                                     \</div>
 <div class="line">        {                                                                                          \</div>
-<div class="line">            iter(<span class="keyword">const</span> <span class="keywordtype">char</span>* file, <span class="keywordtype">unsigned</span> line, <span class="keywordtype">int</span> index) {                                     <a class="code" href="namespacedoctest_1_1detail.html#a00f99edefb8490a8e2602d58c96431f4">\</a></div>
-<div class="line"><a class="code" href="namespacedoctest_1_1detail.html#a00f99edefb8490a8e2602d58c96431f4">                doctest::detail::regTest</a>(<a class="code" href="structdoctest_1_1detail_1_1TestCase.html">doctest::detail::TestCase</a>(func&lt;Type&gt;, file, line,         \</div>
-<div class="line">                                            <a class="code" href="namespacedoctest__detail__test__suite__ns.html#a3a236c82d51cd3622d14b00aa145df94">doctest_detail_test_suite_ns::getCurrentTestSuite</a>(),   \</div>
+<div class="line">            iter(<span class="keyword">const</span> <span class="keywordtype">char</span>* file, <span class="keywordtype">unsigned</span> line, <span class="keywordtype">int</span> index) {                                     <a class="code" href="namespacedoctest_1_1detail.html#a848a393508240d3ab4680a88e2622cbe">\</a></div>
+<div class="line"><a class="code" href="namespacedoctest_1_1detail.html#a848a393508240d3ab4680a88e2622cbe">                doctest::detail::regTest</a>(<a class="code" href="structdoctest_1_1detail_1_1TestCase.html">doctest::detail::TestCase</a>(func&lt;Type&gt;, file, line,         \</div>
+<div class="line">                                            <a class="code" href="namespacedoctest__detail__test__suite__ns.html#a57c74e31a17fa9d6e424d9093549fb38">doctest_detail_test_suite_ns::getCurrentTestSuite</a>(),   \</div>
 <div class="line">                                            doctest::toString&lt;Type&gt;(),                             \</div>
 <div class="line">                                            <span class="keywordtype">int</span>(line) * 1000 + index)                              \</div>
 <div class="line">                                         * dec);                                                   \</div>
@@ -6236,26 +6273,26 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="doctest_8h.html#a14d41f3ce8df5419a66ac0c8bdf33b0d">DOCTEST_GLOBAL_NO_WARNINGS</a>(<a class="code" href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a>(DOCTEST_ANON_VAR_), <span class="comment">/* NOLINT(cert-err58-cpp) */</span>  \</div>
-<div class="line">            <a class="code" href="namespacedoctest_1_1detail.html#ae79cb8df06d35468dd0ba9f04c85802c">doctest::detail::setTestSuite</a>(<a class="code" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a>() * decorators))              \</div>
+<div class="line">            <a class="code" href="namespacedoctest_1_1detail.html#a43e7d7a3a29691b5a4b7ce4192463649">doctest::detail::setTestSuite</a>(<a class="code" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a>() * decorators))              \</div>
 <div class="line">    static_assert(<span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="ttc" id="anamespacedoctest_1_1detail_html_ae79cb8df06d35468dd0ba9f04c85802c"><div class="ttname"><a href="namespacedoctest_1_1detail.html#ae79cb8df06d35468dd0ba9f04c85802c">doctest::detail::setTestSuite</a></div><div class="ttdeci">DOCTEST_INTERFACE int setTestSuite(const TestSuite &amp;ts)</div></div>
+<div class="ttc" id="anamespacedoctest_1_1detail_html_a43e7d7a3a29691b5a4b7ce4192463649"><div class="ttname"><a href="namespacedoctest_1_1detail.html#a43e7d7a3a29691b5a4b7ce4192463649">doctest::detail::setTestSuite</a></div><div class="ttdeci">int setTestSuite(const TestSuite &amp;ts)</div></div>
 <div class="ttc" id="astructdoctest_1_1detail_1_1TestSuite_html"><div class="ttname"><a href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a></div><div class="ttdef"><b>Definition:</b> doctest.h:1593</div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a3ca1fc8ae12659768e3226db19a2c7ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ca1fc8ae12659768e3226db19a2c7ee">&#9670;&nbsp;</a></span>DOCTEST_TEST_SUITE_END</h2>
+<a id="ab39047b0a7b7ceca753fa85e47b2e48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39047b0a7b7ceca753fa85e47b2e48e">&#9670;&nbsp;</a></span>DOCTEST_TEST_SUITE_END</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DOCTEST_TEST_SUITE_END</td>
+          <td class="memname">#define DOCTEST_TEST_SUITE_END</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="doctest_8h.html#a14d41f3ce8df5419a66ac0c8bdf33b0d">DOCTEST_GLOBAL_NO_WARNINGS</a>(<a class="code" href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a>(DOCTEST_ANON_VAR_), <span class="comment">/* NOLINT(cert-err58-cpp) */</span>  \</div>
-<div class="line">            <a class="code" href="namespacedoctest_1_1detail.html#ae79cb8df06d35468dd0ba9f04c85802c">doctest::detail::setTestSuite</a>(<a class="code" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a>() * <span class="stringliteral">&quot;&quot;</span>))                      \</div>
+<div class="line">            <a class="code" href="namespacedoctest_1_1detail.html#a43e7d7a3a29691b5a4b7ce4192463649">doctest::detail::setTestSuite</a>(<a class="code" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a>() * <span class="stringliteral">&quot;&quot;</span>))                      \</div>
 <div class="line">    using <a class="code" href="doctest_8h.html#ac2799231daab4b10ca221f997ef94981">DOCTEST_ANONYMOUS</a>(DOCTEST_ANON_FOR_SEMICOLON_) = <span class="keywordtype">int</span></div>
 </div><!-- fragment -->
 </div>
@@ -6286,7 +6323,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">namespace </span>ns_name { <span class="keyword">namespace </span><a class="code" href="namespacedoctest__detail__test__suite__ns.html">doctest_detail_test_suite_ns</a> {                                   \</div>
-<div class="line">            static <a class="code" href="doctest_8h.html#a47e9d3609dfcc90b9a630ff33b9524d6">DOCTEST_NOINLINE</a> <a class="code" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a>&amp; <a class="code" href="namespacedoctest__detail__test__suite__ns.html#a3a236c82d51cd3622d14b00aa145df94">getCurrentTestSuite</a>() noexcept {   \</div>
+<div class="line">            static <a class="code" href="doctest_8h.html#a47e9d3609dfcc90b9a630ff33b9524d6">DOCTEST_NOINLINE</a> <a class="code" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a>&amp; <a class="code" href="namespacedoctest__detail__test__suite__ns.html#a57c74e31a17fa9d6e424d9093549fb38">getCurrentTestSuite</a>() noexcept {   \</div>
 <div class="line">                DOCTEST_MSVC_SUPPRESS_WARNING_WITH_PUSH(4640)                                      \</div>
 <div class="line">                DOCTEST_CLANG_SUPPRESS_WARNING_WITH_PUSH(<span class="stringliteral">&quot;-Wexit-time-destructors&quot;</span>)                \</div>
 <div class="line">                DOCTEST_GCC_SUPPRESS_WARNING_WITH_PUSH(<span class="stringliteral">&quot;-Wmissing-field-initializers&quot;</span>)             \</div>
@@ -6304,7 +6341,7 @@ Variables</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }                                                                                              \</div>
 <div class="line">    namespace ns_name</div>
-<div class="ttc" id="adoctest_8h_html_a47e9d3609dfcc90b9a630ff33b9524d6"><div class="ttname"><a href="doctest_8h.html#a47e9d3609dfcc90b9a630ff33b9524d6">DOCTEST_NOINLINE</a></div><div class="ttdeci">#define DOCTEST_NOINLINE</div></div>
+<div class="ttc" id="adoctest_8h_html_a47e9d3609dfcc90b9a630ff33b9524d6"><div class="ttname"><a href="doctest_8h.html#a47e9d3609dfcc90b9a630ff33b9524d6">DOCTEST_NOINLINE</a></div><div class="ttdeci">#define DOCTEST_NOINLINE</div><div class="ttdef"><b>Definition:</b> doctest.h:358</div></div>
 <div class="ttc" id="anamespacedoctest__detail__test__suite__ns_html"><div class="ttname"><a href="namespacedoctest__detail__test__suite__ns.html">doctest_detail_test_suite_ns</a></div><div class="ttdef"><b>Definition:</b> doctest.h:1948</div></div>
 </div><!-- fragment -->
 </div>
@@ -6431,7 +6468,7 @@ Variables</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }                                                                                              \</div>
 <div class="line">    static_assert(<span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="ttc" id="anamespacedoctest_html"><div class="ttname"><a href="namespacedoctest.html">doctest</a></div><div class="ttdef"><b>Definition:</b> doctest.h:558</div></div>
+<div class="ttc" id="anamespacedoctest_html"><div class="ttname"><a href="namespacedoctest.html">doctest</a></div><div class="ttdef"><b>Definition:</b> doctest.h:446</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -8665,7 +8702,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TEST_SUITE_END&#160;&#160;&#160;<a class="el" href="doctest_8h.html#a3ca1fc8ae12659768e3226db19a2c7ee">DOCTEST_TEST_SUITE_END</a></td>
+          <td class="memname">#define TEST_SUITE_END&#160;&#160;&#160;<a class="el" href="doctest_8h.html#ab39047b0a7b7ceca753fa85e47b2e48e">DOCTEST_TEST_SUITE_END</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -9298,19 +9335,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a5bada44bccc9e60dcd57ef2b75430546"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bada44bccc9e60dcd57ef2b75430546">&#9670;&nbsp;</a></span>DOCTEST_MSVC_SUPPRESS_WARNING()</h2>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a6b64609ab3b7120bf7d2a09263c15be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b64609ab3b7120bf7d2a09263c15be3">&#9670;&nbsp;</a></span>DOCTEST_ANON_FOR_SEMICOLON___LINE__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="doctest_8h.html#aaa68efffb0caa0ca168f1caecaba0f55">DOCTEST_SUPPRESS_COMMON_WARNINGS_PUSH</a> <a class="el" href="doctest_8h.html#a628491cf2971a026350d5401986bf6d3">DOCTEST_CLANG_SUPPRESS_WARNING_PUSH</a> <a class="el" href="doctest_8h.html#a8015d10af2883db80a955ce0d523886d">DOCTEST_GCC_SUPPRESS_WARNING_PUSH</a> <a class="el" href="doctest_8h.html#aec6d713a9dde361b8e68afe78c5bf3cf">DOCTEST_MSVC_SUPPRESS_WARNING_PUSH</a> DOCTEST_MSVC_SUPPRESS_WARNING </td>
-          <td>(</td>
-          <td class="paramtype">4623&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">using <a class="el" href="doctest_8h.html#a6b64609ab3b7120bf7d2a09263c15be3">DOCTEST_ANON_FOR_SEMICOLON___LINE__</a> =  int ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -9318,9 +9351,13 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_91b078f1eb6e4b953f00b93ae608f5df.html">externals</a></li><li class="navelem"><a class="el" href="doctest_8h.html">doctest.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

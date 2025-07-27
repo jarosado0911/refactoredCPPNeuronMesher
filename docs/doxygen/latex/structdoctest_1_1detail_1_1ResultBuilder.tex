@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for doctest\+::detail\+::Result\+Builder\+:
-\nopagebreak
+Inheritance diagram for doctest\+::detail\+::Result\+Builder\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,9 +32,11 @@ Collaboration diagram for doctest\+::detail\+::Result\+Builder\+:
 \item 
 void \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a86c0ca727fead43263de4a7e9a59ad23}{set\+Result}} (const \mbox{\hyperlink{structdoctest_1_1detail_1_1Result}{Result}} \&res)
 \item 
-{\footnotesize template$<$int comparison, typename L , typename R $>$ }\\\mbox{\hyperlink{doctest_8h_a47e9d3609dfcc90b9a630ff33b9524d6}{DOCTEST\+\_\+\+NOINLINE}} bool \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_aa920a0617a26939d7adcd1ba2dec0e85}{binary\+\_\+assert}} (const \mbox{\hyperlink{doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{DOCTEST\+\_\+\+REF\+\_\+\+WRAP}}(L) lhs, const \mbox{\hyperlink{doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{DOCTEST\+\_\+\+REF\+\_\+\+WRAP}}(R) rhs)
+{\footnotesize template$<$int comparison, typename L , typename R $>$ }\\\mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a21c22939f315b8c8e0e9d4b4d2d08108}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((noinline)) bool binary\+\_\+assert(const L \&lhs
 \item 
-{\footnotesize template$<$typename L $>$ }\\\mbox{\hyperlink{doctest_8h_a47e9d3609dfcc90b9a630ff33b9524d6}{DOCTEST\+\_\+\+NOINLINE}} bool \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a63a2a19638f4a761c70abd5563e2d23a}{unary\+\_\+assert}} (const \mbox{\hyperlink{doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{DOCTEST\+\_\+\+REF\+\_\+\+WRAP}}(L) val)
+\mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a21e6d71651e497f4c1fd48596b7cbd21}{if}} (\mbox{\hyperlink{structdoctest_1_1AssertData_ac9ddaf3e6532fdadba3c1f74eb931d4a}{m\+\_\+failed}}$\vert$$\vert$\mbox{\hyperlink{namespacedoctest_ab27afbd1ff6e5c2b18c53bbd27196a73}{get\+Context\+Options}}() -\/$>$success)
+\item 
+{\footnotesize template$<$typename L $>$ }\\\mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a983f80c0b8f10d1b09d4d988ab6f0019}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((noinline)) bool unary\+\_\+assert(const L \&val)
 \item 
 void \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a5eece6aa3b1a2cb366cf5a0cc6c854a3}{translate\+Exception}} ()
 \item 
@@ -43,7 +44,13 @@ bool \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a2af75dd1d8db8d3a
 \item 
 void \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a03686f862471728c2980d72e02980213}{react}} () const
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const R \& \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a9f73413d071af01eb6c5b06636abc9f8}{rhs}}
+\item 
+return \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a8f8c7ed1015c72b815279d851891b3f5}{!m\+\_\+failed}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -62,13 +69,42 @@ void \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a03686f862471728c
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structdoctest_1_1detail_1_1ResultBuilder_aa920a0617a26939d7adcd1ba2dec0e85}\label{structdoctest_1_1detail_1_1ResultBuilder_aa920a0617a26939d7adcd1ba2dec0e85}} 
-\index{doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}!binary\_assert@{binary\_assert}}
-\index{binary\_assert@{binary\_assert}!doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}}
-\doxysubsubsection{\texorpdfstring{binary\_assert()}{binary\_assert()}}
+\mbox{\Hypertarget{structdoctest_1_1detail_1_1ResultBuilder_a21c22939f315b8c8e0e9d4b4d2d08108}\label{structdoctest_1_1detail_1_1ResultBuilder_a21c22939f315b8c8e0e9d4b4d2d08108}} 
+\index{doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$int comparison, typename L , typename R $>$ \\
-\mbox{\hyperlink{doctest_8h_a47e9d3609dfcc90b9a630ff33b9524d6}{DOCTEST\+\_\+\+NOINLINE}} bool doctest\+::detail\+::\+Result\+Builder\+::binary\+\_\+assert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{DOCTEST\+\_\+\+REF\+\_\+\+WRAP}}(L)}]{lhs,  }\item[{const \mbox{\hyperlink{doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{DOCTEST\+\_\+\+REF\+\_\+\+WRAP}}(R)}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+doctest\+::detail\+::\+Result\+Builder\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(noinline)}]{ }\end{DoxyParamCaption}) const \&}
 
+\mbox{\Hypertarget{structdoctest_1_1detail_1_1ResultBuilder_a983f80c0b8f10d1b09d4d988ab6f0019}\label{structdoctest_1_1detail_1_1ResultBuilder_a983f80c0b8f10d1b09d4d988ab6f0019}} 
+\index{doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename L $>$ \\
+doctest\+::detail\+::\+Result\+Builder\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(noinline)}]{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+OCLINT bitwise operator in conditionalHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdoctest_1_1detail_1_1ResultBuilder_a983f80c0b8f10d1b09d4d988ab6f0019_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structdoctest_1_1detail_1_1ResultBuilder_a21e6d71651e497f4c1fd48596b7cbd21}\label{structdoctest_1_1detail_1_1ResultBuilder_a21e6d71651e497f4c1fd48596b7cbd21}} 
+\index{doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}!if@{if}}
+\index{if@{if}!doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily doctest\+::detail\+::\+Result\+Builder\+::if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdoctest_1_1AssertData_ac9ddaf3e6532fdadba3c1f74eb931d4a}{m\+\_\+failed}}$\vert$$\vert$\mbox{\hyperlink{namespacedoctest_ab27afbd1ff6e5c2b18c53bbd27196a73}{get\+Context\+Options}}() -\/$>$}]{success }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdoctest_1_1detail_1_1ResultBuilder_a21e6d71651e497f4c1fd48596b7cbd21_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{structdoctest_1_1detail_1_1ResultBuilder_a2af75dd1d8db8d3aa949d78025854085}\label{structdoctest_1_1detail_1_1ResultBuilder_a2af75dd1d8db8d3aa949d78025854085}} 
 \index{doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}!log@{log}}
 \index{log@{log}!doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}}
@@ -93,14 +129,28 @@ void \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a03686f862471728c
 \doxysubsubsection{\texorpdfstring{translateException()}{translateException()}}
 {\footnotesize\ttfamily void doctest\+::detail\+::\+Result\+Builder\+::translate\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{structdoctest_1_1detail_1_1ResultBuilder_a63a2a19638f4a761c70abd5563e2d23a}\label{structdoctest_1_1detail_1_1ResultBuilder_a63a2a19638f4a761c70abd5563e2d23a}} 
-\index{doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}!unary\_assert@{unary\_assert}}
-\index{unary\_assert@{unary\_assert}!doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}}
-\doxysubsubsection{\texorpdfstring{unary\_assert()}{unary\_assert()}}
-{\footnotesize\ttfamily template$<$typename L $>$ \\
-\mbox{\hyperlink{doctest_8h_a47e9d3609dfcc90b9a630ff33b9524d6}{DOCTEST\+\_\+\+NOINLINE}} bool doctest\+::detail\+::\+Result\+Builder\+::unary\+\_\+assert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{doctest_8h_af2901cafb023c57fb672ccb1bf14f2eb}{DOCTEST\+\_\+\+REF\+\_\+\+WRAP}}(L)}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-OCLINT bitwise operator in conditional
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structdoctest_1_1detail_1_1ResultBuilder_a8f8c7ed1015c72b815279d851891b3f5}\label{structdoctest_1_1detail_1_1ResultBuilder_a8f8c7ed1015c72b815279d851891b3f5}} 
+\index{doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}!"!m\_failed@{"!m\_failed}}
+\index{"!m\_failed@{"!m\_failed}!doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{"!m\_failed}{!m\_failed}}
+{\footnotesize\ttfamily return doctest\+::detail\+::\+Result\+Builder\+::!m\+\_\+failed}
+
+\mbox{\Hypertarget{structdoctest_1_1detail_1_1ResultBuilder_a9f73413d071af01eb6c5b06636abc9f8}\label{structdoctest_1_1detail_1_1ResultBuilder_a9f73413d071af01eb6c5b06636abc9f8}} 
+\index{doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}!rhs@{rhs}}
+\index{rhs@{rhs}!doctest::detail::ResultBuilder@{doctest::detail::ResultBuilder}}
+\doxysubsubsection{\texorpdfstring{rhs}{rhs}}
+{\footnotesize\ttfamily const R\& doctest\+::detail\+::\+Result\+Builder\+::rhs}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{            \mbox{\hyperlink{structdoctest_1_1AssertData_ac9ddaf3e6532fdadba3c1f74eb931d4a}{m\_failed}} = !RelationalComparator<comparison, L, R>()(lhs, \mbox{\hyperlink{structdoctest_1_1detail_1_1ResultBuilder_a9f73413d071af01eb6c5b06636abc9f8}{rhs}})}
+
+\end{DoxyCode}
+
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

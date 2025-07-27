@@ -1,0 +1,6 @@
+<map id="NeuronGraph::allLinearSplineResampledTrunks" name="NeuronGraph::allLinearSplineResampledTrunks">
+<area shape="rect" id="node1" title="Resamples all trunks using linear interpolation." alt="" coords="563,23,753,65"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#acbf58bd7db5d97c97ec95b63c679a62a" title="Generates multiple levels of refined neuron morphologies." alt="" coords="284,5,515,32"/>
+<area shape="rect" id="node4" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="45,56,196,83"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#a607cb1a4a78a63ac33c462337f178b18" title=" " alt="" coords="5,5,236,32"/>
+</map>

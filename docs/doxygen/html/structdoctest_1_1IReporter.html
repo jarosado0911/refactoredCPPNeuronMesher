@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdoctest_1_1IReporter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacedoctest.html">doctest</a></li><li class="navelem"><a class="el" href="structdoctest_1_1IReporter.html">IReporter</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -102,6 +118,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2b2cb4f15aa7417d4903a0edc3147018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4ecfea9cd9582aad4a5e90e0c8ba45d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1IReporter.html#ab4ecfea9cd9582aad4a5e90e0c8ba45d">test_case_skipped</a> (const <a class="el" href="structdoctest_1_1TestCaseData.html">TestCaseData</a> &amp;)=0</td></tr>
 <tr class="separator:ab4ecfea9cd9582aad4a5e90e0c8ba45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12565b67bf1c7a3b0dfcd9468b9775ab"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1IReporter.html#a12565b67bf1c7a3b0dfcd9468b9775ab">~ IReporter</a> ()</td></tr>
+<tr class="separator:a12565b67bf1c7a3b0dfcd9468b9775ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382155339f7f75f3e4eb1bf6dc40714a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1IReporter.html#a382155339f7f75f3e4eb1bf6dc40714a">IReporter</a> ()=default</td></tr>
+<tr class="separator:a382155339f7f75f3e4eb1bf6dc40714a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a311e068acf95e5dfe736353326570c70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1IReporter.html#a311e068acf95e5dfe736353326570c70">IReporter</a> (const <a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;)=delete</td></tr>
+<tr class="separator:a311e068acf95e5dfe736353326570c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379a73b41c0090cd4eb3fa03b9b5ae76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1IReporter.html#a379a73b41c0090cd4eb3fa03b9b5ae76">IReporter</a> (<a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a379a73b41c0090cd4eb3fa03b9b5ae76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a522fc1ae9225a8692c04d9f1091c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1IReporter.html#a10a522fc1ae9225a8692c04d9f1091c4">operator=</a> (const <a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;)=delete</td></tr>
+<tr class="separator:a10a522fc1ae9225a8692c04d9f1091c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708a7f30367323d784b77818ebafd456"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1IReporter.html#a708a7f30367323d784b77818ebafd456">operator=</a> (<a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a708a7f30367323d784b77818ebafd456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -114,6 +142,109 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:acc1a86891876a957c6fc382af7894f99"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdoctest_1_1String.html">String</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1IReporter.html#acc1a86891876a957c6fc382af7894f99">get_stringified_contexts</a> ()</td></tr>
 <tr class="separator:acc1a86891876a957c6fc382af7894f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a12565b67bf1c7a3b0dfcd9468b9775ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12565b67bf1c7a3b0dfcd9468b9775ab">&#9670;&nbsp;</a></span>~ IReporter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual doctest::IReporter::~ <a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a382155339f7f75f3e4eb1bf6dc40714a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382155339f7f75f3e4eb1bf6dc40714a">&#9670;&nbsp;</a></span>IReporter() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">doctest::IReporter::IReporter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a311e068acf95e5dfe736353326570c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a311e068acf95e5dfe736353326570c70">&#9670;&nbsp;</a></span>IReporter() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">doctest::IReporter::IReporter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a379a73b41c0090cd4eb3fa03b9b5ae76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a379a73b41c0090cd4eb3fa03b9b5ae76">&#9670;&nbsp;</a></span>IReporter() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">doctest::IReporter::IReporter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a67a2da62d754d3b517d6d50ef210a988"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67a2da62d754d3b517d6d50ef210a988">&#9670;&nbsp;</a></span>get_active_contexts()</h2>
@@ -261,6 +392,58 @@ Static Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10a522fc1ae9225a8692c04d9f1091c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10a522fc1ae9225a8692c04d9f1091c4">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1IReporter.html">IReporter</a>&amp; doctest::IReporter::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a708a7f30367323d784b77818ebafd456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708a7f30367323d784b77818ebafd456">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1IReporter.html">IReporter</a>&amp; doctest::IReporter::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdoctest_1_1IReporter.html">IReporter</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -529,9 +712,13 @@ Static Public Member Functions</h2></td></tr>
 <li>include/externals/<a class="el" href="doctest_8h_source.html">doctest.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedoctest.html">doctest</a></li><li class="navelem"><a class="el" href="structdoctest_1_1IReporter.html">IReporter</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

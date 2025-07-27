@@ -1,0 +1,8 @@
+<map id="NeuronGraph::writeToFileUGX" name="NeuronGraph::writeToFileUGX">
+<area shape="rect" id="node1" title="Writes a set of nodes to a UGX file." alt="" coords="411,81,609,108"/>
+<area shape="rect" id="node2" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="236,5,331,32"/>
+<area shape="rect" id="node4" href="$splitrefineSET_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="258,56,309,83"/>
+<area shape="rect" id="node5" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,132,156,159"/>
+<area shape="rect" id="node6" href="$classNeuronGraph.html#aedde45f3cf0e5a3bb8cec88b864580a6" title="Converts an SWC file to UGX format." alt="" coords="204,157,363,184"/>
+<area shape="rect" id="node3" href="$neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="55,5,106,32"/>
+</map>

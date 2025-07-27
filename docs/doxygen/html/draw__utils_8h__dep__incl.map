@@ -1,4 +1,5 @@
 <map id="include/viewer/draw_utils.h" name="include/viewer/draw_utils.h">
-<area shape="rect" id="node1" title="OpenGL drawing utilities for neuron visualization." alt="" coords="5,5,143,47"/>
-<area shape="rect" id="node2" href="$draw__utils_8cpp.html" title="Implementation of OpenGL rendering utilities for neuron visualization." alt="" coords="7,95,141,136"/>
+<area shape="rect" id="node1" title="OpenGL drawing utilities for neuron visualization." alt="" coords="92,5,229,47"/>
+<area shape="rect" id="node2" href="$draw__utils_8cpp.html" title="Implementation of OpenGL rendering utilities for neuron visualization." alt="" coords="5,95,140,136"/>
+<area shape="rect" id="node3" href="$neuronviewer_8cpp.html" title=" " alt="" coords="165,95,335,136"/>
 </map>

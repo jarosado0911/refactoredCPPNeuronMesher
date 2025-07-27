@@ -1,4 +1,5 @@
 <map id="include/viewer/callbacks.h" name="include/viewer/callbacks.h">
-<area shape="rect" id="node1" title="GLFW input handling callbacks for neuron visualization." alt="" coords="11,5,186,32"/>
-<area shape="rect" id="node2" href="$callbacks_8cpp.html" title="Implementation of GLFW callback functions for the neuron viewer." alt="" coords="5,80,192,107"/>
+<area shape="rect" id="node1" title="GLFW input handling callbacks for neuron visualization." alt="" coords="113,5,287,32"/>
+<area shape="rect" id="node2" href="$callbacks_8cpp.html" title="Implementation of GLFW callback functions for the neuron viewer." alt="" coords="5,87,192,114"/>
+<area shape="rect" id="node3" href="$neuronviewer_8cpp.html" title=" " alt="" coords="216,80,387,121"/>
 </map>

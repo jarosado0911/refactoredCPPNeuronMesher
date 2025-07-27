@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions_vars.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,6 +82,13 @@ $(function() {
 
 <div class="contents">
 &#160;
+
+<h3><a id="index__21"></a>- ! -</h3><ul>
+<li>!m_failed
+: <a class="el" href="structdoctest_1_1detail_1_1ResultBuilder.html#a8f8c7ed1015c72b815279d851891b3f5">doctest::detail::ResultBuilder</a>
+</li>
+</ul>
+
 
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>abort_after
@@ -101,8 +128,17 @@ $(function() {
 
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>data
-: <a class="el" href="structdoctest_1_1QueryData.html#a8085a29db9a1cd5c7eff22ef44e9a9e8">doctest::QueryData</a>
+: <a class="el" href="structdoctest_1_1description.html#a2149eb6f745f30e22e0f8f5259c63084">doctest::description</a>
+, <a class="el" href="structdoctest_1_1expected__failures.html#a93cc334ca28ebc017182ea417397c5dc">doctest::expected_failures</a>
+, <a class="el" href="structdoctest_1_1may__fail.html#a5ed42404898983980cda98a744dde59f">doctest::may_fail</a>
+, <a class="el" href="structdoctest_1_1no__breaks.html#ab3f05b91fc0e42b91ba455467393708e">doctest::no_breaks</a>
+, <a class="el" href="structdoctest_1_1no__output.html#acb271ec448a6ccba9fd6a15c5ee26492">doctest::no_output</a>
+, <a class="el" href="structdoctest_1_1QueryData.html#a8085a29db9a1cd5c7eff22ef44e9a9e8">doctest::QueryData</a>
+, <a class="el" href="structdoctest_1_1should__fail.html#ad07c7fc057fb461228ac19d75ba76cb0">doctest::should_fail</a>
+, <a class="el" href="structdoctest_1_1skip.html#a06efddd4a8488460071b1e6c1223e10f">doctest::skip</a>
 , <a class="el" href="classdoctest_1_1String.html#a5c77ed634a1b81aea739a73fb01d986a">doctest::String</a>
+, <a class="el" href="structdoctest_1_1test__suite.html#ad0454aa6ece2b976d2bc51db72bd8b17">doctest::test_suite</a>
+, <a class="el" href="structdoctest_1_1timeout.html#ab6281d0c025d2e22ec6c75f231ef6232">doctest::timeout</a>
 </li>
 <li>duration
 : <a class="el" href="structdoctest_1_1ContextOptions.html#a0fc3e0c1cf669cffd1f826c005fc4223">doctest::ContextOptions</a>
@@ -164,6 +200,9 @@ $(function() {
 <li>last
 : <a class="el" href="structdoctest_1_1ContextOptions.html#a5aaf1b28f6a46d8acb40898a502b6bef">doctest::ContextOptions</a>
 </li>
+<li>lhs
+: <a class="el" href="structdoctest_1_1detail_1_1Expression__lhs.html#ab9a46f4dcddaea288b56f8247d9d9886">doctest::detail::Expression_lhs&lt; L &gt;</a>
+</li>
 <li>list_reporters
 : <a class="el" href="structdoctest_1_1ContextOptions.html#ad3daf077ac3182db5175f8baff49fce0">doctest::ContextOptions</a>
 </li>
@@ -182,6 +221,7 @@ $(function() {
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>m_at
 : <a class="el" href="structdoctest_1_1AssertData.html#a0b3b2866b13ba048c0beea51bd798749">doctest::AssertData</a>
+, <a class="el" href="structdoctest_1_1detail_1_1Expression__lhs.html#a38ccbab9077915fdd2e7f8ae9f008a71">doctest::detail::Expression_lhs&lt; L &gt;</a>
 , <a class="el" href="structdoctest_1_1detail_1_1ExpressionDecomposer.html#a1a71b19bd41d2cbd1c8b4006412870c4">doctest::detail::ExpressionDecomposer</a>
 </li>
 <li>m_decomp
@@ -202,7 +242,7 @@ $(function() {
 : <a class="el" href="structdoctest_1_1AssertData.html#a1fdbef933ef26c0bc174f9ec716924cd">doctest::AssertData</a>
 </li>
 <li>m_exception_string
-: <a class="el" href="structdoctest_1_1AssertData.html#a86c189116f12eccc2d3362ec6d8862f4">doctest::AssertData</a>
+: <a class="el" href="structdoctest_1_1AssertData.html#a11c5691ab8aa9774b250989d5a0a7e80">doctest::AssertData</a>
 </li>
 <li>m_exception_type
 : <a class="el" href="structdoctest_1_1AssertData.html#a1c476dc606780aefdb7db2d7ca146199">doctest::AssertData</a>
@@ -353,7 +393,7 @@ $(function() {
 : <a class="el" href="structdoctest_1_1ContextOptions.html#ad7371979d5134b109dd00fba771b0271">doctest::ContextOptions</a>
 </li>
 <li>npos
-: <a class="el" href="classdoctest_1_1String.html#a29d41bba3eb99eb895aaf8227da09f3e">doctest::String</a>
+: <a class="el" href="classdoctest_1_1String.html#ad5fced1b6920313fe44a9ea1f736a4ef">doctest::String</a>
 </li>
 <li>num_data
 : <a class="el" href="structdoctest_1_1QueryData.html#af1033338fe975ae3c19b16452401230d">doctest::QueryData</a>
@@ -396,6 +436,9 @@ $(function() {
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
+<li>parent
+: <a class="el" href="structSWCNode.html#aec37ef00da8508d57ba127d4ec0c3225">SWCNode</a>
+</li>
 <li>pid
 : <a class="el" href="structSWCNode.html#a4d55115b02532d54ce05c8df8ad0ec95">SWCNode</a>
 </li>
@@ -415,6 +458,9 @@ $(function() {
 </li>
 <li>rand_seed
 : <a class="el" href="structdoctest_1_1ContextOptions.html#ab312bdc6f3c16646f04f75742f87ce0a">doctest::ContextOptions</a>
+</li>
+<li>rhs
+: <a class="el" href="structdoctest_1_1detail_1_1ResultBuilder.html#a9f73413d071af01eb6c5b06636abc9f8">doctest::detail::ResultBuilder</a>
 </li>
 <li>run_stats
 : <a class="el" href="structdoctest_1_1QueryData.html#a435f443f389323f47cb8b0e4202bbea9">doctest::QueryData</a>
@@ -453,10 +499,10 @@ $(function() {
 
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>value
-: <a class="el" href="structdoctest_1_1detail_1_1should__stringify__as__underlying__type.html#a0115e8b2c73fe1a0fc9f344a1374e2dd">doctest::detail::should_stringify_as_underlying_type&lt; T &gt;</a>
-, <a class="el" href="structdoctest_1_1detail_1_1types_1_1false__type.html#a8580f67f4b223b10e49d93b959767f6d">doctest::detail::types::false_type</a>
-, <a class="el" href="structdoctest_1_1detail_1_1types_1_1is__enum.html#a2ac322024808b91cda5ce1a42691ee07">doctest::detail::types::is_enum&lt; T &gt;</a>
-, <a class="el" href="structdoctest_1_1detail_1_1types_1_1true__type.html#a5ad232af56ff87690d552f77e0413f02">doctest::detail::types::true_type</a>
+: <a class="el" href="structdoctest_1_1detail_1_1should__stringify__as__underlying__type.html#ade878ea9dafae8cdc741ddd5497dec96">doctest::detail::should_stringify_as_underlying_type&lt; T &gt;</a>
+, <a class="el" href="structdoctest_1_1detail_1_1types_1_1false__type.html#aa49f5e395f78838b84f85aab46aaafa6">doctest::detail::types::false_type</a>
+, <a class="el" href="structdoctest_1_1detail_1_1types_1_1is__enum.html#ac08bff3cd311269c742cb28c124217ad">doctest::detail::types::is_enum&lt; T &gt;</a>
+, <a class="el" href="structdoctest_1_1detail_1_1types_1_1true__type.html#a4f3b86195362eb02ffb6285b371a5d3a">doctest::detail::types::true_type</a>
 , <a class="el" href="structdoctest_1_1IsNaN.html#a6a490d3d5f5561bcf019fefc88291475">doctest::IsNaN&lt; F &gt;</a>
 </li>
 <li>version
@@ -485,9 +531,12 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

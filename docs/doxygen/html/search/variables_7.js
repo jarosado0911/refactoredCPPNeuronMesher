@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['help_1173',['help',['../structdoctest_1_1ContextOptions.html#a9d542a95ee03f61c233fff51e7461400',1,'doctest::ContextOptions::help()'],['../globals_8cpp.html#aecfcd8d5595d8ba1a38ef3c624d1186a',1,'help():&#160;globals.cpp'],['../globals_8h.html#aecfcd8d5595d8ba1a38ef3c624d1186a',1,'help():&#160;globals.cpp']]],
-  ['helpwindow_1174',['helpWindow',['../globals_8cpp.html#ad1788e3474b817a1b935177e45d114c5',1,'helpWindow():&#160;globals.cpp'],['../globals_8h.html#ad1788e3474b817a1b935177e45d114c5',1,'helpWindow():&#160;globals.cpp']]]
+  ['gnu_5ffile_5fline_1289',['gnu_file_line',['../structdoctest_1_1ContextOptions.html#aab894e731a6fc86cf095288ec7d0c0f2',1,'doctest::ContextOptions']]],
+  ['graph_1290',['graph',['../globals_8cpp.html#a65b5e8f0673c2dba7ec632133f036a21',1,'graph():&#160;globals.cpp'],['../globals_8h.html#a65b5e8f0673c2dba7ec632133f036a21',1,'graph():&#160;globals.cpp']]]
 ];

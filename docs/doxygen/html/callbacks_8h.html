@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('callbacks_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_008249e9286f5c2afe44eabc1cb572ef.html">viewer</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -112,8 +128,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="callbacks_8h__dep__incl.png" border="0" usemap="#ainclude_2viewer_2callbacks_8hdep" alt=""/></div>
 <map name="ainclude_2viewer_2callbacks_8hdep" id="ainclude_2viewer_2callbacks_8hdep">
-<area shape="rect" title="GLFW input handling callbacks for neuron visualization." alt="" coords="11,5,186,32"/>
-<area shape="rect" href="callbacks_8cpp.html" title="Implementation of GLFW callback functions for the neuron viewer." alt="" coords="5,80,192,107"/>
+<area shape="rect" title="GLFW input handling callbacks for neuron visualization." alt="" coords="113,5,287,32"/>
+<area shape="rect" href="callbacks_8cpp.html" title="Implementation of GLFW callback functions for the neuron viewer." alt="" coords="5,87,192,114"/>
+<area shape="rect" href="neuronviewer_8cpp.html" title=" " alt="" coords="216,80,387,121"/>
 </map>
 </div>
 </div>
@@ -208,6 +225,15 @@ Rotation and panning speeds are scaled by constant factors (0.3f and 1.5f) </dd>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="callbacks_8h.html#ae41a3951e1196401047b29ad1d37c6ae" title="Handles mouse button input events.">mouseButtonCallback()</a> for enabling/disabling rotation and panning </dd>
 <dd>
 GLFW cursor position documentation: <a href="https://www.glfw.org/docs/latest/input_guide.html#cursor_pos">https://www.glfw.org/docs/latest/input_guide.html#cursor_pos</a> </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="callbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df_icgraph.png" border="0" usemap="#acallbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df_icgraph" alt=""/></div>
+<map name="acallbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df_icgraph" id="acallbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df_icgraph">
+<area shape="rect" title="Handles mouse cursor movement." alt="" coords="104,5,236,32"/>
+<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -302,6 +328,41 @@ GLFW cursor position documentation: <a href="https://www.glfw.org/docs/latest/in
 <dd>
 Modifier keys (Ctrl, Shift, Alt) are checked using the mods parameter </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>GLFW key documentation: <a href="https://www.glfw.org/docs/latest/input_guide.html#input_key">https://www.glfw.org/docs/latest/input_guide.html#input_key</a> </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="callbacks_8h_a0b9e239c8889734711f29fe45551605b_cgraph.png" border="0" usemap="#acallbacks_8h_a0b9e239c8889734711f29fe45551605b_cgraph" alt=""/></div>
+<map name="acallbacks_8h_a0b9e239c8889734711f29fe45551605b_cgraph" id="acallbacks_8h_a0b9e239c8889734711f29fe45551605b_cgraph">
+<area shape="rect" title="Handles keyboard input events." alt="" coords="5,299,100,326"/>
+<area shape="rect" href="classNeuronGraph.html#a198959fac3c6691530c888896ae777ae" title="Resamples all trunks using cubic spline interpolation." alt="" coords="163,5,354,47"/>
+<area shape="rect" href="classNeuronGraph.html#a7961eded24b6524392b01fdfa7e98452" title="Combines multiple trunks into a single node set." alt="" coords="157,71,360,98"/>
+<area shape="rect" href="opgl__utils_8cpp.html#af16fb9eaedbea83e2bf2906e91d1382a" title="Computes the bounding box and center of a set of nodes." alt="" coords="201,122,317,149"/>
+<area shape="rect" href="classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs." alt="" coords="148,173,369,199"/>
+<area shape="rect" href="classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="176,223,341,250"/>
+<area shape="rect" href="swc__viewer_8cpp.html#a77c6a10a239fd28b973ebe8dfc7f08b5" title=" " alt="" coords="202,274,315,301"/>
+<area shape="rect" href="swc__viewer_8cpp.html#af435ad623add097384c18de67cd0702e" title="Prints keyboard and mouse controls to the console." alt="" coords="209,325,308,351"/>
+<area shape="rect" href="classNeuronGraph.html#a4fbcfc32da26b3bc0fe7211ee0b08237" title="Replaces the current set of nodes in the graph." alt="" coords="177,375,340,402"/>
+<area shape="rect" href="tinyfiledialogs_8c.html#ac5082e6c1f4693110f1703664b3fa9fc" title=" " alt="" coords="436,426,573,453"/>
+<area shape="rect" href="tinyfiledialogs_8c.html#a7a17e17150593bf3b04253ea819fc5bc" title=" " alt="" coords="431,477,578,503"/>
+<area shape="rect" href="classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb" title="Writes a set of nodes to an SWC file." alt="" coords="173,527,344,554"/>
+<area shape="rect" href="classNeuronGraph.html#a938d33cc1ee5a5abc291c555e0a60ad5" title="Writes a set of nodes to a UGX file." alt="" coords="159,578,358,605"/>
+<area shape="rect" href="classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="417,5,592,47"/>
+<area shape="rect" href="swc__viewer_8cpp.html#ab897226cbf8704a86b3a4a11e258334f" title=" " alt="" coords="447,223,563,250"/>
+<area shape="rect" href="swc__viewer_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads neuron data from an SWC file." alt="" coords="465,274,544,301"/>
+<area shape="rect" href="tinyfiledialogs_8c.html#a8918e9f47e1532c1d055f563a32b215c" title=" " alt="" coords="431,325,578,351"/>
+<area shape="rect" href="tinyfiledialogs_8c.html#a789b9cfa9fb2cf888db0246f9c2dca9a" title=" " alt="" coords="640,426,769,453"/>
+<area shape="rect" href="classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph." alt="" coords="425,375,584,402"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="callbacks_8h_a0b9e239c8889734711f29fe45551605b_icgraph.png" border="0" usemap="#acallbacks_8h_a0b9e239c8889734711f29fe45551605b_icgraph" alt=""/></div>
+<map name="acallbacks_8h_a0b9e239c8889734711f29fe45551605b_icgraph" id="acallbacks_8h_a0b9e239c8889734711f29fe45551605b_icgraph">
+<area shape="rect" title="Handles keyboard input events." alt="" coords="104,5,199,32"/>
+<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -379,6 +440,15 @@ The cursor position is captured on button press for relative movement </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="callbacks_8h.html#ae49f0c4c2064be8fbcf555f46460b7df" title="Handles mouse cursor movement.">cursorPosCallback()</a> for the implementation of the actual view transformations </dd>
 <dd>
 GLFW mouse button documentation: <a href="https://www.glfw.org/docs/latest/input_guide.html#input_mouse_button">https://www.glfw.org/docs/latest/input_guide.html#input_mouse_button</a> </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="callbacks_8h_ae41a3951e1196401047b29ad1d37c6ae_icgraph.png" border="0" usemap="#acallbacks_8h_ae41a3951e1196401047b29ad1d37c6ae_icgraph" alt=""/></div>
+<map name="acallbacks_8h_ae41a3951e1196401047b29ad1d37c6ae_icgraph" id="acallbacks_8h_ae41a3951e1196401047b29ad1d37c6ae_icgraph">
+<area shape="rect" title="Handles mouse button input events." alt="" coords="104,5,255,32"/>
+<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -441,13 +511,26 @@ Zooming is centered on the current view (no focal point adjustment) </dd>
 <dd>
 The 1.1 base value provides a good balance between precision and responsiveness </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>GLFW scroll documentation: <a href="https://www.glfw.org/docs/latest/input_guide.html#scrolling">https://www.glfw.org/docs/latest/input_guide.html#scrolling</a> </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="callbacks_8h_aa9b224479e8c1cc5251b8e7f3fdabacd_icgraph.png" border="0" usemap="#acallbacks_8h_aa9b224479e8c1cc5251b8e7f3fdabacd_icgraph" alt=""/></div>
+<map name="acallbacks_8h_aa9b224479e8c1cc5251b8e7f3fdabacd_icgraph" id="acallbacks_8h_aa9b224479e8c1cc5251b8e7f3fdabacd_icgraph">
+<area shape="rect" title="Handles mouse scroll events." alt="" coords="104,5,208,32"/>
+<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_008249e9286f5c2afe44eabc1cb572ef.html">viewer</a></li><li class="navelem"><a class="el" href="callbacks_8h.html">callbacks.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('annotated.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -101,34 +121,50 @@ $(function() {
 <tr id="row_0_0_12_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1TestFailureException.html" target="_self">TestFailureException</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_13_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1Subcase.html" target="_self">Subcase</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_14_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1Result.html" target="_self">Result</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_15_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1ExpressionDecomposer.html" target="_self">ExpressionDecomposer</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_16_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1TestSuite.html" target="_self">TestSuite</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_17_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1TestCase.html" target="_self">TestCase</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_18_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator.html" target="_self">RelationalComparator</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_19_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1ResultBuilder.html" target="_self">ResultBuilder</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_20_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1IExceptionTranslator.html" target="_self">IExceptionTranslator</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_21_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1detail_1_1ExceptionTranslator.html" target="_self">ExceptionTranslator</a></td><td class="desc">OCLINT destructor of virtual class </td></tr>
-<tr id="row_0_0_22_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1ContextScopeBase.html" target="_self">ContextScopeBase</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_23_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1detail_1_1ContextScope.html" target="_self">ContextScope</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_24_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1MessageBuilder.html" target="_self">MessageBuilder</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1String.html" target="_self">String</a></td><td class="desc"></td></tr>
-<tr id="row_0_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1Contains.html" target="_self">Contains</a></td><td class="desc"></td></tr>
-<tr id="row_0_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1TestCaseData.html" target="_self">TestCaseData</a></td><td class="desc"></td></tr>
-<tr id="row_0_4_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_4_" class="arrow" onclick="toggleFolder('0_4_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1AssertData.html" target="_self">AssertData</a></td><td class="desc"></td></tr>
-<tr id="row_0_4_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1AssertData_1_1StringContains.html" target="_self">StringContains</a></td><td class="desc"></td></tr>
-<tr id="row_0_5_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1MessageData.html" target="_self">MessageData</a></td><td class="desc"></td></tr>
-<tr id="row_0_6_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1SubcaseSignature.html" target="_self">SubcaseSignature</a></td><td class="desc"></td></tr>
-<tr id="row_0_7_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1IContextScope.html" target="_self">IContextScope</a></td><td class="desc"></td></tr>
-<tr id="row_0_8_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1ContextOptions.html" target="_self">ContextOptions</a></td><td class="desc">OCLINT too many fields </td></tr>
-<tr id="row_0_9_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1StringMaker.html" target="_self">StringMaker</a></td><td class="desc"></td></tr>
-<tr id="row_0_10_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1Approx.html" target="_self">Approx</a></td><td class="desc"></td></tr>
-<tr id="row_0_11_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1IsNaN.html" target="_self">IsNaN</a></td><td class="desc"></td></tr>
-<tr id="row_0_12_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1Context.html" target="_self">Context</a></td><td class="desc"></td></tr>
-<tr id="row_0_13_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1CurrentTestCaseStats.html" target="_self">CurrentTestCaseStats</a></td><td class="desc"></td></tr>
-<tr id="row_0_14_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1TestCaseException.html" target="_self">TestCaseException</a></td><td class="desc"></td></tr>
-<tr id="row_0_15_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1TestRunStats.html" target="_self">TestRunStats</a></td><td class="desc"></td></tr>
-<tr id="row_0_16_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1QueryData.html" target="_self">QueryData</a></td><td class="desc"></td></tr>
-<tr id="row_0_17_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1IReporter.html" target="_self">IReporter</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_15_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1Expression__lhs.html" target="_self">Expression_lhs</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_16_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1ExpressionDecomposer.html" target="_self">ExpressionDecomposer</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_17_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1TestSuite.html" target="_self">TestSuite</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_18_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1TestCase.html" target="_self">TestCase</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_19_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator.html" target="_self">RelationalComparator</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_20_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_010_00_01L_00_01R_01_4.html" target="_self">RelationalComparator&lt; 0, L, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_21_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_011_00_01L_00_01R_01_4.html" target="_self">RelationalComparator&lt; 1, L, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_22_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_012_00_01L_00_01R_01_4.html" target="_self">RelationalComparator&lt; 2, L, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_23_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_013_00_01L_00_01R_01_4.html" target="_self">RelationalComparator&lt; 3, L, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_24_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_014_00_01L_00_01R_01_4.html" target="_self">RelationalComparator&lt; 4, L, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_25_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1RelationalComparator_3_015_00_01L_00_01R_01_4.html" target="_self">RelationalComparator&lt; 5, L, R &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_26_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1ResultBuilder.html" target="_self">ResultBuilder</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_27_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1IExceptionTranslator.html" target="_self">IExceptionTranslator</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_28_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1detail_1_1ExceptionTranslator.html" target="_self">ExceptionTranslator</a></td><td class="desc">OCLINT destructor of virtual class </td></tr>
+<tr id="row_0_0_29_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1ContextScopeBase.html" target="_self">ContextScopeBase</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_30_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1detail_1_1ContextScope.html" target="_self">ContextScope</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_31_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1detail_1_1MessageBuilder.html" target="_self">MessageBuilder</a></td><td class="desc"></td></tr>
+<tr id="row_0_1_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1String.html" target="_self">String</a></td><td class="desc"></td></tr>
+<tr id="row_0_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1Contains.html" target="_self">Contains</a></td><td class="desc"></td></tr>
+<tr id="row_0_3_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1TestCaseData.html" target="_self">TestCaseData</a></td><td class="desc"></td></tr>
+<tr id="row_0_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_4_" class="arrow" onclick="toggleFolder('0_4_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1AssertData.html" target="_self">AssertData</a></td><td class="desc"></td></tr>
+<tr id="row_0_4_0_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1AssertData_1_1StringContains.html" target="_self">StringContains</a></td><td class="desc"></td></tr>
+<tr id="row_0_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1MessageData.html" target="_self">MessageData</a></td><td class="desc"></td></tr>
+<tr id="row_0_6_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1SubcaseSignature.html" target="_self">SubcaseSignature</a></td><td class="desc"></td></tr>
+<tr id="row_0_7_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1IContextScope.html" target="_self">IContextScope</a></td><td class="desc"></td></tr>
+<tr id="row_0_8_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1ContextOptions.html" target="_self">ContextOptions</a></td><td class="desc">OCLINT too many fields </td></tr>
+<tr id="row_0_9_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1StringMaker.html" target="_self">StringMaker</a></td><td class="desc"></td></tr>
+<tr id="row_0_10_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1Approx.html" target="_self">Approx</a></td><td class="desc"></td></tr>
+<tr id="row_0_11_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1IsNaN.html" target="_self">IsNaN</a></td><td class="desc"></td></tr>
+<tr id="row_0_12_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1test__suite.html" target="_self">test_suite</a></td><td class="desc"></td></tr>
+<tr id="row_0_13_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1description.html" target="_self">description</a></td><td class="desc"></td></tr>
+<tr id="row_0_14_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1skip.html" target="_self">skip</a></td><td class="desc"></td></tr>
+<tr id="row_0_15_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1no__breaks.html" target="_self">no_breaks</a></td><td class="desc"></td></tr>
+<tr id="row_0_16_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1no__output.html" target="_self">no_output</a></td><td class="desc"></td></tr>
+<tr id="row_0_17_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1timeout.html" target="_self">timeout</a></td><td class="desc"></td></tr>
+<tr id="row_0_18_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1may__fail.html" target="_self">may_fail</a></td><td class="desc"></td></tr>
+<tr id="row_0_19_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1should__fail.html" target="_self">should_fail</a></td><td class="desc"></td></tr>
+<tr id="row_0_20_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1expected__failures.html" target="_self">expected_failures</a></td><td class="desc"></td></tr>
+<tr id="row_0_21_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdoctest_1_1Context.html" target="_self">Context</a></td><td class="desc"></td></tr>
+<tr id="row_0_22_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1CurrentTestCaseStats.html" target="_self">CurrentTestCaseStats</a></td><td class="desc"></td></tr>
+<tr id="row_0_23_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1TestCaseException.html" target="_self">TestCaseException</a></td><td class="desc"></td></tr>
+<tr id="row_0_24_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1TestRunStats.html" target="_self">TestRunStats</a></td><td class="desc"></td></tr>
+<tr id="row_0_25_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1QueryData.html" target="_self">QueryData</a></td><td class="desc"></td></tr>
+<tr id="row_0_26_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structdoctest_1_1IReporter.html" target="_self">IReporter</a></td><td class="desc"></td></tr>
 <tr id="row_1_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><a class="el" href="namespacestd.html" target="_self">std</a></td><td class="desc"></td></tr>
 <tr id="row_1_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structstd_1_1char__traits.html" target="_self">char_traits</a></td><td class="desc"></td></tr>
 <tr id="row_1_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classstd_1_1basic__ostream.html" target="_self">basic_ostream</a></td><td class="desc"></td></tr>
@@ -140,9 +176,12 @@ $(function() {
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

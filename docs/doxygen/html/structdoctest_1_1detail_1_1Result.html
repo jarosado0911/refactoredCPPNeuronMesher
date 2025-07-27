@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdoctest_1_1detail_1_1Result.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacedoctest.html">doctest</a></li><li class="navelem"><a class="el" href="namespacedoctest_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -84,7 +100,7 @@ Collaboration diagram for doctest::detail::Result:</div>
 <area shape="rect" href="classdoctest_1_1String.html" title=" " alt="" coords="27,95,134,121"/>
 <area shape="rect" title=" " alt="" coords="9,5,152,32"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -92,6 +108,72 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae38382da1a2d2f8e33aebc7da15febc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4d2e8633aedaffa31f5c8b8530f522c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#ae4d2e8633aedaffa31f5c8b8530f522c">Result</a> (bool passed, const <a class="el" href="classdoctest_1_1String.html">String</a> &amp;decomposition=<a class="el" href="classdoctest_1_1String.html">String</a>())</td></tr>
 <tr class="separator:ae4d2e8633aedaffa31f5c8b8530f522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5058e18e79bbf99a4b644649ebb4c3"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a3f5058e18e79bbf99a4b644649ebb4c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a3f5058e18e79bbf99a4b644649ebb4c3">operator&amp;</a> (const R &amp;)</td></tr>
+<tr class="separator:a3f5058e18e79bbf99a4b644649ebb4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4868619f717cf9fdbeb58133032438"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a2b4868619f717cf9fdbeb58133032438"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a2b4868619f717cf9fdbeb58133032438">operator^</a> (const R &amp;)</td></tr>
+<tr class="separator:a2b4868619f717cf9fdbeb58133032438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f879e2504adae5447a2ff74bcff6f3a"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a7f879e2504adae5447a2ff74bcff6f3a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a7f879e2504adae5447a2ff74bcff6f3a">operator|</a> (const R &amp;)</td></tr>
+<tr class="separator:a7f879e2504adae5447a2ff74bcff6f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1ea00918158128141bb385a7cfccfd"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a5d1ea00918158128141bb385a7cfccfd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a5d1ea00918158128141bb385a7cfccfd">operator&amp;&amp;</a> (const R &amp;)</td></tr>
+<tr class="separator:a5d1ea00918158128141bb385a7cfccfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf0207b823943a5bccedb949e18e282"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a6cf0207b823943a5bccedb949e18e282"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a6cf0207b823943a5bccedb949e18e282">operator||</a> (const R &amp;)</td></tr>
+<tr class="separator:a6cf0207b823943a5bccedb949e18e282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3044eac4bb0a2618fa3bb66cb218995d"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a3044eac4bb0a2618fa3bb66cb218995d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a3044eac4bb0a2618fa3bb66cb218995d">operator==</a> (const R &amp;)</td></tr>
+<tr class="separator:a3044eac4bb0a2618fa3bb66cb218995d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b7fc747774413912635d74408518e3"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a86b7fc747774413912635d74408518e3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a86b7fc747774413912635d74408518e3">operator!=</a> (const R &amp;)</td></tr>
+<tr class="separator:a86b7fc747774413912635d74408518e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde8dcb1c465ce1815b63122a5560d64"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:abde8dcb1c465ce1815b63122a5560d64"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#abde8dcb1c465ce1815b63122a5560d64">operator&lt;</a> (const R &amp;)</td></tr>
+<tr class="separator:abde8dcb1c465ce1815b63122a5560d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae03bd61e639ee5def2e766167b6223"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a7ae03bd61e639ee5def2e766167b6223"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a7ae03bd61e639ee5def2e766167b6223">operator&gt;</a> (const R &amp;)</td></tr>
+<tr class="separator:a7ae03bd61e639ee5def2e766167b6223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cade2a6fc42b720a9fd1be161d139da"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a3cade2a6fc42b720a9fd1be161d139da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a3cade2a6fc42b720a9fd1be161d139da">operator&lt;=</a> (const R &amp;)</td></tr>
+<tr class="separator:a3cade2a6fc42b720a9fd1be161d139da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fa09c686e01d5fcd2b1ea2510368f9"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a74fa09c686e01d5fcd2b1ea2510368f9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a74fa09c686e01d5fcd2b1ea2510368f9">operator&gt;=</a> (const R &amp;)</td></tr>
+<tr class="separator:a74fa09c686e01d5fcd2b1ea2510368f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e12ae4338ab7af201a65c03853ecdd"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a66e12ae4338ab7af201a65c03853ecdd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a66e12ae4338ab7af201a65c03853ecdd">operator=</a> (const R &amp;)</td></tr>
+<tr class="separator:a66e12ae4338ab7af201a65c03853ecdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0689142cc6c21e751906bc5bb94e9aa5"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a0689142cc6c21e751906bc5bb94e9aa5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a0689142cc6c21e751906bc5bb94e9aa5">operator+=</a> (const R &amp;)</td></tr>
+<tr class="separator:a0689142cc6c21e751906bc5bb94e9aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e4ae2c54a768295dc9fcf12365d7c1"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a52e4ae2c54a768295dc9fcf12365d7c1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a52e4ae2c54a768295dc9fcf12365d7c1">operator-=</a> (const R &amp;)</td></tr>
+<tr class="separator:a52e4ae2c54a768295dc9fcf12365d7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65caf82b9f177cd0b5c56526db83ebe7"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a65caf82b9f177cd0b5c56526db83ebe7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a65caf82b9f177cd0b5c56526db83ebe7">operator*=</a> (const R &amp;)</td></tr>
+<tr class="separator:a65caf82b9f177cd0b5c56526db83ebe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1caaf7313e1e7ac21ad1b58c9f795fc7"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a1caaf7313e1e7ac21ad1b58c9f795fc7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a1caaf7313e1e7ac21ad1b58c9f795fc7">operator/=</a> (const R &amp;)</td></tr>
+<tr class="separator:a1caaf7313e1e7ac21ad1b58c9f795fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e06f0bb0a875517ea746e8fcb892ea"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a64e06f0bb0a875517ea746e8fcb892ea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a64e06f0bb0a875517ea746e8fcb892ea">operator%=</a> (const R &amp;)</td></tr>
+<tr class="separator:a64e06f0bb0a875517ea746e8fcb892ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed5df9ea0a0d81fd7d143a36df739d39"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:aed5df9ea0a0d81fd7d143a36df739d39"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#aed5df9ea0a0d81fd7d143a36df739d39">operator&lt;&lt;=</a> (const R &amp;)</td></tr>
+<tr class="separator:aed5df9ea0a0d81fd7d143a36df739d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52bbd4f9ca291ffd32fd36c67d63ba22"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a52bbd4f9ca291ffd32fd36c67d63ba22"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a52bbd4f9ca291ffd32fd36c67d63ba22">operator&gt;&gt;=</a> (const R &amp;)</td></tr>
+<tr class="separator:a52bbd4f9ca291ffd32fd36c67d63ba22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4314b222924d7bf0f1e1fee435eb3f"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:aaa4314b222924d7bf0f1e1fee435eb3f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#aaa4314b222924d7bf0f1e1fee435eb3f">operator&amp;=</a> (const R &amp;)</td></tr>
+<tr class="separator:aaa4314b222924d7bf0f1e1fee435eb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55eb8b8fac1ab96e875fb37d120ecf0c"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:a55eb8b8fac1ab96e875fb37d120ecf0c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#a55eb8b8fac1ab96e875fb37d120ecf0c">operator^=</a> (const R &amp;)</td></tr>
+<tr class="separator:a55eb8b8fac1ab96e875fb37d120ecf0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab652f6394400b1a8243220f84db2a49c"><td class="memTemplParams" colspan="2">template&lt;typename R &gt; </td></tr>
+<tr class="memitem:ab652f6394400b1a8243220f84db2a49c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdoctest_1_1detail_1_1Result.html#ab652f6394400b1a8243220f84db2a49c">operator|=</a> (const R &amp;)</td></tr>
+<tr class="separator:ab652f6394400b1a8243220f84db2a49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -154,6 +236,623 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a86b7fc747774413912635d74408518e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b7fc747774413912635d74408518e3">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64e06f0bb0a875517ea746e8fcb892ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e06f0bb0a875517ea746e8fcb892ea">&#9670;&nbsp;</a></span>operator%=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator%= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f5058e18e79bbf99a4b644649ebb4c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5058e18e79bbf99a4b644649ebb4c3">&#9670;&nbsp;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d1ea00918158128141bb385a7cfccfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1ea00918158128141bb385a7cfccfd">&#9670;&nbsp;</a></span>operator&amp;&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&amp;&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa4314b222924d7bf0f1e1fee435eb3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4314b222924d7bf0f1e1fee435eb3f">&#9670;&nbsp;</a></span>operator&amp;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&amp;= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65caf82b9f177cd0b5c56526db83ebe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65caf82b9f177cd0b5c56526db83ebe7">&#9670;&nbsp;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0689142cc6c21e751906bc5bb94e9aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0689142cc6c21e751906bc5bb94e9aa5">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52e4ae2c54a768295dc9fcf12365d7c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e4ae2c54a768295dc9fcf12365d7c1">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1caaf7313e1e7ac21ad1b58c9f795fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1caaf7313e1e7ac21ad1b58c9f795fc7">&#9670;&nbsp;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abde8dcb1c465ce1815b63122a5560d64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde8dcb1c465ce1815b63122a5560d64">&#9670;&nbsp;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed5df9ea0a0d81fd7d143a36df739d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed5df9ea0a0d81fd7d143a36df739d39">&#9670;&nbsp;</a></span>operator&lt;&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&lt;&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cade2a6fc42b720a9fd1be161d139da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cade2a6fc42b720a9fd1be161d139da">&#9670;&nbsp;</a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66e12ae4338ab7af201a65c03853ecdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e12ae4338ab7af201a65c03853ecdd">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3044eac4bb0a2618fa3bb66cb218995d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3044eac4bb0a2618fa3bb66cb218995d">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ae03bd61e639ee5def2e766167b6223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae03bd61e639ee5def2e766167b6223">&#9670;&nbsp;</a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74fa09c686e01d5fcd2b1ea2510368f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74fa09c686e01d5fcd2b1ea2510368f9">&#9670;&nbsp;</a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52bbd4f9ca291ffd32fd36c67d63ba22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52bbd4f9ca291ffd32fd36c67d63ba22">&#9670;&nbsp;</a></span>operator&gt;&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator&gt;&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b4868619f717cf9fdbeb58133032438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4868619f717cf9fdbeb58133032438">&#9670;&nbsp;</a></span>operator^()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator^ </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55eb8b8fac1ab96e875fb37d120ecf0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55eb8b8fac1ab96e875fb37d120ecf0c">&#9670;&nbsp;</a></span>operator^=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator^= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f879e2504adae5447a2ff74bcff6f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f879e2504adae5447a2ff74bcff6f3a">&#9670;&nbsp;</a></span>operator|()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator| </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab652f6394400b1a8243220f84db2a49c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab652f6394400b1a8243220f84db2a49c">&#9670;&nbsp;</a></span>operator|=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator|= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cf0207b823943a5bccedb949e18e282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf0207b823943a5bccedb949e18e282">&#9670;&nbsp;</a></span>operator||()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a>&amp; doctest::detail::Result::operator|| </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a97968e037266580a799ab3deb9365b79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97968e037266580a799ab3deb9365b79">&#9670;&nbsp;</a></span>m_decomp</h2>
@@ -187,9 +886,13 @@ Public Attributes</h2></td></tr>
 <li>include/externals/<a class="el" href="doctest_8h_source.html">doctest.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedoctest.html">doctest</a></li><li class="navelem"><a class="el" href="namespacedoctest_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="structdoctest_1_1detail_1_1Result.html">Result</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

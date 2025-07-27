@@ -1,0 +1,83 @@
+\hypertarget{neuronviewer_8cpp}{}\doxysection{scripts/app\+\_\+neuronviewer/neuronviewer.cpp File Reference}
+\label{neuronviewer_8cpp}\index{scripts/app\_neuronviewer/neuronviewer.cpp@{scripts/app\_neuronviewer/neuronviewer.cpp}}
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glu.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include \char`\"{}tinyfiledialogs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stb\+\_\+easy\+\_\+font.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}neurongraph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}draw\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}callbacks.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opgl\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}renderhelpwindow.\+cpp\char`\"{}}\newline
+Include dependency graph for neuronviewer.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neuronviewer_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{neuronviewer_8cpp_ad6323e594cd386c73c6340b415789b69}{setup\+Lighting}} ()
+\item 
+void \mbox{\hyperlink{neuronviewer_8cpp_a3eeca8e678d6606633aeadad0a2ac742}{setup\+Camera}} (double cx, double cy, double cz, double radius, int width, int height)
+\item 
+int \mbox{\hyperlink{neuronviewer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{neuronviewer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{neuronviewer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{neuronviewer.cpp@{neuronviewer.cpp}!main@{main}}
+\index{main@{main}!neuronviewer.cpp@{neuronviewer.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{neuronviewer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{neuronviewer_8cpp_a3eeca8e678d6606633aeadad0a2ac742}\label{neuronviewer_8cpp_a3eeca8e678d6606633aeadad0a2ac742}} 
+\index{neuronviewer.cpp@{neuronviewer.cpp}!setupCamera@{setupCamera}}
+\index{setupCamera@{setupCamera}!neuronviewer.cpp@{neuronviewer.cpp}}
+\doxysubsubsection{\texorpdfstring{setupCamera()}{setupCamera()}}
+{\footnotesize\ttfamily void setup\+Camera (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{radius,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{neuronviewer_8cpp_a3eeca8e678d6606633aeadad0a2ac742_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{neuronviewer_8cpp_ad6323e594cd386c73c6340b415789b69}\label{neuronviewer_8cpp_ad6323e594cd386c73c6340b415789b69}} 
+\index{neuronviewer.cpp@{neuronviewer.cpp}!setupLighting@{setupLighting}}
+\index{setupLighting@{setupLighting}!neuronviewer.cpp@{neuronviewer.cpp}}
+\doxysubsubsection{\texorpdfstring{setupLighting()}{setupLighting()}}
+{\footnotesize\ttfamily void setup\+Lighting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{neuronviewer_8cpp_ad6323e594cd386c73c6340b415789b69_icgraph}
+\end{center}
+\end{figure}

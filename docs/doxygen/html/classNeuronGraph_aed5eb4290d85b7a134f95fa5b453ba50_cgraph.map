@@ -1,0 +1,5 @@
+<map id="NeuronGraph::removeSomaSegment" name="NeuronGraph::removeSomaSegment">
+<area shape="rect" id="node1" title="Removes the soma segment from a set of nodes." alt="" coords="5,78,241,105"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a0a94b95b0afc5d98590e631f963a970d" title=" " alt="" coords="290,29,482,71"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#a096f5d8b9231d0b27f0a60a694db41d3" title=" " alt="" coords="289,119,483,146"/>
+</map>

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['gnu_5ffile_5fline_1171',['gnu_file_line',['../structdoctest_1_1ContextOptions.html#aab894e731a6fc86cf095288ec7d0c0f2',1,'doctest::ContextOptions']]],
-  ['graph_1172',['graph',['../globals_8cpp.html#a65b5e8f0673c2dba7ec632133f036a21',1,'graph():&#160;globals.cpp'],['../globals_8h.html#a65b5e8f0673c2dba7ec632133f036a21',1,'graph():&#160;globals.cpp']]]
+  ['failure_5fflags_1285',['failure_flags',['../structdoctest_1_1CurrentTestCaseStats.html#aaa58c52fd07a20e6e4daf19eecb2e2ba',1,'doctest::CurrentTestCaseStats']]],
+  ['first_1286',['first',['../structdoctest_1_1ContextOptions.html#a9f26ee60a5259e73f9f25ce3f4883a97',1,'doctest::ContextOptions']]],
+  ['flipped_1287',['flipped',['../structdoctest_1_1IsNaN.html#a3c25335f2708d9360b8e92813b3ac17d',1,'doctest::IsNaN']]],
+  ['force_5fcolors_1288',['force_colors',['../structdoctest_1_1ContextOptions.html#a8cd276e86a209f3d5486eb6c5a2a29bf',1,'doctest::ContextOptions']]]
 ];
