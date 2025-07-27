@@ -1,4 +1,39 @@
-import pytest, os, inspect
+"""
+Test suite for the Python bindings of the NeuronGraph C++ library.
+
+This module contains unit tests that verify the functionality of the Python bindings
+for the NeuronGraph C++ library. It tests various operations including file I/O,
+graph manipulation, and analysis functions.
+
+Key Test Categories:
+- Basic graph operations (node/edge counts, topology)
+- File I/O (SWC and UGX formats)
+- Graph preprocessing and manipulation
+- Trunk extraction and reassembly
+- Resampling and refinement operations
+- File format conversion
+
+Dependencies:
+    pytest: Test framework
+    rich: Enhanced terminal output formatting
+    python_package.neurongraph: The Python bindings being tested
+
+Usage:
+    To run all tests:
+        pytest test_bindings.py -v
+
+    To run a specific test:
+        pytest test_bindings.py::test_function_name -v
+
+Notes:
+    - Test data files are stored in the test/data directory
+    - Output files are written to test/output
+    - The test fixture 'graph' provides a pre-loaded NeuronGraph instance
+"""
+
+import pytest
+import os
+import inspect
 from rich import print
 from rich.table import Table
 import python_package.neurongraph as ng
