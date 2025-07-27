@@ -1,4 +1,6 @@
 # `C++` Neuron Geometry Analyzer and Mesh Generator
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=jarosado0911&show_icons=true&theme=default)
+
 CPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
 - GitHub Repository: [CPPNeuronMesher](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
 - GitHub Pages: [CPPNeuronMesher](https://jarosado0911.github.io/refactoredCPPNeuronMesher)
@@ -8,8 +10,10 @@ The badges at the top of this README provide at-a-glance insights into the healt
 ### ✅ CI & Quality 
 The CI & Quality badges show the current build status, test results, and automated code quality checks, giving a quick snapshot of whether the project is compiling, passing its tests, and meeting quality standards.
 
-[![🛠️ Build](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/cmake-single-platform.yml)
+[![🛠️ Build](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/build.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/build.yml)
 [![🧪 Doctest](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/doctest.yml)
+[![⭐ Test](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/test.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/test.yml)
+[![☁️ SonarCloud](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/sonarcloud.yml/badge.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/sonarcloud.yml)
 [![Codacy Grade](https://app.codacy.com/project/badge/Grade/72da00b5a0934821b462e2e0134d4c9b)](https://app.codacy.com/gh/jarosado0911/refactoredCPPNeuronMesher/dashboard?utm_source=github.com&utm_medium=referral&utm_content=jarosado0911/refactoredCPPNeuronMesher&utm_campaign=Badge_Grade)
 [![SonarCloud Alerts](https://sonarcloud.io/api/project_badges/measure?project=jarosado0911_refactoredCPPNeuronMesher&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher) 
 ![Code Scanning - Action](https://github.com/jarosado0911/refactoredCPPNeuronMesher/actions/workflows/codeql.yml/badge.svg)
@@ -39,6 +43,8 @@ The GitHub Metadata badges highlight important repository details such as the pr
 ![Release](https://img.shields.io/github/v/release/jarosado0911/refactoredCPPNeuronMesher?include_prereleases)
 ![Stars](https://img.shields.io/github/stars/jarosado0911/refactoredCPPNeuronMesher?style=social)
 ![Forks](https://img.shields.io/github/forks/jarosado0911/refactoredCPPNeuronMesher?style=social)
+[![CMake](https://img.shields.io/badge/build-CMake-blue.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/blob/main/CMakeLists.txt)
+
 ### 📡 Static Analysis Summary
 The Static Analysis Summary badges indicate the results of automated code analysis performed by tools like SonarCloud, highlighting overall code quality and whether the project passes essential quality gates. These provide a quick status check for maintainers and users, and you can view the full analysis details on [SonarCloud](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher).
 

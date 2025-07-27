@@ -1,0 +1,78 @@
+name: SonarCloud Analysis
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  BUILD_TYPE: Debug  # Use Debug for coverage instrumentation
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libtinyxml2-dev \
+          libglfw3-dev \
+          libgl1-mesa-dev \
+          libglu1-mesa-dev \
+          lcov \
+          gcovr
+
+    - name: Set up Java (for SonarCloud)
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Configure CMake with coverage flags
+      run: |
+        cmake -B build \
+              -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} \
+              -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+              -DCMAKE_CXX_FLAGS="--coverage" \
+              -DCMAKE_C_FLAGS="--coverage"
+
+    - name: Build all targets
+      run: cmake --build build --config ${{env.BUILD_TYPE}}
+
+    - name: Run tests
+      working-directory: build
+      run: ctest -C ${{env.BUILD_TYPE}} --output-on-failure
+
+    - name: Run bigtests
+      run: make doctest
+
+    - name: Install .so
+      run: make install
+
+    - name: Run PyTest
+      run: make testpy
+
+    - name: Generate coverage report
+      run: |
+        gcovr -r . --sonarqube coverage.xml
+        cat coverage.xml
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@13a24e453e2e6262f3bb0c5fa8241031e637a028
+      with:
+        args: >
+          -Dsonar.projectKey=jarosado0911_refactoredCPPNeuronMesher
+          -Dsonar.organization=jarosado0911
+          -Dsonar.host.url=https://sonarcloud.io
+          -Dsonar.cfamily.compile-commands=build/compile_commands.json
+          -Dsonar.coverageReportPaths=coverage.xml
+          -Dsonar.exclusions=**/*.html,docs/doxygen/**,src/tinyfiledialogs.c,src/viewercpp/**
+          -Dsonar.coverage.exclusions=coverage/**,src/bindings.cpp,python_package/test/test_bindings.py
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
