@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3ab2880914ce3960d556aa8681e9e47ad4":[3,0,0,0,0,39],
 "namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3ab2aade9d6de83d7d0548e784a502d67f":[3,0,0,0,0,34],
 "namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3ab79f3f076e62c260e77febd914bb82c3":[3,0,0,0,0,6],
 "namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3abcad551db5972ed3918d2dae14c556f1":[3,0,0,0,0,12],
@@ -249,5 +248,6 @@ var NAVTREEINDEX4 =
 "structdoctest_1_1AssertData.html#a3e9d4c7eeff7c4fe310b0597bf7027b8":[4,0,0,4,12],
 "structdoctest_1_1AssertData.html#ab26ee6e05feaefc982c4f5481458cbda":[4,0,0,4,11],
 "structdoctest_1_1AssertData.html#ac22c9ed0d8c6edec58c4b26a0a00e714":[4,0,0,4,9],
-"structdoctest_1_1AssertData.html#ac9ddaf3e6532fdadba3c1f74eb931d4a":[4,0,0,4,8]
+"structdoctest_1_1AssertData.html#ac9ddaf3e6532fdadba3c1f74eb931d4a":[4,0,0,4,8],
+"structdoctest_1_1AssertData.html#ace744d365532d299052c8a80a63f7079":[4,0,0,4,13]
 };

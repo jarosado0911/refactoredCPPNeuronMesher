@@ -28,9 +28,9 @@ var NAVTREE =
     [ "Project Overview", "index.html", [
       [ "🔧 Key Class Documentation", "index.html#autotoc_md38", null ],
       [ "📂 Source File Documentation", "index.html#autotoc_md40", [
-        [ "Source <em>src/</em>", "index.html#autotoc_md41", null ],
-        [ "Viewer <em>src/view/</em>", "index.html#autotoc_md42", null ],
-        [ "Scripts <em>scripts/</em>", "index.html#autotoc_md43", null ],
+        [ "Source <em>src</em>", "index.html#autotoc_md41", null ],
+        [ "Viewer <em>src.view</em>", "index.html#autotoc_md42", null ],
+        [ "Scripts <em>scripts</em>", "index.html#autotoc_md43", null ],
         [ "Python Codes", "index.html#autotoc_md44", null ]
       ] ],
       [ "📈 NeuronGraph Dependency Graphs", "index.html#autotoc_md46", null ],
@@ -102,14 +102,14 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"doctest_8h.html#a3107f364c442e90a71bb083dbda254ce",
-"doctest_8h.html#ab27afbd1ff6e5c2b18c53bbd27196a73",
-"functions_func_p.html",
-"namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3ab2880914ce3960d556aa8681e9e47ad4",
-"structdoctest_1_1AssertData.html#ace744d365532d299052c8a80a63f7079",
-"structdoctest_1_1detail_1_1ResultBuilder.html#a9f73413d071af01eb6c5b06636abc9f8",
-"tinyfiledialogs_8c.html#a90c7539481edef61716be515bffe6669"
+"annotated.html",
+"doctest_8h.html#a324adcbcbb7e31481c2f619a5a0d5a56",
+"doctest_8h.html#ab39047b0a7b7ceca753fa85e47b2e48e",
+"functions_func_r.html",
+"namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3ab2aade9d6de83d7d0548e784a502d67f",
+"structdoctest_1_1AssertData.html#ae1f9906888c2dd06b6291ab196f5074e",
+"structdoctest_1_1detail_1_1ResultBuilder.html#ab55660e3aaa5d8fccbe19360f65bb1f3",
+"tinyfiledialogs_8c.html#a954a6bd12583a32a5c204ef4e8fcb3c5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"structdoctest_1_1detail_1_1ResultBuilder.html#a9f73413d071af01eb6c5b06636abc9f8":[4,0,0,0,26,10],
 "structdoctest_1_1detail_1_1ResultBuilder.html#ab55660e3aaa5d8fccbe19360f65bb1f3":[4,0,0,0,26,1],
 "structdoctest_1_1detail_1_1StringMakerBase.html":[4,0,0,0,5],
 "structdoctest_1_1detail_1_1StringMakerBase.html#a8a9a20bf2459753b5e67b711985242f9":[4,0,0,0,5,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX6 =
 "tinyfiledialogs_8c.html#a8918e9f47e1532c1d055f563a32b215c":[5,0,4,6,69],
 "tinyfiledialogs_8c.html#a8c8e4657dc09540d450c4d9c2f40e462":[5,0,4,6,31],
 "tinyfiledialogs_8c.html#a8e751e9e56dccd769a6b46d9fbbb3e8b":[5,0,4,6,9],
-"tinyfiledialogs_8c.html#a8f689b2493dcd6fcc70ab5f71fedb1b2":[5,0,4,6,85]
+"tinyfiledialogs_8c.html#a8f689b2493dcd6fcc70ab5f71fedb1b2":[5,0,4,6,85],
+"tinyfiledialogs_8c.html#a90c7539481edef61716be515bffe6669":[5,0,4,6,21]
 };
