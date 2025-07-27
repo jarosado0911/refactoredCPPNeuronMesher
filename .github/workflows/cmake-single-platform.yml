@@ -61,6 +61,7 @@ jobs:
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.cfamily.compile-commands=build/compile_commands.json
           -Dsonar.exclusions=src/tinyfiledialogs.c,src/viewercpp/**
+          -Dsonar.coverage.exclusions=coverage/**
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
 
