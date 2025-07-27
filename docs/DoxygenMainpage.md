@@ -23,8 +23,6 @@ This project provides an OpenGL-based neuron visualization and meshing system wr
 - [Utilities](utils_8cpp.html)
 - [Python Bindings](bindings_8cpp.html)
 
-### `scripts/`
-
 ### `src/view/`
 This is the source code for NeuronViewer
 - [Viewer.cpp](neuron_viewer_8cpp.html)
