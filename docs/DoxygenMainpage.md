@@ -26,7 +26,7 @@ This project provides an OpenGL-based neuron visualization and meshing system wr
 ### `src/view/`
 This is the source code for NeuronViewer
 - [Viewer.cpp](neuron_viewer_8cpp.html)
-- [opgl_utils.cpp](opgl_utils_8cpp.html)
+- [opgl_utils.cpp](opgl__utils_8cpp.html)
 - [renderhelpwindow.cpp](renderhelpwindow_8cpp.html)
 - [tinyfiledialogs.c](tinyfiledialogs_8c.html)
 - [globals.cpp](globals_8cpp.html)
@@ -39,6 +39,7 @@ This is the source code for NeuronViewer
 - [splitrefineSET.cpp](splitrefineSET_8cpp.html)
 - [splitrefine.cpp](splitrefine_8cpp.html)
 - [extracttrunks.cpp](extracttrunks_8cpp.html)
+  
 ---
 
 ## 📈 NeuronGraph Dependency Graphs
