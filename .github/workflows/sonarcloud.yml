@@ -65,7 +65,7 @@ jobs:
         cat coverage.xml
 
     - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
+      uses: SonarSource/sonarcloud-github-action@13a24e453e2e6262f3bb0c5fa8241031e637a028
       with:
         args: >
           -Dsonar.projectKey=jarosado0911_refactoredCPPNeuronMesher
