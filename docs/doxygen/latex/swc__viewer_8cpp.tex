@@ -1,0 +1,979 @@
+\hypertarget{swc__viewer_8cpp}{}\doxysection{scripts/swcviewer/swc\+\_\+viewer.cpp File Reference}
+\label{swc__viewer_8cpp}\index{scripts/swcviewer/swc\_viewer.cpp@{scripts/swcviewer/swc\_viewer.cpp}}
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glu.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}tinyfiledialogs.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+Include dependency graph for swc\+\_\+viewer.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{swc__viewer_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSWCNode}{SWCNode}}
+\begin{DoxyCompactList}\small\item\em Structure representing a single node in an SWC neuron morphology. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_af435ad623add097384c18de67cd0702e}{print\+Help\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Prints keyboard and mouse controls to the console. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{swc__viewer_8cpp_adda0a7f12116617440260139feb5ae46}{load\+SWC}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Loads neuron data from an SWC file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_ab897226cbf8704a86b3a4a11e258334f}{compute\+Bounds}} (const std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&nodes, float \&minX, float \&maxX, float \&minY, float \&maxY, float \&minZ, float \&maxZ, float \&centerX, float \&centerY, float \&centerZ, float \&radius)
+\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a77c6a10a239fd28b973ebe8dfc7f08b5}{open\+Neuron\+File}} (std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&nodes, float \&minX, float \&maxX, float \&minY, float \&maxY, float \&minZ, float \&maxZ, float \&centerX, float \&centerY, float \&centerZ, float \&radius)
+\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a924533db1f86336b245cee7e6425171c}{set\+Color\+By\+Type}} (int type)
+\begin{DoxyCompactList}\small\item\em Sets the Open\+GL color based on SWC node type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a279adf0b7e6fec6647b13831f6032486}{draw\+Simple\+Sphere}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&node, float size=0.\+5f)
+\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a9e1aa9b4fe444097d366fd74155e5a7c}{draw\+Simple\+Line}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&a, const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&b)
+\begin{DoxyCompactList}\small\item\em Draws a simple line between two nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_acc9c48455e614233efcc255cc5df30db}{draw\+Sphere}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&node, int slices=6, int stacks=6)
+\begin{DoxyCompactList}\small\item\em Draws a sphere with specified geometric detail. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a65598ae83871fad84212c90bbaec2667}{draw\+Cylinder}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&a, const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&b, int segments=6)
+\begin{DoxyCompactList}\small\item\em Draws a cylinder connecting two nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a4133cae619062843519ce2840ccf168d}{draw\+Bounding\+Box}} (float minX, float maxX, float minY, float maxY, float minZ, float maxZ)
+\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a2eca0fff4e4b8fe4dc7c5701657cab65}{render\+SWC}} (const std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&nodes)
+\begin{DoxyCompactList}\small\item\em Renders a complete SWC neuron morphology. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a0b9e239c8889734711f29fe45551605b}{key\+Callback}} (GLFWwindow $\ast$window, int key, int scancode, int action, int mods)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_ae41a3951e1196401047b29ad1d37c6ae}{mouse\+Button\+Callback}} (GLFWwindow $\ast$window, int button, int action, int mods)
+\begin{DoxyCompactList}\small\item\em Handles mouse button input events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_ae49f0c4c2064be8fbcf555f46460b7df}{cursor\+Pos\+Callback}} (GLFWwindow $\ast$window, double xpos, double ypos)
+\begin{DoxyCompactList}\small\item\em Handles mouse cursor movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_aa9b224479e8c1cc5251b8e7f3fdabacd}{scroll\+Callback}} (GLFWwindow $\ast$window, double xoffset, double yoffset)
+\begin{DoxyCompactList}\small\item\em Handles mouse scroll events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_ad6323e594cd386c73c6340b415789b69}{setup\+Lighting}} ()
+\item 
+void \mbox{\hyperlink{swc__viewer_8cpp_a2edd6335513af8d90d76f90b5f740bbb}{setup\+Camera}} (float cx, float cy, float cz, float radius, int width, int height)
+\item 
+int \mbox{\hyperlink{swc__viewer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{swc__viewer_8cpp_ae796bdcdc88555f8477476e92889e0bc}{render\+Mode}} = 1
+\begin{DoxyCompactList}\small\item\em Current rendering mode (1-\/5) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{swc__viewer_8cpp_ad8f6c59837ba86739f70c824a5d5c893}{rotateX}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Camera rotation around X and Y axes (in degrees) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{swc__viewer_8cpp_a4cd2610187fe8068453e0567281fa5a8}{rotateY}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{swc__viewer_8cpp_a15776f201dc8b554110222e67a51cbae}{zoom}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em Camera zoom factor (higher values = more zoomed in) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{swc__viewer_8cpp_aff0aff5562551336118113de6e0f9267}{panX}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Camera pan offset in X and Y directions. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{swc__viewer_8cpp_a7071265e9ddc2adb4ecea405a7590355}{panY}} = 0.\+0f
+\item 
+bool \mbox{\hyperlink{swc__viewer_8cpp_ac7285bf60dc89068354b900e82672078}{dragging}} = false
+\begin{DoxyCompactList}\small\item\em Mouse drag state flags. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{swc__viewer_8cpp_ad696ba2383c8f822f0edc19aab235c92}{right\+Dragging}} = false
+\item 
+double \mbox{\hyperlink{swc__viewer_8cpp_a02e3a1b901858994db673826761a2b4e}{lastX}}
+\begin{DoxyCompactList}\small\item\em Last recorded mouse cursor position. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{swc__viewer_8cpp_a04eb776b2ebceace641072dabd564d08}{lastY}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{swc__viewer_8cpp_ab897226cbf8704a86b3a4a11e258334f}\label{swc__viewer_8cpp_ab897226cbf8704a86b3a4a11e258334f}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!computeBounds@{computeBounds}}
+\index{computeBounds@{computeBounds}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{computeBounds()}{computeBounds()}}
+{\footnotesize\ttfamily void compute\+Bounds (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{nodes,  }\item[{float \&}]{minX,  }\item[{float \&}]{maxX,  }\item[{float \&}]{minY,  }\item[{float \&}]{maxY,  }\item[{float \&}]{minZ,  }\item[{float \&}]{maxZ,  }\item[{float \&}]{centerX,  }\item[{float \&}]{centerY,  }\item[{float \&}]{centerZ,  }\item[{float \&}]{radius }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{swc__viewer_8cpp_ab897226cbf8704a86b3a4a11e258334f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_ae49f0c4c2064be8fbcf555f46460b7df}\label{swc__viewer_8cpp_ae49f0c4c2064be8fbcf555f46460b7df}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!cursorPosCallback@{cursorPosCallback}}
+\index{cursorPosCallback@{cursorPosCallback}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{cursorPosCallback()}{cursorPosCallback()}}
+{\footnotesize\ttfamily void cursor\+Pos\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{double}]{xpos,  }\item[{double}]{ypos }\end{DoxyParamCaption})}
+
+
+
+Handles mouse cursor movement. 
+
+Updates camera orientation or position based on mouse movement when\+:
+\begin{DoxyItemize}
+\item Left button is held\+: Rotate view
+\item Right button is held\+: Pan view
+\item Middle button is held\+: Zoom view
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that received the event \\
+\hline
+{\em xpos} & The new cursor x-\/coordinate, relative to the left edge of the content area \\
+\hline
+{\em ypos} & The new cursor y-\/coordinate, relative to the top edge of the content area\\
+\hline
+\end{DoxyParams}
+Handles mouse cursor movement.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & The GLFW window that received the event \\
+\hline
+\mbox{\texttt{ in}}  & {\em xpos} & The new x-\/coordinate of the cursor, in screen coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em ypos} & The new y-\/coordinate of the cursor, in screen coordinates\\
+\hline
+\end{DoxyParams}
+This callback function processes mouse movement to implement interactive 3D view manipulation. It provides the following functionality\+:
+\begin{DoxyItemize}
+\item Left-\/drag\+: Rotates the view around the X and Y axes
+\item Right-\/drag\+: Pans the view in the X and Y directions
+\end{DoxyItemize}
+
+The function uses the difference between the current and last cursor positions to calculate the amount of rotation or panning to apply. The actual view transformation is applied in the main rendering loop using the global state variables modified by this function.
+
+\begin{DoxyNote}{Note}
+The function updates the lastX and lastY variables to track cursor movement between frames 
+
+Rotation and panning speeds are scaled by constant factors (0.\+3f and 1.\+5f) 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{callbacks_8h_ae41a3951e1196401047b29ad1d37c6ae}{mouse\+Button\+Callback()}} for enabling/disabling rotation and panning 
+
+GLFW cursor position documentation\+: \href{https://www.glfw.org/docs/latest/input_guide.html\#cursor_pos}{\texttt{ https\+://www.\+glfw.\+org/docs/latest/input\+\_\+guide.\+html\#cursor\+\_\+pos}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{swc__viewer_8cpp_ae49f0c4c2064be8fbcf555f46460b7df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a4133cae619062843519ce2840ccf168d}\label{swc__viewer_8cpp_a4133cae619062843519ce2840ccf168d}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!drawBoundingBox@{drawBoundingBox}}
+\index{drawBoundingBox@{drawBoundingBox}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{drawBoundingBox()}{drawBoundingBox()}}
+{\footnotesize\ttfamily void draw\+Bounding\+Box (\begin{DoxyParamCaption}\item[{float}]{minX,  }\item[{float}]{maxX,  }\item[{float}]{minY,  }\item[{float}]{maxY,  }\item[{float}]{minZ,  }\item[{float}]{maxZ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{swc__viewer_8cpp_a4133cae619062843519ce2840ccf168d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a65598ae83871fad84212c90bbaec2667}\label{swc__viewer_8cpp_a65598ae83871fad84212c90bbaec2667}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!drawCylinder@{drawCylinder}}
+\index{drawCylinder@{drawCylinder}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{drawCylinder()}{drawCylinder()}}
+{\footnotesize\ttfamily void draw\+Cylinder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{a,  }\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{b,  }\item[{int}]{segments = {\ttfamily 6} }\end{DoxyParamCaption})}
+
+
+
+Draws a cylinder connecting two nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First node (start of cylinder) \\
+\hline
+{\em b} & Second node (end of cylinder) \\
+\hline
+{\em segments} & Number of radial segments for the cylinder \mbox{[}default\+: 6\mbox{]}\\
+\hline
+\end{DoxyParams}
+Renders a tapered cylinder that connects two nodes, with the radius at each end determined by the nodes\textquotesingle{} radii. The cylinder is colored according to the first node\textquotesingle{}s type.
+
+Draws a cylinder connecting two nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & The starting node of the cylinder \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & The ending node of the cylinder \\
+\hline
+\mbox{\texttt{ in}}  & {\em segments} & The number of sides around the cylinder\\
+\hline
+\end{DoxyParams}
+This function draws a tapered cylinder connecting two nodes in 3D space. The cylinder\textquotesingle{}s radius at each end is determined by the radius property of the corresponding node, allowing for smooth tapering of neurites.
+
+The function handles the necessary coordinate system transformations to orient the cylinder correctly between the two points in 3D space. It uses Open\+GL\textquotesingle{}s matrix stack to ensure the transformations don\textquotesingle{}t affect subsequent rendering operations.
+
+\begin{DoxyNote}{Note}
+The cylinder is drawn with smooth normals for proper lighting 
+
+If the nodes are coincident (distance = 0), the function returns early 
+
+The 57.\+2957795f constant converts radians to degrees (180/π) 
+
+Uses legacy Open\+GL immediate mode rendering 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+glu\+Cylinder() for details on the underlying GLU primitive 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{swc__viewer_8cpp_a65598ae83871fad84212c90bbaec2667_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a9e1aa9b4fe444097d366fd74155e5a7c}\label{swc__viewer_8cpp_a9e1aa9b4fe444097d366fd74155e5a7c}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!drawSimpleLine@{drawSimpleLine}}
+\index{drawSimpleLine@{drawSimpleLine}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{drawSimpleLine()}{drawSimpleLine()}}
+{\footnotesize\ttfamily void draw\+Simple\+Line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{a,  }\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Draws a simple line between two nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First node (start point) \\
+\hline
+{\em b} & Second node (end point)\\
+\hline
+\end{DoxyParams}
+Renders a line in 3D space between two nodes using immediate mode Open\+GL. The line width is determined by the nodes\textquotesingle{} radii.
+
+Draws a simple line between two nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & The starting node of the line \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & The ending node of the line\\
+\hline
+\end{DoxyParams}
+This function renders a simple line segment between two nodes in 3D space using Open\+GL\textquotesingle{}s immediate mode line rendering. The line is drawn with the current Open\+GL color and line width settings.
+
+The function is typically used for wireframe representations of neuron morphologies or for debug visualization.
+
+\begin{DoxyNote}{Note}
+The line is drawn with the current Open\+GL color 
+
+Uses legacy Open\+GL immediate mode rendering (gl\+Begin/gl\+End) 
+
+For more complex line rendering (e.\+g., with thickness), consider using geometry shaders or other modern Open\+GL techniques 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{swc__viewer_8cpp_a9e1aa9b4fe444097d366fd74155e5a7c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a279adf0b7e6fec6647b13831f6032486}\label{swc__viewer_8cpp_a279adf0b7e6fec6647b13831f6032486}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!drawSimpleSphere@{drawSimpleSphere}}
+\index{drawSimpleSphere@{drawSimpleSphere}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{drawSimpleSphere()}{drawSimpleSphere()}}
+{\footnotesize\ttfamily void draw\+Simple\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{node,  }\item[{float}]{size = {\ttfamily 0.5f} }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{swc__viewer_8cpp_a279adf0b7e6fec6647b13831f6032486_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_acc9c48455e614233efcc255cc5df30db}\label{swc__viewer_8cpp_acc9c48455e614233efcc255cc5df30db}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!drawSphere@{drawSphere}}
+\index{drawSphere@{drawSphere}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{drawSphere()}{drawSphere()}}
+{\footnotesize\ttfamily void draw\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{node,  }\item[{int}]{slices = {\ttfamily 6},  }\item[{int}]{stacks = {\ttfamily 6} }\end{DoxyParamCaption})}
+
+
+
+Draws a sphere with specified geometric detail. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The SWC node to draw \\
+\hline
+{\em slices} & Number of subdivisions around the z-\/axis (longitude) \mbox{[}default\+: 6\mbox{]} \\
+\hline
+{\em stacks} & Number of subdivisions along the z-\/axis (latitude) \mbox{[}default\+: 6\mbox{]}\\
+\hline
+\end{DoxyParams}
+Uses GLU quadric objects to render a sphere with the specified level of detail. The sphere is colored according to the node\textquotesingle{}s type.
+
+Draws a sphere with specified geometric detail.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & The \mbox{\hyperlink{structSWCNode}{SWCNode}} containing the position and radius for the sphere \\
+\hline
+\mbox{\texttt{ in}}  & {\em slices} & The number of subdivisions around the Z axis (longitude) \\
+\hline
+\mbox{\texttt{ in}}  & {\em stacks} & The number of subdivisions along the Z axis (latitude)\\
+\hline
+\end{DoxyParams}
+This function draws a sphere using Open\+GL\textquotesingle{}s GLU quadric primitives with smooth normal vectors for proper lighting calculations. The sphere\textquotesingle{}s radius is taken from the node\textquotesingle{}s radius property, and its position is set to the node\textquotesingle{}s coordinates.
+
+The function handles the Open\+GL matrix stack appropriately and uses the current Open\+GL color for rendering. The resolution of the sphere can be controlled through the slices and stacks parameters.
+
+\begin{DoxyNote}{Note}
+The sphere is drawn with smooth shading (GLU\+\_\+\+SMOOTH) 
+
+Uses legacy Open\+GL immediate mode rendering 
+
+For high-\/quality rendering, use at least 16 slices and stacks 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{draw__utils_8h_a6b12b8639ee9ef751cff0343e93a42a5}{draw\+Simple\+Sphere()}} for a faster, lower-\/quality alternative 
+
+glu\+Quadric\+Normals() for details on normal generation 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{swc__viewer_8cpp_acc9c48455e614233efcc255cc5df30db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a0b9e239c8889734711f29fe45551605b}\label{swc__viewer_8cpp_a0b9e239c8889734711f29fe45551605b}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!keyCallback@{keyCallback}}
+\index{keyCallback@{keyCallback}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{keyCallback()}{keyCallback()}}
+{\footnotesize\ttfamily void key\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input events. 
+
+Processes key presses and releases to control the visualization\+:
+\begin{DoxyItemize}
+\item WASD\+: Move camera left/right/forward/backward
+\item QE\+: Move camera up/down
+\item Arrow keys\+: Rotate view
+\item R\+: Reset view
+\item Space\+: Toggle auto-\/rotation
+\item 1-\/5\+: Switch between rendering modes
+\item +/-\/\+: Adjust rendering parameters
+\item ESC\+: Close window
+\item H\+: Toggle help text
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that received the event \\
+\hline
+{\em key} & The keyboard key that was pressed or released \\
+\hline
+{\em scancode} & The system-\/specific scancode of the key \\
+\hline
+{\em action} & GLFW\+\_\+\+PRESS, GLFW\+\_\+\+RELEASE or GLFW\+\_\+\+REPEAT \\
+\hline
+{\em mods} & Bit field describing which modifier keys were held down\\
+\hline
+\end{DoxyParams}
+Handles keyboard input events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & The GLFW window that received the event \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & The keyboard key that was pressed or released \\
+\hline
+\mbox{\texttt{ in}}  & {\em scancode} & The system-\/specific scancode of the key \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & The key action (GLFW\+\_\+\+PRESS, GLFW\+\_\+\+RELEASE, or GLFW\+\_\+\+REPEAT) \\
+\hline
+\mbox{\texttt{ in}}  & {\em mods} & Bit field describing which modifier keys were held down\\
+\hline
+\end{DoxyParams}
+This callback function processes keyboard input for controlling the neuron viewer. It implements the following keyboard shortcuts\+:
+\begin{DoxyItemize}
+\item F\+: Refine neuron geometry (halve delta)
+\item Ctrl+F\+: Coarsen neuron geometry (double delta)
+\item 1-\/6\+: Switch between different render modes
+\item O\+: Open a neuron file dialog
+\item R\+: Reset camera view
+\item H\+: Show/hide help window
+\item S\+: Save the current neuron data to file
+\end{DoxyItemize}
+
+The function modifies global state for view parameters and triggers updates to the neuron visualization when geometry is refined or coarsened.
+
+\begin{DoxyNote}{Note}
+The function only processes key press events (GLFW\+\_\+\+PRESS) 
+
+Modifier keys (Ctrl, Shift, Alt) are checked using the mods parameter 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+GLFW key documentation\+: \href{https://www.glfw.org/docs/latest/input_guide.html\#input_key}{\texttt{ https\+://www.\+glfw.\+org/docs/latest/input\+\_\+guide.\+html\#input\+\_\+key}} 
+\end{DoxySeeAlso}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{swc__viewer_8cpp_a0b9e239c8889734711f29fe45551605b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{swc__viewer_8cpp_a0b9e239c8889734711f29fe45551605b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_adda0a7f12116617440260139feb5ae46}\label{swc__viewer_8cpp_adda0a7f12116617440260139feb5ae46}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!loadSWC@{loadSWC}}
+\index{loadSWC@{loadSWC}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{loadSWC()}{loadSWC()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ load\+SWC (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Loads neuron data from an SWC file. 
+
+Parses an SWC (Standardized Waveform Container) file containing neuron morphology data and returns a vector of \mbox{\hyperlink{structSWCNode}{SWCNode}} objects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the SWC file to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+SWCNode$>$ Vector of nodes representing the neuron morphology
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file cannot be opened or is malformed\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+The SWC format is a standard format for representing neuron morphologies. Each line in the file represents a point in the neuron structure. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html}{\texttt{ http\+://www.\+neuronland.\+org/\+NLMorphology\+Converter/\+Morphology\+Formats/\+SWC/\+Spec.\+html}}
+\end{DoxySeeAlso}
+Loads neuron data from an SWC file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Path to the SWC or UGX file to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+SWCNode$>$ Vector of SWC nodes representing the neuron
+\end{DoxyReturn}
+This function loads a neuron morphology from the specified file and returns its nodes as a vector of \mbox{\hyperlink{structSWCNode}{SWCNode}} objects. It supports both SWC and UGX file formats and performs preprocessing on the loaded data.
+
+The function\+:
+\begin{DoxyEnumerate}
+\item Reads the neuron data using \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}}\textquotesingle{}s read\+From\+File\+UGXor\+SWC()
+\item Applies preprocessing to the loaded nodes
+\item Converts the node map to a vector for rendering
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+The function modifies the global graph object 
+
+Preprocessing includes validation and cleanup of the neuron structure 
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the file cannot be read or parsed \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a1c8deb90cf431df071765a400ddb144c}{Neuron\+Graph\+::read\+From\+File\+UGXor\+SWC()}} 
+
+\mbox{\hyperlink{classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35}{Neuron\+Graph\+::preprocess()}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{swc__viewer_8cpp_adda0a7f12116617440260139feb5ae46_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{swc__viewer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!main@{main}}
+\index{main@{main}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{swc__viewer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_ae41a3951e1196401047b29ad1d37c6ae}\label{swc__viewer_8cpp_ae41a3951e1196401047b29ad1d37c6ae}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!mouseButtonCallback@{mouseButtonCallback}}
+\index{mouseButtonCallback@{mouseButtonCallback}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{mouseButtonCallback()}{mouseButtonCallback()}}
+{\footnotesize\ttfamily void mouse\+Button\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{int}]{button,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})}
+
+
+
+Handles mouse button input events. 
+
+Processes mouse button presses and releases for\+:
+\begin{DoxyItemize}
+\item Left button\+: Start/end rotation
+\item Right button\+: Start/end panning
+\item Middle button\+: Start/end zooming
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that received the event \\
+\hline
+{\em button} & The mouse button that was pressed or released \\
+\hline
+{\em action} & GLFW\+\_\+\+PRESS or GLFW\+\_\+\+RELEASE \\
+\hline
+{\em mods} & Bit field describing which modifier keys were held down\\
+\hline
+\end{DoxyParams}
+Handles mouse button input events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & The GLFW window that received the event \\
+\hline
+\mbox{\texttt{ in}}  & {\em button} & The mouse button that was pressed or released \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & The button action (GLFW\+\_\+\+PRESS or GLFW\+\_\+\+RELEASE) \\
+\hline
+\mbox{\texttt{ in}}  & {\em mods} & Bit field describing which modifier keys were held down\\
+\hline
+\end{DoxyParams}
+This callback function processes mouse button events to enable interactive 3D view manipulation. It tracks the following interactions\+:
+\begin{DoxyItemize}
+\item Left mouse button\+: Enables view rotation when dragged
+\item Right mouse button\+: Enables view panning when dragged
+\end{DoxyItemize}
+
+The function updates global state variables (dragging, right\+Dragging) that are used by cursor\+Pos\+Callback to implement the actual view transformations.
+
+\begin{DoxyNote}{Note}
+The function tracks both press and release events for smooth interaction 
+
+The cursor position is captured on button press for relative movement 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{callbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df}{cursor\+Pos\+Callback()}} for the implementation of the actual view transformations 
+
+GLFW mouse button documentation\+: \href{https://www.glfw.org/docs/latest/input_guide.html\#input_mouse_button}{\texttt{ https\+://www.\+glfw.\+org/docs/latest/input\+\_\+guide.\+html\#input\+\_\+mouse\+\_\+button}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{swc__viewer_8cpp_ae41a3951e1196401047b29ad1d37c6ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a77c6a10a239fd28b973ebe8dfc7f08b5}\label{swc__viewer_8cpp_a77c6a10a239fd28b973ebe8dfc7f08b5}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!openNeuronFile@{openNeuronFile}}
+\index{openNeuronFile@{openNeuronFile}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{openNeuronFile()}{openNeuronFile()}}
+{\footnotesize\ttfamily void open\+Neuron\+File (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{nodes,  }\item[{float \&}]{minX,  }\item[{float \&}]{maxX,  }\item[{float \&}]{minY,  }\item[{float \&}]{maxY,  }\item[{float \&}]{minZ,  }\item[{float \&}]{maxZ,  }\item[{float \&}]{centerX,  }\item[{float \&}]{centerY,  }\item[{float \&}]{centerZ,  }\item[{float \&}]{radius }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{swc__viewer_8cpp_a77c6a10a239fd28b973ebe8dfc7f08b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{swc__viewer_8cpp_a77c6a10a239fd28b973ebe8dfc7f08b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_af435ad623add097384c18de67cd0702e}\label{swc__viewer_8cpp_af435ad623add097384c18de67cd0702e}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!printHelpText@{printHelpText}}
+\index{printHelpText@{printHelpText}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{printHelpText()}{printHelpText()}}
+{\footnotesize\ttfamily void print\+Help\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints keyboard and mouse controls to the console. 
+
+Displays a help message listing all available keyboard shortcuts and mouse controls for the neuron viewer application.
+
+\begin{DoxyNote}{Note}
+This function is typically called when the application starts or when the user presses the \textquotesingle{}H\textquotesingle{} key.
+\end{DoxyNote}
+Prints keyboard and mouse controls to the console.
+
+Displays the application\textquotesingle{}s keyboard and mouse controls to the console. The help text is defined as a global string constant in \mbox{\hyperlink{globals_8h}{globals.\+h}}.
+
+\begin{DoxyNote}{Note}
+The help text includes controls for view manipulation, file operations, and rendering modes. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{globals_8h}{globals.\+h}} for the \mbox{\hyperlink{globals_8h_aecfcd8d5595d8ba1a38ef3c624d1186a}{help}} text definition 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{swc__viewer_8cpp_af435ad623add097384c18de67cd0702e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a2eca0fff4e4b8fe4dc7c5701657cab65}\label{swc__viewer_8cpp_a2eca0fff4e4b8fe4dc7c5701657cab65}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!renderSWC@{renderSWC}}
+\index{renderSWC@{renderSWC}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{renderSWC()}{renderSWC()}}
+{\footnotesize\ttfamily void render\+SWC (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{nodes }\end{DoxyParamCaption})}
+
+
+
+Renders a complete SWC neuron morphology. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Vector of SWC nodes to render\\
+\hline
+\end{DoxyParams}
+This is the main rendering function that draws an entire neuron morphology. It handles the display of all nodes and connections between them, with appropriate coloring based on node types. The function respects the current rendering mode and visualization settings from \mbox{\hyperlink{globals_8h}{globals.\+h}}.
+
+Renders a complete SWC neuron morphology.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nodes} & A vector of \mbox{\hyperlink{structSWCNode}{SWCNode}} objects representing the neuron morphology\\
+\hline
+\end{DoxyParams}
+This function renders a complete neuron morphology from SWC node data using different rendering modes controlled by the global {\ttfamily render\+Mode} variable. The function handles both the rendering of nodes (soma, branch points, etc.) and the connections between them (dendrites, axons).
+
+Supported render modes\+:
+\begin{DoxyItemize}
+\item Mode 1\+: White wireframe lines between nodes
+\item Mode 2\+: Colored spheres at nodes with white wireframe connections
+\item Mode 3\+: Yellow simple spheres at node positions
+\item Mode 4\+: Purple detailed spheres at node positions
+\item Mode 5\+: Colored tapered cylinders between nodes (no spheres)
+\item Mode 6\+: Colored detailed spheres with colored tapered cylinders
+\end{DoxyItemize}
+
+The function first renders all nodes according to the current render mode, then renders the connections between nodes. Node colors are determined by their SWC type using the \mbox{\hyperlink{draw__utils_8h_a924533db1f86336b245cee7e6425171c}{set\+Color\+By\+Type()}} function.
+
+\begin{DoxyNote}{Note}
+The function uses the global {\ttfamily render\+Mode} variable to determine rendering style 
+
+Parent-\/child relationships are determined by the node.\+pid field 
+
+The function skips rendering of invalid parent references (pid = -\/1) 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{draw__utils_8h_a924533db1f86336b245cee7e6425171c}{set\+Color\+By\+Type()}} for information about color mapping 
+
+\mbox{\hyperlink{draw__utils_8h_acc9c48455e614233efcc255cc5df30db}{draw\+Sphere()}}, \mbox{\hyperlink{draw__utils_8h_a65598ae83871fad84212c90bbaec2667}{draw\+Cylinder()}} for the actual rendering primitives 
+\end{DoxySeeAlso}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{swc__viewer_8cpp_a2eca0fff4e4b8fe4dc7c5701657cab65_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{swc__viewer_8cpp_a2eca0fff4e4b8fe4dc7c5701657cab65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_aa9b224479e8c1cc5251b8e7f3fdabacd}\label{swc__viewer_8cpp_aa9b224479e8c1cc5251b8e7f3fdabacd}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!scrollCallback@{scrollCallback}}
+\index{scrollCallback@{scrollCallback}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{scrollCallback()}{scrollCallback()}}
+{\footnotesize\ttfamily void scroll\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})}
+
+
+
+Handles mouse scroll events. 
+
+Zooms the view in/out based on vertical scroll input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that received the event \\
+\hline
+{\em xoffset} & The scroll offset along the x-\/axis (unused) \\
+\hline
+{\em yoffset} & The scroll offset along the y-\/axis (positive = scroll up, negative = scroll down)\\
+\hline
+\end{DoxyParams}
+Handles mouse scroll events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & The GLFW window that received the event \\
+\hline
+\mbox{\texttt{ in}}  & {\em xoffset} & The scroll offset along the x-\/axis (unused in this implementation) \\
+\hline
+\mbox{\texttt{ in}}  & {\em yoffset} & The scroll offset along the y-\/axis (positive for scroll up, negative for scroll down)\\
+\hline
+\end{DoxyParams}
+This callback function processes mouse scroll wheel input to implement smooth zooming of the 3D view. It modifies the global zoom factor based on the vertical scroll amount.
+
+The zoom factor is adjusted using an exponential scale (1.\+1$^\wedge$yoffset) to provide natural-\/feeling zoom behavior. The zoom level is clamped between 0.\+05 and 10.\+0 to prevent extreme zoom levels that might cause rendering issues or numerical instability.
+
+\begin{DoxyNote}{Note}
+The xoffset parameter is currently unused but included for future compatibility 
+
+Zooming is centered on the current view (no focal point adjustment) 
+
+The 1.\+1 base value provides a good balance between precision and responsiveness 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+GLFW scroll documentation\+: \href{https://www.glfw.org/docs/latest/input_guide.html\#scrolling}{\texttt{ https\+://www.\+glfw.\+org/docs/latest/input\+\_\+guide.\+html\#scrolling}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{swc__viewer_8cpp_aa9b224479e8c1cc5251b8e7f3fdabacd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a924533db1f86336b245cee7e6425171c}\label{swc__viewer_8cpp_a924533db1f86336b245cee7e6425171c}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!setColorByType@{setColorByType}}
+\index{setColorByType@{setColorByType}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{setColorByType()}{setColorByType()}}
+{\footnotesize\ttfamily void set\+Color\+By\+Type (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Sets the Open\+GL color based on SWC node type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & SWC node type identifier (1-\/7)\\
+\hline
+\end{DoxyParams}
+Maps standard SWC node types to distinct colors for visualization. The color mapping follows the standard SWC color scheme\+:
+\begin{DoxyItemize}
+\item 1 (Soma)\+: Red
+\item 2 (Axon)\+: Blue
+\item 3 (Dendrite)\+: Yellow
+\item 4 (Apical dendrite)\+: Purple
+\item 5-\/7\+: Other standard SWC types
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type} & The SWC node type identifier\\
+\hline
+\end{DoxyParams}
+This function maps standard SWC node types to specific colors for visualization. The color mapping is as follows\+:
+\begin{DoxyItemize}
+\item Type 1\+: Red (soma)
+\item Type 2\+: Green (axon)
+\item Type 3\+: Blue (basal dendrite)
+\item Type 4\+: Yellow (apical dendrite)
+\item Type 5\+: Magenta
+\item Type 6\+: Cyan
+\item Type 7\+: Orange
+\item Default\+: White (for any other type)
+\end{DoxyItemize}
+
+The function uses a static map for efficient type-\/to-\/color lookup and modifies the current Open\+GL color state.
+
+\begin{DoxyNote}{Note}
+The function modifies the Open\+GL current color state 
+
+The color map is static and shared across all instances 
+
+For custom color schemes, modify the color\+Map variable 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html}{\texttt{ http\+://www.\+neuronland.\+org/\+NLMorphology\+Converter/\+Morphology\+Formats/\+SWC/\+Spec.\+html}} for SWC format specification 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{swc__viewer_8cpp_a924533db1f86336b245cee7e6425171c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_a2edd6335513af8d90d76f90b5f740bbb}\label{swc__viewer_8cpp_a2edd6335513af8d90d76f90b5f740bbb}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!setupCamera@{setupCamera}}
+\index{setupCamera@{setupCamera}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{setupCamera()}{setupCamera()}}
+{\footnotesize\ttfamily void setup\+Camera (\begin{DoxyParamCaption}\item[{float}]{cx,  }\item[{float}]{cy,  }\item[{float}]{cz,  }\item[{float}]{radius,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{swc__viewer_8cpp_a2edd6335513af8d90d76f90b5f740bbb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{swc__viewer_8cpp_ad6323e594cd386c73c6340b415789b69}\label{swc__viewer_8cpp_ad6323e594cd386c73c6340b415789b69}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!setupLighting@{setupLighting}}
+\index{setupLighting@{setupLighting}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{setupLighting()}{setupLighting()}}
+{\footnotesize\ttfamily void setup\+Lighting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{swc__viewer_8cpp_ad6323e594cd386c73c6340b415789b69_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{swc__viewer_8cpp_ac7285bf60dc89068354b900e82672078}\label{swc__viewer_8cpp_ac7285bf60dc89068354b900e82672078}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!dragging@{dragging}}
+\index{dragging@{dragging}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{dragging}{dragging}}
+{\footnotesize\ttfamily bool dragging = false}
+
+
+
+Mouse drag state flags. 
+
+These track the current drag operation\+:
+\begin{DoxyItemize}
+\item dragging\+: True during left-\/button rotation
+\item right\+Dragging\+: True during right-\/button panning
+\end{DoxyItemize}
+
+Mouse drag state flags. \mbox{\Hypertarget{swc__viewer_8cpp_a02e3a1b901858994db673826761a2b4e}\label{swc__viewer_8cpp_a02e3a1b901858994db673826761a2b4e}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!lastX@{lastX}}
+\index{lastX@{lastX}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{lastX}{lastX}}
+{\footnotesize\ttfamily double lastX}
+
+
+
+Last recorded mouse cursor position. 
+
+Used to calculate mouse movement deltas for smooth camera control.
+
+Last recorded mouse cursor position. \mbox{\Hypertarget{swc__viewer_8cpp_a04eb776b2ebceace641072dabd564d08}\label{swc__viewer_8cpp_a04eb776b2ebceace641072dabd564d08}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!lastY@{lastY}}
+\index{lastY@{lastY}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{lastY}{lastY}}
+{\footnotesize\ttfamily double lastY}
+
+\mbox{\Hypertarget{swc__viewer_8cpp_aff0aff5562551336118113de6e0f9267}\label{swc__viewer_8cpp_aff0aff5562551336118113de6e0f9267}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!panX@{panX}}
+\index{panX@{panX}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{panX}{panX}}
+{\footnotesize\ttfamily float panX = 0.\+0f}
+
+
+
+Camera pan offset in X and Y directions. 
+
+These values control the 2D panning of the view\+:
+\begin{DoxyItemize}
+\item panX\+: Horizontal pan (positive = right)
+\item panY\+: Vertical pan (positive = up)
+\end{DoxyItemize}
+
+Camera pan offset in X and Y directions. \mbox{\Hypertarget{swc__viewer_8cpp_a7071265e9ddc2adb4ecea405a7590355}\label{swc__viewer_8cpp_a7071265e9ddc2adb4ecea405a7590355}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!panY@{panY}}
+\index{panY@{panY}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{panY}{panY}}
+{\footnotesize\ttfamily float panY = 0.\+0f}
+
+\mbox{\Hypertarget{swc__viewer_8cpp_ae796bdcdc88555f8477476e92889e0bc}\label{swc__viewer_8cpp_ae796bdcdc88555f8477476e92889e0bc}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!renderMode@{renderMode}}
+\index{renderMode@{renderMode}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{renderMode}{renderMode}}
+{\footnotesize\ttfamily int render\+Mode = 1}
+
+
+
+Current rendering mode (1-\/5) 
+
+Controls how the neuron is rendered\+:
+\begin{DoxyItemize}
+\item 1\+: Basic line rendering
+\item 2\+: Cylinder rendering
+\item 3\+: Spheres at nodes
+\item 4\+: Full 3D rendering
+\item 5\+: Debug rendering mode
+\end{DoxyItemize}
+
+Current rendering mode (1-\/5) \mbox{\Hypertarget{swc__viewer_8cpp_ad696ba2383c8f822f0edc19aab235c92}\label{swc__viewer_8cpp_ad696ba2383c8f822f0edc19aab235c92}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!rightDragging@{rightDragging}}
+\index{rightDragging@{rightDragging}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{rightDragging}{rightDragging}}
+{\footnotesize\ttfamily bool right\+Dragging = false}
+
+\mbox{\Hypertarget{swc__viewer_8cpp_ad8f6c59837ba86739f70c824a5d5c893}\label{swc__viewer_8cpp_ad8f6c59837ba86739f70c824a5d5c893}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!rotateX@{rotateX}}
+\index{rotateX@{rotateX}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{rotateX}{rotateX}}
+{\footnotesize\ttfamily float rotateX = 0.\+0f}
+
+
+
+Camera rotation around X and Y axes (in degrees) 
+
+These angles control the 3D view orientation\+:
+\begin{DoxyItemize}
+\item rotateX\+: Rotation around the X-\/axis (vertical rotation)
+\item rotateY\+: Rotation around the Y-\/axis (horizontal rotation)
+\end{DoxyItemize}
+
+Camera rotation around X and Y axes (in degrees) \mbox{\Hypertarget{swc__viewer_8cpp_a4cd2610187fe8068453e0567281fa5a8}\label{swc__viewer_8cpp_a4cd2610187fe8068453e0567281fa5a8}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!rotateY@{rotateY}}
+\index{rotateY@{rotateY}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{rotateY}{rotateY}}
+{\footnotesize\ttfamily float rotateY = 0.\+0f}
+
+\mbox{\Hypertarget{swc__viewer_8cpp_a15776f201dc8b554110222e67a51cbae}\label{swc__viewer_8cpp_a15776f201dc8b554110222e67a51cbae}} 
+\index{swc\_viewer.cpp@{swc\_viewer.cpp}!zoom@{zoom}}
+\index{zoom@{zoom}!swc\_viewer.cpp@{swc\_viewer.cpp}}
+\doxysubsubsection{\texorpdfstring{zoom}{zoom}}
+{\footnotesize\ttfamily float zoom = 1.\+0f}
+
+
+
+Camera zoom factor (higher values = more zoomed in) 
+
+Camera zoom factor (higher values = more zoomed in) 

@@ -1,0 +1,562 @@
+\hypertarget{tinyfiledialogs_8c}{}\doxysection{src/tinyfiledialogs.c File Reference}
+\label{tinyfiledialogs_8c}\index{src/tinyfiledialogs.c@{src/tinyfiledialogs.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$sys/utsname.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}tinyfiledialogs.\+h\char`\"{}}\newline
+Include dependency graph for tinyfiledialogs.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tinyfiledialogs_8c_a460e8b223e71d9e54e6e6d288a865156}{TINYFD\+\_\+\+SLASH}}~\char`\"{}/\char`\"{}
+\item 
+\#define \mbox{\hyperlink{tinyfiledialogs_8c_a03da67b2aa763d88422ba0f6aaa6d29b}{MAX\+\_\+\+PATH\+\_\+\+OR\+\_\+\+CMD}}~1024 /$\ast$ \+\_\+\+MAX\+\_\+\+PATH or MAX\+\_\+\+PATH $\ast$/
+\item 
+\#define \mbox{\hyperlink{tinyfiledialogs_8c_a0612543f1a6828a8b0008da041c06f6a}{MAX\+\_\+\+MULTIPLE\+\_\+\+FILES}}~1024
+\item 
+\#define \mbox{\hyperlink{tinyfiledialogs_8c_a790242f2501dc16dd67d87533154258c}{LOW\+\_\+\+MULTIPLE\+\_\+\+FILES}}~32
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tinyfiledialogs_8c_a803e4bfce6989645d3678292083340c0}{tfd\+\_\+replace\+Sub\+Str}} (char const $\ast$a\+Source, char const $\ast$a\+Old\+Sub\+Str, char const $\ast$a\+New\+Sub\+Str, char $\ast$ao\+Destination)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a789b9cfa9fb2cf888db0246f9c2dca9a}{tfd\+\_\+quote\+Detected}} (char const $\ast$a\+String)
+\item 
+char const  $\ast$ \mbox{\hyperlink{tinyfiledialogs_8c_a2c7e7e8ae74afa8315c9c985c73a1fdd}{tinyfd\+\_\+get\+Global\+Char}} (char const $\ast$a\+Char\+Variable\+Name)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a2369e180c58a73d4861bb0130cd82dab}{tinyfd\+\_\+get\+Global\+Int}} (char const $\ast$a\+Int\+Variable\+Name)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a1e4d4275e2731ee2c0939ffd711446cd}{tinyfd\+\_\+set\+Global\+Int}} (char const $\ast$a\+Int\+Variable\+Name, int a\+Value)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a6a75d29f7cc1a6606e1b709fb2d13756}{tfd\+\_\+is\+Darwin}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a47f8aa977cd899f2e44c677491cb1a5d}{is\+Dialog\+Version\+Better09b}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a207f7a0539c4f1488d49a4f05a0cdb73}{tfd\+\_\+qarma\+Present}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_ae11ed1c0d8ae0c30f5453048d1cdf7d0}{tfd\+\_\+matedialog\+Present}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a0f7ff3f21aee78c73276da8eba075edd}{tfd\+\_\+shellementary\+Present}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a15fdc38cfcc89302704d4554221c85f7}{tfd\+\_\+xprop\+Present}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a1ae8f7bd22b5c7d457771295e9a04cc5}{tfd\+\_\+zenity\+Present}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a5702c782c083fb90757b8bb6a95de325}{tfd\+\_\+yad\+Present}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_aca140f9622c8b2ac27a1a7b93d426cf6}{tfd\+\_\+zenity3\+Present}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a77c4dde5df84387f5e8764f33bf04ba3}{tfd\+\_\+kdialog\+Present}} (void)
+\item 
+void \mbox{\hyperlink{tinyfiledialogs_8c_a0c19cd62f9b9ff0f7def8971d2bc3f9d}{tinyfd\+\_\+beep}} (void)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_ac5082e6c1f4693110f1703664b3fa9fc}{tinyfd\+\_\+message\+Box}} (char const $\ast$a\+Title, char const $\ast$a\+Message, char const $\ast$a\+Dialog\+Type, char const $\ast$a\+Icon\+Type, int a\+Default\+Button)
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_ad91628b8a0640682241aa189f03a30ba}{tinyfd\+\_\+notify\+Popup}} (char const $\ast$a\+Title, char const $\ast$a\+Message, char const $\ast$a\+Icon\+Type)
+\item 
+char $\ast$ \mbox{\hyperlink{tinyfiledialogs_8c_a62849e223b13b73fdfe05543a85a7c58}{tinyfd\+\_\+input\+Box}} (char const $\ast$a\+Title, char const $\ast$a\+Message, char const $\ast$a\+Default\+Input)
+\item 
+char $\ast$ \mbox{\hyperlink{tinyfiledialogs_8c_a7a17e17150593bf3b04253ea819fc5bc}{tinyfd\+\_\+save\+File\+Dialog}} (char const $\ast$a\+Title, char const $\ast$a\+Default\+Path\+And\+Or\+File, int a\+Num\+Of\+Filter\+Patterns, char const $\ast$const $\ast$a\+Filter\+Patterns, char const $\ast$a\+Single\+Filter\+Description)
+\item 
+char $\ast$ \mbox{\hyperlink{tinyfiledialogs_8c_a8918e9f47e1532c1d055f563a32b215c}{tinyfd\+\_\+open\+File\+Dialog}} (char const $\ast$a\+Title, char const $\ast$a\+Default\+Path\+And\+Or\+File, int a\+Num\+Of\+Filter\+Patterns, char const $\ast$const $\ast$a\+Filter\+Patterns, char const $\ast$a\+Single\+Filter\+Description, int a\+Allow\+Multiple\+Selects)
+\item 
+char $\ast$ \mbox{\hyperlink{tinyfiledialogs_8c_ab776afd1dd5932c765c32a71fe4c090c}{tinyfd\+\_\+select\+Folder\+Dialog}} (char const $\ast$a\+Title, char const $\ast$a\+Default\+Path)
+\item 
+char $\ast$ \mbox{\hyperlink{tinyfiledialogs_8c_a2f9b70adb58963e8ff41ab6a93b7ca48}{tinyfd\+\_\+color\+Chooser}} (char const $\ast$a\+Title, char const $\ast$a\+Default\+Hex\+RGB, unsigned char const a\+Default\+RGB\mbox{[}3\mbox{]}, unsigned char ao\+Result\+RGB\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{tinyfiledialogs_8c_aa1a9656338b38479c1d5e2a1dde4ed9b}{tfd\+\_\+message\+Box}} (char const $\ast$a\+Title, char const $\ast$a\+Message, char const $\ast$a\+Dialog\+Type, char const $\ast$a\+Icon\+Type, int $\ast$ai\+Default\+Button)
+\item 
+void \mbox{\hyperlink{tinyfiledialogs_8c_aedce7bb7c648a3de1b5ae958748acea0}{tfd\+\_\+input\+Box}} (char const $\ast$a\+Title, char const $\ast$a\+Message, char $\ast$$\ast$ai\+Default\+Input)
+\item 
+void \mbox{\hyperlink{tinyfiledialogs_8c_aeeb17ea3ee23d36a7ab82d35592dfe67}{tfd\+\_\+save\+File\+Dialog}} (char const $\ast$a\+Title, char $\ast$$\ast$ai\+Default\+Path\+And\+File, int const $\ast$a\+Num\+Of\+Filter\+Patterns, char const $\ast$const $\ast$a\+Filter\+Patterns, char const $\ast$a\+Single\+Filter\+Description)
+\item 
+void \mbox{\hyperlink{tinyfiledialogs_8c_a3fce7991af06249434ec2e2c3e6ce6cc}{tfd\+\_\+open\+File\+Dialog}} (char const $\ast$a\+Title, char $\ast$$\ast$ai\+Default\+Path\+And\+File, int const $\ast$a\+Num\+Of\+Filter\+Patterns, char const $\ast$const $\ast$a\+Filter\+Patterns, char const $\ast$a\+Single\+Filter\+Description, int const $\ast$a\+Allow\+Multiple\+Selects)
+\item 
+void \mbox{\hyperlink{tinyfiledialogs_8c_a4b0b3b0324df8080770064489cf73c14}{tfd\+\_\+select\+Folder\+Dialog}} (char const $\ast$a\+Title, char $\ast$$\ast$ai\+Default\+Path)
+\item 
+void \mbox{\hyperlink{tinyfiledialogs_8c_aedbcb03a5bb836db2a28ac787b00633f}{tfd\+\_\+color\+Chooser}} (char const $\ast$a\+Title, char $\ast$$\ast$ai\+Default\+Hex\+RGB)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{tinyfiledialogs_8c_ab96061de83b195bf847e44d164d6056e}{tinyfd\+\_\+version}} \mbox{[}8\mbox{]} = \char`\"{}3.\+19.\+1\char`\"{}
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_aeedca8836f3872ca50ebfe723423b25d}{tinyfd\+\_\+verbose}} = 0
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_aa3441498bf910ce05abb03d769782074}{tinyfd\+\_\+silent}} = 1
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a0b7e8db3c74f9830ad9ddcf5b0dee82f}{tinyfd\+\_\+allow\+Curses\+Dialogs}} = 0
+\item 
+int \mbox{\hyperlink{tinyfiledialogs_8c_a570a95a1dce391ed29f7fc5861ecee69}{tinyfd\+\_\+force\+Console}} = 0
+\item 
+char \mbox{\hyperlink{tinyfiledialogs_8c_a9b9a6af8ea75754b98c73455da469833}{tinyfd\+\_\+response}} \mbox{[}1024\mbox{]}
+\item 
+char \mbox{\hyperlink{tinyfiledialogs_8c_a4e0c55962cd5119defe2e4ab70440d27}{tinyfd\+\_\+needs}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a790242f2501dc16dd67d87533154258c}\label{tinyfiledialogs_8c_a790242f2501dc16dd67d87533154258c}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!LOW\_MULTIPLE\_FILES@{LOW\_MULTIPLE\_FILES}}
+\index{LOW\_MULTIPLE\_FILES@{LOW\_MULTIPLE\_FILES}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{LOW\_MULTIPLE\_FILES}{LOW\_MULTIPLE\_FILES}}
+{\footnotesize\ttfamily \#define LOW\+\_\+\+MULTIPLE\+\_\+\+FILES~32}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a0612543f1a6828a8b0008da041c06f6a}\label{tinyfiledialogs_8c_a0612543f1a6828a8b0008da041c06f6a}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!MAX\_MULTIPLE\_FILES@{MAX\_MULTIPLE\_FILES}}
+\index{MAX\_MULTIPLE\_FILES@{MAX\_MULTIPLE\_FILES}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_MULTIPLE\_FILES}{MAX\_MULTIPLE\_FILES}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+MULTIPLE\+\_\+\+FILES~1024}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a03da67b2aa763d88422ba0f6aaa6d29b}\label{tinyfiledialogs_8c_a03da67b2aa763d88422ba0f6aaa6d29b}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!MAX\_PATH\_OR\_CMD@{MAX\_PATH\_OR\_CMD}}
+\index{MAX\_PATH\_OR\_CMD@{MAX\_PATH\_OR\_CMD}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_PATH\_OR\_CMD}{MAX\_PATH\_OR\_CMD}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+PATH\+\_\+\+OR\+\_\+\+CMD~1024 /$\ast$ \+\_\+\+MAX\+\_\+\+PATH or MAX\+\_\+\+PATH $\ast$/}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a460e8b223e71d9e54e6e6d288a865156}\label{tinyfiledialogs_8c_a460e8b223e71d9e54e6e6d288a865156}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!TINYFD\_SLASH@{TINYFD\_SLASH}}
+\index{TINYFD\_SLASH@{TINYFD\_SLASH}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{TINYFD\_SLASH}{TINYFD\_SLASH}}
+{\footnotesize\ttfamily \#define TINYFD\+\_\+\+SLASH~\char`\"{}/\char`\"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a47f8aa977cd899f2e44c677491cb1a5d}\label{tinyfiledialogs_8c_a47f8aa977cd899f2e44c677491cb1a5d}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!isDialogVersionBetter09b@{isDialogVersionBetter09b}}
+\index{isDialogVersionBetter09b@{isDialogVersionBetter09b}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{isDialogVersionBetter09b()}{isDialogVersionBetter09b()}}
+{\footnotesize\ttfamily int is\+Dialog\+Version\+Better09b (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_aedbcb03a5bb836db2a28ac787b00633f}\label{tinyfiledialogs_8c_aedbcb03a5bb836db2a28ac787b00633f}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_colorChooser@{tfd\_colorChooser}}
+\index{tfd\_colorChooser@{tfd\_colorChooser}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_colorChooser()}{tfd\_colorChooser()}}
+{\footnotesize\ttfamily void tfd\+\_\+color\+Chooser (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char $\ast$$\ast$}]{ai\+Default\+Hex\+RGB }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_aedbcb03a5bb836db2a28ac787b00633f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_aedce7bb7c648a3de1b5ae958748acea0}\label{tinyfiledialogs_8c_aedce7bb7c648a3de1b5ae958748acea0}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_inputBox@{tfd\_inputBox}}
+\index{tfd\_inputBox@{tfd\_inputBox}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_inputBox()}{tfd\_inputBox()}}
+{\footnotesize\ttfamily void tfd\+\_\+input\+Box (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Message,  }\item[{char $\ast$$\ast$}]{ai\+Default\+Input }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_aedce7bb7c648a3de1b5ae958748acea0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a6a75d29f7cc1a6606e1b709fb2d13756}\label{tinyfiledialogs_8c_a6a75d29f7cc1a6606e1b709fb2d13756}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_isDarwin@{tfd\_isDarwin}}
+\index{tfd\_isDarwin@{tfd\_isDarwin}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_isDarwin()}{tfd\_isDarwin()}}
+{\footnotesize\ttfamily int tfd\+\_\+is\+Darwin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a77c4dde5df84387f5e8764f33bf04ba3}\label{tinyfiledialogs_8c_a77c4dde5df84387f5e8764f33bf04ba3}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_kdialogPresent@{tfd\_kdialogPresent}}
+\index{tfd\_kdialogPresent@{tfd\_kdialogPresent}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_kdialogPresent()}{tfd\_kdialogPresent()}}
+{\footnotesize\ttfamily int tfd\+\_\+kdialog\+Present (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{tinyfiledialogs_8c_a77c4dde5df84387f5e8764f33bf04ba3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_ae11ed1c0d8ae0c30f5453048d1cdf7d0}\label{tinyfiledialogs_8c_ae11ed1c0d8ae0c30f5453048d1cdf7d0}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_matedialogPresent@{tfd\_matedialogPresent}}
+\index{tfd\_matedialogPresent@{tfd\_matedialogPresent}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_matedialogPresent()}{tfd\_matedialogPresent()}}
+{\footnotesize\ttfamily int tfd\+\_\+matedialog\+Present (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_aa1a9656338b38479c1d5e2a1dde4ed9b}\label{tinyfiledialogs_8c_aa1a9656338b38479c1d5e2a1dde4ed9b}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_messageBox@{tfd\_messageBox}}
+\index{tfd\_messageBox@{tfd\_messageBox}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_messageBox()}{tfd\_messageBox()}}
+{\footnotesize\ttfamily void tfd\+\_\+message\+Box (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Message,  }\item[{char const $\ast$}]{a\+Dialog\+Type,  }\item[{char const $\ast$}]{a\+Icon\+Type,  }\item[{int $\ast$}]{ai\+Default\+Button }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_aa1a9656338b38479c1d5e2a1dde4ed9b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a3fce7991af06249434ec2e2c3e6ce6cc}\label{tinyfiledialogs_8c_a3fce7991af06249434ec2e2c3e6ce6cc}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_openFileDialog@{tfd\_openFileDialog}}
+\index{tfd\_openFileDialog@{tfd\_openFileDialog}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_openFileDialog()}{tfd\_openFileDialog()}}
+{\footnotesize\ttfamily void tfd\+\_\+open\+File\+Dialog (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char $\ast$$\ast$}]{ai\+Default\+Path\+And\+File,  }\item[{int const $\ast$}]{a\+Num\+Of\+Filter\+Patterns,  }\item[{char const $\ast$const $\ast$}]{a\+Filter\+Patterns,  }\item[{char const $\ast$}]{a\+Single\+Filter\+Description,  }\item[{int const $\ast$}]{a\+Allow\+Multiple\+Selects }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_a3fce7991af06249434ec2e2c3e6ce6cc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a207f7a0539c4f1488d49a4f05a0cdb73}\label{tinyfiledialogs_8c_a207f7a0539c4f1488d49a4f05a0cdb73}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_qarmaPresent@{tfd\_qarmaPresent}}
+\index{tfd\_qarmaPresent@{tfd\_qarmaPresent}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_qarmaPresent()}{tfd\_qarmaPresent()}}
+{\footnotesize\ttfamily int tfd\+\_\+qarma\+Present (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a789b9cfa9fb2cf888db0246f9c2dca9a}\label{tinyfiledialogs_8c_a789b9cfa9fb2cf888db0246f9c2dca9a}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_quoteDetected@{tfd\_quoteDetected}}
+\index{tfd\_quoteDetected@{tfd\_quoteDetected}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_quoteDetected()}{tfd\_quoteDetected()}}
+{\footnotesize\ttfamily int tfd\+\_\+quote\+Detected (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+String }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_a789b9cfa9fb2cf888db0246f9c2dca9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a803e4bfce6989645d3678292083340c0}\label{tinyfiledialogs_8c_a803e4bfce6989645d3678292083340c0}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_replaceSubStr@{tfd\_replaceSubStr}}
+\index{tfd\_replaceSubStr@{tfd\_replaceSubStr}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_replaceSubStr()}{tfd\_replaceSubStr()}}
+{\footnotesize\ttfamily void tfd\+\_\+replace\+Sub\+Str (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Source,  }\item[{char const $\ast$}]{a\+Old\+Sub\+Str,  }\item[{char const $\ast$}]{a\+New\+Sub\+Str,  }\item[{char $\ast$}]{ao\+Destination }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_aeeb17ea3ee23d36a7ab82d35592dfe67}\label{tinyfiledialogs_8c_aeeb17ea3ee23d36a7ab82d35592dfe67}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_saveFileDialog@{tfd\_saveFileDialog}}
+\index{tfd\_saveFileDialog@{tfd\_saveFileDialog}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_saveFileDialog()}{tfd\_saveFileDialog()}}
+{\footnotesize\ttfamily void tfd\+\_\+save\+File\+Dialog (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char $\ast$$\ast$}]{ai\+Default\+Path\+And\+File,  }\item[{int const $\ast$}]{a\+Num\+Of\+Filter\+Patterns,  }\item[{char const $\ast$const $\ast$}]{a\+Filter\+Patterns,  }\item[{char const $\ast$}]{a\+Single\+Filter\+Description }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_aeeb17ea3ee23d36a7ab82d35592dfe67_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a4b0b3b0324df8080770064489cf73c14}\label{tinyfiledialogs_8c_a4b0b3b0324df8080770064489cf73c14}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_selectFolderDialog@{tfd\_selectFolderDialog}}
+\index{tfd\_selectFolderDialog@{tfd\_selectFolderDialog}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_selectFolderDialog()}{tfd\_selectFolderDialog()}}
+{\footnotesize\ttfamily void tfd\+\_\+select\+Folder\+Dialog (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char $\ast$$\ast$}]{ai\+Default\+Path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_a4b0b3b0324df8080770064489cf73c14_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a0f7ff3f21aee78c73276da8eba075edd}\label{tinyfiledialogs_8c_a0f7ff3f21aee78c73276da8eba075edd}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_shellementaryPresent@{tfd\_shellementaryPresent}}
+\index{tfd\_shellementaryPresent@{tfd\_shellementaryPresent}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_shellementaryPresent()}{tfd\_shellementaryPresent()}}
+{\footnotesize\ttfamily int tfd\+\_\+shellementary\+Present (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a15fdc38cfcc89302704d4554221c85f7}\label{tinyfiledialogs_8c_a15fdc38cfcc89302704d4554221c85f7}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_xpropPresent@{tfd\_xpropPresent}}
+\index{tfd\_xpropPresent@{tfd\_xpropPresent}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_xpropPresent()}{tfd\_xpropPresent()}}
+{\footnotesize\ttfamily int tfd\+\_\+xprop\+Present (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a5702c782c083fb90757b8bb6a95de325}\label{tinyfiledialogs_8c_a5702c782c083fb90757b8bb6a95de325}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_yadPresent@{tfd\_yadPresent}}
+\index{tfd\_yadPresent@{tfd\_yadPresent}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_yadPresent()}{tfd\_yadPresent()}}
+{\footnotesize\ttfamily int tfd\+\_\+yad\+Present (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_aca140f9622c8b2ac27a1a7b93d426cf6}\label{tinyfiledialogs_8c_aca140f9622c8b2ac27a1a7b93d426cf6}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_zenity3Present@{tfd\_zenity3Present}}
+\index{tfd\_zenity3Present@{tfd\_zenity3Present}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_zenity3Present()}{tfd\_zenity3Present()}}
+{\footnotesize\ttfamily int tfd\+\_\+zenity3\+Present (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{tinyfiledialogs_8c_aca140f9622c8b2ac27a1a7b93d426cf6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a1ae8f7bd22b5c7d457771295e9a04cc5}\label{tinyfiledialogs_8c_a1ae8f7bd22b5c7d457771295e9a04cc5}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tfd\_zenityPresent@{tfd\_zenityPresent}}
+\index{tfd\_zenityPresent@{tfd\_zenityPresent}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tfd\_zenityPresent()}{tfd\_zenityPresent()}}
+{\footnotesize\ttfamily int tfd\+\_\+zenity\+Present (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{tinyfiledialogs_8c_a1ae8f7bd22b5c7d457771295e9a04cc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a0c19cd62f9b9ff0f7def8971d2bc3f9d}\label{tinyfiledialogs_8c_a0c19cd62f9b9ff0f7def8971d2bc3f9d}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_beep@{tinyfd\_beep}}
+\index{tinyfd\_beep@{tinyfd\_beep}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_beep()}{tinyfd\_beep()}}
+{\footnotesize\ttfamily void tinyfd\+\_\+beep (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a2f9b70adb58963e8ff41ab6a93b7ca48}\label{tinyfiledialogs_8c_a2f9b70adb58963e8ff41ab6a93b7ca48}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_colorChooser@{tinyfd\_colorChooser}}
+\index{tinyfd\_colorChooser@{tinyfd\_colorChooser}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_colorChooser()}{tinyfd\_colorChooser()}}
+{\footnotesize\ttfamily char$\ast$ tinyfd\+\_\+color\+Chooser (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Default\+Hex\+RGB,  }\item[{unsigned char const}]{a\+Default\+RGB\mbox{[}3\mbox{]},  }\item[{unsigned char}]{ao\+Result\+RGB\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{tinyfiledialogs_8c_a2f9b70adb58963e8ff41ab6a93b7ca48_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{tinyfiledialogs_8c_a2f9b70adb58963e8ff41ab6a93b7ca48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a2c7e7e8ae74afa8315c9c985c73a1fdd}\label{tinyfiledialogs_8c_a2c7e7e8ae74afa8315c9c985c73a1fdd}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_getGlobalChar@{tinyfd\_getGlobalChar}}
+\index{tinyfd\_getGlobalChar@{tinyfd\_getGlobalChar}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_getGlobalChar()}{tinyfd\_getGlobalChar()}}
+{\footnotesize\ttfamily char const$\ast$ tinyfd\+\_\+get\+Global\+Char (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Char\+Variable\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a2369e180c58a73d4861bb0130cd82dab}\label{tinyfiledialogs_8c_a2369e180c58a73d4861bb0130cd82dab}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_getGlobalInt@{tinyfd\_getGlobalInt}}
+\index{tinyfd\_getGlobalInt@{tinyfd\_getGlobalInt}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_getGlobalInt()}{tinyfd\_getGlobalInt()}}
+{\footnotesize\ttfamily int tinyfd\+\_\+get\+Global\+Int (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Int\+Variable\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a62849e223b13b73fdfe05543a85a7c58}\label{tinyfiledialogs_8c_a62849e223b13b73fdfe05543a85a7c58}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_inputBox@{tinyfd\_inputBox}}
+\index{tinyfd\_inputBox@{tinyfd\_inputBox}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_inputBox()}{tinyfd\_inputBox()}}
+{\footnotesize\ttfamily char$\ast$ tinyfd\+\_\+input\+Box (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Message,  }\item[{char const $\ast$}]{a\+Default\+Input }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{tinyfiledialogs_8c_a62849e223b13b73fdfe05543a85a7c58_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{tinyfiledialogs_8c_a62849e223b13b73fdfe05543a85a7c58_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_ac5082e6c1f4693110f1703664b3fa9fc}\label{tinyfiledialogs_8c_ac5082e6c1f4693110f1703664b3fa9fc}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_messageBox@{tinyfd\_messageBox}}
+\index{tinyfd\_messageBox@{tinyfd\_messageBox}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_messageBox()}{tinyfd\_messageBox()}}
+{\footnotesize\ttfamily int tinyfd\+\_\+message\+Box (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Message,  }\item[{char const $\ast$}]{a\+Dialog\+Type,  }\item[{char const $\ast$}]{a\+Icon\+Type,  }\item[{int}]{a\+Default\+Button }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{tinyfiledialogs_8c_ac5082e6c1f4693110f1703664b3fa9fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_ac5082e6c1f4693110f1703664b3fa9fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_ad91628b8a0640682241aa189f03a30ba}\label{tinyfiledialogs_8c_ad91628b8a0640682241aa189f03a30ba}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_notifyPopup@{tinyfd\_notifyPopup}}
+\index{tinyfd\_notifyPopup@{tinyfd\_notifyPopup}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_notifyPopup()}{tinyfd\_notifyPopup()}}
+{\footnotesize\ttfamily int tinyfd\+\_\+notify\+Popup (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Message,  }\item[{char const $\ast$}]{a\+Icon\+Type }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{tinyfiledialogs_8c_ad91628b8a0640682241aa189f03a30ba_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a8918e9f47e1532c1d055f563a32b215c}\label{tinyfiledialogs_8c_a8918e9f47e1532c1d055f563a32b215c}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_openFileDialog@{tinyfd\_openFileDialog}}
+\index{tinyfd\_openFileDialog@{tinyfd\_openFileDialog}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_openFileDialog()}{tinyfd\_openFileDialog()}}
+{\footnotesize\ttfamily char$\ast$ tinyfd\+\_\+open\+File\+Dialog (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Default\+Path\+And\+Or\+File,  }\item[{int}]{a\+Num\+Of\+Filter\+Patterns,  }\item[{char const $\ast$const $\ast$}]{a\+Filter\+Patterns,  }\item[{char const $\ast$}]{a\+Single\+Filter\+Description,  }\item[{int}]{a\+Allow\+Multiple\+Selects }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{tinyfiledialogs_8c_a8918e9f47e1532c1d055f563a32b215c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_a8918e9f47e1532c1d055f563a32b215c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a7a17e17150593bf3b04253ea819fc5bc}\label{tinyfiledialogs_8c_a7a17e17150593bf3b04253ea819fc5bc}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_saveFileDialog@{tinyfd\_saveFileDialog}}
+\index{tinyfd\_saveFileDialog@{tinyfd\_saveFileDialog}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_saveFileDialog()}{tinyfd\_saveFileDialog()}}
+{\footnotesize\ttfamily char$\ast$ tinyfd\+\_\+save\+File\+Dialog (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Default\+Path\+And\+Or\+File,  }\item[{int}]{a\+Num\+Of\+Filter\+Patterns,  }\item[{char const $\ast$const $\ast$}]{a\+Filter\+Patterns,  }\item[{char const $\ast$}]{a\+Single\+Filter\+Description }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{tinyfiledialogs_8c_a7a17e17150593bf3b04253ea819fc5bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_a7a17e17150593bf3b04253ea819fc5bc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_ab776afd1dd5932c765c32a71fe4c090c}\label{tinyfiledialogs_8c_ab776afd1dd5932c765c32a71fe4c090c}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_selectFolderDialog@{tinyfd\_selectFolderDialog}}
+\index{tinyfd\_selectFolderDialog@{tinyfd\_selectFolderDialog}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_selectFolderDialog()}{tinyfd\_selectFolderDialog()}}
+{\footnotesize\ttfamily char$\ast$ tinyfd\+\_\+select\+Folder\+Dialog (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Title,  }\item[{char const $\ast$}]{a\+Default\+Path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{tinyfiledialogs_8c_ab776afd1dd5932c765c32a71fe4c090c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tinyfiledialogs_8c_ab776afd1dd5932c765c32a71fe4c090c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a1e4d4275e2731ee2c0939ffd711446cd}\label{tinyfiledialogs_8c_a1e4d4275e2731ee2c0939ffd711446cd}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_setGlobalInt@{tinyfd\_setGlobalInt}}
+\index{tinyfd\_setGlobalInt@{tinyfd\_setGlobalInt}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_setGlobalInt()}{tinyfd\_setGlobalInt()}}
+{\footnotesize\ttfamily int tinyfd\+\_\+set\+Global\+Int (\begin{DoxyParamCaption}\item[{char const $\ast$}]{a\+Int\+Variable\+Name,  }\item[{int}]{a\+Value }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a0b7e8db3c74f9830ad9ddcf5b0dee82f}\label{tinyfiledialogs_8c_a0b7e8db3c74f9830ad9ddcf5b0dee82f}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_allowCursesDialogs@{tinyfd\_allowCursesDialogs}}
+\index{tinyfd\_allowCursesDialogs@{tinyfd\_allowCursesDialogs}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_allowCursesDialogs}{tinyfd\_allowCursesDialogs}}
+{\footnotesize\ttfamily int tinyfd\+\_\+allow\+Curses\+Dialogs = 0}
+
+Curses dialogs are difficult to use and counter-\/intuitive. On windows they are only ascii and still uses the unix backslash ! \mbox{\Hypertarget{tinyfiledialogs_8c_a570a95a1dce391ed29f7fc5861ecee69}\label{tinyfiledialogs_8c_a570a95a1dce391ed29f7fc5861ecee69}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_forceConsole@{tinyfd\_forceConsole}}
+\index{tinyfd\_forceConsole@{tinyfd\_forceConsole}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_forceConsole}{tinyfd\_forceConsole}}
+{\footnotesize\ttfamily int tinyfd\+\_\+force\+Console = 0}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_a4e0c55962cd5119defe2e4ab70440d27}\label{tinyfiledialogs_8c_a4e0c55962cd5119defe2e4ab70440d27}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_needs@{tinyfd\_needs}}
+\index{tinyfd\_needs@{tinyfd\_needs}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_needs}{tinyfd\_needs}}
+{\footnotesize\ttfamily char tinyfd\+\_\+needs\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{stringliteral}{"{}\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{ \_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{/           \(\backslash\)\(\backslash\) \(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{| tiny file |\(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{|  dialogs  |\(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\(\backslash\)\(\backslash\)\_\_\_\_\_  \_\_\_\_/\(\backslash\)n\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{      \(\backslash\)\(\backslash\)|\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\(\backslash\)ntiny file dialogs on UNIX needs:\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\(\backslash\)n   applescript or kdialog or yad or Xdialog\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\(\backslash\)nor zenity (or matedialog or shellementary or qarma)\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\(\backslash\)nor python (2 or 3) + tkinter + python-\/dbus (optional)\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\(\backslash\)nor dialog (opens console if needed) ** Disabled by default **\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\(\backslash\)nor xterm + bash (opens console for basic input)\(\backslash\)}}
+\DoxyCodeLine{\textcolor{stringliteral}{\(\backslash\)nor existing console for basic input."{}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{tinyfiledialogs_8c_a9b9a6af8ea75754b98c73455da469833}\label{tinyfiledialogs_8c_a9b9a6af8ea75754b98c73455da469833}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_response@{tinyfd\_response}}
+\index{tinyfd\_response@{tinyfd\_response}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_response}{tinyfd\_response}}
+{\footnotesize\ttfamily char tinyfd\+\_\+response\mbox{[}1024\mbox{]}}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_aa3441498bf910ce05abb03d769782074}\label{tinyfiledialogs_8c_aa3441498bf910ce05abb03d769782074}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_silent@{tinyfd\_silent}}
+\index{tinyfd\_silent@{tinyfd\_silent}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_silent}{tinyfd\_silent}}
+{\footnotesize\ttfamily int tinyfd\+\_\+silent = 1}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_aeedca8836f3872ca50ebfe723423b25d}\label{tinyfiledialogs_8c_aeedca8836f3872ca50ebfe723423b25d}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_verbose@{tinyfd\_verbose}}
+\index{tinyfd\_verbose@{tinyfd\_verbose}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_verbose}{tinyfd\_verbose}}
+{\footnotesize\ttfamily int tinyfd\+\_\+verbose = 0}
+
+\mbox{\Hypertarget{tinyfiledialogs_8c_ab96061de83b195bf847e44d164d6056e}\label{tinyfiledialogs_8c_ab96061de83b195bf847e44d164d6056e}} 
+\index{tinyfiledialogs.c@{tinyfiledialogs.c}!tinyfd\_version@{tinyfd\_version}}
+\index{tinyfd\_version@{tinyfd\_version}!tinyfiledialogs.c@{tinyfiledialogs.c}}
+\doxysubsubsection{\texorpdfstring{tinyfd\_version}{tinyfd\_version}}
+{\footnotesize\ttfamily char tinyfd\+\_\+version\mbox{[}8\mbox{]} = \char`\"{}3.\+19.\+1\char`\"{}}
+

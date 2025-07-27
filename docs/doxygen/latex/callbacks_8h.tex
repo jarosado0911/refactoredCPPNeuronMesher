@@ -1,0 +1,334 @@
+\hypertarget{callbacks_8h}{}\doxysection{include/viewer/callbacks.h File Reference}
+\label{callbacks_8h}\index{include/viewer/callbacks.h@{include/viewer/callbacks.h}}
+
+
+GLFW input handling callbacks for neuron visualization.  
+
+
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}neurongraph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opgl\+\_\+utils.\+h\char`\"{}}\newline
+Include dependency graph for callbacks.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{callbacks_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{callbacks_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{callbacks_8h_a0b9e239c8889734711f29fe45551605b}{key\+Callback}} (GLFWwindow $\ast$window, int key, int scancode, int action, int mods)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{callbacks_8h_ae41a3951e1196401047b29ad1d37c6ae}{mouse\+Button\+Callback}} (GLFWwindow $\ast$window, int button, int action, int mods)
+\begin{DoxyCompactList}\small\item\em Handles mouse button input events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{callbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df}{cursor\+Pos\+Callback}} (GLFWwindow $\ast$window, double xpos, double ypos)
+\begin{DoxyCompactList}\small\item\em Handles mouse cursor movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{callbacks_8h_aa9b224479e8c1cc5251b8e7f3fdabacd}{scroll\+Callback}} (GLFWwindow $\ast$window, double xoffset, double yoffset)
+\begin{DoxyCompactList}\small\item\em Handles mouse scroll events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+GLFW input handling callbacks for neuron visualization. 
+
+This header defines the callback functions that handle user input through GLFW, including keyboard, mouse, and scroll wheel interactions for the neuron viewer. These callbacks modify the global state in \mbox{\hyperlink{globals_8h}{globals.\+h}} to control the visualization.
+
+\begin{DoxyAuthor}{Author}
+CPPNeuron\+Mesher Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/07-\/27 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{callbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df}\label{callbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df}} 
+\index{callbacks.h@{callbacks.h}!cursorPosCallback@{cursorPosCallback}}
+\index{cursorPosCallback@{cursorPosCallback}!callbacks.h@{callbacks.h}}
+\doxysubsubsection{\texorpdfstring{cursorPosCallback()}{cursorPosCallback()}}
+{\footnotesize\ttfamily void cursor\+Pos\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{double}]{xpos,  }\item[{double}]{ypos }\end{DoxyParamCaption})}
+
+
+
+Handles mouse cursor movement. 
+
+Updates camera orientation or position based on mouse movement when\+:
+\begin{DoxyItemize}
+\item Left button is held\+: Rotate view
+\item Right button is held\+: Pan view
+\item Middle button is held\+: Zoom view
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that received the event \\
+\hline
+{\em xpos} & The new cursor x-\/coordinate, relative to the left edge of the content area \\
+\hline
+{\em ypos} & The new cursor y-\/coordinate, relative to the top edge of the content area\\
+\hline
+\end{DoxyParams}
+Handles mouse cursor movement.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & The GLFW window that received the event \\
+\hline
+\mbox{\texttt{ in}}  & {\em xpos} & The new x-\/coordinate of the cursor, in screen coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em ypos} & The new y-\/coordinate of the cursor, in screen coordinates\\
+\hline
+\end{DoxyParams}
+This callback function processes mouse movement to implement interactive 3D view manipulation. It provides the following functionality\+:
+\begin{DoxyItemize}
+\item Left-\/drag\+: Rotates the view around the X and Y axes
+\item Right-\/drag\+: Pans the view in the X and Y directions
+\end{DoxyItemize}
+
+The function uses the difference between the current and last cursor positions to calculate the amount of rotation or panning to apply. The actual view transformation is applied in the main rendering loop using the global state variables modified by this function.
+
+\begin{DoxyNote}{Note}
+The function updates the lastX and lastY variables to track cursor movement between frames 
+
+Rotation and panning speeds are scaled by constant factors (0.\+3f and 1.\+5f) 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{callbacks_8h_ae41a3951e1196401047b29ad1d37c6ae}{mouse\+Button\+Callback()}} for enabling/disabling rotation and panning 
+
+GLFW cursor position documentation\+: \href{https://www.glfw.org/docs/latest/input_guide.html\#cursor_pos}{\texttt{ https\+://www.\+glfw.\+org/docs/latest/input\+\_\+guide.\+html\#cursor\+\_\+pos}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{callbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{callbacks_8h_a0b9e239c8889734711f29fe45551605b}\label{callbacks_8h_a0b9e239c8889734711f29fe45551605b}} 
+\index{callbacks.h@{callbacks.h}!keyCallback@{keyCallback}}
+\index{keyCallback@{keyCallback}!callbacks.h@{callbacks.h}}
+\doxysubsubsection{\texorpdfstring{keyCallback()}{keyCallback()}}
+{\footnotesize\ttfamily void key\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input events. 
+
+Processes key presses and releases to control the visualization\+:
+\begin{DoxyItemize}
+\item WASD\+: Move camera left/right/forward/backward
+\item QE\+: Move camera up/down
+\item Arrow keys\+: Rotate view
+\item R\+: Reset view
+\item Space\+: Toggle auto-\/rotation
+\item 1-\/5\+: Switch between rendering modes
+\item +/-\/\+: Adjust rendering parameters
+\item ESC\+: Close window
+\item H\+: Toggle help text
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that received the event \\
+\hline
+{\em key} & The keyboard key that was pressed or released \\
+\hline
+{\em scancode} & The system-\/specific scancode of the key \\
+\hline
+{\em action} & GLFW\+\_\+\+PRESS, GLFW\+\_\+\+RELEASE or GLFW\+\_\+\+REPEAT \\
+\hline
+{\em mods} & Bit field describing which modifier keys were held down\\
+\hline
+\end{DoxyParams}
+Handles keyboard input events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & The GLFW window that received the event \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & The keyboard key that was pressed or released \\
+\hline
+\mbox{\texttt{ in}}  & {\em scancode} & The system-\/specific scancode of the key \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & The key action (GLFW\+\_\+\+PRESS, GLFW\+\_\+\+RELEASE, or GLFW\+\_\+\+REPEAT) \\
+\hline
+\mbox{\texttt{ in}}  & {\em mods} & Bit field describing which modifier keys were held down\\
+\hline
+\end{DoxyParams}
+This callback function processes keyboard input for controlling the neuron viewer. It implements the following keyboard shortcuts\+:
+\begin{DoxyItemize}
+\item F\+: Refine neuron geometry (halve delta)
+\item Ctrl+F\+: Coarsen neuron geometry (double delta)
+\item 1-\/6\+: Switch between different render modes
+\item O\+: Open a neuron file dialog
+\item R\+: Reset camera view
+\item H\+: Show/hide help window
+\item S\+: Save the current neuron data to file
+\end{DoxyItemize}
+
+The function modifies global state for view parameters and triggers updates to the neuron visualization when geometry is refined or coarsened.
+
+\begin{DoxyNote}{Note}
+The function only processes key press events (GLFW\+\_\+\+PRESS) 
+
+Modifier keys (Ctrl, Shift, Alt) are checked using the mods parameter 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+GLFW key documentation\+: \href{https://www.glfw.org/docs/latest/input_guide.html\#input_key}{\texttt{ https\+://www.\+glfw.\+org/docs/latest/input\+\_\+guide.\+html\#input\+\_\+key}} 
+\end{DoxySeeAlso}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{callbacks_8h_a0b9e239c8889734711f29fe45551605b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{callbacks_8h_a0b9e239c8889734711f29fe45551605b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{callbacks_8h_ae41a3951e1196401047b29ad1d37c6ae}\label{callbacks_8h_ae41a3951e1196401047b29ad1d37c6ae}} 
+\index{callbacks.h@{callbacks.h}!mouseButtonCallback@{mouseButtonCallback}}
+\index{mouseButtonCallback@{mouseButtonCallback}!callbacks.h@{callbacks.h}}
+\doxysubsubsection{\texorpdfstring{mouseButtonCallback()}{mouseButtonCallback()}}
+{\footnotesize\ttfamily void mouse\+Button\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{int}]{button,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})}
+
+
+
+Handles mouse button input events. 
+
+Processes mouse button presses and releases for\+:
+\begin{DoxyItemize}
+\item Left button\+: Start/end rotation
+\item Right button\+: Start/end panning
+\item Middle button\+: Start/end zooming
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that received the event \\
+\hline
+{\em button} & The mouse button that was pressed or released \\
+\hline
+{\em action} & GLFW\+\_\+\+PRESS or GLFW\+\_\+\+RELEASE \\
+\hline
+{\em mods} & Bit field describing which modifier keys were held down\\
+\hline
+\end{DoxyParams}
+Handles mouse button input events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & The GLFW window that received the event \\
+\hline
+\mbox{\texttt{ in}}  & {\em button} & The mouse button that was pressed or released \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & The button action (GLFW\+\_\+\+PRESS or GLFW\+\_\+\+RELEASE) \\
+\hline
+\mbox{\texttt{ in}}  & {\em mods} & Bit field describing which modifier keys were held down\\
+\hline
+\end{DoxyParams}
+This callback function processes mouse button events to enable interactive 3D view manipulation. It tracks the following interactions\+:
+\begin{DoxyItemize}
+\item Left mouse button\+: Enables view rotation when dragged
+\item Right mouse button\+: Enables view panning when dragged
+\end{DoxyItemize}
+
+The function updates global state variables (dragging, right\+Dragging) that are used by cursor\+Pos\+Callback to implement the actual view transformations.
+
+\begin{DoxyNote}{Note}
+The function tracks both press and release events for smooth interaction 
+
+The cursor position is captured on button press for relative movement 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{callbacks_8h_ae49f0c4c2064be8fbcf555f46460b7df}{cursor\+Pos\+Callback()}} for the implementation of the actual view transformations 
+
+GLFW mouse button documentation\+: \href{https://www.glfw.org/docs/latest/input_guide.html\#input_mouse_button}{\texttt{ https\+://www.\+glfw.\+org/docs/latest/input\+\_\+guide.\+html\#input\+\_\+mouse\+\_\+button}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{callbacks_8h_ae41a3951e1196401047b29ad1d37c6ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{callbacks_8h_aa9b224479e8c1cc5251b8e7f3fdabacd}\label{callbacks_8h_aa9b224479e8c1cc5251b8e7f3fdabacd}} 
+\index{callbacks.h@{callbacks.h}!scrollCallback@{scrollCallback}}
+\index{scrollCallback@{scrollCallback}!callbacks.h@{callbacks.h}}
+\doxysubsubsection{\texorpdfstring{scrollCallback()}{scrollCallback()}}
+{\footnotesize\ttfamily void scroll\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})}
+
+
+
+Handles mouse scroll events. 
+
+Zooms the view in/out based on vertical scroll input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that received the event \\
+\hline
+{\em xoffset} & The scroll offset along the x-\/axis (unused) \\
+\hline
+{\em yoffset} & The scroll offset along the y-\/axis (positive = scroll up, negative = scroll down)\\
+\hline
+\end{DoxyParams}
+Handles mouse scroll events.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & The GLFW window that received the event \\
+\hline
+\mbox{\texttt{ in}}  & {\em xoffset} & The scroll offset along the x-\/axis (unused in this implementation) \\
+\hline
+\mbox{\texttt{ in}}  & {\em yoffset} & The scroll offset along the y-\/axis (positive for scroll up, negative for scroll down)\\
+\hline
+\end{DoxyParams}
+This callback function processes mouse scroll wheel input to implement smooth zooming of the 3D view. It modifies the global zoom factor based on the vertical scroll amount.
+
+The zoom factor is adjusted using an exponential scale (1.\+1$^\wedge$yoffset) to provide natural-\/feeling zoom behavior. The zoom level is clamped between 0.\+05 and 10.\+0 to prevent extreme zoom levels that might cause rendering issues or numerical instability.
+
+\begin{DoxyNote}{Note}
+The xoffset parameter is currently unused but included for future compatibility 
+
+Zooming is centered on the current view (no focal point adjustment) 
+
+The 1.\+1 base value provides a good balance between precision and responsiveness 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+GLFW scroll documentation\+: \href{https://www.glfw.org/docs/latest/input_guide.html\#scrolling}{\texttt{ https\+://www.\+glfw.\+org/docs/latest/input\+\_\+guide.\+html\#scrolling}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{callbacks_8h_aa9b224479e8c1cc5251b8e7f3fdabacd_icgraph}
+\end{center}
+\end{figure}

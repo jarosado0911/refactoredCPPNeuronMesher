@@ -1,0 +1,470 @@
+\hypertarget{draw__utils_8h}{}\doxysection{include/viewer/draw\+\_\+utils.h File Reference}
+\label{draw__utils_8h}\index{include/viewer/draw\_utils.h@{include/viewer/draw\_utils.h}}
+
+
+Open\+GL drawing utilities for neuron visualization.  
+
+
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$GL/glu.\+h$>$}\newline
+Include dependency graph for draw\+\_\+utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{draw__utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{draw__utils_8h_a6b12b8639ee9ef751cff0343e93a42a5}{draw\+Simple\+Sphere}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&node, double size=0.\+5f)
+\begin{DoxyCompactList}\small\item\em Draws a simple low-\/polygon sphere at a node\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__utils_8h_a9e1aa9b4fe444097d366fd74155e5a7c}{draw\+Simple\+Line}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&a, const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&b)
+\begin{DoxyCompactList}\small\item\em Draws a simple line between two nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__utils_8h_acc9c48455e614233efcc255cc5df30db}{draw\+Sphere}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&node, int slices=6, int stacks=6)
+\begin{DoxyCompactList}\small\item\em Draws a sphere with specified geometric detail. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__utils_8h_a65598ae83871fad84212c90bbaec2667}{draw\+Cylinder}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&a, const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&b, int segments=6)
+\begin{DoxyCompactList}\small\item\em Draws a cylinder connecting two nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__utils_8h_a703fff569922c385e2eee4fe8f247528}{draw\+Bounding\+Box}} (double minX, double maxX, double minY, double maxY, double minZ, double maxZ)
+\begin{DoxyCompactList}\small\item\em Draws an axis-\/aligned bounding box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__utils_8h_a924533db1f86336b245cee7e6425171c}{set\+Color\+By\+Type}} (int type)
+\begin{DoxyCompactList}\small\item\em Sets the Open\+GL color based on SWC node type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__utils_8h_a2eca0fff4e4b8fe4dc7c5701657cab65}{render\+SWC}} (const std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&nodes)
+\begin{DoxyCompactList}\small\item\em Renders a complete SWC neuron morphology. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL drawing utilities for neuron visualization. 
+
+This header provides functions for rendering 3D neuron morphologies using Open\+GL. It includes utilities for drawing spheres, cylinders, and other geometric primitives that make up neuron visualizations.
+
+\begin{DoxyAuthor}{Author}
+CPPNeuron\+Mesher Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/07-\/27 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{draw__utils_8h_a703fff569922c385e2eee4fe8f247528}\label{draw__utils_8h_a703fff569922c385e2eee4fe8f247528}} 
+\index{draw\_utils.h@{draw\_utils.h}!drawBoundingBox@{drawBoundingBox}}
+\index{drawBoundingBox@{drawBoundingBox}!draw\_utils.h@{draw\_utils.h}}
+\doxysubsubsection{\texorpdfstring{drawBoundingBox()}{drawBoundingBox()}}
+{\footnotesize\ttfamily void draw\+Bounding\+Box (\begin{DoxyParamCaption}\item[{double}]{minX,  }\item[{double}]{maxX,  }\item[{double}]{minY,  }\item[{double}]{maxY,  }\item[{double}]{minZ,  }\item[{double}]{maxZ }\end{DoxyParamCaption})}
+
+
+
+Draws an axis-\/aligned bounding box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minX} & Minimum x-\/coordinate \\
+\hline
+{\em maxX} & Maximum x-\/coordinate \\
+\hline
+{\em minY} & Minimum y-\/coordinate \\
+\hline
+{\em maxY} & Maximum y-\/coordinate \\
+\hline
+{\em minZ} & Minimum z-\/coordinate \\
+\hline
+{\em maxZ} & Maximum z-\/coordinate\\
+\hline
+\end{DoxyParams}
+Renders a wireframe box representing the spatial bounds of the neuron. Uses immediate mode Open\+GL line drawing.
+
+Draws an axis-\/aligned bounding box.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em minX} & The minimum X coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ in}}  & {\em maxX} & The maximum X coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ in}}  & {\em minY} & The minimum Y coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ in}}  & {\em maxY} & The maximum Y coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ in}}  & {\em minZ} & The minimum Z coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ in}}  & {\em maxZ} & The maximum Z coordinate of the bounding box\\
+\hline
+\end{DoxyParams}
+This function draws a white wireframe box representing the spatial bounds of the neuron morphology. The box is drawn using Open\+GL line primitives, with each edge of the box represented by a single line segment.
+
+The function sets the current Open\+GL color to white before rendering and uses immediate mode rendering (gl\+Begin/gl\+End). The box is axis-\/aligned and defined by the provided min/max coordinates in each dimension.
+
+\begin{DoxyNote}{Note}
+The function sets the color to white (1.\+0, 1.\+0, 1.\+0) 
+
+Uses legacy Open\+GL immediate mode rendering 
+
+The box is drawn with GL\+\_\+\+LINES primitive type 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+gl\+Begin() for details on immediate mode rendering 
+
+gl\+Vertex3f() for vertex specification 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{draw__utils_8h_a703fff569922c385e2eee4fe8f247528_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{draw__utils_8h_a65598ae83871fad84212c90bbaec2667}\label{draw__utils_8h_a65598ae83871fad84212c90bbaec2667}} 
+\index{draw\_utils.h@{draw\_utils.h}!drawCylinder@{drawCylinder}}
+\index{drawCylinder@{drawCylinder}!draw\_utils.h@{draw\_utils.h}}
+\doxysubsubsection{\texorpdfstring{drawCylinder()}{drawCylinder()}}
+{\footnotesize\ttfamily void draw\+Cylinder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{a,  }\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{b,  }\item[{int}]{segments }\end{DoxyParamCaption})}
+
+
+
+Draws a cylinder connecting two nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First node (start of cylinder) \\
+\hline
+{\em b} & Second node (end of cylinder) \\
+\hline
+{\em segments} & Number of radial segments for the cylinder \mbox{[}default\+: 6\mbox{]}\\
+\hline
+\end{DoxyParams}
+Renders a tapered cylinder that connects two nodes, with the radius at each end determined by the nodes\textquotesingle{} radii. The cylinder is colored according to the first node\textquotesingle{}s type.
+
+Draws a cylinder connecting two nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & The starting node of the cylinder \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & The ending node of the cylinder \\
+\hline
+\mbox{\texttt{ in}}  & {\em segments} & The number of sides around the cylinder\\
+\hline
+\end{DoxyParams}
+This function draws a tapered cylinder connecting two nodes in 3D space. The cylinder\textquotesingle{}s radius at each end is determined by the radius property of the corresponding node, allowing for smooth tapering of neurites.
+
+The function handles the necessary coordinate system transformations to orient the cylinder correctly between the two points in 3D space. It uses Open\+GL\textquotesingle{}s matrix stack to ensure the transformations don\textquotesingle{}t affect subsequent rendering operations.
+
+\begin{DoxyNote}{Note}
+The cylinder is drawn with smooth normals for proper lighting 
+
+If the nodes are coincident (distance = 0), the function returns early 
+
+The 57.\+2957795f constant converts radians to degrees (180/π) 
+
+Uses legacy Open\+GL immediate mode rendering 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+glu\+Cylinder() for details on the underlying GLU primitive 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{draw__utils_8h_a65598ae83871fad84212c90bbaec2667_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{draw__utils_8h_a9e1aa9b4fe444097d366fd74155e5a7c}\label{draw__utils_8h_a9e1aa9b4fe444097d366fd74155e5a7c}} 
+\index{draw\_utils.h@{draw\_utils.h}!drawSimpleLine@{drawSimpleLine}}
+\index{drawSimpleLine@{drawSimpleLine}!draw\_utils.h@{draw\_utils.h}}
+\doxysubsubsection{\texorpdfstring{drawSimpleLine()}{drawSimpleLine()}}
+{\footnotesize\ttfamily void draw\+Simple\+Line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{a,  }\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Draws a simple line between two nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First node (start point) \\
+\hline
+{\em b} & Second node (end point)\\
+\hline
+\end{DoxyParams}
+Renders a line in 3D space between two nodes using immediate mode Open\+GL. The line width is determined by the nodes\textquotesingle{} radii.
+
+Draws a simple line between two nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & The starting node of the line \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & The ending node of the line\\
+\hline
+\end{DoxyParams}
+This function renders a simple line segment between two nodes in 3D space using Open\+GL\textquotesingle{}s immediate mode line rendering. The line is drawn with the current Open\+GL color and line width settings.
+
+The function is typically used for wireframe representations of neuron morphologies or for debug visualization.
+
+\begin{DoxyNote}{Note}
+The line is drawn with the current Open\+GL color 
+
+Uses legacy Open\+GL immediate mode rendering (gl\+Begin/gl\+End) 
+
+For more complex line rendering (e.\+g., with thickness), consider using geometry shaders or other modern Open\+GL techniques 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{draw__utils_8h_a9e1aa9b4fe444097d366fd74155e5a7c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{draw__utils_8h_a6b12b8639ee9ef751cff0343e93a42a5}\label{draw__utils_8h_a6b12b8639ee9ef751cff0343e93a42a5}} 
+\index{draw\_utils.h@{draw\_utils.h}!drawSimpleSphere@{drawSimpleSphere}}
+\index{drawSimpleSphere@{drawSimpleSphere}!draw\_utils.h@{draw\_utils.h}}
+\doxysubsubsection{\texorpdfstring{drawSimpleSphere()}{drawSimpleSphere()}}
+{\footnotesize\ttfamily void draw\+Simple\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{node,  }\item[{double}]{size }\end{DoxyParamCaption})}
+
+
+
+Draws a simple low-\/polygon sphere at a node\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The SWC node containing position and radius information \\
+\hline
+{\em size} & Scale factor for the sphere radius (default\+: 0.\+5)\\
+\hline
+\end{DoxyParams}
+This function renders a sphere using immediate mode Open\+GL with minimal geometric detail, making it suitable for large numbers of nodes.
+
+Draws a simple low-\/polygon sphere at a node\textquotesingle{}s position.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & The \mbox{\hyperlink{structSWCNode}{SWCNode}} containing the position for the sphere \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & The radius of the sphere\\
+\hline
+\end{DoxyParams}
+This function draws a simple sphere using Open\+GL\textquotesingle{}s GLU quadric primitives. It\textquotesingle{}s optimized for speed rather than visual quality, using a low number of slices and stacks (8x8) for the sphere approximation.
+
+The function handles the Open\+GL matrix stack appropriately, pushing the current matrix before translation and popping it afterward to avoid affecting subsequent rendering operations.
+
+\begin{DoxyNote}{Note}
+The sphere is drawn with the current Open\+GL color 
+
+Uses legacy Open\+GL immediate mode rendering 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{draw__utils_8h_acc9c48455e614233efcc255cc5df30db}{draw\+Sphere()}} for a higher-\/quality sphere rendering alternative 
+
+glu\+Sphere() for details on the underlying GLU primitive 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__utils_8h_a6b12b8639ee9ef751cff0343e93a42a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{draw__utils_8h_acc9c48455e614233efcc255cc5df30db}\label{draw__utils_8h_acc9c48455e614233efcc255cc5df30db}} 
+\index{draw\_utils.h@{draw\_utils.h}!drawSphere@{drawSphere}}
+\index{drawSphere@{drawSphere}!draw\_utils.h@{draw\_utils.h}}
+\doxysubsubsection{\texorpdfstring{drawSphere()}{drawSphere()}}
+{\footnotesize\ttfamily void draw\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{node,  }\item[{int}]{slices,  }\item[{int}]{stacks }\end{DoxyParamCaption})}
+
+
+
+Draws a sphere with specified geometric detail. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The SWC node to draw \\
+\hline
+{\em slices} & Number of subdivisions around the z-\/axis (longitude) \mbox{[}default\+: 6\mbox{]} \\
+\hline
+{\em stacks} & Number of subdivisions along the z-\/axis (latitude) \mbox{[}default\+: 6\mbox{]}\\
+\hline
+\end{DoxyParams}
+Uses GLU quadric objects to render a sphere with the specified level of detail. The sphere is colored according to the node\textquotesingle{}s type.
+
+Draws a sphere with specified geometric detail.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & The \mbox{\hyperlink{structSWCNode}{SWCNode}} containing the position and radius for the sphere \\
+\hline
+\mbox{\texttt{ in}}  & {\em slices} & The number of subdivisions around the Z axis (longitude) \\
+\hline
+\mbox{\texttt{ in}}  & {\em stacks} & The number of subdivisions along the Z axis (latitude)\\
+\hline
+\end{DoxyParams}
+This function draws a sphere using Open\+GL\textquotesingle{}s GLU quadric primitives with smooth normal vectors for proper lighting calculations. The sphere\textquotesingle{}s radius is taken from the node\textquotesingle{}s radius property, and its position is set to the node\textquotesingle{}s coordinates.
+
+The function handles the Open\+GL matrix stack appropriately and uses the current Open\+GL color for rendering. The resolution of the sphere can be controlled through the slices and stacks parameters.
+
+\begin{DoxyNote}{Note}
+The sphere is drawn with smooth shading (GLU\+\_\+\+SMOOTH) 
+
+Uses legacy Open\+GL immediate mode rendering 
+
+For high-\/quality rendering, use at least 16 slices and stacks 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{draw__utils_8h_a6b12b8639ee9ef751cff0343e93a42a5}{draw\+Simple\+Sphere()}} for a faster, lower-\/quality alternative 
+
+glu\+Quadric\+Normals() for details on normal generation 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{draw__utils_8h_acc9c48455e614233efcc255cc5df30db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{draw__utils_8h_a2eca0fff4e4b8fe4dc7c5701657cab65}\label{draw__utils_8h_a2eca0fff4e4b8fe4dc7c5701657cab65}} 
+\index{draw\_utils.h@{draw\_utils.h}!renderSWC@{renderSWC}}
+\index{renderSWC@{renderSWC}!draw\_utils.h@{draw\_utils.h}}
+\doxysubsubsection{\texorpdfstring{renderSWC()}{renderSWC()}}
+{\footnotesize\ttfamily void render\+SWC (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{nodes }\end{DoxyParamCaption})}
+
+
+
+Renders a complete SWC neuron morphology. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Vector of SWC nodes to render\\
+\hline
+\end{DoxyParams}
+This is the main rendering function that draws an entire neuron morphology. It handles the display of all nodes and connections between them, with appropriate coloring based on node types. The function respects the current rendering mode and visualization settings from \mbox{\hyperlink{globals_8h}{globals.\+h}}.
+
+Renders a complete SWC neuron morphology.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nodes} & A vector of \mbox{\hyperlink{structSWCNode}{SWCNode}} objects representing the neuron morphology\\
+\hline
+\end{DoxyParams}
+This function renders a complete neuron morphology from SWC node data using different rendering modes controlled by the global {\ttfamily render\+Mode} variable. The function handles both the rendering of nodes (soma, branch points, etc.) and the connections between them (dendrites, axons).
+
+Supported render modes\+:
+\begin{DoxyItemize}
+\item Mode 1\+: White wireframe lines between nodes
+\item Mode 2\+: Colored spheres at nodes with white wireframe connections
+\item Mode 3\+: Yellow simple spheres at node positions
+\item Mode 4\+: Purple detailed spheres at node positions
+\item Mode 5\+: Colored tapered cylinders between nodes (no spheres)
+\item Mode 6\+: Colored detailed spheres with colored tapered cylinders
+\end{DoxyItemize}
+
+The function first renders all nodes according to the current render mode, then renders the connections between nodes. Node colors are determined by their SWC type using the \mbox{\hyperlink{draw__utils_8h_a924533db1f86336b245cee7e6425171c}{set\+Color\+By\+Type()}} function.
+
+\begin{DoxyNote}{Note}
+The function uses the global {\ttfamily render\+Mode} variable to determine rendering style 
+
+Parent-\/child relationships are determined by the node.\+pid field 
+
+The function skips rendering of invalid parent references (pid = -\/1) 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{draw__utils_8h_a924533db1f86336b245cee7e6425171c}{set\+Color\+By\+Type()}} for information about color mapping 
+
+\mbox{\hyperlink{draw__utils_8h_acc9c48455e614233efcc255cc5df30db}{draw\+Sphere()}}, \mbox{\hyperlink{draw__utils_8h_a65598ae83871fad84212c90bbaec2667}{draw\+Cylinder()}} for the actual rendering primitives 
+\end{DoxySeeAlso}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{draw__utils_8h_a2eca0fff4e4b8fe4dc7c5701657cab65_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{draw__utils_8h_a2eca0fff4e4b8fe4dc7c5701657cab65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{draw__utils_8h_a924533db1f86336b245cee7e6425171c}\label{draw__utils_8h_a924533db1f86336b245cee7e6425171c}} 
+\index{draw\_utils.h@{draw\_utils.h}!setColorByType@{setColorByType}}
+\index{setColorByType@{setColorByType}!draw\_utils.h@{draw\_utils.h}}
+\doxysubsubsection{\texorpdfstring{setColorByType()}{setColorByType()}}
+{\footnotesize\ttfamily void set\+Color\+By\+Type (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Sets the Open\+GL color based on SWC node type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & SWC node type identifier (1-\/7)\\
+\hline
+\end{DoxyParams}
+Maps standard SWC node types to distinct colors for visualization. The color mapping follows the standard SWC color scheme\+:
+\begin{DoxyItemize}
+\item 1 (Soma)\+: Red
+\item 2 (Axon)\+: Blue
+\item 3 (Dendrite)\+: Yellow
+\item 4 (Apical dendrite)\+: Purple
+\item 5-\/7\+: Other standard SWC types
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type} & The SWC node type identifier\\
+\hline
+\end{DoxyParams}
+This function maps standard SWC node types to specific colors for visualization. The color mapping is as follows\+:
+\begin{DoxyItemize}
+\item Type 1\+: Red (soma)
+\item Type 2\+: Green (axon)
+\item Type 3\+: Blue (basal dendrite)
+\item Type 4\+: Yellow (apical dendrite)
+\item Type 5\+: Magenta
+\item Type 6\+: Cyan
+\item Type 7\+: Orange
+\item Default\+: White (for any other type)
+\end{DoxyItemize}
+
+The function uses a static map for efficient type-\/to-\/color lookup and modifies the current Open\+GL color state.
+
+\begin{DoxyNote}{Note}
+The function modifies the Open\+GL current color state 
+
+The color map is static and shared across all instances 
+
+For custom color schemes, modify the color\+Map variable 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html}{\texttt{ http\+://www.\+neuronland.\+org/\+NLMorphology\+Converter/\+Morphology\+Formats/\+SWC/\+Spec.\+html}} for SWC format specification 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{draw__utils_8h_a924533db1f86336b245cee7e6425171c_icgraph}
+\end{center}
+\end{figure}
