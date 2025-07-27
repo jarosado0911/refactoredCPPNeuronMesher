@@ -21,28 +21,33 @@ This project provides an OpenGL-based neuron visualization and meshing system wr
 - [NeuronTrunks](neurontrunks_8cpp.html)
 - [NeuronUGX](neuronugx_8cpp.html)
 - [Utilities](utils_8cpp.html)
+- [Python Bindings](bindings_8cpp.html)
+
+### `src/view/`
+This is the source code for NeuronViewer
+- [neuronviewer.cpp](neuronviewer_8cpp.html)
+- [opgl_utils.cpp](opgl__utils_8cpp.html)
+- [renderhelpwindow.cpp](renderhelpwindow_8cpp.html)
+- [tinyfiledialogs.c](tinyfiledialogs_8c.html)
+- [globals.cpp](globals_8cpp.html)
+- [draw_utils.cpp](draw__utils_8cpp.html)
+- [callbacks.cpp](callbacks_8cpp.html)
 
 ### `scripts/`
 - [main.cpp](main_8cpp.html)
-
-### `src/view/`
-
-- [Viewer.cpp](doxygen/neuron_viewer_8cpp.html)
-- [Render.cpp](doxygen/html/render_8cpp.html)
-
-### `scripts/`
-
-- [swc_viewer.cpp](doxygen/html/scripts_swc__viewer_8cpp.html)
-- [doxygen_runner.cpp](doxygen/html/scripts_doxygen__runner_8cpp.html)
-
+- [swc_viewer.cpp](swc__viewer_8cpp.html) This is an older viewer (prototype I started with)
+- [splitrefineSET.cpp](splitrefineSET_8cpp.html)
+- [splitrefine.cpp](splitrefine_8cpp.html)
+- [extracttrunks.cpp](extracttrunks_8cpp.html)
+  
 ---
 
 ## 📈 NeuronGraph Dependency Graphs
 
-- [NeuronGraph Class Page (includes graphs)](doxygen/html/classNeuronGraph.html)
-- [Full Class Index](doxygen/html/classes.html)
-- [Namespace Index](doxygen/html/namespaces.html)
-- [File Index](doxygen/html/files.html)
+- [NeuronGraph Class Page (includes graphs)](classNeuronGraph.html)
+- [Full Class Index](classes.html)
+- [Namespace Index](namespaces.html)
+- [File Index](files.html)
 
 ---
 

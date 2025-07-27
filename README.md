@@ -45,7 +45,10 @@ The Static Analysis Summary badges indicate the results of automated code analys
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jarosado0911_refactoredCPPNeuronMesher)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 
-![Windsurf](https://img.shields.io/badge/documented%20with-Windsurf-1f8ceb?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iOCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48dGV4dCB4PSI0IiB5PSIxMiIgc3R5bGU9ImZpbGw6IzE4ODdmNTtmb250LXNpemU6NHB4O2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWYiPldTPC90ZXh0Pjwvc3ZnPg==)
+### 🗒️ Documentation
+This project leverages Windsurf, an AI-powered documentation assistant, to generate high-level summaries and improve code readability across the codebase. Detailed API and internal documentation is generated using Doxygen, providing class references, file structure, and dependency diagrams for the C++ components. Both tools have been integrated to enhance the maintainability, transparency, and navigability of the repository.
+
+[![Doxygen Docs](https://img.shields.io/badge/docs-Doxygen-blue)](https://jarosado0911.github.io/refactoredCPPNeuronMesher/doxygen/) [![Docs](https://img.shields.io/badge/Doxygen-View-blueviolet?logo=doxygen)](https://jarosado0911.github.io/refactoredCPPNeuronMesher/doxygen/) ![Windsurf](https://img.shields.io/badge/documented%20with-Windsurf-1f8ceb?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iOCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48dGV4dCB4PSI0IiB5PSIxMiIgc3R5bGU9ImZpbGw6IzE4ODdmNTtmb250LXNpemU6NHB4O2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWYiPldTPC90ZXh0Pjwvc3ZnPg==)
 
 ## Overview
 
@@ -58,6 +61,8 @@ Main features include:
 - Python bindings (`neurongraph` shared library).
 - Modular CMake build system with continuous integration and quality analysis.
 - Example scripts and utilities for advanced mesh and data manipulation.
+
+📘 [Project Plan (Windsurf)](docs/plan.md), this link contains the current status and actions with respect to the documentation of the code.
 
 ---
 

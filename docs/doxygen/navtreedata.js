@@ -29,12 +29,11 @@ var NAVTREE =
       [ "🔧 Key Class Documentation", "index.html#autotoc_md38", null ],
       [ "📂 Source File Documentation", "index.html#autotoc_md40", [
         [ "<tt>src/</tt>", "index.html#autotoc_md41", null ],
-        [ "<tt>scripts/</tt>", "index.html#autotoc_md42", null ],
-        [ "<tt>src/view/</tt>", "index.html#autotoc_md43", null ],
-        [ "<tt>scripts/</tt>", "index.html#autotoc_md44", null ]
+        [ "<tt>src/view/</tt>", "index.html#autotoc_md42", null ],
+        [ "<tt>scripts/</tt>", "index.html#autotoc_md43", null ]
       ] ],
-      [ "📈 NeuronGraph Dependency Graphs", "index.html#autotoc_md46", null ],
-      [ "🧭 Navigation", "index.html#autotoc_md48", null ]
+      [ "📈 NeuronGraph Dependency Graphs", "index.html#autotoc_md45", null ],
+      [ "🧭 Navigation", "index.html#autotoc_md47", null ]
     ] ],
     [ "SWC Neuron Viewer", "md_scripts_app_neuronviewer_README.html", [
       [ "✅ Prerequisites", "md_scripts_app_neuronviewer_README.html#autotoc_md2", [
@@ -106,9 +105,9 @@ var NAVTREEINDEX =
 "doctest_8h.html#a36945fae4bbeabe5598670ece216c23c",
 "doctest_8h.html#abaa42cd51b4d27384c51ef5d957b888a",
 "functions_w.html",
-"namespacedoctest_1_1detail.html#a43e7d7a3a29691b5a4b7ce4192463649",
-"structdoctest_1_1TestRunStats.html#afd49da305793d2c2622f0b33a63e87b6",
-"swc__viewer_8cpp.html#a4cd2610187fe8068453e0567281fa5a8"
+"namespacedoctest_1_1detail.html#a4d1cd90aa4961947b7d18dffcc8026f2",
+"structdoctest_1_1description.html",
+"swc__viewer_8cpp.html#a65598ae83871fad84212c90bbaec2667"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
