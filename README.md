@@ -41,6 +41,8 @@ The GitHub Metadata badges highlight important repository details such as the pr
 ![Release](https://img.shields.io/github/v/release/jarosado0911/refactoredCPPNeuronMesher?include_prereleases)
 ![Stars](https://img.shields.io/github/stars/jarosado0911/refactoredCPPNeuronMesher?style=social)
 ![Forks](https://img.shields.io/github/forks/jarosado0911/refactoredCPPNeuronMesher?style=social)
+[![CMake](https://img.shields.io/badge/build-CMake-blue.svg)](https://github.com/jarosado0911/refactoredCPPNeuronMesher/CMakeLists.txt)
+
 ### 📡 Static Analysis Summary
 The Static Analysis Summary badges indicate the results of automated code analysis performed by tools like SonarCloud, highlighting overall code quality and whether the project passes essential quality gates. These provide a quick status check for maintainers and users, and you can view the full analysis details on [SonarCloud](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher).
 
