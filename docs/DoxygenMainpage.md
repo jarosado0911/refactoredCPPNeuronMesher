@@ -25,12 +25,12 @@ This project provides an OpenGL-based neuron visualization and meshing system wr
 
 ### `src/view/`
 This is the source code for NeuronViewer
-- [Viewer.cpp](neuron_viewer_8cpp.html)
+- [neuronviewer.cpp](neuronviewer_8cpp.html)
 - [opgl_utils.cpp](opgl__utils_8cpp.html)
 - [renderhelpwindow.cpp](renderhelpwindow_8cpp.html)
 - [tinyfiledialogs.c](tinyfiledialogs_8c.html)
 - [globals.cpp](globals_8cpp.html)
-- [draw_utils.cpp](draw_utils_8cpp.html)
+- [draw_utils.cpp](draw__utils_8cpp.html)
 - [callbacks.cpp](callbacks_8cpp.html)
 
 ### `scripts/`
@@ -44,10 +44,10 @@ This is the source code for NeuronViewer
 
 ## 📈 NeuronGraph Dependency Graphs
 
-- [NeuronGraph Class Page (includes graphs)](doxygen/html/classNeuronGraph.html)
-- [Full Class Index](doxygen/html/classes.html)
-- [Namespace Index](doxygen/html/namespaces.html)
-- [File Index](doxygen/html/files.html)
+- [NeuronGraph Class Page (includes graphs)](doxygen/classNeuronGraph.html)
+- [Full Class Index](doxygen/classes.html)
+- [Namespace Index](doxygen/namespaces.html)
+- [File Index](doxygen/files.html)
 
 ---
 
