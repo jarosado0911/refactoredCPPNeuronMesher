@@ -1,0 +1,148 @@
+\hypertarget{structdoctest_1_1IReporter}{}\doxysection{doctest\+::IReporter Struct Reference}
+\label{structdoctest_1_1IReporter}\index{doctest::IReporter@{doctest::IReporter}}
+
+
+{\ttfamily \#include $<$doctest.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_ae7e30d1c2cd332094c66d39bf3a85e52}{report\+\_\+query}} (const \mbox{\hyperlink{structdoctest_1_1QueryData}{Query\+Data}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a7f4a4b654726d4b266c91cc0e1569f96}{test\+\_\+run\+\_\+start}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a610495b7caa29e36b5ea62bff62952ed}{test\+\_\+run\+\_\+end}} (const \mbox{\hyperlink{structdoctest_1_1TestRunStats}{Test\+Run\+Stats}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_afa107df2d0230607e2f86f1876f48526}{test\+\_\+case\+\_\+start}} (const \mbox{\hyperlink{structdoctest_1_1TestCaseData}{Test\+Case\+Data}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a46c2fe41e5fa3d6930a3cb26d81ed764}{test\+\_\+case\+\_\+reenter}} (const \mbox{\hyperlink{structdoctest_1_1TestCaseData}{Test\+Case\+Data}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a43f8f19681dd5d42218ecb4fd935cda7}{test\+\_\+case\+\_\+end}} (const \mbox{\hyperlink{structdoctest_1_1CurrentTestCaseStats}{Current\+Test\+Case\+Stats}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a40b0cdf1ad59dabc736e35fde63d516f}{test\+\_\+case\+\_\+exception}} (const \mbox{\hyperlink{structdoctest_1_1TestCaseException}{Test\+Case\+Exception}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a03ef82d6fb9afe8b0e3bbe24f28dd268}{subcase\+\_\+start}} (const \mbox{\hyperlink{structdoctest_1_1SubcaseSignature}{Subcase\+Signature}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a05196dd1a5f7e40e8c734cd2a37d4e1e}{subcase\+\_\+end}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a5bb54923eab233bb02f2fcfc178fa12a}{log\+\_\+assert}} (const \mbox{\hyperlink{structdoctest_1_1AssertData}{Assert\+Data}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_a2b2cb4f15aa7417d4903a0edc3147018}{log\+\_\+message}} (const \mbox{\hyperlink{structdoctest_1_1MessageData}{Message\+Data}} \&)=0
+\item 
+virtual void \mbox{\hyperlink{structdoctest_1_1IReporter_ab4ecfea9cd9582aad4a5e90e0c8ba45d}{test\+\_\+case\+\_\+skipped}} (const \mbox{\hyperlink{structdoctest_1_1TestCaseData}{Test\+Case\+Data}} \&)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{structdoctest_1_1IReporter_a7d520de46d9104c0eeb02375fabad32d}{get\+\_\+num\+\_\+active\+\_\+contexts}} ()
+\item 
+static const \mbox{\hyperlink{structdoctest_1_1IContextScope}{IContext\+Scope}} $\ast$const  $\ast$ \mbox{\hyperlink{structdoctest_1_1IReporter_a67a2da62d754d3b517d6d50ef210a988}{get\+\_\+active\+\_\+contexts}} ()
+\item 
+static int \mbox{\hyperlink{structdoctest_1_1IReporter_ac8b96fef046edc609a3374a61b84797d}{get\+\_\+num\+\_\+stringified\+\_\+contexts}} ()
+\item 
+static const \mbox{\hyperlink{classdoctest_1_1String}{String}} $\ast$ \mbox{\hyperlink{structdoctest_1_1IReporter_acc1a86891876a957c6fc382af7894f99}{get\+\_\+stringified\+\_\+contexts}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a67a2da62d754d3b517d6d50ef210a988}\label{structdoctest_1_1IReporter_a67a2da62d754d3b517d6d50ef210a988}} 
+\index{doctest::IReporter@{doctest::IReporter}!get\_active\_contexts@{get\_active\_contexts}}
+\index{get\_active\_contexts@{get\_active\_contexts}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{get\_active\_contexts()}{get\_active\_contexts()}}
+{\footnotesize\ttfamily static const \mbox{\hyperlink{structdoctest_1_1IContextScope}{IContext\+Scope}}$\ast$ const$\ast$ doctest\+::\+IReporter\+::get\+\_\+active\+\_\+contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a7d520de46d9104c0eeb02375fabad32d}\label{structdoctest_1_1IReporter_a7d520de46d9104c0eeb02375fabad32d}} 
+\index{doctest::IReporter@{doctest::IReporter}!get\_num\_active\_contexts@{get\_num\_active\_contexts}}
+\index{get\_num\_active\_contexts@{get\_num\_active\_contexts}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{get\_num\_active\_contexts()}{get\_num\_active\_contexts()}}
+{\footnotesize\ttfamily static int doctest\+::\+IReporter\+::get\+\_\+num\+\_\+active\+\_\+contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_ac8b96fef046edc609a3374a61b84797d}\label{structdoctest_1_1IReporter_ac8b96fef046edc609a3374a61b84797d}} 
+\index{doctest::IReporter@{doctest::IReporter}!get\_num\_stringified\_contexts@{get\_num\_stringified\_contexts}}
+\index{get\_num\_stringified\_contexts@{get\_num\_stringified\_contexts}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{get\_num\_stringified\_contexts()}{get\_num\_stringified\_contexts()}}
+{\footnotesize\ttfamily static int doctest\+::\+IReporter\+::get\+\_\+num\+\_\+stringified\+\_\+contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_acc1a86891876a957c6fc382af7894f99}\label{structdoctest_1_1IReporter_acc1a86891876a957c6fc382af7894f99}} 
+\index{doctest::IReporter@{doctest::IReporter}!get\_stringified\_contexts@{get\_stringified\_contexts}}
+\index{get\_stringified\_contexts@{get\_stringified\_contexts}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{get\_stringified\_contexts()}{get\_stringified\_contexts()}}
+{\footnotesize\ttfamily static const \mbox{\hyperlink{classdoctest_1_1String}{String}}$\ast$ doctest\+::\+IReporter\+::get\+\_\+stringified\+\_\+contexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a5bb54923eab233bb02f2fcfc178fa12a}\label{structdoctest_1_1IReporter_a5bb54923eab233bb02f2fcfc178fa12a}} 
+\index{doctest::IReporter@{doctest::IReporter}!log\_assert@{log\_assert}}
+\index{log\_assert@{log\_assert}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{log\_assert()}{log\_assert()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::log\+\_\+assert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1AssertData}{Assert\+Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a2b2cb4f15aa7417d4903a0edc3147018}\label{structdoctest_1_1IReporter_a2b2cb4f15aa7417d4903a0edc3147018}} 
+\index{doctest::IReporter@{doctest::IReporter}!log\_message@{log\_message}}
+\index{log\_message@{log\_message}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{log\_message()}{log\_message()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::log\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1MessageData}{Message\+Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_ae7e30d1c2cd332094c66d39bf3a85e52}\label{structdoctest_1_1IReporter_ae7e30d1c2cd332094c66d39bf3a85e52}} 
+\index{doctest::IReporter@{doctest::IReporter}!report\_query@{report\_query}}
+\index{report\_query@{report\_query}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{report\_query()}{report\_query()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::report\+\_\+query (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1QueryData}{Query\+Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a05196dd1a5f7e40e8c734cd2a37d4e1e}\label{structdoctest_1_1IReporter_a05196dd1a5f7e40e8c734cd2a37d4e1e}} 
+\index{doctest::IReporter@{doctest::IReporter}!subcase\_end@{subcase\_end}}
+\index{subcase\_end@{subcase\_end}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{subcase\_end()}{subcase\_end()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::subcase\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a03ef82d6fb9afe8b0e3bbe24f28dd268}\label{structdoctest_1_1IReporter_a03ef82d6fb9afe8b0e3bbe24f28dd268}} 
+\index{doctest::IReporter@{doctest::IReporter}!subcase\_start@{subcase\_start}}
+\index{subcase\_start@{subcase\_start}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{subcase\_start()}{subcase\_start()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::subcase\+\_\+start (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1SubcaseSignature}{Subcase\+Signature}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a43f8f19681dd5d42218ecb4fd935cda7}\label{structdoctest_1_1IReporter_a43f8f19681dd5d42218ecb4fd935cda7}} 
+\index{doctest::IReporter@{doctest::IReporter}!test\_case\_end@{test\_case\_end}}
+\index{test\_case\_end@{test\_case\_end}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{test\_case\_end()}{test\_case\_end()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::test\+\_\+case\+\_\+end (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1CurrentTestCaseStats}{Current\+Test\+Case\+Stats}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a40b0cdf1ad59dabc736e35fde63d516f}\label{structdoctest_1_1IReporter_a40b0cdf1ad59dabc736e35fde63d516f}} 
+\index{doctest::IReporter@{doctest::IReporter}!test\_case\_exception@{test\_case\_exception}}
+\index{test\_case\_exception@{test\_case\_exception}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{test\_case\_exception()}{test\_case\_exception()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::test\+\_\+case\+\_\+exception (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1TestCaseException}{Test\+Case\+Exception}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a46c2fe41e5fa3d6930a3cb26d81ed764}\label{structdoctest_1_1IReporter_a46c2fe41e5fa3d6930a3cb26d81ed764}} 
+\index{doctest::IReporter@{doctest::IReporter}!test\_case\_reenter@{test\_case\_reenter}}
+\index{test\_case\_reenter@{test\_case\_reenter}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{test\_case\_reenter()}{test\_case\_reenter()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::test\+\_\+case\+\_\+reenter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1TestCaseData}{Test\+Case\+Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_ab4ecfea9cd9582aad4a5e90e0c8ba45d}\label{structdoctest_1_1IReporter_ab4ecfea9cd9582aad4a5e90e0c8ba45d}} 
+\index{doctest::IReporter@{doctest::IReporter}!test\_case\_skipped@{test\_case\_skipped}}
+\index{test\_case\_skipped@{test\_case\_skipped}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{test\_case\_skipped()}{test\_case\_skipped()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::test\+\_\+case\+\_\+skipped (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1TestCaseData}{Test\+Case\+Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_afa107df2d0230607e2f86f1876f48526}\label{structdoctest_1_1IReporter_afa107df2d0230607e2f86f1876f48526}} 
+\index{doctest::IReporter@{doctest::IReporter}!test\_case\_start@{test\_case\_start}}
+\index{test\_case\_start@{test\_case\_start}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{test\_case\_start()}{test\_case\_start()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::test\+\_\+case\+\_\+start (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1TestCaseData}{Test\+Case\+Data}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a610495b7caa29e36b5ea62bff62952ed}\label{structdoctest_1_1IReporter_a610495b7caa29e36b5ea62bff62952ed}} 
+\index{doctest::IReporter@{doctest::IReporter}!test\_run\_end@{test\_run\_end}}
+\index{test\_run\_end@{test\_run\_end}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{test\_run\_end()}{test\_run\_end()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::test\+\_\+run\+\_\+end (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdoctest_1_1TestRunStats}{Test\+Run\+Stats}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structdoctest_1_1IReporter_a7f4a4b654726d4b266c91cc0e1569f96}\label{structdoctest_1_1IReporter_a7f4a4b654726d4b266c91cc0e1569f96}} 
+\index{doctest::IReporter@{doctest::IReporter}!test\_run\_start@{test\_run\_start}}
+\index{test\_run\_start@{test\_run\_start}!doctest::IReporter@{doctest::IReporter}}
+\doxysubsubsection{\texorpdfstring{test\_run\_start()}{test\_run\_start()}}
+{\footnotesize\ttfamily virtual void doctest\+::\+IReporter\+::test\+\_\+run\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/externals/\mbox{\hyperlink{doctest_8h}{doctest.\+h}}\end{DoxyCompactItemize}

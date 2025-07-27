@@ -1,0 +1,255 @@
+\hypertarget{opgl__utils_8cpp}{}\doxysection{src/viewercpp/opgl\+\_\+utils.cpp File Reference}
+\label{opgl__utils_8cpp}\index{src/viewercpp/opgl\_utils.cpp@{src/viewercpp/opgl\_utils.cpp}}
+
+
+Open\+GL utility functions for neuron visualization.  
+
+
+{\ttfamily \#include \char`\"{}opgl\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+Include dependency graph for opgl\+\_\+utils.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{opgl__utils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{opgl__utils_8cpp_af435ad623add097384c18de67cd0702e}{print\+Help\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Prints the help text to the standard output. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{opgl__utils_8cpp_adda0a7f12116617440260139feb5ae46}{load\+SWC}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Loads a neuron morphology from an SWC or UGX file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{opgl__utils_8cpp_af16fb9eaedbea83e2bf2906e91d1382a}{compute\+Bounds}} (const std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&nodes, double \&minX, double \&maxX, double \&minY, double \&maxY, double \&minZ, double \&maxZ, double \&centerX, double \&centerY, double \&centerZ, double \&radius)
+\begin{DoxyCompactList}\small\item\em Computes the bounding box and center of a set of nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{opgl__utils_8cpp_a81fad3cb23594d5bbd0c49fbe109379b}{open\+Neuron\+File}} (std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&nodes, double \&minX, double \&maxX, double \&minY, double \&maxY, double \&minZ, double \&maxZ, double \&centerX, double \&centerY, double \&centerZ, double \&radius)
+\begin{DoxyCompactList}\small\item\em Opens a file dialog and loads a neuron morphology file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{opgl__utils_8cpp_ae0ba46bf91bbd0831de7be202ba8abba}{current\+Loaded\+File}} = \char`\"{}.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Path to the currently loaded neuron file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL utility functions for neuron visualization. 
+
+This file contains utility functions for handling Open\+GL-\/related operations in the neuron visualization application. It provides functionality for loading neuron data from files, computing spatial bounds, and managing the visualization state.
+
+Key features\+:
+\begin{DoxyItemize}
+\item Loading and parsing SWC/\+UGX neuron files
+\item Computing spatial bounds and center of neuron morphologies
+\item Managing file I/O for neuron data
+\item Integration with the main visualization pipeline
+\end{DoxyItemize}
+
+The implementation handles various neuron file formats and provides utility functions to support the Open\+GL rendering pipeline.
+
+\begin{DoxyAuthor}{Author}
+CPPNeuron\+Mesher Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/07-\/27 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+MIT License 
+\end{DoxyCopyright}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{globals_8h}{globals.\+h}} for shared state variables 
+
+\mbox{\hyperlink{opgl__utils_8h}{opgl\+\_\+utils.\+h}} for function declarations 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{opgl__utils_8cpp_af16fb9eaedbea83e2bf2906e91d1382a}\label{opgl__utils_8cpp_af16fb9eaedbea83e2bf2906e91d1382a}} 
+\index{opgl\_utils.cpp@{opgl\_utils.cpp}!computeBounds@{computeBounds}}
+\index{computeBounds@{computeBounds}!opgl\_utils.cpp@{opgl\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{computeBounds()}{computeBounds()}}
+{\footnotesize\ttfamily void compute\+Bounds (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{nodes,  }\item[{double \&}]{minX,  }\item[{double \&}]{maxX,  }\item[{double \&}]{minY,  }\item[{double \&}]{maxY,  }\item[{double \&}]{minZ,  }\item[{double \&}]{maxZ,  }\item[{double \&}]{centerX,  }\item[{double \&}]{centerY,  }\item[{double \&}]{centerZ,  }\item[{double \&}]{radius }\end{DoxyParamCaption})}
+
+
+
+Computes the bounding box and center of a set of nodes. 
+
+Computes the spatial bounds and center of a set of nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nodes} & Vector of SWC nodes to compute bounds for \\
+\hline
+\mbox{\texttt{ out}}  & {\em minX} & Minimum X coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em maxX} & Maximum X coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em minY} & Minimum Y coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em maxY} & Maximum Y coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em minZ} & Minimum Z coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em maxZ} & Maximum Z coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em centerX} & X coordinate of the bounding box center \\
+\hline
+\mbox{\texttt{ out}}  & {\em centerY} & Y coordinate of the bounding box center \\
+\hline
+\mbox{\texttt{ out}}  & {\em centerZ} & Z coordinate of the bounding box center \\
+\hline
+\mbox{\texttt{ out}}  & {\em radius} & Radius of the bounding sphere (half the maximum dimension)\\
+\hline
+\end{DoxyParams}
+This function calculates the axis-\/aligned bounding box, center point, and bounding sphere radius for a set of 3D points represented by SWC nodes. The results are returned through reference parameters.
+
+The function also prints the computed bounds and center to the console for debugging purposes.
+
+\begin{DoxyNote}{Note}
+If the input vector is empty, the function returns immediately 
+
+The radius is defined as half the maximum dimension of the bounding box 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{opgl__utils_8h_a81fad3cb23594d5bbd0c49fbe109379b}{open\+Neuron\+File()}} for a typical usage example 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{opgl__utils_8cpp_adda0a7f12116617440260139feb5ae46}\label{opgl__utils_8cpp_adda0a7f12116617440260139feb5ae46}} 
+\index{opgl\_utils.cpp@{opgl\_utils.cpp}!loadSWC@{loadSWC}}
+\index{loadSWC@{loadSWC}!opgl\_utils.cpp@{opgl\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{loadSWC()}{loadSWC()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ load\+SWC (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Loads a neuron morphology from an SWC or UGX file. 
+
+Loads neuron data from an SWC file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Path to the SWC or UGX file to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+SWCNode$>$ Vector of SWC nodes representing the neuron
+\end{DoxyReturn}
+This function loads a neuron morphology from the specified file and returns its nodes as a vector of \mbox{\hyperlink{structSWCNode}{SWCNode}} objects. It supports both SWC and UGX file formats and performs preprocessing on the loaded data.
+
+The function\+:
+\begin{DoxyEnumerate}
+\item Reads the neuron data using \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}}\textquotesingle{}s read\+From\+File\+UGXor\+SWC()
+\item Applies preprocessing to the loaded nodes
+\item Converts the node map to a vector for rendering
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+The function modifies the global graph object 
+
+Preprocessing includes validation and cleanup of the neuron structure 
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the file cannot be read or parsed \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a1c8deb90cf431df071765a400ddb144c}{Neuron\+Graph\+::read\+From\+File\+UGXor\+SWC()}} 
+
+\mbox{\hyperlink{classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35}{Neuron\+Graph\+::preprocess()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{opgl__utils_8cpp_a81fad3cb23594d5bbd0c49fbe109379b}\label{opgl__utils_8cpp_a81fad3cb23594d5bbd0c49fbe109379b}} 
+\index{opgl\_utils.cpp@{opgl\_utils.cpp}!openNeuronFile@{openNeuronFile}}
+\index{openNeuronFile@{openNeuronFile}!opgl\_utils.cpp@{opgl\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{openNeuronFile()}{openNeuronFile()}}
+{\footnotesize\ttfamily void open\+Neuron\+File (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{nodes,  }\item[{double \&}]{minX,  }\item[{double \&}]{maxX,  }\item[{double \&}]{minY,  }\item[{double \&}]{maxY,  }\item[{double \&}]{minZ,  }\item[{double \&}]{maxZ,  }\item[{double \&}]{centerX,  }\item[{double \&}]{centerY,  }\item[{double \&}]{centerZ,  }\item[{double \&}]{radius }\end{DoxyParamCaption})}
+
+
+
+Opens a file dialog and loads a neuron morphology file. 
+
+Opens a file dialog to load a neuron file and updates the view.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em nodes} & Vector to store the loaded SWC nodes \\
+\hline
+\mbox{\texttt{ out}}  & {\em minX} & Minimum X coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em maxX} & Maximum X coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em minY} & Minimum Y coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em maxY} & Maximum Y coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em minZ} & Minimum Z coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em maxZ} & Maximum Z coordinate of the bounding box \\
+\hline
+\mbox{\texttt{ out}}  & {\em centerX} & X coordinate of the bounding box center \\
+\hline
+\mbox{\texttt{ out}}  & {\em centerY} & Y coordinate of the bounding box center \\
+\hline
+\mbox{\texttt{ out}}  & {\em centerZ} & Z coordinate of the bounding box center \\
+\hline
+\mbox{\texttt{ out}}  & {\em radius} & Radius of the bounding sphere\\
+\hline
+\end{DoxyParams}
+This function opens a file dialog for the user to select an SWC or UGX file, loads the selected file, and computes the spatial bounds of the neuron. The function updates both the provided output parameters and the global state.
+
+The function performs the following steps\+:
+\begin{DoxyEnumerate}
+\item Shows a file dialog for selecting SWC or UGX files
+\item Loads the selected file using \mbox{\hyperlink{opgl__utils_8h_adda0a7f12116617440260139feb5ae46}{load\+SWC()}}
+\item Updates the global current\+Nodes and current\+Loaded\+File variables
+\item Computes the spatial bounds and center of the loaded neuron
+\item Resets the refinement delta to its default value
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+Uses tinyfiledialogs for the file dialog 
+
+Prints diagnostic information to the console 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{opgl__utils_8h_adda0a7f12116617440260139feb5ae46}{load\+SWC()}} for the actual file loading implementation 
+
+\mbox{\hyperlink{opgl__utils_8h_af16fb9eaedbea83e2bf2906e91d1382a}{compute\+Bounds()}} for the bounds calculation 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{opgl__utils_8cpp_af435ad623add097384c18de67cd0702e}\label{opgl__utils_8cpp_af435ad623add097384c18de67cd0702e}} 
+\index{opgl\_utils.cpp@{opgl\_utils.cpp}!printHelpText@{printHelpText}}
+\index{printHelpText@{printHelpText}!opgl\_utils.cpp@{opgl\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{printHelpText()}{printHelpText()}}
+{\footnotesize\ttfamily void print\+Help\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the help text to the standard output. 
+
+Prints keyboard and mouse controls to the console.
+
+Displays the application\textquotesingle{}s keyboard and mouse controls to the console. The help text is defined as a global string constant in \mbox{\hyperlink{globals_8h}{globals.\+h}}.
+
+\begin{DoxyNote}{Note}
+The help text includes controls for view manipulation, file operations, and rendering modes. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{globals_8h}{globals.\+h}} for the \mbox{\hyperlink{globals_8h_aecfcd8d5595d8ba1a38ef3c624d1186a}{help}} text definition 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{opgl__utils_8cpp_ae0ba46bf91bbd0831de7be202ba8abba}\label{opgl__utils_8cpp_ae0ba46bf91bbd0831de7be202ba8abba}} 
+\index{opgl\_utils.cpp@{opgl\_utils.cpp}!currentLoadedFile@{currentLoadedFile}}
+\index{currentLoadedFile@{currentLoadedFile}!opgl\_utils.cpp@{opgl\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{currentLoadedFile}{currentLoadedFile}}
+{\footnotesize\ttfamily std\+::string current\+Loaded\+File = \char`\"{}.\char`\"{}}
+
+
+
+Path to the currently loaded neuron file. 
+
+Path to the currently loaded SWC file. 
