@@ -1,0 +1,80 @@
+# Plan for Analyzing neurongraph.cpp and Assessing Documentation
+
+## Notes
+- User requested an analysis of neurongraph.cpp and an assessment of its documentation.
+- The file uses Doxygen-style comments for most functions and methods.
+- Some referenced methods (e.g., setSoma, removeSomaSegment) are not present in neurongraph.cpp; may be implemented elsewhere or missing.
+- removeSomaSegment is implemented in neuronoperations.cpp.
+- User requested analysis and documentation generation for neuronoperations.cpp methods.
+- All methods in neuronoperations.cpp are now documented with Doxygen-style comments.
+- User requested analysis and documentation generation for bindings.cpp methods.
+- All methods in bindings.cpp are now documented with Doxygen-style and inline comments.
+- User requested analysis and documentation generation for neurontrunks.cpp methods.
+- All methods in neurontrunks.cpp are now documented with Doxygen-style comments.
+- Function declaration syntax issues (dot vs. scope resolution operator) were found in neurontrunks.cpp and are being addressed.
+- Doxygen documentation is being (re)added to all methods in neurontrunks.cpp per user request; several methods are now complete.
+- User requested documentation for neuronugx.cpp.
+- File-level and method-level Doxygen documentation has been added to neuronugx.cpp (writeToFileUGX, readFromFileUGX).
+- User requested documentation for utils.cpp.
+- File-level and method-level Doxygen documentation has been added to utils.cpp.
+- User requested documentation for callbacks.cpp.
+- File-level and method-level Doxygen documentation has been added to callbacks.cpp.
+- User requested documentation for draw_utils.cpp.
+- File-level and method-level Doxygen documentation has been added to draw_utils.cpp.
+- User requested documentation for globals.cpp and opgl_utils.cpp.
+- File-level Doxygen documentation has been added to globals.cpp.
+- File-level and method-level Doxygen documentation has been added to opgl_utils.cpp.
+- User requested documentation for all header files in include/project and include/viewer directories.
+- Documentation for neurongraph.h in include/project has been added.
+- Documentation for utils.h in include/project has been added.
+- Documentation for draw_utils.h in include/viewer has been added.
+- Documentation for callbacks.h in include/viewer has been added.
+- Documentation for globals.h in include/viewer has been added.
+- Documentation for opgl_utils.h in include/viewer has been added.
+- User reported a possible bug: radius information appears magnified in neuronviewer.cpp; investigation into how radius is handled/scaled is required.
+- Radius scaling bug fixed: drawSimpleSphere now uses node.radius in renderSWC, so spheres now reflect actual SWC radii.
+- New issue: soma node (id 1, pid -1) appears too large; need to investigate if special handling or scaling for soma nodes is required.
+
+## Task List
+- [x] Analyze neurongraph.cpp file structure and content
+- [ ] Assess the quality and completeness of documentation in neurongraph.cpp
+  - [ ] Check for missing or undocumented methods referenced in comments
+- [x] Analyze neuronoperations.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in neuronoperations.cpp
+- [x] Analyze bindings.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in bindings.cpp
+- [x] Analyze neurontrunks.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in neurontrunks.cpp
+  - [x] Document getNeighborMap
+  - [x] Document getTrunks
+  - [x] Document assembleTrunks (basic version)
+  - [x] Document allLinearSplineResampledTrunks
+  - [x] Document allCubicSplineResampledTrunks
+  - [x] Document linearSplineResampleTrunk
+  - [x] Document cubicSplineResampleTrunk
+  - [x] Document generateRefinements
+- [x] Analyze neuronugx.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in neuronugx.cpp
+- [x] Analyze utils.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in utils.cpp
+- [x] Analyze callbacks.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in callbacks.cpp
+- [x] Analyze draw_utils.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in draw_utils.cpp
+- [x] Analyze globals.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in globals.cpp
+- [x] Analyze opgl_utils.cpp file structure and content
+- [x] Generate annotation/documentation for all methods in opgl_utils.cpp
+- [x] Document neurongraph.h in include/project
+- [x] Document utils.h in include/project
+- [x] Document draw_utils.h in include/viewer
+- [x] Document callbacks.h in include/viewer
+- [x] Document globals.h in include/viewer
+- [x] Document opgl_utils.h in include/viewer
+- [x] Document all header files in include/viewer
+- [ ] Investigate radius scaling/handling in neuronviewer.cpp and related headers
+  - [x] Fix drawSimpleSphere to use node.radius
+  - [ ] Investigate and correct soma node (id 1) rendering/size
+
+## Current Goal
+- [ ] Investigate and correct soma node rendering/size
