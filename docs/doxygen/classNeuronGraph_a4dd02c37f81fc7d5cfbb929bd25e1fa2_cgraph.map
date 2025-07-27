@@ -1,0 +1,5 @@
+<map id="NeuronGraph::splitEdges" name="NeuronGraph::splitEdges">
+<area shape="rect" id="node1" title="Splits all edges in the graph by inserting midpoint nodes." alt="" coords="5,78,173,105"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a0a94b95b0afc5d98590e631f963a970d" title=" " alt="" coords="222,29,414,71"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#a096f5d8b9231d0b27f0a60a694db41d3" title=" " alt="" coords="221,119,415,146"/>
+</map>

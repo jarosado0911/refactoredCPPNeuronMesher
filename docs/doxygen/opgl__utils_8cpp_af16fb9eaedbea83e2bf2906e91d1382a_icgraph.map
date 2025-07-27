@@ -1,0 +1,6 @@
+<map id="computeBounds" name="computeBounds">
+<area shape="rect" id="node1" title="Computes the bounding box and center of a set of nodes." alt="" coords="408,22,524,49"/>
+<area shape="rect" id="node2" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="104,22,199,49"/>
+<area shape="rect" id="node3" href="$neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,47,56,74"/>
+<area shape="rect" id="node4" href="$opgl__utils_8cpp.html#a81fad3cb23594d5bbd0c49fbe109379b" title="Opens a file dialog and loads a neuron morphology file." alt="" coords="247,22,360,49"/>
+</map>

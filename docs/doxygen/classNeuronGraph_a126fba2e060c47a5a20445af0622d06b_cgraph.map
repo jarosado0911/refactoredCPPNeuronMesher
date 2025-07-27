@@ -1,0 +1,4 @@
+<map id="NeuronGraph::allLinearSplineResampledTrunks" name="NeuronGraph::allLinearSplineResampledTrunks">
+<area shape="rect" id="node1" title="Resamples all trunks using linear interpolation." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a4263b75e5c5c97d6f65dd681dbdfff60" title="Resamples a single trunk using linear interpolation." alt="" coords="244,5,419,47"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="NeuronGraph::addNode" name="NeuronGraph::addNode">
+<area shape="rect" id="node1" title="Adds a single node to the graph." alt="" coords="667,84,825,111"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a76872c37616f9517420fd8ef11240040" title="Constructs a NeuronGraph from an existing set of nodes." alt="" coords="435,5,619,32"/>
+<area shape="rect" id="node3" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,136,156,163"/>
+<area shape="rect" id="node4" href="$classNeuronGraph.html#a8ee6517767cd316da4474cb55c67307f" title="Reads neuron data from an SWC file." alt="" coords="435,139,618,165"/>
+<area shape="rect" id="node8" href="$classNeuronGraph.html#a4fbcfc32da26b3bc0fe7211ee0b08237" title="Replaces the current set of nodes in the graph." alt="" coords="445,275,608,301"/>
+<area shape="rect" id="node5" href="$extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="270,224,321,251"/>
+<area shape="rect" id="node6" href="$classNeuronGraph.html#a1c8deb90cf431df071765a400ddb144c" title="Reads a neuron file, automatically detecting the format." alt="" coords="204,158,387,199"/>
+<area shape="rect" id="node7" href="$opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="41,267,120,293"/>
+<area shape="rect" id="node9" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="248,325,343,352"/>
+</map>

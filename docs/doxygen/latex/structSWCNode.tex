@@ -25,7 +25,17 @@ double \mbox{\hyperlink{structSWCNode_ad45f7df2489528d1370269a3c87eb791}{y}}
 double \mbox{\hyperlink{structSWCNode_a198b547cdee73cc73b354f29334c377d}{z}}
 \begin{DoxyCompactList}\small\item\em Z-\/coordinate in 3D space. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{structSWCNode_a33ae4d57e524cd40caea72228b8cdd93}{radius}}
-\begin{DoxyCompactList}\small\item\em Radius of the neural process at this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Radius of the neural process at this node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structSWCNode_aec37ef00da8508d57ba127d4ec0c3225}{parent}}
+\item 
+float \mbox{\hyperlink{structSWCNode_aadf0f1100244f9e4c255570145c34ab5}{x}}
+\item 
+float \mbox{\hyperlink{structSWCNode_afbb01efa23f36d4021718dc971fa981d}{y}}
+\item 
+float \mbox{\hyperlink{structSWCNode_a4008a0bd3d817bacc7b376afff337c7e}{z}}
+\item 
+float \mbox{\hyperlink{structSWCNode_abbf8ddd891d41b029e15d8549480ba90}{radius}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -49,6 +59,12 @@ This structure holds the essential properties of a neuron morphology node as def
 
 Unique identifier for the node. 
 
+\mbox{\Hypertarget{structSWCNode_aec37ef00da8508d57ba127d4ec0c3225}\label{structSWCNode_aec37ef00da8508d57ba127d4ec0c3225}} 
+\index{SWCNode@{SWCNode}!parent@{parent}}
+\index{parent@{parent}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily int SWCNode\+::parent}
+
 \mbox{\Hypertarget{structSWCNode_a4d55115b02532d54ce05c8df8ad0ec95}\label{structSWCNode_a4d55115b02532d54ce05c8df8ad0ec95}} 
 \index{SWCNode@{SWCNode}!pid@{pid}}
 \index{pid@{pid}!SWCNode@{SWCNode}}
@@ -62,12 +78,18 @@ Parent node ID (-\/1 for root nodes)
 \mbox{\Hypertarget{structSWCNode_a33ae4d57e524cd40caea72228b8cdd93}\label{structSWCNode_a33ae4d57e524cd40caea72228b8cdd93}} 
 \index{SWCNode@{SWCNode}!radius@{radius}}
 \index{radius@{radius}!SWCNode@{SWCNode}}
-\doxysubsubsection{\texorpdfstring{radius}{radius}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily double SWCNode\+::radius}
 
 
 
 Radius of the neural process at this node. 
+
+\mbox{\Hypertarget{structSWCNode_abbf8ddd891d41b029e15d8549480ba90}\label{structSWCNode_abbf8ddd891d41b029e15d8549480ba90}} 
+\index{SWCNode@{SWCNode}!radius@{radius}}
+\index{radius@{radius}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float SWCNode\+::radius}
 
 \mbox{\Hypertarget{structSWCNode_aa327ce3ad1dbeb90002001cc8ae2de02}\label{structSWCNode_aa327ce3ad1dbeb90002001cc8ae2de02}} 
 \index{SWCNode@{SWCNode}!type@{type}}
@@ -90,35 +112,54 @@ Standard SWC types\+:
 \end{DoxyItemize}\mbox{\Hypertarget{structSWCNode_ad1c3d0a124d002b5e24baff1aa5670cb}\label{structSWCNode_ad1c3d0a124d002b5e24baff1aa5670cb}} 
 \index{SWCNode@{SWCNode}!x@{x}}
 \index{x@{x}!SWCNode@{SWCNode}}
-\doxysubsubsection{\texorpdfstring{x}{x}}
+\doxysubsubsection{\texorpdfstring{x}{x}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily double SWCNode\+::x}
 
 
 
 X-\/coordinate in 3D space. 
 
+\mbox{\Hypertarget{structSWCNode_aadf0f1100244f9e4c255570145c34ab5}\label{structSWCNode_aadf0f1100244f9e4c255570145c34ab5}} 
+\index{SWCNode@{SWCNode}!x@{x}}
+\index{x@{x}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{x}{x}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float SWCNode\+::x}
+
 \mbox{\Hypertarget{structSWCNode_ad45f7df2489528d1370269a3c87eb791}\label{structSWCNode_ad45f7df2489528d1370269a3c87eb791}} 
 \index{SWCNode@{SWCNode}!y@{y}}
 \index{y@{y}!SWCNode@{SWCNode}}
-\doxysubsubsection{\texorpdfstring{y}{y}}
+\doxysubsubsection{\texorpdfstring{y}{y}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily double SWCNode\+::y}
 
 
 
 Y-\/coordinate in 3D space. 
 
+\mbox{\Hypertarget{structSWCNode_afbb01efa23f36d4021718dc971fa981d}\label{structSWCNode_afbb01efa23f36d4021718dc971fa981d}} 
+\index{SWCNode@{SWCNode}!y@{y}}
+\index{y@{y}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{y}{y}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float SWCNode\+::y}
+
 \mbox{\Hypertarget{structSWCNode_a198b547cdee73cc73b354f29334c377d}\label{structSWCNode_a198b547cdee73cc73b354f29334c377d}} 
 \index{SWCNode@{SWCNode}!z@{z}}
 \index{z@{z}!SWCNode@{SWCNode}}
-\doxysubsubsection{\texorpdfstring{z}{z}}
+\doxysubsubsection{\texorpdfstring{z}{z}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily double SWCNode\+::z}
 
 
 
 Z-\/coordinate in 3D space. 
 
+\mbox{\Hypertarget{structSWCNode_a4008a0bd3d817bacc7b376afff337c7e}\label{structSWCNode_a4008a0bd3d817bacc7b376afff337c7e}} 
+\index{SWCNode@{SWCNode}!z@{z}}
+\index{z@{z}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{z}{z}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float SWCNode\+::z}
 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/project/\mbox{\hyperlink{neurongraph_8h}{neurongraph.\+h}}\end{DoxyCompactItemize}
+include/project/\mbox{\hyperlink{neurongraph_8h}{neurongraph.\+h}}\item 
+scripts/swcviewer/\mbox{\hyperlink{swc__viewer_8cpp}{swc\+\_\+viewer.\+cpp}}\end{DoxyCompactItemize}
