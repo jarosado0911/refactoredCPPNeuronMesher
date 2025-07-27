@@ -42,7 +42,7 @@ This is the source code for NeuronViewer
 
 ### Python Codes
 - [neuronviewer.py](neuronviewer_8py.html)
-- [test_bindings.py](test__bindings_8py)
+- [test_bindings.py](test__bindings_8py.html)
   
 ---
 
