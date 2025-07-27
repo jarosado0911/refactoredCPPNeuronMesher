@@ -6,3 +6,5 @@ PyQt5
 PyOpenGL 
 PyOpenGL_accelerate
 imgui[glfw]
+sphinx
+sphinx-rtd-theme

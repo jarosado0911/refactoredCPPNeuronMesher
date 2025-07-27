@@ -24,6 +24,7 @@
  */
 
 #include <string>
+#include "neurongraph.h"  // For NeuronGraph definition
 #include "globals.h"
 
 /** @brief Current rendering mode (1-6) that determines how the neuron is displayed */

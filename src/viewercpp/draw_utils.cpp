@@ -24,6 +24,8 @@
  */
 
 #include <array>
+#include "neurongraph.h"  // For SWCNode definition
+#include "globals.h"      // For renderMode and other globals
 #include "draw_utils.h"
 
 /**
