@@ -1,4 +1,4 @@
-# Plan for Analyzing neurongraph.cpp and Assessing Documentation
+# Analysis & Assess
 
 ## Notes
 - User requested an analysis of neurongraph.cpp and an assessment of its documentation.
