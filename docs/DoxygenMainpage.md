@@ -44,10 +44,10 @@ This is the source code for NeuronViewer
 
 ## 📈 NeuronGraph Dependency Graphs
 
-- [NeuronGraph Class Page (includes graphs)](doxygen/classNeuronGraph.html)
-- [Full Class Index](doxygen/classes.html)
-- [Namespace Index](doxygen/namespaces.html)
-- [File Index](doxygen/files.html)
+- [NeuronGraph Class Page (includes graphs)](classNeuronGraph.html)
+- [Full Class Index](classes.html)
+- [Namespace Index](namespaces.html)
+- [File Index](files.html)
 
 ---
 
