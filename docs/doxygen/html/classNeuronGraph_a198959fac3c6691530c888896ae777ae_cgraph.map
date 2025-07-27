@@ -1,4 +1,0 @@
-<map id="NeuronGraph::allCubicSplineResampledTrunks" name="NeuronGraph::allCubicSplineResampledTrunks">
-<area shape="rect" id="node1" title="Resamples all trunks using cubic spline interpolation." alt="" coords="5,5,196,47"/>
-<area shape="rect" id="node2" href="$classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="244,5,419,47"/>
-</map>

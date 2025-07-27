@@ -1,6 +1,0 @@
-<map id="tinyfd_messageBox" name="tinyfd_messageBox">
-<area shape="rect" id="node1" title=" " alt="" coords="272,31,409,57"/>
-<area shape="rect" id="node2" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="117,5,211,32"/>
-<area shape="rect" id="node4" href="$tinyfiledialogs_8c.html#aa1a9656338b38479c1d5e2a1dde4ed9b" title=" " alt="" coords="104,56,224,83"/>
-<area shape="rect" id="node3" href="$neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
-</map>

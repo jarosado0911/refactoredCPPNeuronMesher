@@ -1,8 +1,0 @@
-<map id="NeuronGraph::topologicalSort" name="NeuronGraph::topologicalSort">
-<area shape="rect" id="node1" title=" " alt="" coords="388,56,581,83"/>
-<area shape="rect" id="node2" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="147,5,297,32"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#aed5eb4290d85b7a134f95fa5b453ba50" title="Removes the soma segment from a set of nodes." alt="" coords="104,56,340,83"/>
-<area shape="rect" id="node5" href="$classNeuronGraph.html#a4dd02c37f81fc7d5cfbb929bd25e1fa2" title="Splits all edges in the graph by inserting midpoint nodes." alt="" coords="138,107,306,133"/>
-<area shape="rect" id="node4" href="$extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,56,83"/>
-<area shape="rect" id="node6" href="$splitrefine_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,56,133"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="NeuronGraph::splitEdges" name="NeuronGraph::splitEdges">
-<area shape="rect" id="node1" title=" " alt="" coords="431,31,599,57"/>
-<area shape="rect" id="node2" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,5,156,32"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#acde3c34e7d73fd00635d4fef5a9fcb3d" title="Applies edge splitting N times recursively." alt="" coords="204,56,383,83"/>
-<area shape="rect" id="node4" href="$splitrefineSET_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="55,56,106,83"/>
-</map>

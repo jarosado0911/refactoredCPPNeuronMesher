@@ -1,7 +1,0 @@
-<map id="NeuronGraph::cubicSplineResampleTrunk" name="NeuronGraph::cubicSplineResampleTrunk">
-<area shape="rect" id="node1" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="721,121,896,162"/>
-<area shape="rect" id="node2" href="$classNeuronGraph.html#a198959fac3c6691530c888896ae777ae" title="Resamples all trunks using cubic spline interpolation." alt="" coords="483,70,673,111"/>
-<area shape="rect" id="node4" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,56,156,83"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#acbf58bd7db5d97c97ec95b63c679a62a" title="Generates multiple levels of refined neuron morphologies." alt="" coords="204,5,435,32"/>
-<area shape="rect" id="node5" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="272,107,367,133"/>
-</map>

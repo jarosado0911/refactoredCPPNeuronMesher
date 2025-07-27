@@ -1,8 +1,0 @@
-<map id="include/viewer/opgl_utils.h" name="include/viewer/opgl_utils.h">
-<area shape="rect" id="node1" title="OpenGL utility functions for neuron visualization." alt="" coords="244,5,377,47"/>
-<area shape="rect" id="node2" href="$opgl__utils_8cpp.html" title="OpenGL utility functions for neuron visualization." alt="" coords="5,95,136,136"/>
-<area shape="rect" id="node3" href="$callbacks_8h.html" title="GLFW input handling callbacks for neuron visualization." alt="" coords="161,102,335,129"/>
-<area shape="rect" id="node5" href="$neuronviewer_8cpp.html" title=" " alt="" coords="327,184,497,225"/>
-<area shape="rect" id="node6" href="$renderhelpwindow_8cpp.html" title=" " alt="" coords="411,95,581,136"/>
-<area shape="rect" id="node4" href="$callbacks_8cpp.html" title="Implementation of GLFW callback functions for the neuron viewer." alt="" coords="116,191,303,218"/>
-</map>

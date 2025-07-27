@@ -1,8 +1,0 @@
-<map id="NeuronGraph::readFromFileUGXorSWC" name="NeuronGraph::readFromFileUGXorSWC">
-<area shape="rect" id="node1" title="Reads a neuron file, automatically detecting the format." alt="" coords="399,74,581,115"/>
-<area shape="rect" id="node2" href="$opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="219,31,298,57"/>
-<area shape="rect" id="node5" href="$classNeuronGraph.html#a8b2d5d03d0953e5cff1edc4e396d97c2" title="Constructor that loads a neuron from file." alt="" coords="167,81,351,108"/>
-<area shape="rect" id="node6" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="183,132,334,159"/>
-<area shape="rect" id="node3" href="$neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="37,5,87,32"/>
-<area shape="rect" id="node4" href="$opgl__utils_8cpp.html#a81fad3cb23594d5bbd0c49fbe109379b" title="Opens a file dialog and loads a neuron morphology file." alt="" coords="5,56,119,83"/>
-</map>

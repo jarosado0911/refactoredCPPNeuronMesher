@@ -1,5 +1,0 @@
-<map id="drawSimpleSphere" name="drawSimpleSphere">
-<area shape="rect" id="node1" title="Renders a low&#45;detail sphere at the specified node&#39;s position." alt="" coords="243,5,373,32"/>
-<area shape="rect" id="node2" href="$draw__utils_8cpp.html#a2eca0fff4e4b8fe4dc7c5701657cab65" title="Renders a collection of SWC nodes as a 3D neuron morphology." alt="" coords="104,5,195,32"/>
-<area shape="rect" id="node3" href="$neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
-</map>

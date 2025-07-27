@@ -1,7 +1,0 @@
-<map id="NeuronGraph::preprocess" name="NeuronGraph::preprocess">
-<area shape="rect" id="node1" title="Applies standard preprocessing steps to a set of nodes." alt="" coords="5,141,176,168"/>
-<area shape="rect" id="node2" href="$classNeuronGraph.html#ade30f063c2aeaaa9817606497f16875b" title=" " alt="" coords="235,29,449,56"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#ae25c92d56c3019385447d3dc7ab86346" title=" " alt="" coords="244,104,440,131"/>
-<area shape="rect" id="node4" href="$classNeuronGraph.html#a0d0ce27089a76553f8e4e109ffdf8183" title=" " alt="" coords="224,179,460,205"/>
-<area shape="rect" id="node5" href="$classNeuronGraph.html#a6b0c1b97c8866106d3bb7f803b94f6f4" title=" " alt="" coords="263,253,421,280"/>
-</map>

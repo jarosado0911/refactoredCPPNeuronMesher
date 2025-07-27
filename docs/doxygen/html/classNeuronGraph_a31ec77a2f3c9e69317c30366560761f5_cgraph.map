@@ -1,5 +1,0 @@
-<map id="NeuronGraph::ugx2swc" name="NeuronGraph::ugx2swc">
-<area shape="rect" id="node1" title="Converts a UGX file to SWC format." alt="" coords="5,31,164,57"/>
-<area shape="rect" id="node2" href="$classNeuronGraph.html#aadf6c2dcb7cd1aa1d3664009eede14be" title="Returns a copy of all nodes in the graph." alt="" coords="216,5,379,32"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb" title="Writes a set of nodes to an SWC file." alt="" coords="212,56,383,83"/>
-</map>

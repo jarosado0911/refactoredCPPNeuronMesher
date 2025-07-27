@@ -1,8 +1,0 @@
-<map id="renderSWC" name="renderSWC">
-<area shape="rect" id="node1" title="Renders a complete SWC neuron morphology." alt="" coords="5,107,96,133"/>
-<area shape="rect" id="node2" href="$swc__viewer_8cpp.html#a65598ae83871fad84212c90bbaec2667" title="Draws a cylinder connecting two nodes." alt="" coords="160,5,259,32"/>
-<area shape="rect" id="node3" href="$swc__viewer_8cpp.html#a9e1aa9b4fe444097d366fd74155e5a7c" title="Draws a simple line between two nodes." alt="" coords="152,56,267,83"/>
-<area shape="rect" id="node4" href="$swc__viewer_8cpp.html#a279adf0b7e6fec6647b13831f6032486" title=" " alt="" coords="144,107,275,133"/>
-<area shape="rect" id="node5" href="$swc__viewer_8cpp.html#acc9c48455e614233efcc255cc5df30db" title="Draws a sphere with specified geometric detail." alt="" coords="164,157,255,184"/>
-<area shape="rect" id="node6" href="$swc__viewer_8cpp.html#a924533db1f86336b245cee7e6425171c" title="Sets the OpenGL color based on SWC node type." alt="" coords="152,208,267,235"/>
-</map>

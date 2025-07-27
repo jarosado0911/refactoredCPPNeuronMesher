@@ -1,6 +1,0 @@
-<map id="loadSWC" name="loadSWC">
-<area shape="rect" id="node1" title="Loads neuron data from an SWC file." alt="" coords="408,5,487,32"/>
-<area shape="rect" id="node2" href="$swc__viewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node3" href="$swc__viewer_8cpp.html#a77c6a10a239fd28b973ebe8dfc7f08b5" title=" " alt="" coords="247,31,360,57"/>
-<area shape="rect" id="node4" href="$swc__viewer_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events." alt="" coords="104,31,199,57"/>
-</map>

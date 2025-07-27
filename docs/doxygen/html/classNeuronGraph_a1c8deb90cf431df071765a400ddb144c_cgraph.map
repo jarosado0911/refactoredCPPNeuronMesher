@@ -1,6 +1,0 @@
-<map id="NeuronGraph::readFromFileUGXorSWC" name="NeuronGraph::readFromFileUGXorSWC">
-<area shape="rect" id="node1" title="Reads a neuron file, automatically detecting the format." alt="" coords="5,23,188,65"/>
-<area shape="rect" id="node2" href="$classNeuronGraph.html#a8ee6517767cd316da4474cb55c67307f" title="Reads neuron data from an SWC file." alt="" coords="251,5,433,32"/>
-<area shape="rect" id="node4" href="$classNeuronGraph.html#a8742e842a6ce2eb1981d36ba9a8317fb" title="Reads neuron data from a UGX file." alt="" coords="236,56,448,83"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph." alt="" coords="496,5,655,32"/>
-</map>
