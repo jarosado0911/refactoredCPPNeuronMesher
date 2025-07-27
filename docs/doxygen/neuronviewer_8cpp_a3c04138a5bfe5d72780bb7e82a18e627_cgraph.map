@@ -1,0 +1,30 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,827,56,854"/>
+<area shape="rect" id="node2" href="$opgl__utils_8cpp.html#af16fb9eaedbea83e2bf2906e91d1382a" title="Computes the bounding box and center of a set of nodes." alt="" coords="572,549,688,575"/>
+<area shape="rect" id="node3" href="$callbacks_8cpp.html#ae49f0c4c2064be8fbcf555f46460b7df" title="Handles mouse cursor movement for view manipulation." alt="" coords="113,726,245,753"/>
+<area shape="rect" id="node4" href="$draw__utils_8cpp.html#a703fff569922c385e2eee4fe8f247528" title="Renders a wireframe bounding box in 3D space." alt="" coords="116,777,243,803"/>
+<area shape="rect" id="node5" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="132,305,227,331"/>
+<area shape="rect" id="node11" href="$opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="591,599,669,626"/>
+<area shape="rect" id="node18" href="$callbacks_8cpp.html#ae41a3951e1196401047b29ad1d37c6ae" title="Handles mouse button events for 3D view manipulation." alt="" coords="104,827,255,854"/>
+<area shape="rect" id="node19" href="$renderhelpwindow_8cpp.html#a083009674748e689f272c981da6096a3" title=" " alt="" coords="113,878,245,905"/>
+<area shape="rect" id="node20" href="$draw__utils_8cpp.html#a2eca0fff4e4b8fe4dc7c5701657cab65" title="Renders a collection of SWC nodes as a 3D neuron morphology." alt="" coords="134,929,225,955"/>
+<area shape="rect" id="node26" href="$callbacks_8cpp.html#aa9b224479e8c1cc5251b8e7f3fdabacd" title="Handles mouse scroll wheel events for zooming the view." alt="" coords="127,979,231,1006"/>
+<area shape="rect" id="node27" href="$neuronviewer_8cpp.html#a3eeca8e678d6606633aeadad0a2ac742" title=" " alt="" coords="129,1030,229,1057"/>
+<area shape="rect" id="node28" href="$neuronviewer_8cpp.html#ad6323e594cd386c73c6340b415789b69" title=" " alt="" coords="130,1081,229,1107"/>
+<area shape="rect" id="node6" href="$classNeuronGraph.html#a198959fac3c6691530c888896ae777ae" title="Resamples all trunks using cubic spline interpolation." alt="" coords="318,457,509,499"/>
+<area shape="rect" id="node7" href="$classNeuronGraph.html#a7961eded24b6524392b01fdfa7e98452" title="Combines multiple trunks into a single node set." alt="" coords="312,523,515,550"/>
+<area shape="rect" id="node8" href="$classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs." alt="" coords="303,51,524,78"/>
+<area shape="rect" id="node9" href="$classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="331,153,496,179"/>
+<area shape="rect" id="node10" href="$opgl__utils_8cpp.html#a81fad3cb23594d5bbd0c49fbe109379b" title="Opens a file dialog and loads a neuron morphology file." alt="" coords="357,574,470,601"/>
+<area shape="rect" id="node12" href="$classNeuronGraph.html#a4fbcfc32da26b3bc0fe7211ee0b08237" title="Replaces the current set of nodes in the graph." alt="" coords="736,287,899,314"/>
+<area shape="rect" id="node13" href="$opgl__utils_8cpp.html#af435ad623add097384c18de67cd0702e" title="Prints the help text to the standard output." alt="" coords="364,203,463,230"/>
+<area shape="rect" id="node14" href="$tinyfiledialogs_8c.html#ac5082e6c1f4693110f1703664b3fa9fc" title=" " alt="" coords="345,254,482,281"/>
+<area shape="rect" id="node15" href="$tinyfiledialogs_8c.html#a7a17e17150593bf3b04253ea819fc5bc" title=" " alt="" coords="340,305,487,331"/>
+<area shape="rect" id="node16" href="$classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb" title="Writes a set of nodes to an SWC file." alt="" coords="328,355,499,382"/>
+<area shape="rect" id="node17" href="$classNeuronGraph.html#a938d33cc1ee5a5abc291c555e0a60ad5" title="Writes a set of nodes to a UGX file." alt="" coords="314,406,513,433"/>
+<area shape="rect" id="node21" href="$draw__utils_8cpp.html#a505cf7f6ed8d6527faf799567d971bb1" title="Renders a tapered cylinder between two nodes." alt="" coords="364,929,463,955"/>
+<area shape="rect" id="node22" href="$draw__utils_8cpp.html#a9e1aa9b4fe444097d366fd74155e5a7c" title="Draws a straight line between two nodes." alt="" coords="356,979,471,1006"/>
+<area shape="rect" id="node23" href="$draw__utils_8cpp.html#acaf017db92cfa0d82163fe785474e5a2" title="Renders a low&#45;detail sphere at the specified node&#39;s position." alt="" coords="348,1030,479,1057"/>
+<area shape="rect" id="node24" href="$draw__utils_8cpp.html#a93fb31c05cb8b32586e30b13f9a053b4" title="Renders a detailed sphere at the specified node&#39;s position." alt="" coords="368,827,459,854"/>
+<area shape="rect" id="node25" href="$draw__utils_8cpp.html#a924533db1f86336b245cee7e6425171c" title="Sets the OpenGL color based on SWC node type." alt="" coords="356,878,471,905"/>
+</map>

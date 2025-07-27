@@ -1,0 +1,20 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,236,56,263"/>
+<area shape="rect" id="node2" href="$swc__viewer_8cpp.html#ab897226cbf8704a86b3a4a11e258334f" title=" " alt="" coords="481,72,597,99"/>
+<area shape="rect" id="node3" href="$swc__viewer_8cpp.html#ae49f0c4c2064be8fbcf555f46460b7df" title="Handles mouse cursor movement." alt="" coords="113,59,245,86"/>
+<area shape="rect" id="node4" href="$swc__viewer_8cpp.html#a4133cae619062843519ce2840ccf168d" title=" " alt="" coords="116,110,243,136"/>
+<area shape="rect" id="node5" href="$swc__viewer_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events." alt="" coords="132,160,227,187"/>
+<area shape="rect" id="node7" href="$swc__viewer_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads neuron data from an SWC file." alt="" coords="500,148,579,175"/>
+<area shape="rect" id="node9" href="$swc__viewer_8cpp.html#ae41a3951e1196401047b29ad1d37c6ae" title="Handles mouse button input events." alt="" coords="104,262,255,288"/>
+<area shape="rect" id="node10" href="$swc__viewer_8cpp.html#a2eca0fff4e4b8fe4dc7c5701657cab65" title="Renders a complete SWC neuron morphology." alt="" coords="134,312,225,339"/>
+<area shape="rect" id="node16" href="$swc__viewer_8cpp.html#aa9b224479e8c1cc5251b8e7f3fdabacd" title="Handles mouse scroll events." alt="" coords="127,363,231,390"/>
+<area shape="rect" id="node17" href="$swc__viewer_8cpp.html#a2edd6335513af8d90d76f90b5f740bbb" title=" " alt="" coords="129,414,229,440"/>
+<area shape="rect" id="node18" href="$swc__viewer_8cpp.html#ad6323e594cd386c73c6340b415789b69" title=" " alt="" coords="130,464,229,491"/>
+<area shape="rect" id="node6" href="$swc__viewer_8cpp.html#a77c6a10a239fd28b973ebe8dfc7f08b5" title=" " alt="" coords="311,110,425,136"/>
+<area shape="rect" id="node8" href="$swc__viewer_8cpp.html#af435ad623add097384c18de67cd0702e" title="Prints keyboard and mouse controls to the console." alt="" coords="319,160,417,187"/>
+<area shape="rect" id="node11" href="$swc__viewer_8cpp.html#a65598ae83871fad84212c90bbaec2667" title="Draws a cylinder connecting two nodes." alt="" coords="319,262,417,288"/>
+<area shape="rect" id="node12" href="$swc__viewer_8cpp.html#a9e1aa9b4fe444097d366fd74155e5a7c" title="Draws a simple line between two nodes." alt="" coords="311,312,425,339"/>
+<area shape="rect" id="node13" href="$swc__viewer_8cpp.html#a279adf0b7e6fec6647b13831f6032486" title=" " alt="" coords="303,363,433,390"/>
+<area shape="rect" id="node14" href="$swc__viewer_8cpp.html#acc9c48455e614233efcc255cc5df30db" title="Draws a sphere with specified geometric detail." alt="" coords="323,414,413,440"/>
+<area shape="rect" id="node15" href="$swc__viewer_8cpp.html#a924533db1f86336b245cee7e6425171c" title="Sets the OpenGL color based on SWC node type." alt="" coords="311,464,425,491"/>
+</map>

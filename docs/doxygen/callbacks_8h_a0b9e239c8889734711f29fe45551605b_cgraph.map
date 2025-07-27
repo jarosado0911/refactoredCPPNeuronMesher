@@ -1,0 +1,21 @@
+<map id="keyCallback" name="keyCallback">
+<area shape="rect" id="node1" title="Handles keyboard input events." alt="" coords="5,299,100,326"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a198959fac3c6691530c888896ae777ae" title="Resamples all trunks using cubic spline interpolation." alt="" coords="163,5,354,47"/>
+<area shape="rect" id="node4" href="$classNeuronGraph.html#a7961eded24b6524392b01fdfa7e98452" title="Combines multiple trunks into a single node set." alt="" coords="157,71,360,98"/>
+<area shape="rect" id="node5" href="$opgl__utils_8cpp.html#af16fb9eaedbea83e2bf2906e91d1382a" title="Computes the bounding box and center of a set of nodes." alt="" coords="201,122,317,149"/>
+<area shape="rect" id="node6" href="$classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs." alt="" coords="148,173,369,199"/>
+<area shape="rect" id="node7" href="$classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="176,223,341,250"/>
+<area shape="rect" id="node8" href="$swc__viewer_8cpp.html#a77c6a10a239fd28b973ebe8dfc7f08b5" title=" " alt="" coords="202,274,315,301"/>
+<area shape="rect" id="node13" href="$swc__viewer_8cpp.html#af435ad623add097384c18de67cd0702e" title="Prints keyboard and mouse controls to the console." alt="" coords="209,325,308,351"/>
+<area shape="rect" id="node14" href="$classNeuronGraph.html#a4fbcfc32da26b3bc0fe7211ee0b08237" title="Replaces the current set of nodes in the graph." alt="" coords="177,375,340,402"/>
+<area shape="rect" id="node16" href="$tinyfiledialogs_8c.html#ac5082e6c1f4693110f1703664b3fa9fc" title=" " alt="" coords="436,426,573,453"/>
+<area shape="rect" id="node17" href="$tinyfiledialogs_8c.html#a7a17e17150593bf3b04253ea819fc5bc" title=" " alt="" coords="431,477,578,503"/>
+<area shape="rect" id="node18" href="$classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb" title="Writes a set of nodes to an SWC file." alt="" coords="173,527,344,554"/>
+<area shape="rect" id="node19" href="$classNeuronGraph.html#a938d33cc1ee5a5abc291c555e0a60ad5" title="Writes a set of nodes to a UGX file." alt="" coords="159,578,358,605"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="417,5,592,47"/>
+<area shape="rect" id="node9" href="$swc__viewer_8cpp.html#ab897226cbf8704a86b3a4a11e258334f" title=" " alt="" coords="447,223,563,250"/>
+<area shape="rect" id="node10" href="$swc__viewer_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads neuron data from an SWC file." alt="" coords="465,274,544,301"/>
+<area shape="rect" id="node11" href="$tinyfiledialogs_8c.html#a8918e9f47e1532c1d055f563a32b215c" title=" " alt="" coords="431,325,578,351"/>
+<area shape="rect" id="node12" href="$tinyfiledialogs_8c.html#a789b9cfa9fb2cf888db0246f9c2dca9a" title=" " alt="" coords="640,426,769,453"/>
+<area shape="rect" id="node15" href="$classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph." alt="" coords="425,375,584,402"/>
+</map>

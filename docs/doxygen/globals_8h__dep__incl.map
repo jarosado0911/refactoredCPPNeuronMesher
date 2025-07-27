@@ -1,0 +1,10 @@
+<map id="include/viewer/globals.h" name="include/viewer/globals.h">
+<area shape="rect" id="node1" title="Global state variables for the neuron visualization." alt="" coords="373,5,534,32"/>
+<area shape="rect" id="node2" href="$callbacks_8cpp.html" title="Implementation of GLFW callback functions for the neuron viewer." alt="" coords="180,177,367,203"/>
+<area shape="rect" id="node3" href="$draw__utils_8cpp.html" title="Implementation of OpenGL rendering utilities for neuron visualization." alt="" coords="31,80,166,121"/>
+<area shape="rect" id="node4" href="$globals_8cpp.html" title="Global variables and state for the neuron viewer application." alt="" coords="191,87,364,114"/>
+<area shape="rect" id="node5" href="$opgl__utils_8cpp.html" title="OpenGL utility functions for neuron visualization." alt="" coords="388,80,519,121"/>
+<area shape="rect" id="node6" href="$callbacks_8h.html" title="GLFW input handling callbacks for neuron visualization." alt="" coords="543,87,718,114"/>
+<area shape="rect" id="node7" href="$neuronviewer_8cpp.html" title=" " alt="" coords="671,169,841,211"/>
+<area shape="rect" id="node8" href="$renderhelpwindow_8cpp.html" title=" " alt="" coords="793,80,964,121"/>
+</map>

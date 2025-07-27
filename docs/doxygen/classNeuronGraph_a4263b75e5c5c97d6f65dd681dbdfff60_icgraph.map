@@ -1,0 +1,6 @@
+<map id="NeuronGraph::linearSplineResampleTrunk" name="NeuronGraph::linearSplineResampleTrunk">
+<area shape="rect" id="node1" title="Resamples a single trunk using linear interpolation." alt="" coords="721,70,896,111"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a126fba2e060c47a5a20445af0622d06b" title="Resamples all trunks using linear interpolation." alt="" coords="483,41,673,82"/>
+<area shape="rect" id="node4" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,56,156,83"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#acbf58bd7db5d97c97ec95b63c679a62a" title="Generates multiple levels of refined neuron morphologies." alt="" coords="204,5,435,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="openNeuronFile" name="openNeuronFile">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,119,83"/>
+<area shape="rect" id="node2" href="$swc__viewer_8cpp.html#ab897226cbf8704a86b3a4a11e258334f" title=" " alt="" coords="182,5,298,32"/>
+<area shape="rect" id="node3" href="$swc__viewer_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads neuron data from an SWC file." alt="" coords="201,56,279,83"/>
+<area shape="rect" id="node4" href="$tinyfiledialogs_8c.html#a8918e9f47e1532c1d055f563a32b215c" title=" " alt="" coords="167,107,313,133"/>
+<area shape="rect" id="node5" href="$tinyfiledialogs_8c.html#a789b9cfa9fb2cf888db0246f9c2dca9a" title=" " alt="" coords="361,107,491,133"/>
+</map>

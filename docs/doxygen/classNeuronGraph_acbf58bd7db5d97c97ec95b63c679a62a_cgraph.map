@@ -1,0 +1,10 @@
+<map id="NeuronGraph::generateRefinements" name="NeuronGraph::generateRefinements">
+<area shape="rect" id="node1" title="Generates multiple levels of refined neuron morphologies." alt="" coords="5,137,236,163"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a198959fac3c6691530c888896ae777ae" title="Resamples all trunks using cubic spline interpolation." alt="" coords="299,5,490,47"/>
+<area shape="rect" id="node4" href="$classNeuronGraph.html#a126fba2e060c47a5a20445af0622d06b" title="Resamples all trunks using linear interpolation." alt="" coords="299,71,490,112"/>
+<area shape="rect" id="node6" href="$classNeuronGraph.html#a7961eded24b6524392b01fdfa7e98452" title="Combines multiple trunks into a single node set." alt="" coords="293,137,496,163"/>
+<area shape="rect" id="node7" href="$classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs." alt="" coords="284,187,505,214"/>
+<area shape="rect" id="node8" href="$classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="312,238,477,265"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="553,5,728,47"/>
+<area shape="rect" id="node5" href="$classNeuronGraph.html#a4263b75e5c5c97d6f65dd681dbdfff60" title="Resamples a single trunk using linear interpolation." alt="" coords="553,71,728,112"/>
+</map>
