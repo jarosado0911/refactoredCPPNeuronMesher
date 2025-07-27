@@ -1,21 +1,45 @@
 <map id="keyCallback" name="keyCallback">
-<area shape="rect" id="node1" title="Handles keyboard input events." alt="" coords="5,299,100,326"/>
-<area shape="rect" id="node2" href="$classNeuronGraph.html#a198959fac3c6691530c888896ae777ae" title="Resamples all trunks using cubic spline interpolation." alt="" coords="163,5,354,47"/>
-<area shape="rect" id="node4" href="$classNeuronGraph.html#a7961eded24b6524392b01fdfa7e98452" title="Combines multiple trunks into a single node set." alt="" coords="157,71,360,98"/>
-<area shape="rect" id="node5" href="$opgl__utils_8cpp.html#af16fb9eaedbea83e2bf2906e91d1382a" title="Computes the bounding box and center of a set of nodes." alt="" coords="201,122,317,149"/>
-<area shape="rect" id="node6" href="$classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs." alt="" coords="148,173,369,199"/>
-<area shape="rect" id="node7" href="$classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="176,223,341,250"/>
-<area shape="rect" id="node8" href="$swc__viewer_8cpp.html#a77c6a10a239fd28b973ebe8dfc7f08b5" title=" " alt="" coords="202,274,315,301"/>
-<area shape="rect" id="node13" href="$swc__viewer_8cpp.html#af435ad623add097384c18de67cd0702e" title="Prints keyboard and mouse controls to the console." alt="" coords="209,325,308,351"/>
-<area shape="rect" id="node14" href="$classNeuronGraph.html#a4fbcfc32da26b3bc0fe7211ee0b08237" title="Replaces the current set of nodes in the graph." alt="" coords="177,375,340,402"/>
-<area shape="rect" id="node16" href="$tinyfiledialogs_8c.html#ac5082e6c1f4693110f1703664b3fa9fc" title=" " alt="" coords="436,426,573,453"/>
-<area shape="rect" id="node17" href="$tinyfiledialogs_8c.html#a7a17e17150593bf3b04253ea819fc5bc" title=" " alt="" coords="431,477,578,503"/>
-<area shape="rect" id="node18" href="$classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb" title="Writes a set of nodes to an SWC file." alt="" coords="173,527,344,554"/>
-<area shape="rect" id="node19" href="$classNeuronGraph.html#a938d33cc1ee5a5abc291c555e0a60ad5" title="Writes a set of nodes to a UGX file." alt="" coords="159,578,358,605"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="417,5,592,47"/>
-<area shape="rect" id="node9" href="$swc__viewer_8cpp.html#ab897226cbf8704a86b3a4a11e258334f" title=" " alt="" coords="447,223,563,250"/>
-<area shape="rect" id="node10" href="$swc__viewer_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads neuron data from an SWC file." alt="" coords="465,274,544,301"/>
-<area shape="rect" id="node11" href="$tinyfiledialogs_8c.html#a8918e9f47e1532c1d055f563a32b215c" title=" " alt="" coords="431,325,578,351"/>
-<area shape="rect" id="node12" href="$tinyfiledialogs_8c.html#a789b9cfa9fb2cf888db0246f9c2dca9a" title=" " alt="" coords="640,426,769,453"/>
-<area shape="rect" id="node15" href="$classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph." alt="" coords="425,375,584,402"/>
+<area shape="rect" id="node1" title="Handles keyboard input events." alt="" coords="5,2080,100,2106"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a198959fac3c6691530c888896ae777ae" title="Resamples all trunks using cubic spline interpolation." alt="" coords="163,1583,354,1624"/>
+<area shape="rect" id="node4" href="$classNeuronGraph.html#a7961eded24b6524392b01fdfa7e98452" title="Combines multiple trunks into a single node set." alt="" coords="157,1852,360,1878"/>
+<area shape="rect" id="node5" href="$opgl__utils_8cpp.html#af16fb9eaedbea83e2bf2906e91d1382a" title="Computes the bounding box and center of a set of nodes." alt="" coords="201,1902,317,1929"/>
+<area shape="rect" id="node6" href="$classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs." alt="" coords="148,1953,369,1980"/>
+<area shape="rect" id="node7" href="$classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="176,2004,341,2030"/>
+<area shape="rect" id="node9" href="$swc__viewer_8cpp.html#a77c6a10a239fd28b973ebe8dfc7f08b5" title=" " alt="" coords="202,2105,315,2132"/>
+<area shape="rect" id="node34" href="$tinyfiledialogs_8c.html#ac5082e6c1f4693110f1703664b3fa9fc" title=" " alt="" coords="889,1573,1027,1600"/>
+<area shape="rect" id="node38" href="$swc__viewer_8cpp.html#af435ad623add097384c18de67cd0702e" title="Prints keyboard and mouse controls to the console." alt="" coords="209,2206,308,2233"/>
+<area shape="rect" id="node39" href="$classNeuronGraph.html#a4fbcfc32da26b3bc0fe7211ee0b08237" title="Replaces the current set of nodes in the graph." alt="" coords="177,2257,340,2284"/>
+<area shape="rect" id="node40" href="$tinyfiledialogs_8c.html#a7a17e17150593bf3b04253ea819fc5bc" title=" " alt="" coords="445,1497,592,1524"/>
+<area shape="rect" id="node42" href="$classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb" title="Writes a set of nodes to an SWC file." alt="" coords="173,2308,344,2334"/>
+<area shape="rect" id="node43" href="$classNeuronGraph.html#a938d33cc1ee5a5abc291c555e0a60ad5" title="Writes a set of nodes to a UGX file." alt="" coords="159,2358,358,2385"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="431,1380,606,1422"/>
+<area shape="rect" id="node8" href="$classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e" title="Builds a neighbor map from a set of nodes." alt="" coords="417,1446,620,1473"/>
+<area shape="rect" id="node10" href="$swc__viewer_8cpp.html#ab897226cbf8704a86b3a4a11e258334f" title=" " alt="" coords="461,2080,577,2106"/>
+<area shape="rect" id="node11" href="$swc__viewer_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads neuron data from an SWC file." alt="" coords="479,2130,558,2157"/>
+<area shape="rect" id="node12" href="$tinyfiledialogs_8c.html#a8918e9f47e1532c1d055f563a32b215c" title=" " alt="" coords="445,2029,592,2056"/>
+<area shape="rect" id="node13" href="$tinyfiledialogs_8c.html#a2497154987af60e28a041af366728368" title=" " alt="" coords="1115,1168,1205,1194"/>
+<area shape="rect" id="node14" href="$tinyfiledialogs_8c.html#a132d61d56463b9f8f38111bde865a6b4" title=" " alt="" coords="1293,1066,1423,1093"/>
+<area shape="rect" id="node15" href="$tinyfiledialogs_8c.html#abb27c82040748f9ed13e6d803e5ec74c" title=" " alt="" coords="1307,1320,1409,1346"/>
+<area shape="rect" id="node16" href="$tinyfiledialogs_8c.html#a6a75d29f7cc1a6606e1b709fb2d13756" title=" " alt="" coords="1471,1320,1565,1346"/>
+<area shape="rect" id="node17" href="$tinyfiledialogs_8c.html#a8e751e9e56dccd769a6b46d9fbbb3e8b" title=" " alt="" coords="718,2029,791,2056"/>
+<area shape="rect" id="node18" href="$tinyfiledialogs_8c.html#a26a975a42ad504050daa9c7f132e280d" title=" " alt="" coords="1106,978,1214,1005"/>
+<area shape="rect" id="node19" href="$tinyfiledialogs_8c.html#ade09309ff58892f8bcaa444e440c36d0" title=" " alt="" coords="715,1877,794,1904"/>
+<area shape="rect" id="node20" href="$tinyfiledialogs_8c.html#a25e21eec46d56cee2ede392879228b99" title=" " alt="" coords="705,1928,805,1954"/>
+<area shape="rect" id="node21" href="$tinyfiledialogs_8c.html#a6b6ad1f832c8368c8799447d661c2e4b" title=" " alt="" coords="668,1978,841,2005"/>
+<area shape="rect" id="node22" href="$tinyfiledialogs_8c.html#a8c8e4657dc09540d450c4d9c2f40e462" title=" " alt="" coords="1100,1725,1220,1752"/>
+<area shape="rect" id="node23" href="$tinyfiledialogs_8c.html#aea610393d0670ec39a589bf9933390d5" title=" " alt="" coords="1112,1370,1208,1397"/>
+<area shape="rect" id="node24" href="$tinyfiledialogs_8c.html#a77c4dde5df84387f5e8764f33bf04ba3" title=" " alt="" coords="1095,2250,1225,2277"/>
+<area shape="rect" id="node25" href="$tinyfiledialogs_8c.html#a1ae8f7bd22b5c7d457771295e9a04cc5" title=" " alt="" coords="1296,2225,1420,2252"/>
+<area shape="rect" id="node26" href="$tinyfiledialogs_8c.html#ae11ed1c0d8ae0c30f5453048d1cdf7d0" title=" " alt="" coords="1084,534,1236,561"/>
+<area shape="rect" id="node27" href="$tinyfiledialogs_8c.html#a207f7a0539c4f1488d49a4f05a0cdb73" title=" " alt="" coords="1097,902,1223,929"/>
+<area shape="rect" id="node28" href="$tinyfiledialogs_8c.html#a789b9cfa9fb2cf888db0246f9c2dca9a" title=" " alt="" coords="1095,1877,1225,1904"/>
+<area shape="rect" id="node29" href="$tinyfiledialogs_8c.html#a0f7ff3f21aee78c73276da8eba075edd" title=" " alt="" coords="1075,2124,1245,2150"/>
+<area shape="rect" id="node30" href="$tinyfiledialogs_8c.html#a15fdc38cfcc89302704d4554221c85f7" title=" " alt="" coords="1099,1421,1221,1448"/>
+<area shape="rect" id="node31" href="$tinyfiledialogs_8c.html#a5702c782c083fb90757b8bb6a95de325" title=" " alt="" coords="1105,712,1215,738"/>
+<area shape="rect" id="node32" href="$tinyfiledialogs_8c.html#aca140f9622c8b2ac27a1a7b93d426cf6" title=" " alt="" coords="1095,2200,1225,2226"/>
+<area shape="rect" id="node33" href="$tinyfiledialogs_8c.html#a62849e223b13b73fdfe05543a85a7c58" title=" " alt="" coords="699,1421,811,1448"/>
+<area shape="rect" id="node35" href="$tinyfiledialogs_8c.html#a4a88b80d423f3774772e9f4425843e22" title=" " alt="" coords="1105,2637,1215,2664"/>
+<area shape="rect" id="node36" href="$tinyfiledialogs_8c.html#a5d2fc2b6dc016de1e409061009dcafcc" title=" " alt="" coords="1105,357,1215,384"/>
+<area shape="rect" id="node37" href="$tinyfiledialogs_8c.html#a340a95c24c9e36eac5e8d3d41e69e316" title=" " alt="" coords="1106,2061,1214,2088"/>
+<area shape="rect" id="node41" href="$tinyfiledialogs_8c.html#a4c3beb3f1dca5f349b7af2b398e8082e" title=" " alt="" coords="705,256,804,282"/>
 </map>

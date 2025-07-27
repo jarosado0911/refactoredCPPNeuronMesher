@@ -1,6 +1,4 @@
 <map id="NeuronGraph::NeuronGraph" name="NeuronGraph::NeuronGraph">
-<area shape="rect" id="node1" title="Constructor that loads a neuron from file." alt="" coords="5,31,189,57"/>
-<area shape="rect" id="node2" href="$classNeuronGraph.html#a1c8deb90cf431df071765a400ddb144c" title="Reads a neuron file, automatically detecting the format." alt="" coords="237,23,420,65"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#a8ee6517767cd316da4474cb55c67307f" title="Reads neuron data from an SWC file." alt="" coords="483,5,665,32"/>
-<area shape="rect" id="node4" href="$classNeuronGraph.html#a8742e842a6ce2eb1981d36ba9a8317fb" title="Reads neuron data from a UGX file." alt="" coords="468,56,680,83"/>
+<area shape="rect" id="node1" title="Constructor that loads a neuron from file." alt="" coords="5,13,189,39"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a1c8deb90cf431df071765a400ddb144c" title="Reads a neuron file, automatically detecting the format." alt="" coords="237,5,420,47"/>
 </map>

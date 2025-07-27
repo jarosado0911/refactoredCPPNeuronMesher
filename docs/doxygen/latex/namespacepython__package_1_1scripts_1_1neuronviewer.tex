@@ -1,0 +1,279 @@
+\hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer}{}\doxysection{python\+\_\+package.\+scripts.\+neuronviewer Namespace Reference}
+\label{namespacepython__package_1_1scripts_1_1neuronviewer}\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a6a000eaa135f2812a46833037fa21bff}{init\+\_\+window}} (width=800, height=600)
+\item 
+def \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a5f49e0ce590d40a009d0981e0b4ba577}{open\+\_\+file\+\_\+dialog}} ()
+\item 
+def \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a70ec864a7eedde77059c2e08a7ad25d7}{load\+\_\+neuron}} (path)
+\item 
+def \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a17d9535ec8c78feb9be1c7b1c53b0bb4}{draw\+\_\+graph}} (\mbox{\hyperlink{globals_8h_a65b5e8f0673c2dba7ec632133f036a21}{graph}})
+\item 
+def \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a1a676ff87a08f3cc84be3a5ffe6096ce}{mouse\+\_\+button\+\_\+callback}} (window, button, action, mods)
+\item 
+def \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a522f9fe5d73552a461a92a2776cee656}{cursor\+\_\+position\+\_\+callback}} (window, xpos, ypos)
+\item 
+def \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a03eacb03a221d5a4dd599a8c2258c3f7}{scroll\+\_\+callback}} (window, xoffset, yoffset)
+\item 
+def \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a0b7d6621e4bdd4eca661fdcce49c1615}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a7a5a713c6c71e0c1de1f26d3c7d9a522}{angle\+\_\+x}} = 0.\+0
+\item 
+float \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a93c4e62564a602400025a9c6ecee292d}{angle\+\_\+y}} = 0.\+0
+\item 
+float \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a711df9d9f2f32f00de14901d6f2af41b}{distance}} = 300.\+0
+\item 
+\mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_aaa606405202000da0baa7bc2b0863c9d}{last\+\_\+x}}
+\item 
+\mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a209f0006fa754ac2f454ea8c502a73bf}{last\+\_\+y}}
+\item 
+bool \mbox{\hyperlink{namespacepython__package_1_1scripts_1_1neuronviewer_a631eb153ca418391fe18561f9673d4f4}{mouse\+\_\+pressed}} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Neuron Viewer - A 3D visualization tool for neuron morphologies.
+
+This module provides a simple OpenGL-based viewer for visualizing neuron structures
+loaded from SWC or UGX files. It supports interactive 3D navigation and multiple
+rendering modes for examining neuron morphologies.
+
+Key Features:
+- Supports SWC and UGX file formats
+- Interactive 3D camera controls
+- Multiple rendering modes (wireframe, solid, etc.)
+- Cross-platform compatibility
+
+Dependencies:
+- PyOpenGL
+- GLFW
+- NumPy
+- Tkinter (for file dialogs)
+
+Example:
+    viewer = NeuronViewer()
+    viewer.run()
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a522f9fe5d73552a461a92a2776cee656}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a522f9fe5d73552a461a92a2776cee656}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!cursor\_position\_callback@{cursor\_position\_callback}}
+\index{cursor\_position\_callback@{cursor\_position\_callback}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{cursor\_position\_callback()}{cursor\_position\_callback()}}
+{\footnotesize\ttfamily def python\+\_\+package.\+scripts.\+neuronviewer.\+cursor\+\_\+position\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{window,  }\item[{}]{xpos,  }\item[{}]{ypos }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles mouse cursor movement events for view rotation.
+Tracks the last known position of the mouse cursor and updates the angle_x and angle_y variables
+when the left mouse button is pressed.
+Rotation speed is scaled by a constant factor (0.5) to provide a good balance between precision and responsiveness.
+The actual view transformation is applied in the main rendering loop using the global state variables modified by this function.
+
+See also
+--------
+GLFW cursor position documentation: https://www.glfw.org/docs/latest/input_guide.html#cursor_pos
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a17d9535ec8c78feb9be1c7b1c53b0bb4}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a17d9535ec8c78feb9be1c7b1c53b0bb4}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!draw\_graph@{draw\_graph}}
+\index{draw\_graph@{draw\_graph}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{draw\_graph()}{draw\_graph()}}
+{\footnotesize\ttfamily def python\+\_\+package.\+scripts.\+neuronviewer.\+draw\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{graph }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Draw a neuron as a set of lines connecting the nodes in the graph.
+
+This function takes a NeuronGraph object as input and draws it as a set of
+lines connecting the nodes in the graph. The lines are drawn by iterating
+over the nodes and connecting each node to its parent node (if it exists).
+
+Args:
+    graph (NeuronGraph): The neuron graph to draw.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepython__package_1_1scripts_1_1neuronviewer_a17d9535ec8c78feb9be1c7b1c53b0bb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a6a000eaa135f2812a46833037fa21bff}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a6a000eaa135f2812a46833037fa21bff}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!init\_window@{init\_window}}
+\index{init\_window@{init\_window}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{init\_window()}{init\_window()}}
+{\footnotesize\ttfamily def python\+\_\+package.\+scripts.\+neuronviewer.\+init\+\_\+window (\begin{DoxyParamCaption}\item[{}]{width = {\ttfamily 800},  }\item[{}]{height = {\ttfamily 600} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize a GLFW window with the given width and height.
+
+This function initializes the GLFW library and creates a window
+with the given size. The window is set as the current OpenGL context
+and depth testing is enabled.
+
+Args:
+    width (int): The width of the window in pixels.
+    height (int): The height of the window in pixels.
+
+Returns:
+    GLFWwindow: The initialized GLFW window.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepython__package_1_1scripts_1_1neuronviewer_a6a000eaa135f2812a46833037fa21bff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a70ec864a7eedde77059c2e08a7ad25d7}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a70ec864a7eedde77059c2e08a7ad25d7}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!load\_neuron@{load\_neuron}}
+\index{load\_neuron@{load\_neuron}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{load\_neuron()}{load\_neuron()}}
+{\footnotesize\ttfamily def python\+\_\+package.\+scripts.\+neuronviewer.\+load\+\_\+neuron (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load a neuron from a file.
+
+This function takes a file path as input and loads a neuron from the file.
+The neuron is loaded into a NeuronGraph object and returned.
+
+The supported file formats are SWC and UGX. If the file format is not
+recognized, a ValueError is raised.
+
+Parameters
+----------
+path : str
+    The path to the file containing the neuron data.
+
+Returns
+-------
+NeuronGraph
+    The loaded neuron graph.
+
+Raises
+------
+ValueError
+    If the file format is not recognized.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepython__package_1_1scripts_1_1neuronviewer_a70ec864a7eedde77059c2e08a7ad25d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a0b7d6621e4bdd4eca661fdcce49c1615}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a0b7d6621e4bdd4eca661fdcce49c1615}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!main@{main}}
+\index{main@{main}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def python\+\_\+package.\+scripts.\+neuronviewer.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Main function to initialize the GLFW window and handle rendering loop.
+
+This function sets up the GLFW window, assigns necessary callbacks for mouse
+and keyboard interaction, and enters the main rendering loop. In each loop 
+iteration, it processes events, clears the screen, sets up the camera 
+perspective, and draws the neuron graph if loaded. It also handles the 
+keyboard shortcut for opening a file dialog to load neuron data from a file.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepython__package_1_1scripts_1_1neuronviewer_a0b7d6621e4bdd4eca661fdcce49c1615_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a1a676ff87a08f3cc84be3a5ffe6096ce}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a1a676ff87a08f3cc84be3a5ffe6096ce}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!mouse\_button\_callback@{mouse\_button\_callback}}
+\index{mouse\_button\_callback@{mouse\_button\_callback}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{mouse\_button\_callback()}{mouse\_button\_callback()}}
+{\footnotesize\ttfamily def python\+\_\+package.\+scripts.\+neuronviewer.\+mouse\+\_\+button\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{window,  }\item[{}]{button,  }\item[{}]{action,  }\item[{}]{mods }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles mouse button events for view manipulation.
+Tracks when the left mouse button is pressed or released to toggle the
+mouse_pressed state, which is used for initiating and controlling 3D view
+rotation in the neuron viewer.
+
+Args:
+    window: The GLFW window that received the event.
+    button: The mouse button that was pressed or released.
+    action: The mouse button action (GLFW_PRESS or GLFW_RELEASE).
+    mods: Bit field describing which modifier keys were held down.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a5f49e0ce590d40a009d0981e0b4ba577}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a5f49e0ce590d40a009d0981e0b4ba577}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!open\_file\_dialog@{open\_file\_dialog}}
+\index{open\_file\_dialog@{open\_file\_dialog}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{open\_file\_dialog()}{open\_file\_dialog()}}
+{\footnotesize\ttfamily def python\+\_\+package.\+scripts.\+neuronviewer.\+open\+\_\+file\+\_\+dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Open a file dialog to select a neuron file.
+
+This function uses a Tkinter file dialog to open a file selection window
+for choosing neuron morphology files. The supported file types are SWC 
+and UGX, but all file types can be selected.
+
+Returns
+-------
+str
+    The path to the selected file or an empty string if no file was selected.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacepython__package_1_1scripts_1_1neuronviewer_a5f49e0ce590d40a009d0981e0b4ba577_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a03eacb03a221d5a4dd599a8c2258c3f7}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a03eacb03a221d5a4dd599a8c2258c3f7}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!scroll\_callback@{scroll\_callback}}
+\index{scroll\_callback@{scroll\_callback}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{scroll\_callback()}{scroll\_callback()}}
+{\footnotesize\ttfamily def python\+\_\+package.\+scripts.\+neuronviewer.\+scroll\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{window,  }\item[{}]{xoffset,  }\item[{}]{yoffset }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles mouse scroll events for zooming the view.
+The xoffset parameter is currently unused but included for future compatibility.
+Zooming is centered on the current view (no focal point adjustment).
+The 1.1 base value provides a good balance between precision and responsiveness.
+See also
+--------
+GLFW scroll documentation: https://www.glfw.org/docs/latest/input_guide.html#scrolling
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a7a5a713c6c71e0c1de1f26d3c7d9a522}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a7a5a713c6c71e0c1de1f26d3c7d9a522}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!angle\_x@{angle\_x}}
+\index{angle\_x@{angle\_x}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{angle\_x}{angle\_x}}
+{\footnotesize\ttfamily float python\+\_\+package.\+scripts.\+neuronviewer.\+angle\+\_\+x = 0.\+0}
+
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a93c4e62564a602400025a9c6ecee292d}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a93c4e62564a602400025a9c6ecee292d}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!angle\_y@{angle\_y}}
+\index{angle\_y@{angle\_y}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{angle\_y}{angle\_y}}
+{\footnotesize\ttfamily float python\+\_\+package.\+scripts.\+neuronviewer.\+angle\+\_\+y = 0.\+0}
+
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a711df9d9f2f32f00de14901d6f2af41b}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a711df9d9f2f32f00de14901d6f2af41b}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!distance@{distance}}
+\index{distance@{distance}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily float python\+\_\+package.\+scripts.\+neuronviewer.\+distance = 300.\+0}
+
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_aaa606405202000da0baa7bc2b0863c9d}\label{namespacepython__package_1_1scripts_1_1neuronviewer_aaa606405202000da0baa7bc2b0863c9d}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!last\_x@{last\_x}}
+\index{last\_x@{last\_x}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{last\_x}{last\_x}}
+{\footnotesize\ttfamily python\+\_\+package.\+scripts.\+neuronviewer.\+last\+\_\+x}
+
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a209f0006fa754ac2f454ea8c502a73bf}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a209f0006fa754ac2f454ea8c502a73bf}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!last\_y@{last\_y}}
+\index{last\_y@{last\_y}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{last\_y}{last\_y}}
+{\footnotesize\ttfamily python\+\_\+package.\+scripts.\+neuronviewer.\+last\+\_\+y}
+
+\mbox{\Hypertarget{namespacepython__package_1_1scripts_1_1neuronviewer_a631eb153ca418391fe18561f9673d4f4}\label{namespacepython__package_1_1scripts_1_1neuronviewer_a631eb153ca418391fe18561f9673d4f4}} 
+\index{python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}!mouse\_pressed@{mouse\_pressed}}
+\index{mouse\_pressed@{mouse\_pressed}!python\_package.scripts.neuronviewer@{python\_package.scripts.neuronviewer}}
+\doxysubsubsection{\texorpdfstring{mouse\_pressed}{mouse\_pressed}}
+{\footnotesize\ttfamily bool python\+\_\+package.\+scripts.\+neuronviewer.\+mouse\+\_\+pressed = False}
+

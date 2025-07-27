@@ -1,0 +1,4 @@
+<map id="NeuronGraph::getTrunks" name="NeuronGraph::getTrunks">
+<area shape="rect" id="node1" title="Extracts trunk segments from a neuron morphology." alt="" coords="5,5,171,32"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e" title="Builds a neighbor map from a set of nodes." alt="" coords="219,5,421,32"/>
+</map>

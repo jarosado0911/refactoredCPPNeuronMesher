@@ -1,6 +1,7 @@
 <map id="doctest::AssertData" name="doctest::AssertData">
-<area shape="rect" id="node1" title=" " alt="" coords="145,199,284,225"/>
-<area shape="rect" id="node2" href="$structdoctest_1_1TestCaseData.html" title=" " alt="" coords="136,102,293,129"/>
-<area shape="rect" id="node3" href="$classdoctest_1_1String.html" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node4" href="$classdoctest_1_1AssertData_1_1StringContains.html" title=" " alt="" coords="317,95,456,136"/>
+<area shape="rect" id="node1" title=" " alt="" coords="45,303,183,329"/>
+<area shape="rect" id="node2" href="$structdoctest_1_1TestCaseData.html" title=" " alt="" coords="99,147,257,173"/>
+<area shape="rect" id="node3" href="$classdoctest_1_1String.html" title=" " alt="" coords="125,5,231,32"/>
+<area shape="rect" id="node5" href="$classdoctest_1_1Contains.html" title=" " alt="" coords="219,95,345,121"/>
+<area shape="rect" id="node4" href="$classdoctest_1_1AssertData_1_1StringContains.html" title=" " alt="" coords="218,199,357,240"/>
 </map>

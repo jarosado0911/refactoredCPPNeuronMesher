@@ -65,6 +65,7 @@ var hierarchy =
     [ "doctest::detail::should_stringify_as_underlying_type< T >", "structdoctest_1_1detail_1_1should__stringify__as__underlying__type.html", null ],
     [ "doctest::skip", "structdoctest_1_1skip.html", null ],
     [ "stb_easy_font_color", "structstb__easy__font__color.html", null ],
+    [ "stb_easy_font_info_struct", "structstb__easy__font__info__struct.html", null ],
     [ "doctest::String", "classdoctest_1_1String.html", null ],
     [ "doctest::AssertData::StringContains", "classdoctest_1_1AssertData_1_1StringContains.html", null ],
     [ "doctest::detail::StringMakerBase< C >", "structdoctest_1_1detail_1_1StringMakerBase.html", null ],
@@ -91,5 +92,6 @@ var hierarchy =
       [ "doctest::detail::types::is_rvalue_reference< T && >", "structdoctest_1_1detail_1_1types_1_1is__rvalue__reference_3_01T_01_6_6_01_4.html", null ]
     ] ],
     [ "std::tuple< Types >", "classstd_1_1tuple.html", null ],
-    [ "doctest::detail::types::underlying_type< T >", "structdoctest_1_1detail_1_1types_1_1underlying__type.html", null ]
+    [ "doctest::detail::types::underlying_type< T >", "structdoctest_1_1detail_1_1types_1_1underlying__type.html", null ],
+    [ "doctest::String::view", "structdoctest_1_1String_1_1view.html", null ]
 ];

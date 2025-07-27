@@ -13,6 +13,11 @@ Collaboration diagram for doctest\+::String\+:\nopagebreak
 \includegraphics[width=187pt]{classdoctest_1_1String__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdoctest_1_1String_1_1view}{view}}
+\begin{DoxyCompactList}\small\item\em OCLINT avoid private static members. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -70,6 +75,39 @@ int \mbox{\hyperlink{classdoctest_1_1String_adb57becb56e054d981e7c2b967a7e359}{c
 \item 
 static constexpr \mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} \mbox{\hyperlink{classdoctest_1_1String_ad5fced1b6920313fe44a9ea1f736a4ef}{npos}} = static\+\_\+cast$<$\mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}}$>$(-\/1)
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classdoctest_1_1String_a6f861e8ed006680f430dfc05844f44ca}{allocate}} (\mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} sz)
+\item 
+bool \mbox{\hyperlink{classdoctest_1_1String_a3d0c1d8e0d27818235e0639f49d232e9}{is\+On\+Stack}} () const noexcept
+\item 
+void \mbox{\hyperlink{classdoctest_1_1String_ae81f4517c89c01eee8c750eddcf62197}{set\+On\+Heap}} () noexcept
+\item 
+void \mbox{\hyperlink{classdoctest_1_1String_a62268e72280c4eff28d92fe47a76828c}{set\+Last}} (\mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} in=\mbox{\hyperlink{classdoctest_1_1String_a7556e9dc0e91da4040218da3750d9da5}{last}}) noexcept
+\item 
+void \mbox{\hyperlink{classdoctest_1_1String_a72dcec3321fa6dd19f0463b574b05e8b}{set\+Size}} (\mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} sz) noexcept
+\item 
+void \mbox{\hyperlink{classdoctest_1_1String_a9adde1fae310e0d1a394cc1383495572}{copy}} (const \mbox{\hyperlink{classdoctest_1_1String}{String}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>char \mbox{\hyperlink{classdoctest_1_1String_a7e031ced488588936a540eba26facf67}{buf}} \mbox{[}\mbox{\hyperlink{classdoctest_1_1String_ab296aa939b5758284ab42ad4aa741725}{len}}\mbox{]}\\
+\>\mbox{\hyperlink{structdoctest_1_1String_1_1view}{view}} \mbox{\hyperlink{classdoctest_1_1String_a5c77ed634a1b81aea739a73fb01d986a}{data}}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} \mbox{\hyperlink{classdoctest_1_1String_ab296aa939b5758284ab42ad4aa741725}{len}} = 24
+\item 
+static constexpr \mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} \mbox{\hyperlink{classdoctest_1_1String_a7556e9dc0e91da4040218da3750d9da5}{last}} = \mbox{\hyperlink{classdoctest_1_1String_ab296aa939b5758284ab42ad4aa741725}{len}} -\/ 1
+\begin{DoxyCompactList}\small\item\em OCLINT avoid private static members. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -132,6 +170,12 @@ static constexpr \mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdoctest_1_1String_a6f861e8ed006680f430dfc05844f44ca}\label{classdoctest_1_1String_a6f861e8ed006680f430dfc05844f44ca}} 
+\index{doctest::String@{doctest::String}!allocate@{allocate}}
+\index{allocate@{allocate}!doctest::String@{doctest::String}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily char$\ast$ doctest\+::\+String\+::allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}}}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classdoctest_1_1String_a35df67f11652bcc568ad3af470c344c0}\label{classdoctest_1_1String_a35df67f11652bcc568ad3af470c344c0}} 
 \index{doctest::String@{doctest::String}!c\_str@{c\_str}}
 \index{c\_str@{c\_str}!doctest::String@{doctest::String}}
@@ -176,6 +220,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{compare()}{compare()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily int doctest\+::\+String\+::compare (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdoctest_1_1String}{String}} \&}]{other,  }\item[{bool}]{no\+\_\+case = {\ttfamily false} }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{classdoctest_1_1String_a9adde1fae310e0d1a394cc1383495572}\label{classdoctest_1_1String_a9adde1fae310e0d1a394cc1383495572}} 
+\index{doctest::String@{doctest::String}!copy@{copy}}
+\index{copy@{copy}!doctest::String@{doctest::String}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily void doctest\+::\+String\+::copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdoctest_1_1String}{String}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classdoctest_1_1String_aa7b27b07ca5bf081b3ec25a3224a7a05}\label{classdoctest_1_1String_aa7b27b07ca5bf081b3ec25a3224a7a05}} 
 \index{doctest::String@{doctest::String}!find@{find}}
 \index{find@{find}!doctest::String@{doctest::String}}
@@ -189,6 +239,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=307pt]{classdoctest_1_1String_aa7b27b07ca5bf081b3ec25a3224a7a05_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classdoctest_1_1String_a3d0c1d8e0d27818235e0639f49d232e9}\label{classdoctest_1_1String_a3d0c1d8e0d27818235e0639f49d232e9}} 
+\index{doctest::String@{doctest::String}!isOnStack@{isOnStack}}
+\index{isOnStack@{isOnStack}!doctest::String@{doctest::String}}
+\doxysubsubsection{\texorpdfstring{isOnStack()}{isOnStack()}}
+{\footnotesize\ttfamily bool doctest\+::\+String\+::is\+On\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
 \mbox{\Hypertarget{classdoctest_1_1String_ad1df797f12cd140e3d1739f2b30b64d2}\label{classdoctest_1_1String_ad1df797f12cd140e3d1739f2b30b64d2}} 
 \index{doctest::String@{doctest::String}!operator+=@{operator+=}}
 \index{operator+=@{operator+=}!doctest::String@{doctest::String}}
@@ -224,6 +280,24 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{rfind@{rfind}!doctest::String@{doctest::String}}
 \doxysubsubsection{\texorpdfstring{rfind()}{rfind()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} doctest\+::\+String\+::rfind (\begin{DoxyParamCaption}\item[{char}]{ch,  }\item[{\mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}}}]{pos = {\ttfamily \mbox{\hyperlink{classdoctest_1_1String_ad5fced1b6920313fe44a9ea1f736a4ef}{npos}}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classdoctest_1_1String_a62268e72280c4eff28d92fe47a76828c}\label{classdoctest_1_1String_a62268e72280c4eff28d92fe47a76828c}} 
+\index{doctest::String@{doctest::String}!setLast@{setLast}}
+\index{setLast@{setLast}!doctest::String@{doctest::String}}
+\doxysubsubsection{\texorpdfstring{setLast()}{setLast()}}
+{\footnotesize\ttfamily void doctest\+::\+String\+::set\+Last (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}}}]{in = {\ttfamily \mbox{\hyperlink{classdoctest_1_1String_a7556e9dc0e91da4040218da3750d9da5}{last}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classdoctest_1_1String_ae81f4517c89c01eee8c750eddcf62197}\label{classdoctest_1_1String_ae81f4517c89c01eee8c750eddcf62197}} 
+\index{doctest::String@{doctest::String}!setOnHeap@{setOnHeap}}
+\index{setOnHeap@{setOnHeap}!doctest::String@{doctest::String}}
+\doxysubsubsection{\texorpdfstring{setOnHeap()}{setOnHeap()}}
+{\footnotesize\ttfamily void doctest\+::\+String\+::set\+On\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classdoctest_1_1String_a72dcec3321fa6dd19f0463b574b05e8b}\label{classdoctest_1_1String_a72dcec3321fa6dd19f0463b574b05e8b}} 
+\index{doctest::String@{doctest::String}!setSize@{setSize}}
+\index{setSize@{setSize}!doctest::String@{doctest::String}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void doctest\+::\+String\+::set\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}}}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
 
 \mbox{\Hypertarget{classdoctest_1_1String_acc9888303b7330a8dc78d3d79eadcf7c}\label{classdoctest_1_1String_acc9888303b7330a8dc78d3d79eadcf7c}} 
 \index{doctest::String@{doctest::String}!size@{size}}
@@ -269,17 +343,37 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdoctest_1_1String_ab9310b7f606204c59b4dbcd112faa299}\label{classdoctest_1_1String_ab9310b7f606204c59b4dbcd112faa299}} 
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \} \hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classdoctest_1_1String_a7e031ced488588936a540eba26facf67}\label{classdoctest_1_1String_a7e031ced488588936a540eba26facf67}} 
 \index{doctest::String@{doctest::String}!buf@{buf}}
 \index{buf@{buf}!doctest::String@{doctest::String}}
 \doxysubsubsection{\texorpdfstring{buf}{buf}}
-{\footnotesize\ttfamily char doctest\+::\+String\+::buf\mbox{[}len\mbox{]}}
+{\footnotesize\ttfamily char doctest\+::\+String\+::buf\mbox{[}\mbox{\hyperlink{classdoctest_1_1String_ab296aa939b5758284ab42ad4aa741725}{len}}\mbox{]}}
 
 \mbox{\Hypertarget{classdoctest_1_1String_a5c77ed634a1b81aea739a73fb01d986a}\label{classdoctest_1_1String_a5c77ed634a1b81aea739a73fb01d986a}} 
 \index{doctest::String@{doctest::String}!data@{data}}
 \index{data@{data}!doctest::String@{doctest::String}}
 \doxysubsubsection{\texorpdfstring{data}{data}}
-{\footnotesize\ttfamily view doctest\+::\+String\+::data}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdoctest_1_1String_1_1view}{view}} doctest\+::\+String\+::data}
+
+\mbox{\Hypertarget{classdoctest_1_1String_a7556e9dc0e91da4040218da3750d9da5}\label{classdoctest_1_1String_a7556e9dc0e91da4040218da3750d9da5}} 
+\index{doctest::String@{doctest::String}!last@{last}}
+\index{last@{last}!doctest::String@{doctest::String}}
+\doxysubsubsection{\texorpdfstring{last}{last}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} doctest\+::\+String\+::last = \mbox{\hyperlink{classdoctest_1_1String_ab296aa939b5758284ab42ad4aa741725}{len}} -\/ 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+OCLINT avoid private static members. 
+
+\mbox{\Hypertarget{classdoctest_1_1String_ab296aa939b5758284ab42ad4aa741725}\label{classdoctest_1_1String_ab296aa939b5758284ab42ad4aa741725}} 
+\index{doctest::String@{doctest::String}!len@{len}}
+\index{len@{len}!doctest::String@{doctest::String}}
+\doxysubsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{classdoctest_1_1String_afcf1caf7a50f91734aada0c79db5d22e}{size\+\_\+type}} doctest\+::\+String\+::len = 24\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
 
 \mbox{\Hypertarget{classdoctest_1_1String_ad5fced1b6920313fe44a9ea1f736a4ef}\label{classdoctest_1_1String_ad5fced1b6920313fe44a9ea1f736a4ef}} 
 \index{doctest::String@{doctest::String}!npos@{npos}}

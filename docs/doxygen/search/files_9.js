@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['splitrefine_2ecpp_1026',['splitrefine.cpp',['../splitrefine_8cpp.html',1,'']]],
-  ['splitrefineset_2ecpp_1027',['splitrefineSET.cpp',['../splitrefineSET_8cpp.html',1,'']]],
-  ['stb_5feasy_5ffont_2eh_1028',['stb_easy_font.h',['../stb__easy__font_8h.html',1,'']]],
-  ['swc_5fviewer_2ecpp_1029',['swc_viewer.cpp',['../swc__viewer_8cpp.html',1,'']]]
+  ['readme_2emd_1165',['README.md',['../app__neuronviewer_2README_8md.html',1,'(Global Namespace)'],['../README_8md.html',1,'(Global Namespace)']]],
+  ['renderhelpwindow_2ecpp_1166',['renderhelpwindow.cpp',['../renderhelpwindow_8cpp.html',1,'']]]
 ];

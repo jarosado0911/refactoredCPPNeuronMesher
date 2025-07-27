@@ -110,6 +110,9 @@ Include dependency graph for doctest.h:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html">doctest::String</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1String_1_1view.html">doctest::String::view</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCLINT avoid private static members.  <a href="structdoctest_1_1String_1_1view.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1Contains.html">doctest::Contains</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1TestCaseData.html">doctest::TestCaseData</a></td></tr>
@@ -1158,6 +1161,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a74ab5a541c6c8582c2e19fe086c81e19"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest_1_1detail.html#a74ab5a541c6c8582c2e19fe086c81e19">doctest::detail::consume</a> (const int *, int) noexcept</td></tr>
+<tr class="separator:a74ab5a541c6c8582c2e19fe086c81e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69bae4d605f9ca3b46f99b8464306bf9"><td class="memTemplParams" colspan="2">template&lt;class traits &gt; </td></tr>
 <tr class="memitem:a69bae4d605f9ca3b46f99b8464306bf9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classstd_1_1basic__ostream.html">basic_ostream</a>&lt; char, traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#a69bae4d605f9ca3b46f99b8464306bf9">std::operator&lt;&lt;</a> (<a class="el" href="classstd_1_1basic__ostream.html">basic_ostream</a>&lt; char, traits &gt; &amp;, const char *)</td></tr>
 <tr class="separator:a69bae4d605f9ca3b46f99b8464306bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1336,6 +1341,8 @@ Variables</h2></td></tr>
 <tr class="separator:adc27271d5708e23ddd424987ab96c71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a257144d27898c6057ed16f0d0205c3a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedoctest.html#a257144d27898c6057ed16f0d0205c3a2">doctest::is_running_in_test</a></td></tr>
 <tr class="separator:a257144d27898c6057ed16f0d0205c3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed45a98132d100f2f34a4d0318182d3a"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="doctest_8h.html#aed45a98132d100f2f34a4d0318182d3a">DOCTEST_ANON_VAR___LINE__</a> = <a class="el" href="namespacedoctest_1_1detail.html#a74ab5a541c6c8582c2e19fe086c81e19">doctest::detail::consume</a>(&amp; DOCTEST_ANON_VAR___LINE__ , <a class="el" href="namespacedoctest_1_1detail.html#a43e7d7a3a29691b5a4b7ce4192463649">doctest::detail::setTestSuite</a>(<a class="el" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a>() * &quot;&quot;) )</td></tr>
+<tr class="separator:aed45a98132d100f2f34a4d0318182d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1937649cc9503739c20b3c81b97b5e5d"></a>
@@ -4319,8 +4326,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="doctest_8h.html#aeffeb8afb2053d165c856f4ee520b62b">DOCTEST_CLANG_SUPPRESS_WARNING_WITH_PUSH</a>(<span class="stringliteral">&quot;-Wglobal-constructors&quot;</span>)                                \</div>
-<div class="line">    static <span class="keyword">const</span> <span class="keywordtype">int</span> var = doctest::detail::consume(&amp;var, __VA_ARGS__);                              \</div>
+<div class="line">    static <span class="keyword">const</span> <span class="keywordtype">int</span> var = <a class="code" href="namespacedoctest_1_1detail.html#a74ab5a541c6c8582c2e19fe086c81e19">doctest::detail::consume</a>(&amp;var, __VA_ARGS__);                              \</div>
 <div class="line">    DOCTEST_CLANG_SUPPRESS_WARNING_POP</div>
+<div class="ttc" id="anamespacedoctest_1_1detail_html_a74ab5a541c6c8582c2e19fe086c81e19"><div class="ttname"><a href="namespacedoctest_1_1detail.html#a74ab5a541c6c8582c2e19fe086c81e19">doctest::detail::consume</a></div><div class="ttdeci">static constexpr int consume(const int *, int) noexcept</div><div class="ttdef"><b>Definition:</b> doctest.h:447</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -9346,6 +9354,29 @@ Variables</h2></td></tr>
           <td class="memname">using <a class="el" href="doctest_8h.html#a6b64609ab3b7120bf7d2a09263c15be3">DOCTEST_ANON_FOR_SEMICOLON___LINE__</a> =  int ()</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aed45a98132d100f2f34a4d0318182d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed45a98132d100f2f34a4d0318182d3a">&#9670;&nbsp;</a></span>DOCTEST_ANON_VAR___LINE__</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int DOCTEST_ANON_VAR___LINE__ = <a class="el" href="namespacedoctest_1_1detail.html#a74ab5a541c6c8582c2e19fe086c81e19">doctest::detail::consume</a>(&amp; DOCTEST_ANON_VAR___LINE__ , <a class="el" href="namespacedoctest_1_1detail.html#a43e7d7a3a29691b5a4b7ce4192463649">doctest::detail::setTestSuite</a>(<a class="el" href="structdoctest_1_1detail_1_1TestSuite.html">doctest::detail::TestSuite</a>() * &quot;&quot;) )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

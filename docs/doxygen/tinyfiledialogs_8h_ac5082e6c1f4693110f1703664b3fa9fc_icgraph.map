@@ -1,6 +1,13 @@
 <map id="tinyfd_messageBox" name="tinyfd_messageBox">
-<area shape="rect" id="node1" title=" " alt="" coords="272,31,409,57"/>
-<area shape="rect" id="node2" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="117,5,211,32"/>
-<area shape="rect" id="node4" href="$tinyfiledialogs_8c.html#aa1a9656338b38479c1d5e2a1dde4ed9b" title=" " alt="" coords="104,56,224,83"/>
-<area shape="rect" id="node3" href="$neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="643,94,780,121"/>
+<area shape="rect" id="node2" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="104,94,199,121"/>
+<area shape="rect" id="node4" href="$tinyfiledialogs_8c.html#aa1a9656338b38479c1d5e2a1dde4ed9b" title=" " alt="" coords="469,69,589,95"/>
+<area shape="rect" id="node5" href="$tinyfiledialogs_8c.html#a62849e223b13b73fdfe05543a85a7c58" title=" " alt="" coords="473,119,585,146"/>
+<area shape="rect" id="node11" href="$tinyfiledialogs_8c.html#ad91628b8a0640682241aa189f03a30ba" title=" " alt="" coords="464,170,595,197"/>
+<area shape="rect" id="node3" href="$neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,94,56,121"/>
+<area shape="rect" id="node6" href="$tinyfiledialogs_8c.html#aedce7bb7c648a3de1b5ae958748acea0" title=" " alt="" coords="284,43,379,70"/>
+<area shape="rect" id="node7" href="$tinyfiledialogs_8c.html#a2f9b70adb58963e8ff41ab6a93b7ca48" title=" " alt="" coords="262,94,401,121"/>
+<area shape="rect" id="node8" href="$tinyfiledialogs_8c.html#a8918e9f47e1532c1d055f563a32b215c" title=" " alt="" coords="258,145,405,171"/>
+<area shape="rect" id="node9" href="$tinyfiledialogs_8c.html#a7a17e17150593bf3b04253ea819fc5bc" title=" " alt="" coords="258,195,405,222"/>
+<area shape="rect" id="node10" href="$tinyfiledialogs_8c.html#ab776afd1dd5932c765c32a71fe4c090c" title=" " alt="" coords="247,246,416,273"/>
 </map>

@@ -1,0 +1,34 @@
+var namespacepython__package_1_1test =
+[
+    [ "test_bindings", "namespacepython__package_1_1test_1_1test__bindings.html", [
+      [ "get_output_dir", "namespacepython__package_1_1test_1_1test__bindings.html#a5aa2a020be0336f83ab0f0ddeee1de61", null ],
+      [ "get_test_data_path", "namespacepython__package_1_1test_1_1test__bindings.html#a2db324d8d5ff4561ccf90912bd7b29da", null ],
+      [ "graph", "namespacepython__package_1_1test_1_1test__bindings.html#a1c77a0c9a494ff93bbb124386f23f64a", null ],
+      [ "test_assemble_cubic_resample", "namespacepython__package_1_1test_1_1test__bindings.html#a78f7cf207dbae5f1f8a26d690fcccc73", null ],
+      [ "test_assemble_linear_resample", "namespacepython__package_1_1test_1_1test__bindings.html#a5dc09d6a4c6b023cd323b71fbd6bb53b", null ],
+      [ "test_assemble_trunks", "namespacepython__package_1_1test_1_1test__bindings.html#a58b81b0cfe4172e492d6ff6e3cf5b5ba", null ],
+      [ "test_assemble_trunks2", "namespacepython__package_1_1test_1_1test__bindings.html#a0bc824ecf1f30a5251e919c4e34a9299", null ],
+      [ "test_generate_refinements_cubic", "namespacepython__package_1_1test_1_1test__bindings.html#a7681cc53eacd1da3233e60bed8d8b07e", null ],
+      [ "test_generate_refinements_linear", "namespacepython__package_1_1test_1_1test__bindings.html#ac2613c30cd28b875671d0d3624e16c71", null ],
+      [ "test_get_nodes", "namespacepython__package_1_1test_1_1test__bindings.html#a563043be363c7505552923e115a6877a", null ],
+      [ "test_get_trunks", "namespacepython__package_1_1test_1_1test__bindings.html#a35799398bd614f962ec3b772d985f278", null ],
+      [ "test_has_soma_segment", "namespacepython__package_1_1test_1_1test__bindings.html#ac18158648cc123f385c8abbd4c319320", null ],
+      [ "test_initializer", "namespacepython__package_1_1test_1_1test__bindings.html#a14ba953b401e12d7496523aad8d55cf1", null ],
+      [ "test_initializer2", "namespacepython__package_1_1test_1_1test__bindings.html#abd90884371c2f4d0c2a7d4e03a1cb6ec", null ],
+      [ "test_is_soma_missing", "namespacepython__package_1_1test_1_1test__bindings.html#aa0c0e5acb9f1c1f176ff11c45f4d7612", null ],
+      [ "test_number_of_edges", "namespacepython__package_1_1test_1_1test__bindings.html#a647afb613bcf278e77fc83b51bae27f3", null ],
+      [ "test_number_of_nodes", "namespacepython__package_1_1test_1_1test__bindings.html#a274e86b0f93fc725f9a2da30afe798ba", null ],
+      [ "test_preprocess", "namespacepython__package_1_1test_1_1test__bindings.html#adbde22cf94011d8c71087b67e881f87e", null ],
+      [ "test_read_from_fileUGX", "namespacepython__package_1_1test_1_1test__bindings.html#aef66f04ec13a8b52281c5255e0d83e14", null ],
+      [ "test_remove_soma_segment", "namespacepython__package_1_1test_1_1test__bindings.html#a0896b5aa6dcbef4de8c37c47ac1a0147", null ],
+      [ "test_save_preprocess", "namespacepython__package_1_1test_1_1test__bindings.html#a7f7e4fc2152fcaacb5be2051f7ff49d4", null ],
+      [ "test_set_nodes", "namespacepython__package_1_1test_1_1test__bindings.html#a34e1e6f40a6c89fd8b3273c6b5f1d44a", null ],
+      [ "test_splitedges", "namespacepython__package_1_1test_1_1test__bindings.html#a31ecffff3fe026e5783738783a60efd8", null ],
+      [ "test_splitedgesN", "namespacepython__package_1_1test_1_1test__bindings.html#a65bb854cd455dccbee0ea7c5b56d86d4", null ],
+      [ "test_swc_to_ugx", "namespacepython__package_1_1test_1_1test__bindings.html#acd301d2a9c943644384d014acc869e5f", null ],
+      [ "test_topological_sort", "namespacepython__package_1_1test_1_1test__bindings.html#a181613f90586ad732bd544b35dedb80b", null ],
+      [ "test_ugx_to_swc", "namespacepython__package_1_1test_1_1test__bindings.html#a00746dce147064869541d01e1dd348ff", null ],
+      [ "test_write_to_ugx", "namespacepython__package_1_1test_1_1test__bindings.html#ab105c78370d7573e3445499b48245a41", null ],
+      [ "delta", "namespacepython__package_1_1test_1_1test__bindings.html#a80bdcd7a78c01872af356d1023f4f2be", null ]
+    ] ]
+];

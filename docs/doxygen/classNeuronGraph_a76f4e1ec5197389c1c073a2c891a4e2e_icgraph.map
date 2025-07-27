@@ -1,0 +1,8 @@
+<map id="NeuronGraph::getNeighborMap" name="NeuronGraph::getNeighborMap">
+<area shape="rect" id="node1" title="Builds a neighbor map from a set of nodes." alt="" coords="696,81,899,108"/>
+<area shape="rect" id="node2" href="$classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="483,81,648,108"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#acbf58bd7db5d97c97ec95b63c679a62a" title="Generates multiple levels of refined neuron morphologies." alt="" coords="204,5,435,32"/>
+<area shape="rect" id="node4" href="$bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,31,156,57"/>
+<area shape="rect" id="node5" href="$callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="272,107,367,133"/>
+<area shape="rect" id="node6" href="$extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="294,157,345,184"/>
+</map>

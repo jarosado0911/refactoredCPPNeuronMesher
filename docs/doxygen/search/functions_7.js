@@ -1,4 +1,30 @@
 var searchData=
 [
-  ['hassomasegment_1095',['hasSomaSegment',['../classNeuronGraph.html#abc081d9ef1972cbc262571246698f0f2',1,'NeuronGraph::hasSomaSegment(const std::map&lt; int, SWCNode &gt; &amp;nodeSet) const'],['../classNeuronGraph.html#ade30f063c2aeaaa9817606497f16875b',1,'NeuronGraph::hasSomaSegment() const']]]
+  ['gdialogpresent_1243',['gdialogPresent',['../tinyfiledialogs_8c.html#a26a975a42ad504050daa9c7f132e280d',1,'tinyfiledialogs.c']]],
+  ['ge_1244',['ge',['../namespacedoctest_1_1detail.html#ad71e8d309e6c0a2ed5b4b00ba29bde07',1,'doctest::detail']]],
+  ['generaterefinements_1245',['generateRefinements',['../classNeuronGraph.html#a607cb1a4a78a63ac33c462337f178b18',1,'NeuronGraph::generateRefinements(double &amp;delta, int &amp;N, std::string &amp;method)'],['../classNeuronGraph.html#acbf58bd7db5d97c97ec95b63c679a62a',1,'NeuronGraph::generateRefinements(const std::map&lt; int, SWCNode &gt; &amp;nodeSet, double &amp;delta, int &amp;N, std::string &amp;method)']]],
+  ['get_5factive_5fcontexts_1246',['get_active_contexts',['../structdoctest_1_1IReporter.html#a67a2da62d754d3b517d6d50ef210a988',1,'doctest::IReporter']]],
+  ['get_5fnum_5factive_5fcontexts_1247',['get_num_active_contexts',['../structdoctest_1_1IReporter.html#a7d520de46d9104c0eeb02375fabad32d',1,'doctest::IReporter']]],
+  ['get_5fnum_5fstringified_5fcontexts_1248',['get_num_stringified_contexts',['../structdoctest_1_1IReporter.html#ac8b96fef046edc609a3374a61b84797d',1,'doctest::IReporter']]],
+  ['get_5foutput_5fdir_1249',['get_output_dir',['../namespacepython__package_1_1test_1_1test__bindings.html#a5aa2a020be0336f83ab0f0ddeee1de61',1,'python_package::test::test_bindings']]],
+  ['get_5fstringified_5fcontexts_1250',['get_stringified_contexts',['../structdoctest_1_1IReporter.html#acc1a86891876a957c6fc382af7894f99',1,'doctest::IReporter']]],
+  ['get_5ftest_5fdata_5fpath_1251',['get_test_data_path',['../namespacepython__package_1_1test_1_1test__bindings.html#a2db324d8d5ff4561ccf90912bd7b29da',1,'python_package::test::test_bindings']]],
+  ['getcontextoptions_1252',['getContextOptions',['../namespacedoctest.html#ab27afbd1ff6e5c2b18c53bbd27196a73',1,'doctest']]],
+  ['getcurdir_1253',['getCurDir',['../tinyfiledialogs_8c.html#ade09309ff58892f8bcaa444e440c36d0',1,'tinyfiledialogs.c']]],
+  ['getcurrenttestsuite_1254',['getCurrentTestSuite',['../namespacedoctest__detail__test__suite__ns.html#a57c74e31a17fa9d6e424d9093549fb38',1,'doctest_detail_test_suite_ns']]],
+  ['getenvdisplay_1255',['getenvDISPLAY',['../tinyfiledialogs_8c.html#a41c87c0dfbae15a0f58ac7dc6aae9df3',1,'tinyfiledialogs.c']]],
+  ['getexecutabledir_1256',['getExecutableDir',['../utils_8cpp.html#a61041010719c9542fda1970c0d005abf',1,'getExecutableDir():&#160;utils.cpp'],['../utils_8h.html#a61041010719c9542fda1970c0d005abf',1,'getExecutableDir():&#160;utils.cpp']]],
+  ['getlastname_1257',['getLastName',['../tinyfiledialogs_8c.html#a25e21eec46d56cee2ede392879228b99',1,'tinyfiledialogs.c']]],
+  ['getmajorminorpatch_1258',['getMajorMinorPatch',['../tinyfiledialogs_8c.html#a90c7539481edef61716be515bffe6669',1,'tinyfiledialogs.c']]],
+  ['getneighbormap_1259',['getNeighborMap',['../classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e',1,'NeuronGraph']]],
+  ['getnodes_1260',['getNodes',['../classNeuronGraph.html#aadf6c2dcb7cd1aa1d3664009eede14be',1,'NeuronGraph']]],
+  ['getpathwithoutfinalslash_1261',['getPathWithoutFinalSlash',['../tinyfiledialogs_8c.html#a6b6ad1f832c8368c8799447d661c2e4b',1,'tinyfiledialogs.c']]],
+  ['gettrunkparentmap_1262',['getTrunkParentMap',['../classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619',1,'NeuronGraph']]],
+  ['gettrunks_1263',['getTrunks',['../classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065',1,'NeuronGraph::getTrunks(const std::map&lt; int, SWCNode &gt; &amp;nodeSet, bool resetIndex=false) const'],['../classNeuronGraph.html#a74bfbcdde59807456a3ed21aa244fe48',1,'NeuronGraph::getTrunks(bool resetIndex=false) const']]],
+  ['getversion_1264',['getVersion',['../tinyfiledialogs_8c.html#aa1826e1aa138f7342056fb2c78879d93',1,'tinyfiledialogs.c']]],
+  ['gmessagepresent_1265',['gmessagePresent',['../tinyfiledialogs_8c.html#a73c50a053d690eb0e3a134dd20464f14',1,'tinyfiledialogs.c']]],
+  ['graph_1266',['graph',['../namespacepython__package_1_1test_1_1test__bindings.html#a1c77a0c9a494ff93bbb124386f23f64a',1,'python_package::test::test_bindings']]],
+  ['graphicmode_1267',['graphicMode',['../tinyfiledialogs_8c.html#ace6f0894743de5d9d85408deb51cac51',1,'tinyfiledialogs.c']]],
+  ['gt_1268',['gt',['../namespacedoctest_1_1detail.html#a5f6a44bcefeb1c334ba762da38ae5350',1,'doctest::detail']]],
+  ['gxmessagepresent_1269',['gxmessagePresent',['../tinyfiledialogs_8c.html#a534a425bbbaeaea0f48ceb48ebce8129',1,'tinyfiledialogs.c']]]
 ];

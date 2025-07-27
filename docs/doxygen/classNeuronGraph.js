@@ -11,6 +11,7 @@ var classNeuronGraph =
     [ "cubicSplineResampleTrunk", "classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956", null ],
     [ "generateRefinements", "classNeuronGraph.html#acbf58bd7db5d97c97ec95b63c679a62a", null ],
     [ "generateRefinements", "classNeuronGraph.html#a607cb1a4a78a63ac33c462337f178b18", null ],
+    [ "getNeighborMap", "classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e", null ],
     [ "getNodes", "classNeuronGraph.html#aadf6c2dcb7cd1aa1d3664009eede14be", null ],
     [ "getTrunkParentMap", "classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619", null ],
     [ "getTrunks", "classNeuronGraph.html#a74bfbcdde59807456a3ed21aa244fe48", null ],
@@ -44,5 +45,7 @@ var classNeuronGraph =
     [ "writeToFile", "classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb", null ],
     [ "writeToFile", "classNeuronGraph.html#a0dec1b5ec2012af3aa6cb50ce2c08941", null ],
     [ "writeToFileUGX", "classNeuronGraph.html#a938d33cc1ee5a5abc291c555e0a60ad5", null ],
-    [ "writeToFileUGX", "classNeuronGraph.html#aa4db233a8438b8eb45241f79c3a8cfe4", null ]
+    [ "writeToFileUGX", "classNeuronGraph.html#aa4db233a8438b8eb45241f79c3a8cfe4", null ],
+    [ "edges", "classNeuronGraph.html#ae9cbc0c7feb5dcfbc415fb65ca5f782a", null ],
+    [ "nodes", "classNeuronGraph.html#a312adb405dceafb6b1a736bd8e4ded88", null ]
 ];
