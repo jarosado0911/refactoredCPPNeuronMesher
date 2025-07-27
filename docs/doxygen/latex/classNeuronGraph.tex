@@ -1,0 +1,1697 @@
+\hypertarget{classNeuronGraph}{}\doxysection{Neuron\+Graph Class Reference}
+\label{classNeuronGraph}\index{NeuronGraph@{NeuronGraph}}
+
+
+Class for representing and processing neuron morphology graphs.  
+
+
+
+
+{\ttfamily \#include $<$neurongraph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNeuronGraph_ad652dbc8d74bbd8f0d5dc182711a4d6f}{Neuron\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNeuronGraph_a8b2d5d03d0953e5cff1edc4e396d97c2}{Neuron\+Graph}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor that loads a neuron from file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNeuronGraph_a76872c37616f9517420fd8ef11240040}{Neuron\+Graph}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} from an existing set of nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_a453e31c723b0dc9d692d8663d93be51a}{add\+Node}} (const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&node)
+\begin{DoxyCompactList}\small\item\em Adds a single node to the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237}{set\+Nodes}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set)
+\begin{DoxyCompactList}\small\item\em Replaces the current set of nodes in the graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNeuronGraph_a7b7eae0aeccf7e7aec8f3cab6008f37c}{is\+Topologically\+Sorted}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set) const
+\begin{DoxyCompactList}\small\item\em Checks if a set of nodes is topologically sorted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNeuronGraph_a0a94b95b0afc5d98590e631f963a970d}{is\+Topologically\+Sorted}} () const
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_ab66e25466d6c0b228b95c118963e7cb0}{topological\+Sort}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set) const
+\begin{DoxyCompactList}\small\item\em Sorts nodes topologically using Kahn\textquotesingle{}s algorithm. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a096f5d8b9231d0b27f0a60a694db41d3}{topological\+Sort}} () const
+\item 
+bool \mbox{\hyperlink{classNeuronGraph_abc081d9ef1972cbc262571246698f0f2}{has\+Soma\+Segment}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set) const
+\begin{DoxyCompactList}\small\item\em Checks if the node set contains a soma segment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNeuronGraph_ade30f063c2aeaaa9817606497f16875b}{has\+Soma\+Segment}} () const
+\item 
+bool \mbox{\hyperlink{classNeuronGraph_a84a4ee923b6547a3d2fa7c8953932ed0}{is\+Soma\+Missing}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set) const
+\begin{DoxyCompactList}\small\item\em Checks if the node set is missing a soma. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNeuronGraph_ae25c92d56c3019385447d3dc7ab86346}{is\+Soma\+Missing}} () const
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_aed5eb4290d85b7a134f95fa5b453ba50}{remove\+Soma\+Segment}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&input\+Nodes) const
+\begin{DoxyCompactList}\small\item\em Removes the soma segment from a set of nodes. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a0d0ce27089a76553f8e4e109ffdf8183}{remove\+Soma\+Segment}} () const
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a4da98a459bd4ddaa00df5ed08bc80477}{set\+Soma}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set) const
+\begin{DoxyCompactList}\small\item\em Adds a soma node if none exists. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a6b0c1b97c8866106d3bb7f803b94f6f4}{set\+Soma}} () const
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35}{preprocess}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set) const
+\begin{DoxyCompactList}\small\item\em Applies standard preprocessing steps to a set of nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}{read\+From\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads neuron data from an SWC file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb}{write\+To\+File}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Writes a set of nodes to an SWC file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_a0dec1b5ec2012af3aa6cb50ce2c08941}{write\+To\+File}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb}{read\+From\+File\+UGX}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads neuron data from a UGX file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_a1c8deb90cf431df071765a400ddb144c}{read\+From\+File\+UGXor\+SWC}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads a neuron file, automatically detecting the format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5}{write\+To\+File\+UGX}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Writes a set of nodes to a UGX file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_aa4db233a8438b8eb45241f79c3a8cfe4}{write\+To\+File\+UGX}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{classNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6}{swc2ugx}} (const std\+::string \&inputfile, const std\+::string \&outputfile)
+\begin{DoxyCompactList}\small\item\em Converts an SWC file to UGX format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNeuronGraph_a31ec77a2f3c9e69317c30366560761f5}{ugx2swc}} (const std\+::string \&inputfile, const std\+::string \&outputfile)
+\begin{DoxyCompactList}\small\item\em Converts a UGX file to SWC format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNeuronGraph_a95079dcc37ed05aae8680eacf1fad317}{number\+Of\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of nodes in the graph. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNeuronGraph_ad7d477e87f08f5d83df1e22b3e2f31ef}{number\+Of\+Edges}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of edges in the graph. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classNeuronGraph_aadf6c2dcb7cd1aa1d3664009eede14be}{get\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Returns a copy of all nodes in the graph. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a4dd02c37f81fc7d5cfbb929bd25e1fa2}{split\+Edges}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set) const
+\begin{DoxyCompactList}\small\item\em Splits all edges in the graph by inserting midpoint nodes. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_abff93693953850f3bbda6dd5e694de08}{split\+Edges}} () const
+\item 
+std\+::vector$<$ std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ \mbox{\hyperlink{classNeuronGraph_acde3c34e7d73fd00635d4fef5a9fcb3d}{split\+EdgesN}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set, int N) const
+\begin{DoxyCompactList}\small\item\em Applies edge splitting N times recursively. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ \mbox{\hyperlink{classNeuronGraph_a5aeb1a2193d8a712338836d5c9ce53f4}{split\+EdgesN}} (int N) const
+\item 
+std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ \mbox{\hyperlink{classNeuronGraph_ae750a60642aa3d1a30ec9265795cd065}{get\+Trunks}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set, bool reset\+Index=false) const
+\begin{DoxyCompactList}\small\item\em Extracts trunk segments from a neuron morphology. \end{DoxyCompactList}\item 
+std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ \mbox{\hyperlink{classNeuronGraph_a74bfbcdde59807456a3ed21aa244fe48}{get\+Trunks}} (bool reset\+Index=false) const
+\item 
+std\+::map$<$ int, int $>$ \mbox{\hyperlink{classNeuronGraph_aa4a2201e3e2eddb93176ce3e84bfc619}{get\+Trunk\+Parent\+Map}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set, const std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&trunk\+Node\+Sets) const
+\begin{DoxyCompactList}\small\item\em Creates a mapping from trunk IDs to their parent trunk IDs. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a7961eded24b6524392b01fdfa7e98452}{assemble\+Trunks}} (const std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&trunk\+Node\+Sets) const
+\begin{DoxyCompactList}\small\item\em Combines multiple trunks into a single node set. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a8067ed0a71ebcbfd9092d25aec536545}{assemble\+Trunks}} (const std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&resampled\+Trunks, const std\+::map$<$ int, int $>$ \&trunk\+Parent\+Map)
+\begin{DoxyCompactList}\small\item\em Combines resampled trunks using a parent-\/child relationship map. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_a4263b75e5c5c97d6f65dd681dbdfff60}{linear\+Spline\+Resample\+Trunk}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&trunk, double \&delta) const
+\begin{DoxyCompactList}\small\item\em Resamples a single trunk using linear interpolation. \end{DoxyCompactList}\item 
+std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ \mbox{\hyperlink{classNeuronGraph_a126fba2e060c47a5a20445af0622d06b}{all\+Linear\+Spline\+Resampled\+Trunks}} (std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&trunks, double \&delta) const
+\begin{DoxyCompactList}\small\item\em Resamples all trunks using linear interpolation. \end{DoxyCompactList}\item 
+std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{classNeuronGraph_ae4a90fcdd47904cee5fc06b451e2d956}{cubic\+Spline\+Resample\+Trunk}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&trunk, double \&delta) const
+\begin{DoxyCompactList}\small\item\em Resamples a single trunk using cubic spline interpolation. \end{DoxyCompactList}\item 
+std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ \mbox{\hyperlink{classNeuronGraph_a198959fac3c6691530c888896ae777ae}{all\+Cubic\+Spline\+Resampled\+Trunks}} (std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&trunks, double \&delta) const
+\begin{DoxyCompactList}\small\item\em Resamples all trunks using cubic spline interpolation. \end{DoxyCompactList}\item 
+std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ \mbox{\hyperlink{classNeuronGraph_acbf58bd7db5d97c97ec95b63c679a62a}{generate\+Refinements}} (const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&node\+Set, double \&delta, int \&N, std\+::string \&method)
+\begin{DoxyCompactList}\small\item\em Generates multiple levels of refined neuron morphologies. \end{DoxyCompactList}\item 
+std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ \mbox{\hyperlink{classNeuronGraph_a607cb1a4a78a63ac33c462337f178b18}{generate\+Refinements}} (double \&delta, int \&N, std\+::string \&method)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for representing and processing neuron morphology graphs. 
+
+The \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} class provides comprehensive functionality for working with neuron morphology data, including file I/O, topological analysis, and geometric processing. It supports both SWC and UGX file formats and includes methods for manipulating and analyzing neuron structures.
+
+Key features\+:
+\begin{DoxyItemize}
+\item Reading and writing SWC/\+UGX files
+\item Topological sorting and validation
+\item Soma detection and processing
+\item Edge splitting and resampling
+\item Trunk extraction and manipulation 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNeuronGraph_ad652dbc8d74bbd8f0d5dc182711a4d6f}\label{classNeuronGraph_ad652dbc8d74bbd8f0d5dc182711a4d6f}} 
+\index{NeuronGraph@{NeuronGraph}!NeuronGraph@{NeuronGraph}}
+\index{NeuronGraph@{NeuronGraph}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{NeuronGraph()}{NeuronGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Neuron\+Graph\+::\+Neuron\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Creates an empty \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} with no nodes or edges. \mbox{\Hypertarget{classNeuronGraph_a8b2d5d03d0953e5cff1edc4e396d97c2}\label{classNeuronGraph_a8b2d5d03d0953e5cff1edc4e396d97c2}} 
+\index{NeuronGraph@{NeuronGraph}!NeuronGraph@{NeuronGraph}}
+\index{NeuronGraph@{NeuronGraph}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{NeuronGraph()}{NeuronGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Neuron\+Graph\+::\+Neuron\+Graph (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that loads a neuron from file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Path to the SWC or UGX file to load\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a1c8deb90cf431df071765a400ddb144c}{read\+From\+File\+UGXor\+SWC()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a76872c37616f9517420fd8ef11240040}\label{classNeuronGraph_a76872c37616f9517420fd8ef11240040}} 
+\index{NeuronGraph@{NeuronGraph}!NeuronGraph@{NeuronGraph}}
+\index{NeuronGraph@{NeuronGraph}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{NeuronGraph()}{NeuronGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Neuron\+Graph\+::\+Neuron\+Graph (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} from an existing set of nodes. 
+
+Constructor that initializes a \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} from a set of SWC nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & Map of node IDs to \mbox{\hyperlink{structSWCNode}{SWCNode}} objects\\
+\hline
+ & {\em node\+Set} & A map containing SWC nodes indexed by their IDs\\
+\hline
+\end{DoxyParams}
+This constructor creates a new \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} instance by clearing any existing data and populating the graph with the provided nodes. It automatically builds the parent-\/child relationships between nodes.
+
+\begin{DoxyNote}{Note}
+The node\+Set parameter uses structured binding, so the key is ignored (\+\_\+) 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a453e31c723b0dc9d692d8663d93be51a}{add\+Node(const SWCNode\& node)}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNeuronGraph_a453e31c723b0dc9d692d8663d93be51a}\label{classNeuronGraph_a453e31c723b0dc9d692d8663d93be51a}} 
+\index{NeuronGraph@{NeuronGraph}!addNode@{addNode}}
+\index{addNode@{addNode}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::add\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSWCNode}{SWCNode}} \&}]{node }\end{DoxyParamCaption})}
+
+
+
+Adds a single node to the graph. 
+
+Adds a single node to the graph and updates edge relationships.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node} & The \mbox{\hyperlink{structSWCNode}{SWCNode}} to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is typically used internally by other methods that read or generate node data.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The \mbox{\hyperlink{structSWCNode}{SWCNode}} to be added to the graph\\
+\hline
+\end{DoxyParams}
+This method adds a node to the internal nodes map and automatically creates the parent-\/child edge relationship if the node has a valid parent (pid != -\/1). Root nodes (pid == -\/1) are added without creating edges.
+
+\begin{DoxyNote}{Note}
+This method assumes node IDs are unique and will overwrite existing nodes 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structSWCNode}{SWCNode}} structure for node data format 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a198959fac3c6691530c888896ae777ae}\label{classNeuronGraph_a198959fac3c6691530c888896ae777ae}} 
+\index{NeuronGraph@{NeuronGraph}!allCubicSplineResampledTrunks@{allCubicSplineResampledTrunks}}
+\index{allCubicSplineResampledTrunks@{allCubicSplineResampledTrunks}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{allCubicSplineResampledTrunks()}{allCubicSplineResampledTrunks()}}
+{\footnotesize\ttfamily std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ Neuron\+Graph\+::all\+Cubic\+Spline\+Resampled\+Trunks (\begin{DoxyParamCaption}\item[{std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&}]{trunks,  }\item[{double \&}]{delta }\end{DoxyParamCaption}) const}
+
+
+
+Resamples all trunks using cubic spline interpolation. 
+
+Applies cubic spline resampling to all trunk segments in a neuron morphology.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em trunks} & Map of trunk IDs to their nodes \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em delta} & Target spacing between resampled points (may be adjusted) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new map of resampled trunks
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em trunks} & Map of trunk segments where each key is a trunk ID and value is a map of node IDs to SWCNodes \\
+\hline
+{\em delta} & Target distance between consecutive nodes in the resampled trunks (in microns) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, std\+::map$<$int, SWCNode$>$$>$ Map of resampled trunks with the same structure as input
+\end{DoxyReturn}
+This method processes each trunk segment in the input map and applies cubic spline resampling to achieve a smooth and uniform node distribution. The resampling is performed independently on each trunk.
+
+Key features\+:
+\begin{DoxyItemize}
+\item Fits a smooth cubic spline through the original nodes of each trunk
+\item Samples points at approximately \textquotesingle{}delta\textquotesingle{} intervals along the spline
+\item Preserves the start and end points of each trunk exactly
+\item Maintains the original topology while improving smoothness
+\item Handles each trunk segment independently
+\end{DoxyItemize}
+
+The resampling process involves\+:
+\begin{DoxyEnumerate}
+\item Fitting natural cubic splines to the x, y, and z coordinates separately
+\item Parameterizing the spline by arc length
+\item Sampling new points at approximately \textquotesingle{}delta\textquotesingle{} intervals along the curve
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+This method produces smoother results than linear interpolation but is more computationally intensive 
+
+The actual spacing may vary slightly to ensure the curve is sampled properly 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_ae4a90fcdd47904cee5fc06b451e2d956}{cubic\+Spline\+Resample\+Trunk()}} for the single-\/trunk implementation 
+
+\mbox{\hyperlink{classNeuronGraph_a126fba2e060c47a5a20445af0622d06b}{all\+Linear\+Spline\+Resampled\+Trunks()}} for a faster but less smooth alternative 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a126fba2e060c47a5a20445af0622d06b}\label{classNeuronGraph_a126fba2e060c47a5a20445af0622d06b}} 
+\index{NeuronGraph@{NeuronGraph}!allLinearSplineResampledTrunks@{allLinearSplineResampledTrunks}}
+\index{allLinearSplineResampledTrunks@{allLinearSplineResampledTrunks}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{allLinearSplineResampledTrunks()}{allLinearSplineResampledTrunks()}}
+{\footnotesize\ttfamily std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ Neuron\+Graph\+::all\+Linear\+Spline\+Resampled\+Trunks (\begin{DoxyParamCaption}\item[{std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&}]{trunks,  }\item[{double \&}]{delta }\end{DoxyParamCaption}) const}
+
+
+
+Resamples all trunks using linear interpolation. 
+
+Applies linear spline resampling to all trunk segments in a neuron morphology.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em trunks} & Map of trunk IDs to their nodes \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em delta} & Target spacing between resampled points (may be adjusted) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new map of resampled trunks
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em trunks} & Map of trunk segments where each key is a trunk ID and value is a map of node IDs to SWCNodes \\
+\hline
+{\em delta} & Target distance between consecutive nodes in the resampled trunks (in microns) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, std\+::map$<$int, SWCNode$>$$>$ Map of resampled trunks with the same structure as input
+\end{DoxyReturn}
+This method processes each trunk segment in the input map and applies linear spline resampling to achieve a more uniform node distribution. The resampling is performed independently on each trunk.
+
+Key features\+:
+\begin{DoxyItemize}
+\item Preserves the start and end points of each trunk exactly
+\item Inserts new nodes to achieve approximately \textquotesingle{}delta\textquotesingle{} spacing between points
+\item Maintains the original topology and branching structure
+\item Handles each trunk segment independently
+\end{DoxyItemize}
+
+The resampling process involves\+:
+\begin{DoxyEnumerate}
+\item Calculating the total length of each trunk
+\item Determining the number of segments needed based on \textquotesingle{}delta\textquotesingle{}
+\item Linearly interpolating new points along each segment
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+The actual spacing may vary slightly to ensure the start and end points are preserved exactly 
+
+This method is typically used as a preprocessing step before mesh generation 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a4263b75e5c5c97d6f65dd681dbdfff60}{linear\+Spline\+Resample\+Trunk()}} for the single-\/trunk implementation 
+
+\mbox{\hyperlink{classNeuronGraph_a198959fac3c6691530c888896ae777ae}{all\+Cubic\+Spline\+Resampled\+Trunks()}} for a smoother but more computationally intensive alternative 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a8067ed0a71ebcbfd9092d25aec536545}\label{classNeuronGraph_a8067ed0a71ebcbfd9092d25aec536545}} 
+\index{NeuronGraph@{NeuronGraph}!assembleTrunks@{assembleTrunks}}
+\index{assembleTrunks@{assembleTrunks}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{assembleTrunks()}{assembleTrunks()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::assemble\+Trunks (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&}]{resampled\+Trunks,  }\item[{const std\+::map$<$ int, int $>$ \&}]{trunk\+Parent\+Map }\end{DoxyParamCaption})}
+
+
+
+Combines resampled trunks using a parent-\/child relationship map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em resampled\+Trunks} & Map of trunk IDs to their resampled nodes \\
+\hline
+\mbox{\texttt{ in}}  & {\em trunk\+Parent\+Map} & Map of trunk IDs to their parent trunk IDs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A single map containing all nodes from all trunks with updated parent references
+\end{DoxyReturn}
+This version is used when trunk nodes have been resampled and need to be reconnected based on the original topology. \mbox{\Hypertarget{classNeuronGraph_a7961eded24b6524392b01fdfa7e98452}\label{classNeuronGraph_a7961eded24b6524392b01fdfa7e98452}} 
+\index{NeuronGraph@{NeuronGraph}!assembleTrunks@{assembleTrunks}}
+\index{assembleTrunks@{assembleTrunks}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{assembleTrunks()}{assembleTrunks()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::assemble\+Trunks (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&}]{trunk\+Node\+Sets }\end{DoxyParamCaption}) const}
+
+
+
+Combines multiple trunks into a single node set. 
+
+Combines multiple trunk segments into a single neuron representation with sequential node IDs.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em trunk\+Node\+Sets} & Map of trunk IDs to their nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A single map containing all nodes from all trunks
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This version preserves the original node IDs
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trunk\+Node\+Sets} & Map of trunk segments where each key is a trunk ID and value is a map of node IDs to SWCNodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, SWCNode$>$ A single map of SWC nodes with sequential IDs representing the assembled neuron
+\end{DoxyReturn}
+This method takes multiple trunk segments and combines them into a single neuron representation while ensuring all node IDs are unique and sequential. It handles the remapping of parent-\/child relationships to maintain the neuron\textquotesingle{}s topological structure.
+
+Key features\+:
+\begin{DoxyItemize}
+\item Renumbers all node IDs sequentially starting from 1
+\item Maintains parent-\/child relationships between nodes
+\item Handles duplicate nodes across different trunks (uses first occurrence)
+\item Ensures the root node has pid = -\/1
+\end{DoxyItemize}
+
+The method performs two main passes\+:
+\begin{DoxyEnumerate}
+\item First pass\+: Creates a mapping from old node IDs to new sequential IDs
+\item Second pass\+: Updates all parent IDs using the new mapping
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+This method assumes that node IDs within each trunk have NOT been reset to start at 1. If the trunks have already been renumbered, use the other overload that takes a trunk\+Parent\+Map. 
+
+The resulting node IDs will be sequential and unique across all trunks. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a8067ed0a71ebcbfd9092d25aec536545}{assemble\+Trunks(const std\+::map$<$int, std\+::map$<$int, SWCNode$>$$>$\&, const std\+::map$<$int,int$>$\&)}} for the version that handles parent-\/child relationships between trunks 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_ae4a90fcdd47904cee5fc06b451e2d956}\label{classNeuronGraph_ae4a90fcdd47904cee5fc06b451e2d956}} 
+\index{NeuronGraph@{NeuronGraph}!cubicSplineResampleTrunk@{cubicSplineResampleTrunk}}
+\index{cubicSplineResampleTrunk@{cubicSplineResampleTrunk}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{cubicSplineResampleTrunk()}{cubicSplineResampleTrunk()}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::cubic\+Spline\+Resample\+Trunk (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{trunk,  }\item[{double \&}]{delta }\end{DoxyParamCaption}) const}
+
+
+
+Resamples a single trunk using cubic spline interpolation. 
+
+Resamples a single trunk segment using cubic spline interpolation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em trunk} & The trunk to resample (map of node IDs to SWCNodes) \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em delta} & Target spacing between resampled points (may be adjusted) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new set of nodes representing the resampled trunk
+\end{DoxyReturn}
+Cubic spline interpolation generally produces smoother curves than linear interpolation, especially for coarsely sampled data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em trunk} & Map of node IDs to \mbox{\hyperlink{structSWCNode}{SWCNode}} objects representing the trunk to be resampled \\
+\hline
+{\em delta} & Target distance between consecutive nodes in the resampled trunk (in microns) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, SWCNode$>$ A new map of resampled nodes with sequential IDs
+\end{DoxyReturn}
+This method performs cubic spline resampling of a neuron trunk to achieve a smooth and uniform distribution of nodes along its length. It creates a smooth curve that passes through all original nodes and samples new points along this curve.
+
+Key features\+:
+\begin{DoxyItemize}
+\item Preserves the first and last nodes of the original trunk exactly
+\item Fits natural cubic splines to x, y, and z coordinates separately
+\item Parameterizes the spline by arc length for uniform sampling
+\item Maintains the dominant node type throughout the resampled trunk
+\item Handles 3D coordinates and radii with appropriate interpolation
+\item Adjusts node IDs and parent IDs to maintain a valid tree structure
+\end{DoxyItemize}
+
+The algorithm works as follows\+:
+\begin{DoxyEnumerate}
+\item Converts the input trunk to an ordered vector of nodes
+\item Determines the dominant node type in the trunk
+\item Fits natural cubic splines to x, y, and z coordinates
+\item Parameterizes the spline by arc length
+\item Samples new points at approximately \textquotesingle{}delta\textquotesingle{} intervals along the curve
+\item Ensures the first and last nodes match the original exactly
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+This method produces smoother results than linear interpolation but is more computationally intensive 
+
+The actual spacing may vary slightly to ensure the curve is sampled properly 
+
+If the input trunk has fewer than 4 nodes, falls back to linear interpolation 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a198959fac3c6691530c888896ae777ae}{all\+Cubic\+Spline\+Resampled\+Trunks()}} for resampling multiple trunks 
+
+\mbox{\hyperlink{classNeuronGraph_a4263b75e5c5c97d6f65dd681dbdfff60}{linear\+Spline\+Resample\+Trunk()}} for a faster but less smooth alternative 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_acbf58bd7db5d97c97ec95b63c679a62a}\label{classNeuronGraph_acbf58bd7db5d97c97ec95b63c679a62a}} 
+\index{NeuronGraph@{NeuronGraph}!generateRefinements@{generateRefinements}}
+\index{generateRefinements@{generateRefinements}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{generateRefinements()}{generateRefinements()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ Neuron\+Graph\+::generate\+Refinements (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set,  }\item[{double \&}]{delta,  }\item[{int \&}]{N,  }\item[{std\+::string \&}]{method }\end{DoxyParamCaption})}
+
+
+
+Generates multiple levels of refined neuron morphologies. 
+
+Generates multiple levels of mesh refinements for a neuron morphology.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to refine \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em delta} & Initial spacing parameter for refinement \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em N} & Number of refinement levels to generate \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em method} & Refinement method (\char`\"{}linear\char`\"{} or \char`\"{}cubic\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A map where keys are refinement levels and values are the refined node sets
+\end{DoxyReturn}
+This method generates a series of increasingly refined versions of the input neuron morphology by repeatedly applying the specified interpolation method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & Map of SWC nodes representing the input neuron morphology \\
+\hline
+{\em delta} & Initial target spacing between nodes (in microns). This value is halved in each refinement level. \\
+\hline
+{\em N} & Number of refinement levels to generate \\
+\hline
+{\em method} & Interpolation method to use (\char`\"{}linear\char`\"{} or \char`\"{}cubic\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, std\+::map$<$int, SWCNode$>$$>$ Map where each key is the refinement level (0 to N-\/1) and the value is the resampled neuron at that refinement level
+\end{DoxyReturn}
+This method creates a series of increasingly refined versions of the input neuron morphology. Each refinement level approximately halves the spacing between nodes, providing a multi-\/resolution representation of the neuron that can be used for progressive rendering or adaptive meshing.
+
+Key features\+:
+\begin{DoxyItemize}
+\item Supports both linear and cubic spline interpolation methods
+\item Progressively refines the mesh by halving \textquotesingle{}delta\textquotesingle{} at each level
+\item Maintains topological relationships between nodes
+\item Preserves branch points and overall neuron structure
+\item Returns all refinement levels for comparison or progressive loading
+\end{DoxyItemize}
+
+The refinement process works as follows\+:
+\begin{DoxyEnumerate}
+\item Extracts trunk segments from the input neuron
+\item Determines parent-\/child relationships between trunks
+\item For each refinement level i (0 to N-\/1)\+: a. Resamples all trunks using the specified method with spacing delta/(2$^\wedge$i) b. Reassembles the neuron from the resampled trunks c. Stores the result in the output map
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+The input \textquotesingle{}delta\textquotesingle{} parameter will be modified during execution (halved at each level) 
+
+If an unsupported method is provided, falls back to linear interpolation 
+
+The first refinement level (i=0) uses the initial delta value 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a126fba2e060c47a5a20445af0622d06b}{all\+Linear\+Spline\+Resampled\+Trunks()}} for the linear interpolation implementation 
+
+\mbox{\hyperlink{classNeuronGraph_a198959fac3c6691530c888896ae777ae}{all\+Cubic\+Spline\+Resampled\+Trunks()}} for the cubic spline implementation 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a607cb1a4a78a63ac33c462337f178b18}\label{classNeuronGraph_a607cb1a4a78a63ac33c462337f178b18}} 
+\index{NeuronGraph@{NeuronGraph}!generateRefinements@{generateRefinements}}
+\index{generateRefinements@{generateRefinements}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{generateRefinements()}{generateRefinements()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::map$<$int, std\+::map$<$int,\mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ $>$ Neuron\+Graph\+::generate\+Refinements (\begin{DoxyParamCaption}\item[{double \&}]{delta,  }\item[{int \&}]{N,  }\item[{std\+::string \&}]{method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Generates refinements for the current graph\textquotesingle{}s nodes \mbox{\Hypertarget{classNeuronGraph_aadf6c2dcb7cd1aa1d3664009eede14be}\label{classNeuronGraph_aadf6c2dcb7cd1aa1d3664009eede14be}} 
+\index{NeuronGraph@{NeuronGraph}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily auto Neuron\+Graph\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a copy of all nodes in the graph. 
+
+\begin{DoxyReturn}{Returns}
+A map of node IDs to \mbox{\hyperlink{structSWCNode}{SWCNode}} objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNeuronGraph_aa4a2201e3e2eddb93176ce3e84bfc619}\label{classNeuronGraph_aa4a2201e3e2eddb93176ce3e84bfc619}} 
+\index{NeuronGraph@{NeuronGraph}!getTrunkParentMap@{getTrunkParentMap}}
+\index{getTrunkParentMap@{getTrunkParentMap}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{getTrunkParentMap()}{getTrunkParentMap()}}
+{\footnotesize\ttfamily std\+::map$<$ int, int $>$ Neuron\+Graph\+::get\+Trunk\+Parent\+Map (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set,  }\item[{const std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$$>$ \&}]{trunk\+Node\+Sets }\end{DoxyParamCaption}) const}
+
+
+
+Creates a mapping from trunk IDs to their parent trunk IDs. 
+
+Determines the parent-\/child relationships between trunk segments in a neuron morphology.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The original set of nodes \\
+\hline
+\mbox{\texttt{ in}}  & {\em trunk\+Node\+Sets} & Map of trunk IDs to their nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A map where keys are trunk IDs and values are parent trunk IDs (-\/1 for root trunks)
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & Original map of all SWC nodes in the neuron \\
+\hline
+{\em trunk\+Node\+Sets} & Map of trunk segments where each key is a trunk ID and value is a map of node IDs to SWCNodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, int$>$ Map where each key is a trunk ID and value is its parent trunk ID (-\/1 for root trunks)
+\end{DoxyReturn}
+This method analyzes the connectivity between trunk segments to establish a hierarchical parent-\/child relationship between them. It determines which trunk connects to which by examining the parent-\/child relationships of the nodes at the connection points between trunks.
+
+The algorithm works in two main phases\+:
+\begin{DoxyEnumerate}
+\item Builds a reverse lookup (node ID → trunk ID) to quickly find which trunk a node belongs to
+\item For each trunk, examines the parent of its first node to determine its parent trunk
+\end{DoxyEnumerate}
+
+Key assumptions\+:
+\begin{DoxyItemize}
+\item The first node in each trunk\textquotesingle{}s node map is the rootward (proximal) end of the trunk
+\item Trunks are topologically sorted with parent nodes appearing before their children
+\item The input trunks have already been extracted and may have been processed (e.\+g., resampled)
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+A return value of -\/1 indicates a root trunk (no parent) 
+
+If a trunk\textquotesingle{}s first node has no parent or its parent is not in any trunk, it\textquotesingle{}s considered a root trunk 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_ae750a60642aa3d1a30ec9265795cd065}{get\+Trunks()}} for how trunks are initially extracted 
+
+\mbox{\hyperlink{classNeuronGraph_a7961eded24b6524392b01fdfa7e98452}{assemble\+Trunks()}} for how this parent information is used in reconstruction 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a74bfbcdde59807456a3ed21aa244fe48}\label{classNeuronGraph_a74bfbcdde59807456a3ed21aa244fe48}} 
+\index{NeuronGraph@{NeuronGraph}!getTrunks@{getTrunks}}
+\index{getTrunks@{getTrunks}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{getTrunks()}{getTrunks()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::map$<$int,std\+::map$<$int,\mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ $>$ Neuron\+Graph\+::get\+Trunks (\begin{DoxyParamCaption}\item[{bool}]{reset\+Index = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Extracts trunk segments from the current graph \mbox{\Hypertarget{classNeuronGraph_ae750a60642aa3d1a30ec9265795cd065}\label{classNeuronGraph_ae750a60642aa3d1a30ec9265795cd065}} 
+\index{NeuronGraph@{NeuronGraph}!getTrunks@{getTrunks}}
+\index{getTrunks@{getTrunks}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{getTrunks()}{getTrunks()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::map$<$ int, std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ Neuron\+Graph\+::get\+Trunks (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set,  }\item[{bool}]{reset\+Index = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Extracts trunk segments from a neuron morphology. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to process \\
+\hline
+\mbox{\texttt{ in}}  & {\em reset\+Index} & If true, renumbers node IDs sequentially \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A map where each key is a trunk ID and the value is a map of node IDs to SWCNodes
+\end{DoxyReturn}
+A trunk is defined as a linear segment between branch points or between a branch point and a leaf node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & Map of SWC nodes where key is node ID and value is the \mbox{\hyperlink{structSWCNode}{SWCNode}} object \\
+\hline
+{\em reset\+Index} & If true, renumbers node IDs sequentially within each trunk (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, std\+::map$<$int, SWCNode$>$$>$ where each key is a trunk ID and value is a map of node IDs to SWCNodes in that trunk
+\end{DoxyReturn}
+This method identifies and extracts linear segments (trunks) from a neuron morphology. A trunk is defined as a path between\+:
+\begin{DoxyItemize}
+\item Two branch points (nodes with degree $>$ 2)
+\item A branch point and an endpoint (node with degree 1)
+\item The root node and the first branch point
+\end{DoxyItemize}
+
+The algorithm works as follows\+:
+\begin{DoxyEnumerate}
+\item Builds a neighbor map to represent the neuron\textquotesingle{}s connectivity
+\item Identifies branch points (nodes with $>$2 neighbors)
+\item For each branch point, traverses to connected nodes to extract linear segments
+\item Uses canonical representation to avoid duplicate trunks
+\item Optionally renumbers node IDs sequentially within each trunk
+\end{DoxyEnumerate}
+
+The method handles both directed and undirected traversal of the neuron morphology.
+
+\begin{DoxyNote}{Note}
+When reset\+Index is true, node IDs within each trunk will be renumbered sequentially starting from 1, with parent IDs adjusted accordingly. The first node in each trunk will have pid = -\/1. 
+
+The method uses a canonical representation to ensure each trunk is only included once, regardless of traversal direction. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+get\+Neighbor\+Map() for the \mbox{\hyperlink{globals_8h_a65b5e8f0673c2dba7ec632133f036a21}{graph}} representation used internally 
+
+\mbox{\hyperlink{classNeuronGraph_aa4a2201e3e2eddb93176ce3e84bfc619}{get\+Trunk\+Parent\+Map()}} for establishing relationships between trunks 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_ade30f063c2aeaaa9817606497f16875b}\label{classNeuronGraph_ade30f063c2aeaaa9817606497f16875b}} 
+\index{NeuronGraph@{NeuronGraph}!hasSomaSegment@{hasSomaSegment}}
+\index{hasSomaSegment@{hasSomaSegment}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{hasSomaSegment()}{hasSomaSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Neuron\+Graph\+::has\+Soma\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Checks if the current graph contains a soma segment \mbox{\Hypertarget{classNeuronGraph_abc081d9ef1972cbc262571246698f0f2}\label{classNeuronGraph_abc081d9ef1972cbc262571246698f0f2}} 
+\index{NeuronGraph@{NeuronGraph}!hasSomaSegment@{hasSomaSegment}}
+\index{hasSomaSegment@{hasSomaSegment}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{hasSomaSegment()}{hasSomaSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Neuron\+Graph\+::has\+Soma\+Segment (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the node set contains a soma segment. 
+
+Checks if the neuron has multiple soma nodes (soma segment)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a soma segment is found, false otherwise
+\end{DoxyReturn}
+A soma segment is defined as multiple connected nodes of type 1 (soma).
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & Map of SWC nodes to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if multiple soma nodes exist, false otherwise
+\end{DoxyReturn}
+This method detects the presence of soma segments, which occur when multiple nodes have type 1 (soma). In proper neuron morphology, there should be exactly one soma node. Multiple soma nodes can cause issues in analysis and mesh generation.
+
+The method uses early exit optimization -\/ it returns true as soon as a second soma node is found, avoiding unnecessary iterations.
+
+\begin{DoxyNote}{Note}
+Soma nodes are identified by type == 1 in SWC format 
+
+This is used in preprocessing to clean up neuron data
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35}{preprocess()}} for automatic soma segment removal 
+
+\mbox{\hyperlink{classNeuronGraph_aed5eb4290d85b7a134f95fa5b453ba50}{remove\+Soma\+Segment()}} for soma segment correction 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_ae25c92d56c3019385447d3dc7ab86346}\label{classNeuronGraph_ae25c92d56c3019385447d3dc7ab86346}} 
+\index{NeuronGraph@{NeuronGraph}!isSomaMissing@{isSomaMissing}}
+\index{isSomaMissing@{isSomaMissing}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{isSomaMissing()}{isSomaMissing()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Neuron\+Graph\+::is\+Soma\+Missing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Checks if the current graph is missing a soma \mbox{\Hypertarget{classNeuronGraph_a84a4ee923b6547a3d2fa7c8953932ed0}\label{classNeuronGraph_a84a4ee923b6547a3d2fa7c8953932ed0}} 
+\index{NeuronGraph@{NeuronGraph}!isSomaMissing@{isSomaMissing}}
+\index{isSomaMissing@{isSomaMissing}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{isSomaMissing()}{isSomaMissing()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Neuron\+Graph\+::is\+Soma\+Missing (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the node set is missing a soma. 
+
+Checks if the neuron is missing a soma node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if no soma is present, false otherwise
+\end{DoxyReturn}
+This is the inverse of \mbox{\hyperlink{classNeuronGraph_abc081d9ef1972cbc262571246698f0f2}{has\+Soma\+Segment()}} and is provided for readability.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & Map of SWC nodes to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if no soma node exists, false if soma is present
+\end{DoxyReturn}
+This method determines whether the neuron morphology lacks a soma (cell body). Every valid neuron should have exactly one soma node of type 1. Missing somas can occur in incomplete reconstructions or when dealing with neuron fragments.
+
+The method uses early exit -\/ it returns false as soon as any soma node is found, making it efficient for large neuron datasets.
+
+\begin{DoxyNote}{Note}
+Soma nodes are identified by type == 1 in SWC format 
+
+This is used in preprocessing to add missing somas
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35}{preprocess()}} for automatic soma addition 
+
+\mbox{\hyperlink{classNeuronGraph_a4da98a459bd4ddaa00df5ed08bc80477}{set\+Soma()}} for adding missing soma nodes 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a0a94b95b0afc5d98590e631f963a970d}\label{classNeuronGraph_a0a94b95b0afc5d98590e631f963a970d}} 
+\index{NeuronGraph@{NeuronGraph}!isTopologicallySorted@{isTopologicallySorted}}
+\index{isTopologicallySorted@{isTopologicallySorted}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{isTopologicallySorted()}{isTopologicallySorted()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Neuron\+Graph\+::is\+Topologically\+Sorted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Checks if the current graph\textquotesingle{}s nodes are topologically sorted \mbox{\Hypertarget{classNeuronGraph_a7b7eae0aeccf7e7aec8f3cab6008f37c}\label{classNeuronGraph_a7b7eae0aeccf7e7aec8f3cab6008f37c}} 
+\index{NeuronGraph@{NeuronGraph}!isTopologicallySorted@{isTopologicallySorted}}
+\index{isTopologicallySorted@{isTopologicallySorted}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{isTopologicallySorted()}{isTopologicallySorted()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Neuron\+Graph\+::is\+Topologically\+Sorted (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Checks if a set of nodes is topologically sorted. 
+
+Checks if the neuron nodes are topologically sorted.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the nodes are topologically sorted, false otherwise
+\end{DoxyReturn}
+A set of nodes is considered topologically sorted if for every node, its parent ID is less than its own ID (i.\+e., parent nodes come before their children in the sequence).
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & Map of SWC nodes to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if nodes are topologically sorted, false otherwise
+\end{DoxyReturn}
+This method verifies that all parent nodes have IDs smaller than their children nodes (parent\+\_\+id $<$ child\+\_\+id). This property is important for many neuron analysis algorithms and ensures proper tree traversal.
+
+A topologically sorted neuron means that when nodes are processed in ID order, all parent nodes are encountered before their children.
+
+\begin{DoxyNote}{Note}
+Root nodes (pid == -\/1) are always considered valid 
+
+The commented debug output can be uncommented for troubleshooting
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structSWCNode}{SWCNode}} structure for node ID and parent ID fields 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a4263b75e5c5c97d6f65dd681dbdfff60}\label{classNeuronGraph_a4263b75e5c5c97d6f65dd681dbdfff60}} 
+\index{NeuronGraph@{NeuronGraph}!linearSplineResampleTrunk@{linearSplineResampleTrunk}}
+\index{linearSplineResampleTrunk@{linearSplineResampleTrunk}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{linearSplineResampleTrunk()}{linearSplineResampleTrunk()}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::linear\+Spline\+Resample\+Trunk (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{trunk,  }\item[{double \&}]{delta }\end{DoxyParamCaption}) const}
+
+
+
+Resamples a single trunk using linear interpolation. 
+
+Resamples a single trunk segment using linear interpolation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em trunk} & The trunk to resample (map of node IDs to SWCNodes) \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em delta} & Target spacing between resampled points (may be adjusted) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new set of nodes representing the resampled trunk
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em trunk} & Map of node IDs to \mbox{\hyperlink{structSWCNode}{SWCNode}} objects representing the trunk to be resampled \\
+\hline
+{\em delta} & Target distance between consecutive nodes in the resampled trunk (in microns) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$int, SWCNode$>$ A new map of resampled nodes with sequential IDs
+\end{DoxyReturn}
+This method performs linear resampling of a neuron trunk to achieve a more uniform distribution of nodes along its length. It creates a piecewise linear approximation of the original trunk with nodes spaced approximately \textquotesingle{}delta\textquotesingle{} units apart.
+
+Key features\+:
+\begin{DoxyItemize}
+\item Preserves the first and last nodes of the original trunk exactly
+\item Uses linear interpolation between existing nodes
+\item Maintains the dominant node type throughout the resampled trunk
+\item Adjusts node IDs and parent IDs to maintain a valid tree structure
+\item Handles 3D coordinates and radii
+\end{DoxyItemize}
+
+The algorithm works as follows\+:
+\begin{DoxyEnumerate}
+\item Converts the input trunk to an ordered vector of nodes
+\item Determines the dominant node type in the trunk
+\item Calculates the total arc length of the trunk
+\item Determines the number of segments needed based on \textquotesingle{}delta\textquotesingle{}
+\item Performs linear interpolation between existing nodes to create new points
+\item Ensures the first and last nodes match the original exactly
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+The actual spacing may vary slightly to ensure the first and last nodes are preserved exactly 
+
+If the input trunk has fewer than 2 nodes, returns an empty map 
+
+The minimum number of points in the resampled trunk is 4 to ensure reasonable shape representation 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a126fba2e060c47a5a20445af0622d06b}{all\+Linear\+Spline\+Resampled\+Trunks()}} for resampling multiple trunks 
+
+\mbox{\hyperlink{classNeuronGraph_ae4a90fcdd47904cee5fc06b451e2d956}{cubic\+Spline\+Resample\+Trunk()}} for a smoother but more computationally intensive alternative 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_ad7d477e87f08f5d83df1e22b3e2f31ef}\label{classNeuronGraph_ad7d477e87f08f5d83df1e22b3e2f31ef}} 
+\index{NeuronGraph@{NeuronGraph}!numberOfEdges@{numberOfEdges}}
+\index{numberOfEdges@{numberOfEdges}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{numberOfEdges()}{numberOfEdges()}}
+{\footnotesize\ttfamily int Neuron\+Graph\+::number\+Of\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of edges in the graph. 
+
+\begin{DoxyReturn}{Returns}
+The total number of edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNeuronGraph_a95079dcc37ed05aae8680eacf1fad317}\label{classNeuronGraph_a95079dcc37ed05aae8680eacf1fad317}} 
+\index{NeuronGraph@{NeuronGraph}!numberOfNodes@{numberOfNodes}}
+\index{numberOfNodes@{numberOfNodes}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{numberOfNodes()}{numberOfNodes()}}
+{\footnotesize\ttfamily int Neuron\+Graph\+::number\+Of\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of nodes in the graph. 
+
+\begin{DoxyReturn}{Returns}
+The total number of nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35}\label{classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35}} 
+\index{NeuronGraph@{NeuronGraph}!preprocess@{preprocess}}
+\index{preprocess@{preprocess}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{preprocess()}{preprocess()}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::preprocess (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Applies standard preprocessing steps to a set of nodes. 
+
+Preprocesses a node set to ensure proper soma properties.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to preprocess \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new set of preprocessed nodes
+\end{DoxyReturn}
+Preprocessing includes\+:
+\begin{DoxyEnumerate}
+\item Topological sorting
+\item Soma segment handling
+\item Soma addition if missing
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & The input map of SWC nodes to preprocess \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A preprocessed map of SWC nodes with corrected soma properties
+\end{DoxyReturn}
+This method performs essential preprocessing steps on neuron data\+:
+\begin{DoxyEnumerate}
+\item Checks if soma is missing and adds one if necessary
+\item Removes soma segments if multiple soma nodes exist
+\end{DoxyEnumerate}
+
+The preprocessing ensures that the neuron has exactly one soma node, which is critical for proper neuron analysis and mesh generation.
+
+\begin{DoxySeeAlso}{See also}
+is\+Soma\+Missing(const std\+::map$<$int, SWCNode$>$\& node\+Set) 
+
+has\+Soma\+Segment(const std\+::map$<$int, SWCNode$>$\& node\+Set) 
+
+set\+Soma(const std\+::map$<$int, SWCNode$>$\& node\+Set) 
+
+remove\+Soma\+Segment(const std\+::map$<$int, SWCNode$>$\& node\+Set) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}\label{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}} 
+\index{NeuronGraph@{NeuronGraph}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::read\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Reads neuron data from an SWC file. 
+
+Reads neuron morphology data from an SWC format file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Path to the SWC file to read\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file cannot be opened or parsed \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html}{\texttt{ http\+://www.\+neuronland.\+org/\+NLMorphology\+Converter/\+Morphology\+Formats/\+SWC/\+Spec.\+html}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the SWC file to read\\
+\hline
+\end{DoxyParams}
+This method parses an SWC (Standardized Morphology Format) file and populates the graph with neuron nodes. The SWC format contains one node per line with the following columns\+: ID, type, x, y, z, radius, parent\+\_\+\+ID.
+
+The parser handles\+:
+\begin{DoxyItemize}
+\item Comment lines (starting with \#)
+\item Inline comments
+\item Whitespace normalization
+\item Tab-\/to-\/space conversion
+\item Error reporting for malformed lines
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Clears existing graph data before loading new data 
+
+Prints summary information upon successful completion 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+If file cannot be opened, an error message is printed and method returns
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a453e31c723b0dc9d692d8663d93be51a}{add\+Node(const SWCNode\& node)}} for individual node processing 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb}\label{classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb}} 
+\index{NeuronGraph@{NeuronGraph}!readFromFileUGX@{readFromFileUGX}}
+\index{readFromFileUGX@{readFromFileUGX}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{readFromFileUGX()}{readFromFileUGX()}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::read\+From\+File\+UGX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Reads neuron data from a UGX file. 
+
+Reads neuron morphology data from a UGX file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Path to the UGX file to read\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file cannot be opened or parsed \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+UGX is an XML-\/based format used by the UG4 simulation framework
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the input UGX file to read\\
+\hline
+\end{DoxyParams}
+This method imports neuron morphology data from a UGX file and populates the internal data structures of the \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} class. It handles the conversion from the UGX format to the internal SWC-\/based representation.
+
+The method processes the following UGX elements\+:
+\begin{DoxyItemize}
+\item Vertex coordinates (3D positions)
+\item Edge connectivity between nodes
+\item Vertex attributes (diameters, types, etc.)
+\item Subset information for different neuron components
+\end{DoxyItemize}
+
+The import process includes\+:
+\begin{DoxyEnumerate}
+\item Parsing the XML structure of the UGX file
+\item Extracting vertex coordinates and creating SWC nodes
+\item Reconstructing parent-\/child relationships from edges
+\item Loading additional attributes like diameters and node types
+\item Validating the imported morphology
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+The method clears any existing neuron data before importing 
+
+If the file cannot be read or is malformed, error messages are printed to stderr 
+
+The method attempts to map UGX subsets back to SWC node types when possible 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5}{write\+To\+File\+UGX()}} for the corresponding export functionality 
+
+\href{https://github.com/UG4/ug4}{\texttt{ https\+://github.\+com/\+UG4/ug4}} for more information about the UGX format 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a1c8deb90cf431df071765a400ddb144c}\label{classNeuronGraph_a1c8deb90cf431df071765a400ddb144c}} 
+\index{NeuronGraph@{NeuronGraph}!readFromFileUGXorSWC@{readFromFileUGXorSWC}}
+\index{readFromFileUGXorSWC@{readFromFileUGXorSWC}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{readFromFileUGXorSWC()}{readFromFileUGXorSWC()}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::read\+From\+File\+UGXor\+SWC (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Reads a neuron file, automatically detecting the format. 
+
+Automatically detects file format and reads neuron data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Path to the neuron file (SWC or UGX)\\
+\hline
+\end{DoxyParams}
+This method examines the file extension to determine whether to use \mbox{\hyperlink{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}{read\+From\+File()}} or \mbox{\hyperlink{classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb}{read\+From\+File\+UGX()}}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file format is not supported\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the input file (SWC or UGX format)\\
+\hline
+\end{DoxyParams}
+This method automatically determines the file format based on the file extension and calls the appropriate reader method\+:
+\begin{DoxyItemize}
+\item .swc files are read using \mbox{\hyperlink{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}{read\+From\+File()}}
+\item .ugx files are read using \mbox{\hyperlink{classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb}{read\+From\+File\+UGX()}}
+\end{DoxyItemize}
+
+This provides a convenient unified interface for loading neuron data regardless of the input format.
+
+\begin{DoxyWarning}{Warning}
+Prints error message for unsupported file extensions
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}{read\+From\+File(const std\+::string\& filename)}} for SWC format 
+
+\mbox{\hyperlink{classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb}{read\+From\+File\+UGX(const std\+::string\& filename)}} for UGX format 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a0d0ce27089a76553f8e4e109ffdf8183}\label{classNeuronGraph_a0d0ce27089a76553f8e4e109ffdf8183}} 
+\index{NeuronGraph@{NeuronGraph}!removeSomaSegment@{removeSomaSegment}}
+\index{removeSomaSegment@{removeSomaSegment}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{removeSomaSegment()}{removeSomaSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ Neuron\+Graph\+::remove\+Soma\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Removes the soma segment from the current graph \mbox{\Hypertarget{classNeuronGraph_aed5eb4290d85b7a134f95fa5b453ba50}\label{classNeuronGraph_aed5eb4290d85b7a134f95fa5b453ba50}} 
+\index{NeuronGraph@{NeuronGraph}!removeSomaSegment@{removeSomaSegment}}
+\index{removeSomaSegment@{removeSomaSegment}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{removeSomaSegment()}{removeSomaSegment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::remove\+Soma\+Segment (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{input\+Nodes }\end{DoxyParamCaption}) const}
+
+
+
+Removes the soma segment from a set of nodes. 
+
+Removes multiple soma nodes and replaces them with a single averaged soma.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input\+Nodes} & The set of nodes to process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new set of nodes with the soma segment removed
+\end{DoxyReturn}
+This method identifies and removes the soma segment (multiple connected type 1 nodes) and replaces it with a single representative soma node at the average position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Nodes} & The input map of SWC nodes containing multiple soma nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new map of SWC nodes with a single soma node at ID 1
+\end{DoxyReturn}
+This method processes neuron morphologies that have multiple soma nodes (soma segments) and consolidates them into a single soma node. The process involves\+:
+\begin{DoxyEnumerate}
+\item Identifying all soma nodes (type == 1)
+\item Computing the average position and radius of all soma nodes
+\item Creating a new soma node with ID 1 at the averaged location
+\item Reassigning all non-\/soma nodes with new sequential IDs starting from 2
+\item Updating parent-\/child relationships to connect to the new soma
+\item Ensuring topological sorting of the result
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+If no soma nodes are found, returns the input unchanged 
+
+The resulting soma always has ID 1 and parent ID -\/1 (root) 
+
+All nodes originally connected to any soma will be connected to the new soma
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_abc081d9ef1972cbc262571246698f0f2}{has\+Soma\+Segment()}} to detect if soma segments exist 
+
+\mbox{\hyperlink{classNeuronGraph_ab66e25466d6c0b228b95c118963e7cb0}{topological\+Sort()}} for ensuring proper node ordering 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237}\label{classNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237}} 
+\index{NeuronGraph@{NeuronGraph}!setNodes@{setNodes}}
+\index{setNodes@{setNodes}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{setNodes()}{setNodes()}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::set\+Nodes (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption})}
+
+
+
+Replaces the current set of nodes in the graph. 
+
+Sets the nodes of the graph, replacing any existing nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & New set of nodes to use\\
+\hline
+\end{DoxyParams}
+This method clears the current graph and rebuilds it using the provided nodes. It automatically updates the internal adjacency list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & A map containing SWC nodes indexed by their IDs\\
+\hline
+\end{DoxyParams}
+This method clears the current graph data and repopulates it with the provided node set. It rebuilds all parent-\/child relationships from scratch.
+
+\begin{DoxyNote}{Note}
+This is equivalent to reconstructing the graph with new data 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a453e31c723b0dc9d692d8663d93be51a}{add\+Node(const SWCNode\& node)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a6b0c1b97c8866106d3bb7f803b94f6f4}\label{classNeuronGraph_a6b0c1b97c8866106d3bb7f803b94f6f4}} 
+\index{NeuronGraph@{NeuronGraph}!setSoma@{setSoma}}
+\index{setSoma@{setSoma}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{setSoma()}{setSoma()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ Neuron\+Graph\+::set\+Soma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Adds a soma node to the current graph if none exists \mbox{\Hypertarget{classNeuronGraph_a4da98a459bd4ddaa00df5ed08bc80477}\label{classNeuronGraph_a4da98a459bd4ddaa00df5ed08bc80477}} 
+\index{NeuronGraph@{NeuronGraph}!setSoma@{setSoma}}
+\index{setSoma@{setSoma}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{setSoma()}{setSoma()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::set\+Soma (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Adds a soma node if none exists. 
+
+Assigns a soma node to a neuron morphology that lacks one.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new set of nodes with a soma node added if needed
+\end{DoxyReturn}
+If no soma (type 1) node is present, this method adds one at the root position of the neuron tree.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & The input map of SWC nodes missing a soma \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new map of SWC nodes with a soma node assigned
+\end{DoxyReturn}
+This method addresses neuron morphologies that are missing a soma (cell body) by converting the first root node found (pid == -\/1) into a soma node (type = 1).
+
+The method follows this logic\+:
+\begin{DoxyEnumerate}
+\item First checks if a soma already exists using \mbox{\hyperlink{classNeuronGraph_a84a4ee923b6547a3d2fa7c8953932ed0}{is\+Soma\+Missing()}}
+\item If soma is present, returns the input unchanged
+\item If soma is missing, searches for the first root node (pid == -\/1)
+\item Converts the root node\textquotesingle{}s type to 1 (soma type)
+\item Prints a confirmation message with the assigned node ID
+\end{DoxyEnumerate}
+
+This operation is essential for\+:
+\begin{DoxyItemize}
+\item Ensuring every neuron has exactly one soma for proper analysis
+\item Correcting incomplete neuron reconstructions
+\item Preparing neuron data for mesh generation algorithms
+\item Maintaining consistency with neuron morphology standards
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+If no root node is found, prints a warning and returns input unchanged 
+
+Only the first root node encountered is converted to soma 
+
+The node\textquotesingle{}s position and other properties remain unchanged
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+If multiple root nodes exist, only the first one becomes the soma
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a84a4ee923b6547a3d2fa7c8953932ed0}{is\+Soma\+Missing()}} to detect if soma assignment is needed 
+
+\mbox{\hyperlink{classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35}{preprocess()}} which automatically calls this method when needed 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_abff93693953850f3bbda6dd5e694de08}\label{classNeuronGraph_abff93693953850f3bbda6dd5e694de08}} 
+\index{NeuronGraph@{NeuronGraph}!splitEdges@{splitEdges}}
+\index{splitEdges@{splitEdges}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{splitEdges()}{splitEdges()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ Neuron\+Graph\+::split\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Splits all edges in the current graph \mbox{\Hypertarget{classNeuronGraph_a4dd02c37f81fc7d5cfbb929bd25e1fa2}\label{classNeuronGraph_a4dd02c37f81fc7d5cfbb929bd25e1fa2}} 
+\index{NeuronGraph@{NeuronGraph}!splitEdges@{splitEdges}}
+\index{splitEdges@{splitEdges}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{splitEdges()}{splitEdges()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::split\+Edges (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Splits all edges in the graph by inserting midpoint nodes. 
+
+Splits all edges in the neuron by inserting midpoint nodes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new set of nodes with edges split
+\end{DoxyReturn}
+This method inserts a new node at the midpoint of each edge, effectively doubling the number of edges while preserving the overall shape of the neuron.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & The input map of SWC nodes to process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new map of SWC nodes with midpoint nodes inserted on all edges
+\end{DoxyReturn}
+This method performs edge subdivision by inserting a new node at the midpoint of every parent-\/child edge in the neuron morphology. The process involves\+:
+\begin{DoxyEnumerate}
+\item Creating a midpoint node for each parent-\/child relationship
+\item Positioning the midpoint at the average coordinates of parent and child
+\item Setting the midpoint radius as the average of parent and child radii
+\item Updating the topology so child nodes connect through their midpoints
+\item Ensuring topological sorting of the final result
+\end{DoxyEnumerate}
+
+This operation effectively doubles the resolution of the neuron morphology, which is useful for\+:
+\begin{DoxyItemize}
+\item Mesh refinement operations
+\item Improved geometric accuracy in simulations
+\item Smoother interpolation between neuron segments
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+New node IDs are assigned sequentially starting from the highest existing ID + 1 
+
+Midpoint nodes inherit the type of their child node 
+
+Root nodes (pid == -\/1) are not affected by this operation
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_acde3c34e7d73fd00635d4fef5a9fcb3d}{split\+Edges\+N()}} for performing multiple iterations of edge splitting 
+
+\mbox{\hyperlink{classNeuronGraph_ab66e25466d6c0b228b95c118963e7cb0}{topological\+Sort()}} for ensuring proper node ordering 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_acde3c34e7d73fd00635d4fef5a9fcb3d}\label{classNeuronGraph_acde3c34e7d73fd00635d4fef5a9fcb3d}} 
+\index{NeuronGraph@{NeuronGraph}!splitEdgesN@{splitEdgesN}}
+\index{splitEdgesN@{splitEdgesN}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{splitEdgesN()}{splitEdgesN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ $>$ Neuron\+Graph\+::split\+EdgesN (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set,  }\item[{int}]{N }\end{DoxyParamCaption}) const}
+
+
+
+Applies edge splitting N times recursively. 
+
+Performs N iterations of edge splitting on the neuron morphology.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to process \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & Number of times to split the edges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of node sets, where each element represents the result of i+1 splits (i = 0 to N-\/1)
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & The input map of SWC nodes to process \\
+\hline
+{\em N} & The number of edge splitting iterations to perform \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector containing the node sets after each iteration of splitting
+\end{DoxyReturn}
+This method applies the \mbox{\hyperlink{classNeuronGraph_a4dd02c37f81fc7d5cfbb929bd25e1fa2}{split\+Edges()}} operation N times in sequence, where each iteration uses the result of the previous iteration as input. This creates progressively finer subdivisions of the neuron morphology.
+
+The returned vector contains N maps, where\+:
+\begin{DoxyItemize}
+\item splits\mbox{[}0\mbox{]} contains the result after 1 iteration
+\item splits\mbox{[}1\mbox{]} contains the result after 2 iterations
+\item splits\mbox{[}N-\/1\mbox{]} contains the result after N iterations
+\end{DoxyItemize}
+
+After N iterations, the number of nodes grows exponentially, with each iteration approximately doubling the number of edges (and thus nodes).
+
+Use cases\+:
+\begin{DoxyItemize}
+\item Progressive mesh refinement for adaptive simulations
+\item Creating multiple levels of detail for the same neuron
+\item Analyzing convergence properties of numerical methods
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Each iteration significantly increases the number of nodes 
+
+Memory usage grows exponentially with N 
+
+Consider memory constraints when choosing large values of N
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a4dd02c37f81fc7d5cfbb929bd25e1fa2}{split\+Edges()}} for single iteration edge splitting 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a5aeb1a2193d8a712338836d5c9ce53f4}\label{classNeuronGraph_a5aeb1a2193d8a712338836d5c9ce53f4}} 
+\index{NeuronGraph@{NeuronGraph}!splitEdgesN@{splitEdgesN}}
+\index{splitEdgesN@{splitEdgesN}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{splitEdgesN()}{splitEdgesN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::map$<$int, \mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ $>$ Neuron\+Graph\+::split\+EdgesN (\begin{DoxyParamCaption}\item[{int}]{N }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Applies edge splitting N times to the current graph \mbox{\Hypertarget{classNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6}\label{classNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6}} 
+\index{NeuronGraph@{NeuronGraph}!swc2ugx@{swc2ugx}}
+\index{swc2ugx@{swc2ugx}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{swc2ugx()}{swc2ugx()}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::swc2ugx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{inputfile,  }\item[{const std\+::string \&}]{outputfile }\end{DoxyParamCaption})}
+
+
+
+Converts an SWC file to UGX format. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em inputfile} & Path to the input SWC file \\
+\hline
+\mbox{\texttt{ in}}  & {\em outputfile} & Path for the output UGX file\\
+\hline
+\end{DoxyParams}
+This is a convenience method that combines \mbox{\hyperlink{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}{read\+From\+File()}} and \mbox{\hyperlink{classNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5}{write\+To\+File\+UGX()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputfile} & Path to the input SWC file \\
+\hline
+{\em outputfile} & Path to the output UGX file\\
+\hline
+\end{DoxyParams}
+This static utility method provides convenient SWC to UGX format conversion. It creates a temporary \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} instance, loads the SWC data, and exports it in UGX format suitable for mesh generation and finite element analysis.
+
+\begin{DoxyNote}{Note}
+This is a static method that can be called without a \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} instance
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a31ec77a2f3c9e69317c30366560761f5}{ugx2swc(const std\+::string\& inputfile, const std\+::string\& outputfile)}} for reverse conversion 
+
+\mbox{\hyperlink{classNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5}{write\+To\+File\+UGX()}} for UGX output functionality 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a096f5d8b9231d0b27f0a60a694db41d3}\label{classNeuronGraph_a096f5d8b9231d0b27f0a60a694db41d3}} 
+\index{NeuronGraph@{NeuronGraph}!topologicalSort@{topologicalSort}}
+\index{topologicalSort@{topologicalSort}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{topologicalSort()}{topologicalSort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ Neuron\+Graph\+::topological\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sorts the current graph\textquotesingle{}s nodes topologically \mbox{\Hypertarget{classNeuronGraph_ab66e25466d6c0b228b95c118963e7cb0}\label{classNeuronGraph_ab66e25466d6c0b228b95c118963e7cb0}} 
+\index{NeuronGraph@{NeuronGraph}!topologicalSort@{topologicalSort}}
+\index{topologicalSort@{topologicalSort}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{topologicalSort()}{topologicalSort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ Neuron\+Graph\+::topological\+Sort (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set }\end{DoxyParamCaption}) const}
+
+
+
+Sorts nodes topologically using Kahn\textquotesingle{}s algorithm. 
+
+Performs topological sorting of neuron nodes to ensure proper parent-\/child ordering.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The set of nodes to sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new map of nodes sorted in topological order
+\end{DoxyReturn}
+This method ensures that parent nodes always appear before their children in the resulting sequence, which is important for many processing steps.
+
+\begin{DoxyNote}{Note}
+If the graph contains cycles, the behavior is undefined. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\href{https://en.wikipedia.org/wiki/Topological_sorting\#Kahn's_algorithm}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Topological\+\_\+sorting\#\+Kahn\textquotesingle{}s\+\_\+algorithm}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & The input map of SWC nodes to sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new map of SWC nodes with reassigned IDs in topological order
+\end{DoxyReturn}
+This method implements Kahn\textquotesingle{}s algorithm for topological sorting to ensure that all parent nodes have smaller IDs than their children. The algorithm\+:
+\begin{DoxyEnumerate}
+\item Builds an adjacency list and calculates in-\/degrees for all nodes
+\item Starts with nodes having zero in-\/degree (root nodes)
+\item Processes nodes in breadth-\/first order, updating in-\/degrees
+\item Reassigns node IDs sequentially (1, 2, 3, ...) based on topological order
+\item Updates parent IDs to maintain correct relationships
+\end{DoxyEnumerate}
+
+Topological sorting is essential for\+:
+\begin{DoxyItemize}
+\item Ensuring proper tree traversal algorithms work correctly
+\item Maintaining consistency in neuron analysis operations
+\item Enabling efficient parent-\/to-\/child processing
+\item Supporting mesh generation algorithms that rely on ordered traversal
+\end{DoxyItemize}
+
+The resulting neuron will have\+:
+\begin{DoxyItemize}
+\item Root nodes (soma) with the smallest IDs
+\item All parent nodes having IDs smaller than their children
+\item Sequential ID numbering starting from 1
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+This method creates entirely new node IDs while preserving topology 
+
+The original node IDs are completely replaced 
+
+Parent-\/child relationships are preserved but with new ID mappings
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a7b7eae0aeccf7e7aec8f3cab6008f37c}{is\+Topologically\+Sorted()}} to check if sorting is needed 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a31ec77a2f3c9e69317c30366560761f5}\label{classNeuronGraph_a31ec77a2f3c9e69317c30366560761f5}} 
+\index{NeuronGraph@{NeuronGraph}!ugx2swc@{ugx2swc}}
+\index{ugx2swc@{ugx2swc}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{ugx2swc()}{ugx2swc()}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::ugx2swc (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{inputfile,  }\item[{const std\+::string \&}]{outputfile }\end{DoxyParamCaption})}
+
+
+
+Converts a UGX file to SWC format. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em inputfile} & Path to the input UGX file \\
+\hline
+\mbox{\texttt{ in}}  & {\em outputfile} & Path for the output SWC file\\
+\hline
+\end{DoxyParams}
+This is a convenience method that combines \mbox{\hyperlink{classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb}{read\+From\+File\+UGX()}} and \mbox{\hyperlink{classNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb}{write\+To\+File()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputfile} & Path to the input UGX file \\
+\hline
+{\em outputfile} & Path to the output SWC file\\
+\hline
+\end{DoxyParams}
+This static utility method provides convenient UGX to SWC format conversion. It creates a temporary \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} instance, loads the UGX data, and exports it in standard SWC format for compatibility with neuron analysis tools.
+
+\begin{DoxyNote}{Note}
+This is a static method that can be called without a \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} instance
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6}{swc2ugx(const std\+::string\& inputfile, const std\+::string\& outputfile)}} for reverse conversion 
+
+\mbox{\hyperlink{classNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb}{write\+To\+File()}} for SWC output functionality 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb}\label{classNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb}} 
+\index{NeuronGraph@{NeuronGraph}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::write\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Writes a set of nodes to an SWC file. 
+
+Writes neuron morphology data to an SWC format file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The nodes to write \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & Path to the output file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The file will be overwritten if it already exists
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & Map of SWC nodes to write to file \\
+\hline
+{\em filename} & Output file path for the SWC data\\
+\hline
+\end{DoxyParams}
+This method exports neuron morphology data in the standard SWC format. Nodes are written in sorted order by ID to ensure consistent output. Each line contains\+: ID, type, x, y, z, radius, parent\+\_\+\+ID.
+
+The output format is compatible with standard neuron analysis tools and can be read back using \mbox{\hyperlink{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}{read\+From\+File()}}.
+
+\begin{DoxyNote}{Note}
+If output file cannot be opened, an error message is printed and method returns 
+
+Prints confirmation message upon successful completion
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a8ee6517767cd316da4474cb55c67307f}{read\+From\+File(const std\+::string\& filename)}} for reading SWC files 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_a0dec1b5ec2012af3aa6cb50ce2c08941}\label{classNeuronGraph_a0dec1b5ec2012af3aa6cb50ce2c08941}} 
+\index{NeuronGraph@{NeuronGraph}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::write\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Writes the current graph\textquotesingle{}s nodes to an SWC file \mbox{\Hypertarget{classNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5}\label{classNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5}} 
+\index{NeuronGraph@{NeuronGraph}!writeToFileUGX@{writeToFileUGX}}
+\index{writeToFileUGX@{writeToFileUGX}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{writeToFileUGX()}{writeToFileUGX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::write\+To\+File\+UGX (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \&}]{node\+Set,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Writes a set of nodes to a UGX file. 
+
+Writes neuron morphology data to a UGX file format.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em node\+Set} & The nodes to write \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & Path to the output file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The file will be overwritten if it already exists
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Set} & Map of SWC nodes to be written, where key is node ID and value is \mbox{\hyperlink{structSWCNode}{SWCNode}} object \\
+\hline
+{\em filename} & Path to the output UGX file\\
+\hline
+\end{DoxyParams}
+This method converts the internal neuron representation into the UGX file format, which is compatible with the UG4 simulation framework. The UGX format is an XML-\/based format that can represent complex graph structures with additional attributes.
+
+The output UGX file includes\+:
+\begin{DoxyItemize}
+\item 3D vertex coordinates for each node
+\item Edge connectivity based on parent-\/child relationships
+\item Node diameters as vertex attributes
+\item Subset definitions for different neuron components (soma, axon, dendrites, etc.)
+\end{DoxyItemize}
+
+The method performs the following steps\+:
+\begin{DoxyEnumerate}
+\item Extracts node positions, diameters, and connectivity from the input node set
+\item Creates a mapping between node IDs and internal indices
+\item Organizes nodes into subsets based on their type (soma, axon, dendrites, etc.)
+\item Constructs the UGX XML structure with proper formatting
+\item Writes the XML data to the specified file
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+The method preserves the 3D structure and topological relationships of the neuron 
+
+If the file cannot be written, an error message is printed to stderr 
+
+The method automatically handles different SWC node types (soma=1, axon=2, etc.) 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb}{read\+From\+File\+UGX()}} for the corresponding import functionality 
+
+\href{https://github.com/UG4/ug4}{\texttt{ https\+://github.\+com/\+UG4/ug4}} for more information about the UGX format 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classNeuronGraph_aa4db233a8438b8eb45241f79c3a8cfe4}\label{classNeuronGraph_aa4db233a8438b8eb45241f79c3a8cfe4}} 
+\index{NeuronGraph@{NeuronGraph}!writeToFileUGX@{writeToFileUGX}}
+\index{writeToFileUGX@{writeToFileUGX}!NeuronGraph@{NeuronGraph}}
+\doxysubsubsection{\texorpdfstring{writeToFileUGX()}{writeToFileUGX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Neuron\+Graph\+::write\+To\+File\+UGX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Writes the current graph\textquotesingle{}s nodes to a UGX file 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/project/\mbox{\hyperlink{neurongraph_8h}{neurongraph.\+h}}\item 
+src/\mbox{\hyperlink{neurongraph_8cpp}{neurongraph.\+cpp}}\item 
+src/\mbox{\hyperlink{neuronoperations_8cpp}{neuronoperations.\+cpp}}\item 
+src/\mbox{\hyperlink{neurontrunks_8cpp}{neurontrunks.\+cpp}}\item 
+src/\mbox{\hyperlink{neuronugx_8cpp}{neuronugx.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,156 @@
+\hypertarget{classdoctest_1_1Context}{}\doxysection{doctest\+::Context Class Reference}
+\label{classdoctest_1_1Context}\index{doctest::Context@{doctest::Context}}
+
+
+{\ttfamily \#include $<$doctest.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdoctest_1_1Context_a881bc2d0fe207d672e1debe830768a98}{Context}} (int argc=0, const char $\ast$const $\ast$argv=nullptr)
+\item 
+\mbox{\hyperlink{classdoctest_1_1Context_a1d40d57d7b4bee1c8e6e2ebe7eafbb3a}{Context}} (const \mbox{\hyperlink{classdoctest_1_1Context}{Context}} \&)=delete
+\item 
+\mbox{\hyperlink{classdoctest_1_1Context_a1feb0418d15238aa805f0c1e16f5197e}{Context}} (\mbox{\hyperlink{classdoctest_1_1Context}{Context}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classdoctest_1_1Context}{Context}} \& \mbox{\hyperlink{classdoctest_1_1Context_a10db87d277d16217d732dc32b25adc11}{operator=}} (const \mbox{\hyperlink{classdoctest_1_1Context}{Context}} \&)=delete
+\item 
+\mbox{\hyperlink{classdoctest_1_1Context}{Context}} \& \mbox{\hyperlink{classdoctest_1_1Context_aad3c5d4999317a732f2128928b0c5226}{operator=}} (\mbox{\hyperlink{classdoctest_1_1Context}{Context}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classdoctest_1_1Context_a33b344fbc4803dca81147c4a4cc9edbd}{$\sim$\+Context}} ()
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_ad55229220bf9ca74e6e0c6323bf672e1}{apply\+Command\+Line}} (int argc, const char $\ast$const $\ast$argv)
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_a60ad57a46c19db2b142468c3acac448a}{add\+Filter}} (const char $\ast$filter, const char $\ast$value)
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_aaa878723e89310d5aa3f516bc7ab3165}{clear\+Filters}} ()
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_a7f7735caa75c60cdf8c8d86a75ce1d81}{set\+Option}} (const char $\ast$option, bool value)
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_a95e7a0230c5897f0eae36718f51d2f05}{set\+Option}} (const char $\ast$option, int value)
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_a4352ffc196c4ba56045270e45baa2754}{set\+Option}} (const char $\ast$option, const char $\ast$value)
+\item 
+bool \mbox{\hyperlink{classdoctest_1_1Context_a219b10301380b81c84c0824a6876d9aa}{should\+Exit}} ()
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_ae85cecc7689f009e23cba383484773b2}{set\+As\+Default\+For\+Asserts\+Out\+Of\+Test\+Cases}} ()
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_a669dd0a596a611eeb0decdb78b661a90}{set\+Assert\+Handler}} (\mbox{\hyperlink{namespacedoctest_1_1detail_a296151d397b21a9ce755b0e6ed2d1f0a}{detail\+::assert\+\_\+handler}} ah)
+\item 
+void \mbox{\hyperlink{classdoctest_1_1Context_a503e7ebcc794a3cc67fa2e77873cafaa}{set\+Cout}} (\mbox{\hyperlink{namespacestd_a6d1736434ff6d516a3df38cbb7487ea5}{std\+::ostream}} $\ast$out)
+\item 
+int \mbox{\hyperlink{classdoctest_1_1Context_a8059b137ef41cbe6c5d8160806a3cc63}{run}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdoctest_1_1Context_a881bc2d0fe207d672e1debe830768a98}\label{classdoctest_1_1Context_a881bc2d0fe207d672e1debe830768a98}} 
+\index{doctest::Context@{doctest::Context}!Context@{Context}}
+\index{Context@{Context}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{Context()}{Context()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily doctest\+::\+Context\+::\+Context (\begin{DoxyParamCaption}\item[{int}]{argc = {\ttfamily 0},  }\item[{const char $\ast$const $\ast$}]{argv = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a1d40d57d7b4bee1c8e6e2ebe7eafbb3a}\label{classdoctest_1_1Context_a1d40d57d7b4bee1c8e6e2ebe7eafbb3a}} 
+\index{doctest::Context@{doctest::Context}!Context@{Context}}
+\index{Context@{Context}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{Context()}{Context()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily doctest\+::\+Context\+::\+Context (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdoctest_1_1Context}{Context}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a1feb0418d15238aa805f0c1e16f5197e}\label{classdoctest_1_1Context_a1feb0418d15238aa805f0c1e16f5197e}} 
+\index{doctest::Context@{doctest::Context}!Context@{Context}}
+\index{Context@{Context}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{Context()}{Context()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily doctest\+::\+Context\+::\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdoctest_1_1Context}{Context}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a33b344fbc4803dca81147c4a4cc9edbd}\label{classdoctest_1_1Context_a33b344fbc4803dca81147c4a4cc9edbd}} 
+\index{doctest::Context@{doctest::Context}!````~Context@{$\sim$Context}}
+\index{````~Context@{$\sim$Context}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{$\sim$Context()}{~Context()}}
+{\footnotesize\ttfamily doctest\+::\+Context\+::$\sim$\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdoctest_1_1Context_a60ad57a46c19db2b142468c3acac448a}\label{classdoctest_1_1Context_a60ad57a46c19db2b142468c3acac448a}} 
+\index{doctest::Context@{doctest::Context}!addFilter@{addFilter}}
+\index{addFilter@{addFilter}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{addFilter()}{addFilter()}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::add\+Filter (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filter,  }\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_ad55229220bf9ca74e6e0c6323bf672e1}\label{classdoctest_1_1Context_ad55229220bf9ca74e6e0c6323bf672e1}} 
+\index{doctest::Context@{doctest::Context}!applyCommandLine@{applyCommandLine}}
+\index{applyCommandLine@{applyCommandLine}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{applyCommandLine()}{applyCommandLine()}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::apply\+Command\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$const $\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_aaa878723e89310d5aa3f516bc7ab3165}\label{classdoctest_1_1Context_aaa878723e89310d5aa3f516bc7ab3165}} 
+\index{doctest::Context@{doctest::Context}!clearFilters@{clearFilters}}
+\index{clearFilters@{clearFilters}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{clearFilters()}{clearFilters()}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::clear\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a10db87d277d16217d732dc32b25adc11}\label{classdoctest_1_1Context_a10db87d277d16217d732dc32b25adc11}} 
+\index{doctest::Context@{doctest::Context}!operator=@{operator=}}
+\index{operator=@{operator=}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdoctest_1_1Context}{Context}}\& doctest\+::\+Context\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdoctest_1_1Context}{Context}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_aad3c5d4999317a732f2128928b0c5226}\label{classdoctest_1_1Context_aad3c5d4999317a732f2128928b0c5226}} 
+\index{doctest::Context@{doctest::Context}!operator=@{operator=}}
+\index{operator=@{operator=}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdoctest_1_1Context}{Context}}\& doctest\+::\+Context\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdoctest_1_1Context}{Context}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a8059b137ef41cbe6c5d8160806a3cc63}\label{classdoctest_1_1Context_a8059b137ef41cbe6c5d8160806a3cc63}} 
+\index{doctest::Context@{doctest::Context}!run@{run}}
+\index{run@{run}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int doctest\+::\+Context\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_ae85cecc7689f009e23cba383484773b2}\label{classdoctest_1_1Context_ae85cecc7689f009e23cba383484773b2}} 
+\index{doctest::Context@{doctest::Context}!setAsDefaultForAssertsOutOfTestCases@{setAsDefaultForAssertsOutOfTestCases}}
+\index{setAsDefaultForAssertsOutOfTestCases@{setAsDefaultForAssertsOutOfTestCases}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{setAsDefaultForAssertsOutOfTestCases()}{setAsDefaultForAssertsOutOfTestCases()}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::set\+As\+Default\+For\+Asserts\+Out\+Of\+Test\+Cases (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a669dd0a596a611eeb0decdb78b661a90}\label{classdoctest_1_1Context_a669dd0a596a611eeb0decdb78b661a90}} 
+\index{doctest::Context@{doctest::Context}!setAssertHandler@{setAssertHandler}}
+\index{setAssertHandler@{setAssertHandler}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{setAssertHandler()}{setAssertHandler()}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::set\+Assert\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacedoctest_1_1detail_a296151d397b21a9ce755b0e6ed2d1f0a}{detail\+::assert\+\_\+handler}}}]{ah }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a503e7ebcc794a3cc67fa2e77873cafaa}\label{classdoctest_1_1Context_a503e7ebcc794a3cc67fa2e77873cafaa}} 
+\index{doctest::Context@{doctest::Context}!setCout@{setCout}}
+\index{setCout@{setCout}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{setCout()}{setCout()}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::set\+Cout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacestd_a6d1736434ff6d516a3df38cbb7487ea5}{std\+::ostream}} $\ast$}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a7f7735caa75c60cdf8c8d86a75ce1d81}\label{classdoctest_1_1Context_a7f7735caa75c60cdf8c8d86a75ce1d81}} 
+\index{doctest::Context@{doctest::Context}!setOption@{setOption}}
+\index{setOption@{setOption}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{setOption()}{setOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::set\+Option (\begin{DoxyParamCaption}\item[{const char $\ast$}]{option,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a4352ffc196c4ba56045270e45baa2754}\label{classdoctest_1_1Context_a4352ffc196c4ba56045270e45baa2754}} 
+\index{doctest::Context@{doctest::Context}!setOption@{setOption}}
+\index{setOption@{setOption}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{setOption()}{setOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::set\+Option (\begin{DoxyParamCaption}\item[{const char $\ast$}]{option,  }\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a95e7a0230c5897f0eae36718f51d2f05}\label{classdoctest_1_1Context_a95e7a0230c5897f0eae36718f51d2f05}} 
+\index{doctest::Context@{doctest::Context}!setOption@{setOption}}
+\index{setOption@{setOption}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{setOption()}{setOption()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void doctest\+::\+Context\+::set\+Option (\begin{DoxyParamCaption}\item[{const char $\ast$}]{option,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdoctest_1_1Context_a219b10301380b81c84c0824a6876d9aa}\label{classdoctest_1_1Context_a219b10301380b81c84c0824a6876d9aa}} 
+\index{doctest::Context@{doctest::Context}!shouldExit@{shouldExit}}
+\index{shouldExit@{shouldExit}!doctest::Context@{doctest::Context}}
+\doxysubsubsection{\texorpdfstring{shouldExit()}{shouldExit()}}
+{\footnotesize\ttfamily bool doctest\+::\+Context\+::should\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/externals/\mbox{\hyperlink{doctest_8h}{doctest.\+h}}\end{DoxyCompactItemize}

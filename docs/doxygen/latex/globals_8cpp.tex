@@ -1,0 +1,299 @@
+\hypertarget{globals_8cpp}{}\doxysection{src/viewercpp/globals.cpp File Reference}
+\label{globals_8cpp}\index{src/viewercpp/globals.cpp@{src/viewercpp/globals.cpp}}
+
+
+Global variables and state for the neuron viewer application.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}neurongraph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+Include dependency graph for globals.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{globals_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{globals_8cpp_ae796bdcdc88555f8477476e92889e0bc}{render\+Mode}} = 1
+\begin{DoxyCompactList}\small\item\em Current rendering mode (1-\/6) that determines how the neuron is displayed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{globals_8cpp_aa8aa4f538680d1269ff4be66f769687f}{rotateX}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Rotation around the X-\/axis in degrees. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{globals_8cpp_ae23fc2c47e293b5e63b1b202d3f4ea8c}{rotateY}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Rotation around the Y-\/axis in degrees. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{globals_8cpp_a9c59ed4a7b6bdc2b1207e39fabf379a4}{zoom}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em Zoom factor (1.\+0 = normal, $>$1.\+0 = zoom in, $<$1.\+0 = zoom out) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{globals_8cpp_a49a99c955b0f88d5e8405c8804ee14c9}{panX}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Horizontal pan offset in screen coordinates. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{globals_8cpp_ade3f4841d2b81325742f734954b13169}{panY}} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Vertical pan offset in screen coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{globals_8cpp_ac7285bf60dc89068354b900e82672078}{dragging}} = false
+\begin{DoxyCompactList}\small\item\em Flag indicating if left mouse button is being dragged. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{globals_8cpp_ad696ba2383c8f822f0edc19aab235c92}{right\+Dragging}} = false
+\begin{DoxyCompactList}\small\item\em Flag indicating if right mouse button is being dragged. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{globals_8cpp_a02e3a1b901858994db673826761a2b4e}{lastX}}
+\begin{DoxyCompactList}\small\item\em X coordinate of the last mouse position. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{globals_8cpp_a04eb776b2ebceace641072dabd564d08}{lastY}}
+\begin{DoxyCompactList}\small\item\em Y coordinate of the last mouse position. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{globals_8cpp_a4d6785feef726a067dc9f82a1461061a}{refine\+Delta}} = 8.\+0
+\begin{DoxyCompactList}\small\item\em Refinement parameter for geometry processing. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{globals_8cpp_aecfcd8d5595d8ba1a38ef3c624d1186a}{help}}
+\begin{DoxyCompactList}\small\item\em Help text displayed in the console and help window. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structSWCNode}{SWCNode}} $>$ \mbox{\hyperlink{globals_8cpp_af8217013dbadaec18d104a5f0e7dc04b}{current\+Nodes}}
+\begin{DoxyCompactList}\small\item\em Global container for the currently loaded neuron nodes. \end{DoxyCompactList}\item 
+GLFWwindow $\ast$ \mbox{\hyperlink{globals_8cpp_ad1788e3474b817a1b935177e45d114c5}{help\+Window}} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to the GLFW help window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} \mbox{\hyperlink{globals_8cpp_a65b5e8f0673c2dba7ec632133f036a21}{graph}}
+\begin{DoxyCompactList}\small\item\em Global instance of the neuron graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Global variables and state for the neuron viewer application. 
+
+This file contains the implementation of global variables used throughout the neuron visualization application. These variables maintain the application state, including view parameters, user interface state, and the current neuron data being visualized.
+
+Key components\+:
+\begin{DoxyItemize}
+\item View parameters (rotation, zoom, pan)
+\item Rendering mode and quality settings
+\item User interaction state (mouse dragging, etc.)
+\item Help text and UI state
+\item Current neuron data and graph representation
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+These variables are declared as extern in \mbox{\hyperlink{globals_8h}{globals.\+h}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{globals_8h}{globals.\+h}} for declarations and documentation of each variable
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+CPPNeuron\+Mesher Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/07-\/27 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{globals_8cpp_af8217013dbadaec18d104a5f0e7dc04b}\label{globals_8cpp_af8217013dbadaec18d104a5f0e7dc04b}} 
+\index{globals.cpp@{globals.cpp}!currentNodes@{currentNodes}}
+\index{currentNodes@{currentNodes}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{currentNodes}{currentNodes}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structSWCNode}{SWCNode}}$>$ current\+Nodes}
+
+
+
+Global container for the currently loaded neuron nodes. 
+
+Currently loaded neuron nodes for rendering.
+
+This vector holds the SWC nodes of the currently loaded neuron. It\textquotesingle{}s used throughout the application for rendering and processing.
+
+\begin{DoxyNote}{Note}
+Updated when a new file is loaded via \mbox{\hyperlink{opgl__utils_8cpp_a81fad3cb23594d5bbd0c49fbe109379b}{open\+Neuron\+File()}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structSWCNode}{SWCNode}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{globals_8cpp_ac7285bf60dc89068354b900e82672078}\label{globals_8cpp_ac7285bf60dc89068354b900e82672078}} 
+\index{globals.cpp@{globals.cpp}!dragging@{dragging}}
+\index{dragging@{dragging}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{dragging}{dragging}}
+{\footnotesize\ttfamily bool dragging = false}
+
+
+
+Flag indicating if left mouse button is being dragged. 
+
+Mouse drag state flags. \mbox{\Hypertarget{globals_8cpp_a65b5e8f0673c2dba7ec632133f036a21}\label{globals_8cpp_a65b5e8f0673c2dba7ec632133f036a21}} 
+\index{globals.cpp@{globals.cpp}!graph@{graph}}
+\index{graph@{graph}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} graph}
+
+
+
+Global instance of the neuron graph. 
+
+The main neuron graph data structure.
+
+This object holds the complete neuron graph structure and provides methods for loading, processing, and querying the neuron morphology.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} class for available operations 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{globals_8cpp_aecfcd8d5595d8ba1a38ef3c624d1186a}\label{globals_8cpp_aecfcd8d5595d8ba1a38ef3c624d1186a}} 
+\index{globals.cpp@{globals.cpp}!help@{help}}
+\index{help@{help}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily std\+::string help}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{stringliteral}{"{}=== SWC Viewer Controls ===\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}1 -\/ 6         | Change render mode\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}F             | Refine geometry (cubic spline)\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}Ctrl + F      | Coarsen geometry (cubic spline)\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}O             | Open SWC/UGX file\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}S             | Save to SWC/UGX file\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}R             | Reset camera view\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}H             | Help screen\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}Mouse Drag    | Rotate scene (Left Button)\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}Mouse Drag    | Pan scene (Right Button)\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}Scroll Wheel  | Zoom in/out\(\backslash\)n"{}}}
+\DoxyCodeLine{                   \textcolor{stringliteral}{"{}ESC           | Exit viewer"{}}}
+
+\end{DoxyCode}
+
+
+Help text displayed in the console and help window. 
+
+Help text displayed in the help window.
+
+Contains formatted text describing the application\textquotesingle{}s keyboard and mouse controls. The text is displayed when the user presses the \textquotesingle{}H\textquotesingle{} key or when explicitly requested.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{opgl__utils_8cpp_af435ad623add097384c18de67cd0702e}{print\+Help\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{globals_8cpp_ad1788e3474b817a1b935177e45d114c5}\label{globals_8cpp_ad1788e3474b817a1b935177e45d114c5}} 
+\index{globals.cpp@{globals.cpp}!helpWindow@{helpWindow}}
+\index{helpWindow@{helpWindow}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{helpWindow}{helpWindow}}
+{\footnotesize\ttfamily GLFWwindow$\ast$ help\+Window = nullptr}
+
+
+
+Pointer to the GLFW help window. 
+
+Pointer to the help window (nullptr if not open)
+
+This is the main window used for displaying the help text. Initialized to nullptr and created when the help window is shown.
+
+\begin{DoxyNote}{Note}
+Managed by the main application loop 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+show\+Help\+Window() in the main application file 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{globals_8cpp_a02e3a1b901858994db673826761a2b4e}\label{globals_8cpp_a02e3a1b901858994db673826761a2b4e}} 
+\index{globals.cpp@{globals.cpp}!lastX@{lastX}}
+\index{lastX@{lastX}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{lastX}{lastX}}
+{\footnotesize\ttfamily double lastX}
+
+
+
+X coordinate of the last mouse position. 
+
+Last recorded mouse cursor position. \mbox{\Hypertarget{globals_8cpp_a04eb776b2ebceace641072dabd564d08}\label{globals_8cpp_a04eb776b2ebceace641072dabd564d08}} 
+\index{globals.cpp@{globals.cpp}!lastY@{lastY}}
+\index{lastY@{lastY}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{lastY}{lastY}}
+{\footnotesize\ttfamily double lastY}
+
+
+
+Y coordinate of the last mouse position. 
+
+\mbox{\Hypertarget{globals_8cpp_a49a99c955b0f88d5e8405c8804ee14c9}\label{globals_8cpp_a49a99c955b0f88d5e8405c8804ee14c9}} 
+\index{globals.cpp@{globals.cpp}!panX@{panX}}
+\index{panX@{panX}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{panX}{panX}}
+{\footnotesize\ttfamily double panX = 0.\+0f}
+
+
+
+Horizontal pan offset in screen coordinates. 
+
+Camera pan offset in X and Y directions. \mbox{\Hypertarget{globals_8cpp_ade3f4841d2b81325742f734954b13169}\label{globals_8cpp_ade3f4841d2b81325742f734954b13169}} 
+\index{globals.cpp@{globals.cpp}!panY@{panY}}
+\index{panY@{panY}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{panY}{panY}}
+{\footnotesize\ttfamily double panY = 0.\+0f}
+
+
+
+Vertical pan offset in screen coordinates. 
+
+\mbox{\Hypertarget{globals_8cpp_a4d6785feef726a067dc9f82a1461061a}\label{globals_8cpp_a4d6785feef726a067dc9f82a1461061a}} 
+\index{globals.cpp@{globals.cpp}!refineDelta@{refineDelta}}
+\index{refineDelta@{refineDelta}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{refineDelta}{refineDelta}}
+{\footnotesize\ttfamily double refine\+Delta = 8.\+0}
+
+
+
+Refinement parameter for geometry processing. 
+
+Refinement parameter for mesh generation.
+
+Controls the level of detail in the generated geometry. Higher values result in coarser meshes, while lower values produce more detailed meshes. Used in cubic spline interpolation.
+
+\begin{DoxyNote}{Note}
+Initialized to 8.\+0 for a coarse starting point 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+all\+Cubic\+Spline\+Resampled\+Trunks() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{globals_8cpp_ae796bdcdc88555f8477476e92889e0bc}\label{globals_8cpp_ae796bdcdc88555f8477476e92889e0bc}} 
+\index{globals.cpp@{globals.cpp}!renderMode@{renderMode}}
+\index{renderMode@{renderMode}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{renderMode}{renderMode}}
+{\footnotesize\ttfamily int render\+Mode = 1}
+
+
+
+Current rendering mode (1-\/6) that determines how the neuron is displayed. 
+
+Current rendering mode (1-\/5) \mbox{\Hypertarget{globals_8cpp_ad696ba2383c8f822f0edc19aab235c92}\label{globals_8cpp_ad696ba2383c8f822f0edc19aab235c92}} 
+\index{globals.cpp@{globals.cpp}!rightDragging@{rightDragging}}
+\index{rightDragging@{rightDragging}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{rightDragging}{rightDragging}}
+{\footnotesize\ttfamily bool right\+Dragging = false}
+
+
+
+Flag indicating if right mouse button is being dragged. 
+
+\mbox{\Hypertarget{globals_8cpp_aa8aa4f538680d1269ff4be66f769687f}\label{globals_8cpp_aa8aa4f538680d1269ff4be66f769687f}} 
+\index{globals.cpp@{globals.cpp}!rotateX@{rotateX}}
+\index{rotateX@{rotateX}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{rotateX}{rotateX}}
+{\footnotesize\ttfamily double rotateX = 0.\+0f}
+
+
+
+Rotation around the X-\/axis in degrees. 
+
+Camera rotation around X and Y axes (in degrees) \mbox{\Hypertarget{globals_8cpp_ae23fc2c47e293b5e63b1b202d3f4ea8c}\label{globals_8cpp_ae23fc2c47e293b5e63b1b202d3f4ea8c}} 
+\index{globals.cpp@{globals.cpp}!rotateY@{rotateY}}
+\index{rotateY@{rotateY}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{rotateY}{rotateY}}
+{\footnotesize\ttfamily double rotateY = 0.\+0f}
+
+
+
+Rotation around the Y-\/axis in degrees. 
+
+\mbox{\Hypertarget{globals_8cpp_a9c59ed4a7b6bdc2b1207e39fabf379a4}\label{globals_8cpp_a9c59ed4a7b6bdc2b1207e39fabf379a4}} 
+\index{globals.cpp@{globals.cpp}!zoom@{zoom}}
+\index{zoom@{zoom}!globals.cpp@{globals.cpp}}
+\doxysubsubsection{\texorpdfstring{zoom}{zoom}}
+{\footnotesize\ttfamily double zoom = 1.\+0f}
+
+
+
+Zoom factor (1.\+0 = normal, $>$1.\+0 = zoom in, $<$1.\+0 = zoom out) 
+
+Camera zoom factor (higher values = more zoomed in) 

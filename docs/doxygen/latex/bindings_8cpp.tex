@@ -1,0 +1,112 @@
+\hypertarget{bindings_8cpp}{}\doxysection{src/bindings.cpp File Reference}
+\label{bindings_8cpp}\index{src/bindings.cpp@{src/bindings.cpp}}
+
+
+Python bindings for the CPPNeuron\+Mesher library using pybind11.  
+
+
+{\ttfamily \#include $<$pybind11/pybind11.\+h$>$}\newline
+{\ttfamily \#include $<$pybind11/stl.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}neurongraph.\+h\char`\"{}}\newline
+Include dependency graph for bindings.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bindings_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bindings_8cpp_aae7648d27183e458e522ad3086719fde}{PYBIND11\+\_\+\+MODULE}} (neurongraph, m)
+\begin{DoxyCompactList}\small\item\em Python module definition for neurongraph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Python bindings for the CPPNeuron\+Mesher library using pybind11. 
+
+\begin{DoxyAuthor}{Author}
+CPPNeuron\+Mesher Project 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024
+\end{DoxyDate}
+This file provides Python bindings for the \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} class and \mbox{\hyperlink{structSWCNode}{SWCNode}} structure, enabling Python users to access the full functionality of the CPPNeuron\+Mesher library. The bindings expose all major operations including file I/O, morphology analysis, preprocessing, mesh operations, and trunk analysis.
+
+The Python module can be imported as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{import} neurongraph}
+\DoxyCodeLine{graph = neurongraph.NeuronGraph()}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} for the main class documentation 
+
+\mbox{\hyperlink{structSWCNode}{SWCNode}} for the node structure documentation 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bindings_8cpp_aae7648d27183e458e522ad3086719fde}\label{bindings_8cpp_aae7648d27183e458e522ad3086719fde}} 
+\index{bindings.cpp@{bindings.cpp}!PYBIND11\_MODULE@{PYBIND11\_MODULE}}
+\index{PYBIND11\_MODULE@{PYBIND11\_MODULE}!bindings.cpp@{bindings.cpp}}
+\doxysubsubsection{\texorpdfstring{PYBIND11\_MODULE()}{PYBIND11\_MODULE()}}
+{\footnotesize\ttfamily PYBIND11\+\_\+\+MODULE (\begin{DoxyParamCaption}\item[{neurongraph}]{,  }\item[{m}]{ }\end{DoxyParamCaption})}
+
+
+
+Python module definition for neurongraph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The pybind11 module object\\
+\hline
+\end{DoxyParams}
+This function defines the Python module \textquotesingle{}neurongraph\textquotesingle{} and exposes all C++ classes and methods to Python. The module provides two main classes\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{structSWCNode}{SWCNode}}\+: Represents individual neuron nodes with spatial and topological data
+\item \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}}\+: Main class for neuron morphology analysis and processing
+\end{DoxyItemize}
+
+All method signatures are preserved from C++ to Python, with automatic type conversion handled by pybind11 for standard types (int, double, string, maps, vectors). Python binding for \mbox{\hyperlink{structSWCNode}{SWCNode}} structure
+
+Exposes the \mbox{\hyperlink{structSWCNode}{SWCNode}} C++ structure to Python, providing direct access to all neuron node properties. \mbox{\hyperlink{structSWCNode}{SWCNode}} represents a single point in a neuron morphology with spatial coordinates, topological relationships, and morphological type.
+
+Python usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{node = neurongraph.SWCNode()}
+\DoxyCodeLine{node.id = 1}
+\DoxyCodeLine{node.pid = -\/1  \textcolor{comment}{\# Root node}}
+\DoxyCodeLine{node.type = 1  \textcolor{comment}{\# Soma}}
+\DoxyCodeLine{node.x, node.y, node.z = 0.0, 0.0, 0.0}
+\DoxyCodeLine{node.radius = 5.0}
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+All attributes are read-\/write from Python 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structSWCNode}{SWCNode}} C++ structure for detailed field descriptions
+\end{DoxySeeAlso}
+Python binding for \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} class
+
+Exposes the complete \mbox{\hyperlink{classNeuronGraph}{Neuron\+Graph}} C++ class to Python, providing access to all neuron morphology analysis, processing, and I/O operations. This is the main class for working with neuron data in Python.
+
+Python usage examples\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{\# Create empty graph}}
+\DoxyCodeLine{graph = neurongraph.NeuronGraph()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{\# Load from file}}
+\DoxyCodeLine{graph = neurongraph.NeuronGraph(\textcolor{stringliteral}{"{}neuron.swc"{}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{\# Create from node dictionary}}
+\DoxyCodeLine{nodes = \{1: node1, 2: node2, ...\}}
+\DoxyCodeLine{graph = neurongraph.NeuronGraph(nodes)}
+
+\end{DoxyCode}

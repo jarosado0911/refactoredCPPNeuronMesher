@@ -1,0 +1,8 @@
+<map id="include/externals/tinyfiledialogs.h" name="include/externals/tinyfiledialogs.h">
+<area shape="rect" id="node1" title=" " alt="" coords="44,5,259,32"/>
+<area shape="rect" id="node2" href="$tinyfiledialogs_8c.html" title=" " alt="" coords="5,87,140,114"/>
+<area shape="rect" id="node3" href="$opgl__utils_8h.html" title="OpenGL utility functions for neuron visualization." alt="" coords="165,80,298,121"/>
+<area shape="rect" id="node4" href="$opgl__utils_8cpp.html" title="OpenGL utility functions for neuron visualization." alt="" coords="78,169,209,211"/>
+<area shape="rect" id="node5" href="$callbacks_8h.html" title="GLFW input handling callbacks for neuron visualization." alt="" coords="233,177,408,203"/>
+<area shape="rect" id="node6" href="$callbacks_8cpp.html" title="Implementation of GLFW callback functions for the neuron viewer." alt="" coords="227,259,414,285"/>
+</map>

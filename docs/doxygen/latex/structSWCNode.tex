@@ -1,0 +1,124 @@
+\hypertarget{structSWCNode}{}\doxysection{SWCNode Struct Reference}
+\label{structSWCNode}\index{SWCNode@{SWCNode}}
+
+
+Structure representing a single node in an SWC neuron morphology.  
+
+
+
+
+{\ttfamily \#include $<$neurongraph.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structSWCNode_aafdc61627f5700f681783984608ca6d4}{id}}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structSWCNode_a4d55115b02532d54ce05c8df8ad0ec95}{pid}}
+\begin{DoxyCompactList}\small\item\em Parent node ID (-\/1 for root nodes) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structSWCNode_aa327ce3ad1dbeb90002001cc8ae2de02}{type}}
+\begin{DoxyCompactList}\small\item\em Node type identifier. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structSWCNode_ad1c3d0a124d002b5e24baff1aa5670cb}{x}}
+\begin{DoxyCompactList}\small\item\em X-\/coordinate in 3D space. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structSWCNode_ad45f7df2489528d1370269a3c87eb791}{y}}
+\begin{DoxyCompactList}\small\item\em Y-\/coordinate in 3D space. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structSWCNode_a198b547cdee73cc73b354f29334c377d}{z}}
+\begin{DoxyCompactList}\small\item\em Z-\/coordinate in 3D space. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structSWCNode_a33ae4d57e524cd40caea72228b8cdd93}{radius}}
+\begin{DoxyCompactList}\small\item\em Radius of the neural process at this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a single node in an SWC neuron morphology. 
+
+This structure holds the essential properties of a neuron morphology node as defined in the SWC (Single-\/\+Write-\/\+Cable) format. Each node represents a 3D point in the neuron structure with associated metadata.
+
+\begin{DoxySeeAlso}{See also}
+\href{http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html}{\texttt{ http\+://www.\+neuronland.\+org/\+NLMorphology\+Converter/\+Morphology\+Formats/\+SWC/\+Spec.\+html}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structSWCNode_aafdc61627f5700f681783984608ca6d4}\label{structSWCNode_aafdc61627f5700f681783984608ca6d4}} 
+\index{SWCNode@{SWCNode}!id@{id}}
+\index{id@{id}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int SWCNode\+::id}
+
+
+
+Unique identifier for the node. 
+
+\mbox{\Hypertarget{structSWCNode_a4d55115b02532d54ce05c8df8ad0ec95}\label{structSWCNode_a4d55115b02532d54ce05c8df8ad0ec95}} 
+\index{SWCNode@{SWCNode}!pid@{pid}}
+\index{pid@{pid}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{pid}{pid}}
+{\footnotesize\ttfamily int SWCNode\+::pid}
+
+
+
+Parent node ID (-\/1 for root nodes) 
+
+\mbox{\Hypertarget{structSWCNode_a33ae4d57e524cd40caea72228b8cdd93}\label{structSWCNode_a33ae4d57e524cd40caea72228b8cdd93}} 
+\index{SWCNode@{SWCNode}!radius@{radius}}
+\index{radius@{radius}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily double SWCNode\+::radius}
+
+
+
+Radius of the neural process at this node. 
+
+\mbox{\Hypertarget{structSWCNode_aa327ce3ad1dbeb90002001cc8ae2de02}\label{structSWCNode_aa327ce3ad1dbeb90002001cc8ae2de02}} 
+\index{SWCNode@{SWCNode}!type@{type}}
+\index{type@{type}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily int SWCNode\+::type}
+
+
+
+Node type identifier. 
+
+Standard SWC types\+:
+\begin{DoxyItemize}
+\item 0\+: undefined
+\item 1\+: soma
+\item 2\+: axon
+\item 3\+: basal dendrite
+\item 4\+: apical dendrite
+\item 5-\/7\+: custom types (user-\/defined) 
+\end{DoxyItemize}\mbox{\Hypertarget{structSWCNode_ad1c3d0a124d002b5e24baff1aa5670cb}\label{structSWCNode_ad1c3d0a124d002b5e24baff1aa5670cb}} 
+\index{SWCNode@{SWCNode}!x@{x}}
+\index{x@{x}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily double SWCNode\+::x}
+
+
+
+X-\/coordinate in 3D space. 
+
+\mbox{\Hypertarget{structSWCNode_ad45f7df2489528d1370269a3c87eb791}\label{structSWCNode_ad45f7df2489528d1370269a3c87eb791}} 
+\index{SWCNode@{SWCNode}!y@{y}}
+\index{y@{y}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double SWCNode\+::y}
+
+
+
+Y-\/coordinate in 3D space. 
+
+\mbox{\Hypertarget{structSWCNode_a198b547cdee73cc73b354f29334c377d}\label{structSWCNode_a198b547cdee73cc73b354f29334c377d}} 
+\index{SWCNode@{SWCNode}!z@{z}}
+\index{z@{z}!SWCNode@{SWCNode}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily double SWCNode\+::z}
+
+
+
+Z-\/coordinate in 3D space. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/project/\mbox{\hyperlink{neurongraph_8h}{neurongraph.\+h}}\end{DoxyCompactItemize}
