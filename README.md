@@ -1,4 +1,6 @@
 # `C++` Neuron Geometry Analyzer and Mesh Generator
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=jarosado0911&show_icons=true&theme=default)
+
 CPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
 - GitHub Repository: [CPPNeuronMesher](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
 - GitHub Pages: [CPPNeuronMesher](https://jarosado0911.github.io/refactoredCPPNeuronMesher)
