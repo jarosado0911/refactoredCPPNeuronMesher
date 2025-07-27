@@ -8,7 +8,7 @@ This project provides an OpenGL-based neuron visualization and meshing system wr
 
 ## 🔧 Key Class Documentation
 
-- [NeuronGraph Class Documentation](classNeuronGraph.html)
+- [NeuronGraph Class Documentation](doxygen/html/classNeuronGraph.html)
 
 ---
 
