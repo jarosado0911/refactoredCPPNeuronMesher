@@ -1,3 +1,28 @@
+/**
+ * @file neuronugx.cpp
+ * @brief Implementation of UGX file format support for neuron morphologies
+ * 
+ * This file provides functionality to read from and write to the UGX file format,
+ * which is commonly used in the UG4 simulation framework. It handles the conversion
+ * between the internal SWC-based neuron representation and the UG4 grid format.
+ *
+ * Key features:
+ * - Export neuron morphologies to UGX format for visualization and simulation
+ * - Import UGX files while preserving node properties and connectivity
+ * - Support for different neuron components (soma, axon, dendrites) via subsets
+ * - Maintains 3D coordinates, diameters, and topological relationships
+ *
+ * The UGX format is an XML-based format that represents graphs with additional
+ * attributes, making it suitable for complex neuron morphologies with different
+ * types of neural processes.
+ *
+ * @author CPPNeuronMesher Team
+ * @date 2025-07-27
+ * @version 1.0
+ * @copyright MIT License
+ * @see https://github.com/yourusername/refactoredCPPNeuronMesher
+ */
+
 #include <array>
 #include "neurongraph.h"
 #include <numeric>
@@ -5,8 +30,36 @@
 
 using namespace tinyxml2;
 
+/**
+ * @brief Writes neuron morphology data to a UGX file format
+ * @param nodeSet Map of SWC nodes to be written, where key is node ID and value is SWCNode object
+ * @param filename Path to the output UGX file
+ * 
+ * This method converts the internal neuron representation into the UGX file format,
+ * which is compatible with the UG4 simulation framework. The UGX format is an XML-based
+ * format that can represent complex graph structures with additional attributes.
+ *
+ * The output UGX file includes:
+ * - 3D vertex coordinates for each node
+ * - Edge connectivity based on parent-child relationships
+ * - Node diameters as vertex attributes
+ * - Subset definitions for different neuron components (soma, axon, dendrites, etc.)
+ *
+ * The method performs the following steps:
+ * 1. Extracts node positions, diameters, and connectivity from the input node set
+ * 2. Creates a mapping between node IDs and internal indices
+ * 3. Organizes nodes into subsets based on their type (soma, axon, dendrites, etc.)
+ * 4. Constructs the UGX XML structure with proper formatting
+ * 5. Writes the XML data to the specified file
+ *
+ * @note The method preserves the 3D structure and topological relationships of the neuron
+ * @note If the file cannot be written, an error message is printed to stderr
+ * @note The method automatically handles different SWC node types (soma=1, axon=2, etc.)
+ * @see readFromFileUGX() for the corresponding import functionality
+ * @see https://github.com/UG4/ug4 for more information about the UGX format
+ */
 void NeuronGraph::writeToFileUGX(const std::map<int, SWCNode>& nodeSet,
-                                 const std::string& filename) {
+                               const std::string& filename) {
     std::vector<std::array<double, 3>> positions;
     std::vector<double> diameters;
     std::vector<std::pair<int, int>> edges;
@@ -161,6 +214,33 @@ void NeuronGraph::writeToFileUGX(const std::map<int, SWCNode>& nodeSet,
     }
 }
 
+/**
+ * @brief Reads neuron morphology data from a UGX file
+ * @param filename Path to the input UGX file to read
+ * 
+ * This method imports neuron morphology data from a UGX file and populates the internal
+ * data structures of the NeuronGraph class. It handles the conversion from the UGX format
+ * to the internal SWC-based representation.
+ *
+ * The method processes the following UGX elements:
+ * - Vertex coordinates (3D positions)
+ * - Edge connectivity between nodes
+ * - Vertex attributes (diameters, types, etc.)
+ * - Subset information for different neuron components
+ *
+ * The import process includes:
+ * 1. Parsing the XML structure of the UGX file
+ * 2. Extracting vertex coordinates and creating SWC nodes
+ * 3. Reconstructing parent-child relationships from edges
+ * 4. Loading additional attributes like diameters and node types
+ * 5. Validating the imported morphology
+ *
+ * @note The method clears any existing neuron data before importing
+ * @note If the file cannot be read or is malformed, error messages are printed to stderr
+ * @note The method attempts to map UGX subsets back to SWC node types when possible
+ * @see writeToFileUGX() for the corresponding export functionality
+ * @see https://github.com/UG4/ug4 for more information about the UGX format
+ */
 void NeuronGraph::readFromFileUGX(const std::string& filename)
 {
     nodes.clear();
