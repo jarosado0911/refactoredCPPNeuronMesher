@@ -8,7 +8,7 @@ This project provides an OpenGL-based neuron visualization and meshing system wr
 
 ## 🔧 Key Class Documentation
 
-- [NeuronGraph Class Documentation](doxygen/classNeuronGraph.html)
+- [NeuronGraph Class Documentation](classNeuronGraph.html)
 
 ---
 
@@ -16,14 +16,14 @@ This project provides an OpenGL-based neuron visualization and meshing system wr
 
 ### `src/`
 
-- [NeuronGraph](doxygen/classNeuronGraph.html)
-- [NeuronOperations](doxygen/neuronoperations_8cpp.html)
-- [NeuronTrunks](doxygen/neurontrunks_8cpp.html)
-- [NeuronUGX](doxygen/neuronugx_8cpp.html)
-- [Utilities](doxygen/utils_8cpp.html)
+- [NeuronGraph](classNeuronGraph.html)
+- [NeuronOperations](neuronoperations_8cpp.html)
+- [NeuronTrunks](neurontrunks_8cpp.html)
+- [NeuronUGX](neuronugx_8cpp.html)
+- [Utilities](utils_8cpp.html)
 
 ### `scripts/`
-- [main.cpp](doxygen/main_8cpp.html)
+- [main.cpp](main_8cpp.html)
 
 ### `src/view/`
 
