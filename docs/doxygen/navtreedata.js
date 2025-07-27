@@ -33,6 +33,7 @@ var NAVTREE =
         [ "<tt>src/view/</tt>", "index.html#autotoc_md43", null ],
         [ "<tt>scripts/</tt>", "index.html#autotoc_md44", null ]
       ] ],
+      [ "- <a href=\"extracttrunks_8cpp.html\">extracttrunks.cpp</a>", "index.html#autotoc_md45", null ],
       [ "📈 NeuronGraph Dependency Graphs", "index.html#autotoc_md46", null ],
       [ "🧭 Navigation", "index.html#autotoc_md48", null ]
     ] ],
@@ -106,9 +107,9 @@ var NAVTREEINDEX =
 "doctest_8h.html#a36945fae4bbeabe5598670ece216c23c",
 "doctest_8h.html#abaa42cd51b4d27384c51ef5d957b888a",
 "functions_w.html",
-"namespacedoctest_1_1detail.html#a43e7d7a3a29691b5a4b7ce4192463649",
-"structdoctest_1_1TestRunStats.html#afd49da305793d2c2622f0b33a63e87b6",
-"swc__viewer_8cpp.html#a4cd2610187fe8068453e0567281fa5a8"
+"namespacedoctest_1_1detail.html#a37fb12184f6bac0e07ab434b4f264d08",
+"structdoctest_1_1TestRunStats.html#aecbf62d51a6c96875d72124c27096e1d",
+"swc__viewer_8cpp.html#a4133cae619062843519ce2840ccf168d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
