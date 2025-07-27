@@ -39,6 +39,10 @@ This is the source code for NeuronViewer
 - [splitrefineSET.cpp](splitrefineSET_8cpp.html)
 - [splitrefine.cpp](splitrefine_8cpp.html)
 - [extracttrunks.cpp](extracttrunks_8cpp.html)
+
+### Python Codes
+- [neuronviewer.py](neuronviewer_8py.html)
+- [test_bindings.py](test__bindings_8py)
   
 ---
 

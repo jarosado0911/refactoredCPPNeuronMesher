@@ -1,9 +1,20 @@
 var searchData=
 [
-  ['epsilon_1070',['epsilon',['../structdoctest_1_1Approx.html#af8df6b0af00fd875e5b6a0c30b86f636',1,'doctest::Approx']]],
-  ['eq_1071',['eq',['../namespacedoctest_1_1detail.html#afee21f6a8fdddb74655d67e5a4cc0946',1,'doctest::detail']]],
-  ['exceptiontranslator_1072',['ExceptionTranslator',['../classdoctest_1_1detail_1_1ExceptionTranslator.html#a3ac05488993c40c6ba55ce51a6bf7eae',1,'doctest::detail::ExceptionTranslator']]],
-  ['expected_5ffailures_1073',['expected_failures',['../structdoctest_1_1expected__failures.html#aa0d976fe3790c0c64918b8009fa419b4',1,'doctest::expected_failures']]],
-  ['expression_5flhs_1074',['Expression_lhs',['../structdoctest_1_1detail_1_1Expression__lhs.html#ab5d05d371e81dd7724592174afbfeba1',1,'doctest::detail::Expression_lhs']]],
-  ['expressiondecomposer_1075',['ExpressionDecomposer',['../structdoctest_1_1detail_1_1ExpressionDecomposer.html#a6bf2c46ebf0dc68106be801a90776e65',1,'doctest::detail::ExpressionDecomposer']]]
+  ['declval_1209',['declval',['../namespacedoctest_1_1detail.html#ab60ed87072d57dc65559089d26c98327',1,'doctest::detail']]],
+  ['decomp_5fassert_1210',['decomp_assert',['../namespacedoctest_1_1detail.html#acb7ee45e2dceca4a4d8339d2912780a0',1,'doctest::detail']]],
+  ['deletefolder_1211',['deleteFolder',['../utils_8cpp.html#a5dacd3daee9ede26b4fe6133408462d5',1,'deleteFolder(const std::string &amp;path):&#160;utils.cpp'],['../utils_8h.html#a5dacd3daee9ede26b4fe6133408462d5',1,'deleteFolder(const std::string &amp;path):&#160;utils.cpp']]],
+  ['description_1212',['description',['../structdoctest_1_1description.html#a2ba67962378e434801ecccbcf2bd403a',1,'doctest::description']]],
+  ['destroy_1213',['destroy',['../structdoctest_1_1detail_1_1ContextScopeBase.html#a6f223de9a972b08bf1b9e9d2d99ab4c6',1,'doctest::detail::ContextScopeBase']]],
+  ['detectpresence_1214',['detectPresence',['../tinyfiledialogs_8c.html#a59c08f25c3ef21ad9751ce4e167d962d',1,'tinyfiledialogs.c']]],
+  ['dialogname_1215',['dialogName',['../tinyfiledialogs_8c.html#a2497154987af60e28a041af366728368',1,'tinyfiledialogs.c']]],
+  ['dialognameonly_1216',['dialogNameOnly',['../tinyfiledialogs_8c.html#adf4008e85bddaea8f3aac9e8866735bf',1,'tinyfiledialogs.c']]],
+  ['direxists_1217',['dirExists',['../tinyfiledialogs_8c.html#a8e751e9e56dccd769a6b46d9fbbb3e8b',1,'tinyfiledialogs.c']]],
+  ['draw_5fgraph_1218',['draw_graph',['../namespacepython__package_1_1scripts_1_1neuronviewer.html#a17d9535ec8c78feb9be1c7b1c53b0bb4',1,'python_package::scripts::neuronviewer']]],
+  ['drawboundingbox_1219',['drawBoundingBox',['../draw__utils_8cpp.html#a703fff569922c385e2eee4fe8f247528',1,'drawBoundingBox(double minX, double maxX, double minY, double maxY, double minZ, double maxZ):&#160;draw_utils.cpp'],['../draw__utils_8h.html#a703fff569922c385e2eee4fe8f247528',1,'drawBoundingBox(double minX, double maxX, double minY, double maxY, double minZ, double maxZ):&#160;draw_utils.cpp'],['../swc__viewer_8cpp.html#a4133cae619062843519ce2840ccf168d',1,'drawBoundingBox(float minX, float maxX, float minY, float maxY, float minZ, float maxZ):&#160;swc_viewer.cpp']]],
+  ['drawcylinder_1220',['drawCylinder',['../draw__utils_8cpp.html#a505cf7f6ed8d6527faf799567d971bb1',1,'drawCylinder(const SWCNode &amp;a, const SWCNode &amp;b, int segments):&#160;draw_utils.cpp'],['../swc__viewer_8cpp.html#a65598ae83871fad84212c90bbaec2667',1,'drawCylinder(const SWCNode &amp;a, const SWCNode &amp;b, int segments=6):&#160;swc_viewer.cpp'],['../draw__utils_8h.html#a65598ae83871fad84212c90bbaec2667',1,'drawCylinder(const SWCNode &amp;a, const SWCNode &amp;b, int segments=6):&#160;draw_utils.cpp']]],
+  ['drawsimpleline_1221',['drawSimpleLine',['../draw__utils_8cpp.html#a9e1aa9b4fe444097d366fd74155e5a7c',1,'drawSimpleLine(const SWCNode &amp;a, const SWCNode &amp;b):&#160;draw_utils.cpp'],['../draw__utils_8h.html#a9e1aa9b4fe444097d366fd74155e5a7c',1,'drawSimpleLine(const SWCNode &amp;a, const SWCNode &amp;b):&#160;draw_utils.cpp'],['../swc__viewer_8cpp.html#a9e1aa9b4fe444097d366fd74155e5a7c',1,'drawSimpleLine(const SWCNode &amp;a, const SWCNode &amp;b):&#160;swc_viewer.cpp']]],
+  ['drawsimplesphere_1222',['drawSimpleSphere',['../draw__utils_8cpp.html#acaf017db92cfa0d82163fe785474e5a2',1,'drawSimpleSphere(const SWCNode &amp;node, double size):&#160;draw_utils.cpp'],['../draw__utils_8h.html#a6b12b8639ee9ef751cff0343e93a42a5',1,'drawSimpleSphere(const SWCNode &amp;node, double size=0.5f):&#160;draw_utils.cpp'],['../swc__viewer_8cpp.html#a279adf0b7e6fec6647b13831f6032486',1,'drawSimpleSphere(const SWCNode &amp;node, float size=0.5f):&#160;swc_viewer.cpp']]],
+  ['drawsphere_1223',['drawSphere',['../draw__utils_8cpp.html#a93fb31c05cb8b32586e30b13f9a053b4',1,'drawSphere(const SWCNode &amp;node, int slices, int stacks):&#160;draw_utils.cpp'],['../draw__utils_8h.html#acc9c48455e614233efcc255cc5df30db',1,'drawSphere(const SWCNode &amp;node, int slices=6, int stacks=6):&#160;draw_utils.cpp'],['../swc__viewer_8cpp.html#acc9c48455e614233efcc255cc5df30db',1,'drawSphere(const SWCNode &amp;node, int slices=6, int stacks=6):&#160;swc_viewer.cpp']]],
+  ['dunstifypresent_1224',['dunstifyPresent',['../tinyfiledialogs_8c.html#a635b809b99950e37239122c23935e7bd',1,'tinyfiledialogs.c']]],
+  ['dunstpresent_1225',['dunstPresent',['../tinyfiledialogs_8c.html#ad4a0896545c74e3800c225dd735dff60',1,'tinyfiledialogs.c']]]
 ];

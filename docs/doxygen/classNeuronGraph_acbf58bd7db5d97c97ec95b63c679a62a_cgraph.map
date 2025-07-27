@@ -5,6 +5,7 @@
 <area shape="rect" id="node6" href="$classNeuronGraph.html#a7961eded24b6524392b01fdfa7e98452" title="Combines multiple trunks into a single node set." alt="" coords="293,137,496,163"/>
 <area shape="rect" id="node7" href="$classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs." alt="" coords="284,187,505,214"/>
 <area shape="rect" id="node8" href="$classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="312,238,477,265"/>
-<area shape="rect" id="node3" href="$classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="553,5,728,47"/>
-<area shape="rect" id="node5" href="$classNeuronGraph.html#a4263b75e5c5c97d6f65dd681dbdfff60" title="Resamples a single trunk using linear interpolation." alt="" coords="553,71,728,112"/>
+<area shape="rect" id="node3" href="$classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="567,5,742,47"/>
+<area shape="rect" id="node5" href="$classNeuronGraph.html#a4263b75e5c5c97d6f65dd681dbdfff60" title="Resamples a single trunk using linear interpolation." alt="" coords="567,71,742,112"/>
+<area shape="rect" id="node9" href="$classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e" title="Builds a neighbor map from a set of nodes." alt="" coords="553,238,756,265"/>
 </map>

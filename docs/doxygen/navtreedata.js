@@ -28,12 +28,13 @@ var NAVTREE =
     [ "Project Overview", "index.html", [
       [ "🔧 Key Class Documentation", "index.html#autotoc_md38", null ],
       [ "📂 Source File Documentation", "index.html#autotoc_md40", [
-        [ "<tt>src/</tt>", "index.html#autotoc_md41", null ],
-        [ "<tt>src/view/</tt>", "index.html#autotoc_md42", null ],
-        [ "<tt>scripts/</tt>", "index.html#autotoc_md43", null ]
+        [ "Source <em>src/</em>", "index.html#autotoc_md41", null ],
+        [ "Viewer <em>src/view/</em>", "index.html#autotoc_md42", null ],
+        [ "Scripts <em>scripts/</em>", "index.html#autotoc_md43", null ],
+        [ "Python Codes", "index.html#autotoc_md44", null ]
       ] ],
-      [ "📈 NeuronGraph Dependency Graphs", "index.html#autotoc_md45", null ],
-      [ "🧭 Navigation", "index.html#autotoc_md47", null ]
+      [ "📈 NeuronGraph Dependency Graphs", "index.html#autotoc_md46", null ],
+      [ "🧭 Navigation", "index.html#autotoc_md48", null ]
     ] ],
     [ "SWC Neuron Viewer", "md_scripts_app_neuronviewer_README.html", [
       [ "✅ Prerequisites", "md_scripts_app_neuronviewer_README.html#autotoc_md2", [
@@ -66,7 +67,7 @@ var NAVTREE =
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
@@ -101,13 +102,14 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"doctest_8h.html#a36945fae4bbeabe5598670ece216c23c",
-"doctest_8h.html#abaa42cd51b4d27384c51ef5d957b888a",
-"functions_w.html",
-"namespacedoctest_1_1detail.html#a4d1cd90aa4961947b7d18dffcc8026f2",
-"structdoctest_1_1description.html",
-"swc__viewer_8cpp.html#a65598ae83871fad84212c90bbaec2667"
+"",
+"doctest_8h.html#a3107f364c442e90a71bb083dbda254ce",
+"doctest_8h.html#ab27afbd1ff6e5c2b18c53bbd27196a73",
+"functions_func_p.html",
+"namespacedoctest_1_1assertType.html#ae1bb5bed722f34f1c38b83cb19d326d3ab2880914ce3960d556aa8681e9e47ad4",
+"structdoctest_1_1AssertData.html#ace744d365532d299052c8a80a63f7079",
+"structdoctest_1_1detail_1_1ResultBuilder.html#a9f73413d071af01eb6c5b06636abc9f8",
+"tinyfiledialogs_8c.html#a90c7539481edef61716be515bffe6669"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

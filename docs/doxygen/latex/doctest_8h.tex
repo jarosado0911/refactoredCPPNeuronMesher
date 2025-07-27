@@ -13,6 +13,8 @@ Include dependency graph for doctest.\+h\+:\nopagebreak
 \item 
 class \mbox{\hyperlink{classdoctest_1_1String}{doctest\+::\+String}}
 \item 
+struct \mbox{\hyperlink{structdoctest_1_1String_1_1view}{doctest\+::\+String\+::view}}
+\begin{DoxyCompactList}\small\item\em OCLINT avoid private static members. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classdoctest_1_1Contains}{doctest\+::\+Contains}}
 \item 
 struct \mbox{\hyperlink{structdoctest_1_1TestCaseData}{doctest\+::\+Test\+Case\+Data}}
@@ -1055,6 +1057,8 @@ enum \mbox{\hyperlink{namespacedoctest_1_1TestCaseFailureReason_aecb2ca1f80416d6
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+static constexpr int \mbox{\hyperlink{namespacedoctest_1_1detail_a74ab5a541c6c8582c2e19fe086c81e19}{doctest\+::detail\+::consume}} (const int $\ast$, int) noexcept
+\item 
 {\footnotesize template$<$class traits $>$ }\\\mbox{\hyperlink{classstd_1_1basic__ostream}{basic\+\_\+ostream}}$<$ char, traits $>$ \& \mbox{\hyperlink{namespacestd_a69bae4d605f9ca3b46f99b8464306bf9}{std\+::operator$<$$<$}} (\mbox{\hyperlink{classstd_1_1basic__ostream}{basic\+\_\+ostream}}$<$ char, traits $>$ \&, const char $\ast$)
 \item 
 String \mbox{\hyperlink{namespacedoctest_a826506344e5292ae5f116ec696b5287b}{doctest\+::operator+}} (const String \&lhs, const String \&rhs)
@@ -1209,6 +1213,8 @@ decltype(nullptr) typedef \mbox{\hyperlink{namespacestd_a434932eec359f259df5e75c
 decltype(sizeof(void $\ast$)) typede \mbox{\hyperlink{namespacestd_adc27271d5708e23ddd424987ab96c71b}{std\+::size\+\_\+t}} )
 \item 
 bool \mbox{\hyperlink{namespacedoctest_a257144d27898c6057ed16f0d0205c3a2}{doctest\+::is\+\_\+running\+\_\+in\+\_\+test}}
+\item 
+static const int \mbox{\hyperlink{doctest_8h_aed45a98132d100f2f34a4d0318182d3a}{DOCTEST\+\_\+\+ANON\+\_\+\+VAR\+\_\+\+\_\+\+\_\+\+LINE\+\_\+\+\_\+}} = \mbox{\hyperlink{namespacedoctest_1_1detail_a74ab5a541c6c8582c2e19fe086c81e19}{doctest\+::detail\+::consume}}(\& DOCTEST\+\_\+\+ANON\+\_\+\+VAR\+\_\+\+\_\+\+\_\+\+LINE\+\_\+\+\_\+ , \mbox{\hyperlink{namespacedoctest_1_1detail_a43e7d7a3a29691b5a4b7ce4192463649}{doctest\+::detail\+::set\+Test\+Suite}}(\mbox{\hyperlink{structdoctest_1_1detail_1_1TestSuite}{doctest\+::detail\+::\+Test\+Suite}}() $\ast$ \char`\"{}\char`\"{}) )
 \end{DoxyCompactItemize}
 
 
@@ -2178,7 +2184,7 @@ bool \mbox{\hyperlink{namespacedoctest_a257144d27898c6057ed16f0d0205c3a2}{doctes
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{    \mbox{\hyperlink{doctest_8h_aeffeb8afb2053d165c856f4ee520b62b}{DOCTEST\_CLANG\_SUPPRESS\_WARNING\_WITH\_PUSH}}(\textcolor{stringliteral}{"{}-\/Wglobal-\/constructors"{}})                                \(\backslash\)}
-\DoxyCodeLine{    static \textcolor{keyword}{const} \textcolor{keywordtype}{int} var = doctest::detail::consume(\&var, \_\_VA\_ARGS\_\_);                              \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keyword}{const} \textcolor{keywordtype}{int} var = \mbox{\hyperlink{namespacedoctest_1_1detail_a74ab5a541c6c8582c2e19fe086c81e19}{doctest::detail::consume}}(\&var, \_\_VA\_ARGS\_\_);                              \(\backslash\)}
 \DoxyCodeLine{    DOCTEST\_CLANG\_SUPPRESS\_WARNING\_POP}
 
 \end{DoxyCode}
@@ -3777,4 +3783,13 @@ bool \mbox{\hyperlink{namespacedoctest_a257144d27898c6057ed16f0d0205c3a2}{doctes
 \index{DOCTEST\_ANON\_FOR\_SEMICOLON\_\_\_LINE\_\_@{DOCTEST\_ANON\_FOR\_SEMICOLON\_\_\_LINE\_\_}!doctest.h@{doctest.h}}
 \doxysubsubsection{\texorpdfstring{DOCTEST\_ANON\_FOR\_SEMICOLON\_\_\_LINE\_\_}{DOCTEST\_ANON\_FOR\_SEMICOLON\_\_\_LINE\_\_}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{doctest_8h_a6b64609ab3b7120bf7d2a09263c15be3}{DOCTEST\+\_\+\+ANON\+\_\+\+FOR\+\_\+\+SEMICOLON\+\_\+\+\_\+\+\_\+\+LINE\+\_\+\+\_\+}} =  int ()}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{doctest_8h_aed45a98132d100f2f34a4d0318182d3a}\label{doctest_8h_aed45a98132d100f2f34a4d0318182d3a}} 
+\index{doctest.h@{doctest.h}!DOCTEST\_ANON\_VAR\_\_\_LINE\_\_@{DOCTEST\_ANON\_VAR\_\_\_LINE\_\_}}
+\index{DOCTEST\_ANON\_VAR\_\_\_LINE\_\_@{DOCTEST\_ANON\_VAR\_\_\_LINE\_\_}!doctest.h@{doctest.h}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_ANON\_VAR\_\_\_LINE\_\_}{DOCTEST\_ANON\_VAR\_\_\_LINE\_\_}}
+{\footnotesize\ttfamily const int DOCTEST\+\_\+\+ANON\+\_\+\+VAR\+\_\+\+\_\+\+\_\+\+LINE\+\_\+\+\_\+ = \mbox{\hyperlink{namespacedoctest_1_1detail_a74ab5a541c6c8582c2e19fe086c81e19}{doctest\+::detail\+::consume}}(\& DOCTEST\+\_\+\+ANON\+\_\+\+VAR\+\_\+\+\_\+\+\_\+\+LINE\+\_\+\+\_\+ , \mbox{\hyperlink{namespacedoctest_1_1detail_a43e7d7a3a29691b5a4b7ce4192463649}{doctest\+::detail\+::set\+Test\+Suite}}(\mbox{\hyperlink{structdoctest_1_1detail_1_1TestSuite}{doctest\+::detail\+::\+Test\+Suite}}() $\ast$ \char`\"{}\char`\"{}) )\hspace{0.3cm}{\ttfamily [static]}}
 

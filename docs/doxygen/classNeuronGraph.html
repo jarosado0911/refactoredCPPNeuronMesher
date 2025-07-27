@@ -83,6 +83,8 @@ $(document).ready(function(){initNavTree('classNeuronGraph.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classNeuronGraph-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">NeuronGraph Class Reference</div>  </div>
@@ -219,6 +221,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acbf58bd7db5d97c97ec95b63c679a62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a607cb1a4a78a63ac33c462337f178b18"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::map&lt; int, <a class="el" href="structSWCNode.html">SWCNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuronGraph.html#a607cb1a4a78a63ac33c462337f178b18">generateRefinements</a> (double &amp;delta, int &amp;N, std::string &amp;method)</td></tr>
 <tr class="separator:a607cb1a4a78a63ac33c462337f178b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a76f4e1ec5197389c1c073a2c891a4e2e"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e">getNeighborMap</a> (const std::map&lt; int, <a class="el" href="structSWCNode.html">SWCNode</a> &gt; &amp;nodeSet) const</td></tr>
+<tr class="memdesc:a76f4e1ec5197389c1c073a2c891a4e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a neighbor map from a set of nodes.  <a href="classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e">More...</a><br /></td></tr>
+<tr class="separator:a76f4e1ec5197389c1c073a2c891a4e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a312adb405dceafb6b1a736bd8e4ded88"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, <a class="el" href="structSWCNode.html">SWCNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuronGraph.html#a312adb405dceafb6b1a736bd8e4ded88">nodes</a></td></tr>
+<tr class="memdesc:a312adb405dceafb6b1a736bd8e4ded88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of node IDs to <a class="el" href="structSWCNode.html" title="Structure representing a single node in an SWC neuron morphology.">SWCNode</a> objects.  <a href="classNeuronGraph.html#a312adb405dceafb6b1a736bd8e4ded88">More...</a><br /></td></tr>
+<tr class="separator:a312adb405dceafb6b1a736bd8e4ded88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cbc0c7feb5dcfbc415fb65ca5f782a"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuronGraph.html#ae9cbc0c7feb5dcfbc415fb65ca5f782a">edges</a></td></tr>
+<tr class="memdesc:ae9cbc0c7feb5dcfbc415fb65ca5f782a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjacency list representation of the neuron graph.  <a href="classNeuronGraph.html#ae9cbc0c7feb5dcfbc415fb65ca5f782a">More...</a><br /></td></tr>
+<tr class="separator:ae9cbc0c7feb5dcfbc415fb65ca5f782a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for representing and processing neuron morphology graphs. </p>
@@ -296,10 +313,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a8b2d5d03d0953e5cff1edc4e396d97c2_cgraph.png" border="0" usemap="#aclassNeuronGraph_a8b2d5d03d0953e5cff1edc4e396d97c2_cgraph" alt=""/></div>
 <map name="aclassNeuronGraph_a8b2d5d03d0953e5cff1edc4e396d97c2_cgraph" id="aclassNeuronGraph_a8b2d5d03d0953e5cff1edc4e396d97c2_cgraph">
-<area shape="rect" title="Constructor that loads a neuron from file." alt="" coords="5,31,189,57"/>
-<area shape="rect" href="classNeuronGraph.html#a1c8deb90cf431df071765a400ddb144c" title="Reads a neuron file, automatically detecting the format." alt="" coords="237,23,420,65"/>
-<area shape="rect" href="classNeuronGraph.html#a8ee6517767cd316da4474cb55c67307f" title="Reads neuron data from an SWC file." alt="" coords="483,5,665,32"/>
-<area shape="rect" href="classNeuronGraph.html#a8742e842a6ce2eb1981d36ba9a8317fb" title="Reads neuron data from a UGX file." alt="" coords="468,56,680,83"/>
+<area shape="rect" title="Constructor that loads a neuron from file." alt="" coords="5,13,189,39"/>
+<area shape="rect" href="classNeuronGraph.html#a1c8deb90cf431df071765a400ddb144c" title="Reads a neuron file, automatically detecting the format." alt="" coords="237,5,420,47"/>
 </map>
 </div>
 
@@ -333,15 +348,6 @@ Here is the call graph for this function:</div>
 <p>This constructor creates a new <a class="el" href="classNeuronGraph.html" title="Class for representing and processing neuron morphology graphs.">NeuronGraph</a> instance by clearing any existing data and populating the graph with the provided nodes. It automatically builds the parent-child relationships between nodes.</p>
 <dl class="section note"><dt>Note</dt><dd>The nodeSet parameter uses structured binding, so the key is ignored (_) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph.">addNode(const SWCNode&amp; node)</a> </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classNeuronGraph_a76872c37616f9517420fd8ef11240040_cgraph.png" border="0" usemap="#aclassNeuronGraph_a76872c37616f9517420fd8ef11240040_cgraph" alt=""/></div>
-<map name="aclassNeuronGraph_a76872c37616f9517420fd8ef11240040_cgraph" id="aclassNeuronGraph_a76872c37616f9517420fd8ef11240040_cgraph">
-<area shape="rect" title="Constructs a NeuronGraph from an existing set of nodes." alt="" coords="5,5,189,32"/>
-<area shape="rect" href="classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph." alt="" coords="237,5,396,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -385,15 +391,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a453e31c723b0dc9d692d8663d93be51a_icgraph.png" border="0" usemap="#aclassNeuronGraph_a453e31c723b0dc9d692d8663d93be51a_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_a453e31c723b0dc9d692d8663d93be51a_icgraph" id="aclassNeuronGraph_a453e31c723b0dc9d692d8663d93be51a_icgraph">
-<area shape="rect" title="Adds a single node to the graph." alt="" coords="667,84,825,111"/>
-<area shape="rect" href="classNeuronGraph.html#a76872c37616f9517420fd8ef11240040" title="Constructs a NeuronGraph from an existing set of nodes." alt="" coords="435,5,619,32"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,136,156,163"/>
-<area shape="rect" href="classNeuronGraph.html#a8ee6517767cd316da4474cb55c67307f" title="Reads neuron data from an SWC file." alt="" coords="435,139,618,165"/>
-<area shape="rect" href="classNeuronGraph.html#a4fbcfc32da26b3bc0fe7211ee0b08237" title="Replaces the current set of nodes in the graph." alt="" coords="445,275,608,301"/>
-<area shape="rect" href="extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="270,224,321,251"/>
-<area shape="rect" href="classNeuronGraph.html#a1c8deb90cf431df071765a400ddb144c" title="Reads a neuron file, automatically detecting the format." alt="" coords="204,158,387,199"/>
-<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="41,267,120,293"/>
-<area shape="rect" href="callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="248,325,343,352"/>
+<area shape="rect" title="Adds a single node to the graph." alt="" coords="204,5,363,32"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,5,156,32"/>
 </map>
 </div>
 
@@ -853,8 +852,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classNeuronGraph.html#a7961eded24b6524392b01fdfa7e98452" title="Combines multiple trunks into a single node set." alt="" coords="293,137,496,163"/>
 <area shape="rect" href="classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs." alt="" coords="284,187,505,214"/>
 <area shape="rect" href="classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="312,238,477,265"/>
-<area shape="rect" href="classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="553,5,728,47"/>
-<area shape="rect" href="classNeuronGraph.html#a4263b75e5c5c97d6f65dd681dbdfff60" title="Resamples a single trunk using linear interpolation." alt="" coords="553,71,728,112"/>
+<area shape="rect" href="classNeuronGraph.html#ae4a90fcdd47904cee5fc06b451e2d956" title="Resamples a single trunk using cubic spline interpolation." alt="" coords="567,5,742,47"/>
+<area shape="rect" href="classNeuronGraph.html#a4263b75e5c5c97d6f65dd681dbdfff60" title="Resamples a single trunk using linear interpolation." alt="" coords="567,71,742,112"/>
+<area shape="rect" href="classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e" title="Builds a neighbor map from a set of nodes." alt="" coords="553,238,756,265"/>
 </map>
 </div>
 <div class="dynheader">
@@ -927,6 +927,71 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a76f4e1ec5197389c1c073a2c891a4e2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f4e1ec5197389c1c073a2c891a4e2e">&#9670;&nbsp;</a></span>getNeighborMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; int, std::vector&lt; int &gt; &gt; NeuronGraph::getNeighborMap </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; int, <a class="el" href="structSWCNode.html">SWCNode</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nodeSet</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Builds a neighbor map from a set of nodes. </p>
+<p>Builds an adjacency list representing the connectivity between nodes in a neuron morphology.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nodeSet</td><td>Set of nodes to process </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Map where each key is a node ID and the value is a list of neighbor node IDs</dd></dl>
+<p>This helper function constructs an adjacency list representation of the graph from a set of nodes by establishing parent-child relationships.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeSet</td><td>Map of SWC nodes where key is node ID and value is the <a class="el" href="structSWCNode.html" title="Structure representing a single node in an SWC neuron morphology.">SWCNode</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::map&lt;int, std::vector&lt;int&gt;&gt; where each key is a node ID and value is a vector of its neighbor node IDs</dd></dl>
+<p>This method constructs an undirected graph representation of the neuron morphology by creating neighbor relationships between connected nodes. For each node in the input set, it establishes bidirectional connections between the node and its parent (if the parent exists in the nodeSet).</p>
+<p>The resulting neighbor map allows efficient traversal of the neuron's topology in any direction, which is essential for various analysis and processing tasks such as trunk extraction and topological sorting.</p>
+<dl class="section note"><dt>Note</dt><dd>Only nodes present in the input nodeSet are included in the neighbor map </dd>
+<dd>
+The method creates bidirectional edges (A→B and B→A) for each parent-child relationship </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology.">getTrunks()</a> for the primary use of this method </dd>
+<dd>
+<a class="el" href="classNeuronGraph.html#ab66e25466d6c0b228b95c118963e7cb0" title="Sorts nodes topologically using Kahn&#39;s algorithm.">topologicalSort()</a> for another application of the neighbor map </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classNeuronGraph_a76f4e1ec5197389c1c073a2c891a4e2e_icgraph.png" border="0" usemap="#aclassNeuronGraph_a76f4e1ec5197389c1c073a2c891a4e2e_icgraph" alt=""/></div>
+<map name="aclassNeuronGraph_a76f4e1ec5197389c1c073a2c891a4e2e_icgraph" id="aclassNeuronGraph_a76f4e1ec5197389c1c073a2c891a4e2e_icgraph">
+<area shape="rect" title="Builds a neighbor map from a set of nodes." alt="" coords="696,81,899,108"/>
+<area shape="rect" href="classNeuronGraph.html#ae750a60642aa3d1a30ec9265795cd065" title="Extracts trunk segments from a neuron morphology." alt="" coords="483,81,648,108"/>
+<area shape="rect" href="classNeuronGraph.html#acbf58bd7db5d97c97ec95b63c679a62a" title="Generates multiple levels of refined neuron morphologies." alt="" coords="204,5,435,32"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,31,156,57"/>
+<area shape="rect" href="callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="272,107,367,133"/>
+<area shape="rect" href="extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="294,157,345,184"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aadf6c2dcb7cd1aa1d3664009eede14be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aadf6c2dcb7cd1aa1d3664009eede14be">&#9670;&nbsp;</a></span>getNodes()</h2>
 
@@ -957,14 +1022,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_aadf6c2dcb7cd1aa1d3664009eede14be_icgraph.png" border="0" usemap="#aclassNeuronGraph_aadf6c2dcb7cd1aa1d3664009eede14be_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_aadf6c2dcb7cd1aa1d3664009eede14be_icgraph" id="aclassNeuronGraph_aadf6c2dcb7cd1aa1d3664009eede14be_icgraph">
-<area shape="rect" title="Returns a copy of all nodes in the graph." alt="" coords="411,132,573,159"/>
-<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="244,31,323,57"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="258,81,309,108"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,183,156,209"/>
-<area shape="rect" href="classNeuronGraph.html#aedde45f3cf0e5a3bb8cec88b864580a6" title="Converts an SWC file to UGX format." alt="" coords="204,183,363,209"/>
-<area shape="rect" href="classNeuronGraph.html#a31ec77a2f3c9e69317c30366560761f5" title="Converts a UGX file to SWC format." alt="" coords="204,233,363,260"/>
-<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="55,5,106,32"/>
-<area shape="rect" href="opgl__utils_8cpp.html#a81fad3cb23594d5bbd0c49fbe109379b" title="Opens a file dialog and loads a neuron morphology file." alt="" coords="24,56,137,83"/>
+<area shape="rect" title="Returns a copy of all nodes in the graph." alt="" coords="365,81,528,108"/>
+<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="203,31,281,57"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="217,81,267,108"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="167,132,317,159"/>
+<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="37,5,87,32"/>
+<area shape="rect" href="opgl__utils_8cpp.html#a81fad3cb23594d5bbd0c49fbe109379b" title="Opens a file dialog and loads a neuron morphology file." alt="" coords="5,56,119,83"/>
 </map>
 </div>
 
@@ -1149,9 +1212,18 @@ Here is the caller graph for this function:</div>
 <dl class="section note"><dt>Note</dt><dd>When resetIndex is true, node IDs within each trunk will be renumbered sequentially starting from 1, with parent IDs adjusted accordingly. The first node in each trunk will have pid = -1. </dd>
 <dd>
 The method uses a canonical representation to ensure each trunk is only included once, regardless of traversal direction. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>getNeighborMap() for the <a class="el" href="globals_8h.html#a65b5e8f0673c2dba7ec632133f036a21" title="The main neuron graph data structure.">graph</a> representation used internally </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e" title="Builds a neighbor map from a set of nodes.">getNeighborMap()</a> for the <a class="el" href="globals_8h.html#a65b5e8f0673c2dba7ec632133f036a21" title="The main neuron graph data structure.">graph</a> representation used internally </dd>
 <dd>
 <a class="el" href="classNeuronGraph.html#aa4a2201e3e2eddb93176ce3e84bfc619" title="Creates a mapping from trunk IDs to their parent trunk IDs.">getTrunkParentMap()</a> for establishing relationships between trunks </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classNeuronGraph_ae750a60642aa3d1a30ec9265795cd065_cgraph.png" border="0" usemap="#aclassNeuronGraph_ae750a60642aa3d1a30ec9265795cd065_cgraph" alt=""/></div>
+<map name="aclassNeuronGraph_ae750a60642aa3d1a30ec9265795cd065_cgraph" id="aclassNeuronGraph_ae750a60642aa3d1a30ec9265795cd065_cgraph">
+<area shape="rect" title="Extracts trunk segments from a neuron morphology." alt="" coords="5,5,171,32"/>
+<area shape="rect" href="classNeuronGraph.html#a76f4e1ec5197389c1c073a2c891a4e2e" title="Builds a neighbor map from a set of nodes." alt="" coords="219,5,421,32"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1205,10 +1277,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_ade30f063c2aeaaa9817606497f16875b_icgraph.png" border="0" usemap="#aclassNeuronGraph_ade30f063c2aeaaa9817606497f16875b_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_ade30f063c2aeaaa9817606497f16875b_icgraph" id="aclassNeuronGraph_ade30f063c2aeaaa9817606497f16875b_icgraph">
-<area shape="rect" title=" " alt="" coords="423,31,637,57"/>
-<area shape="rect" href="classNeuronGraph.html#a48d21c08d8a35dd270a0aa8032c4fe35" title="Applies standard preprocessing steps to a set of nodes." alt="" coords="204,5,375,32"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,56,156,83"/>
-<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="41,5,120,32"/>
+<area shape="rect" title=" " alt="" coords="204,29,419,56"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,29,156,56"/>
 </map>
 </div>
 
@@ -1294,11 +1364,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_ae25c92d56c3019385447d3dc7ab86346_icgraph.png" border="0" usemap="#aclassNeuronGraph_ae25c92d56c3019385447d3dc7ab86346_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_ae25c92d56c3019385447d3dc7ab86346_icgraph" id="aclassNeuronGraph_ae25c92d56c3019385447d3dc7ab86346_icgraph">
-<area shape="rect" title=" " alt="" coords="423,56,619,83"/>
-<area shape="rect" href="classNeuronGraph.html#a48d21c08d8a35dd270a0aa8032c4fe35" title="Applies standard preprocessing steps to a set of nodes." alt="" coords="204,5,375,32"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,56,156,83"/>
-<area shape="rect" href="classNeuronGraph.html#a4da98a459bd4ddaa00df5ed08bc80477" title="Adds a soma node if none exists." alt="" coords="210,107,369,133"/>
-<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="41,5,120,32"/>
+<area shape="rect" title=" " alt="" coords="212,31,408,57"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="9,5,160,32"/>
+<area shape="rect" href="classNeuronGraph.html#a4da98a459bd4ddaa00df5ed08bc80477" title="Adds a soma node if none exists." alt="" coords="5,56,164,83"/>
 </map>
 </div>
 
@@ -1344,7 +1412,7 @@ Here is the caller graph for this function:</div>
 This is used in preprocessing to add missing somas</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNeuronGraph.html#a48d21c08d8a35dd270a0aa8032c4fe35" title="Applies standard preprocessing steps to a set of nodes.">preprocess()</a> for automatic soma addition </dd>
 <dd>
-<a class="el" href="classNeuronGraph.html#a4da98a459bd4ddaa00df5ed08bc80477" title="Adds a soma node if none exists.">setSoma()</a> for adding missing soma nodes </dd></dl>
+<a class="el" href="classNeuronGraph.html#a4da98a459bd4ddaa00df5ed08bc80477" title="Adds a soma node if none exists.">setSoma()</a> for adding missing soma <a class="el" href="classNeuronGraph.html#a312adb405dceafb6b1a736bd8e4ded88" title="Map of node IDs to SWCNode objects.">nodes</a> </dd></dl>
 
 </div>
 </div>
@@ -1645,18 +1713,6 @@ setSoma(const std::map&lt;int, SWCNode&gt;&amp; nodeSet) </dd>
 <dd>
 removeSomaSegment(const std::map&lt;int, SWCNode&gt;&amp; nodeSet) </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35_cgraph.png" border="0" usemap="#aclassNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35_cgraph" alt=""/></div>
-<map name="aclassNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35_cgraph" id="aclassNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35_cgraph">
-<area shape="rect" title="Applies standard preprocessing steps to a set of nodes." alt="" coords="5,141,176,168"/>
-<area shape="rect" href="classNeuronGraph.html#ade30f063c2aeaaa9817606497f16875b" title=" " alt="" coords="235,29,449,56"/>
-<area shape="rect" href="classNeuronGraph.html#ae25c92d56c3019385447d3dc7ab86346" title=" " alt="" coords="244,104,440,131"/>
-<area shape="rect" href="classNeuronGraph.html#a0d0ce27089a76553f8e4e109ffdf8183" title=" " alt="" coords="224,179,460,205"/>
-<area shape="rect" href="classNeuronGraph.html#a6b0c1b97c8866106d3bb7f803b94f6f4" title=" " alt="" coords="263,253,421,280"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35_icgraph.png" border="0" usemap="#aclassNeuronGraph_a48d21c08d8a35dd270a0aa8032c4fe35_icgraph" alt=""/></div>
@@ -1722,25 +1778,13 @@ Prints summary information upon successful completion </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>If file cannot be opened, an error message is printed and method returns</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph.">addNode(const SWCNode&amp; node)</a> for individual node processing </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classNeuronGraph_a8ee6517767cd316da4474cb55c67307f_cgraph.png" border="0" usemap="#aclassNeuronGraph_a8ee6517767cd316da4474cb55c67307f_cgraph" alt=""/></div>
-<map name="aclassNeuronGraph_a8ee6517767cd316da4474cb55c67307f_cgraph" id="aclassNeuronGraph_a8ee6517767cd316da4474cb55c67307f_cgraph">
-<area shape="rect" title="Reads neuron data from an SWC file." alt="" coords="5,5,188,32"/>
-<area shape="rect" href="classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph." alt="" coords="236,5,395,32"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a8ee6517767cd316da4474cb55c67307f_icgraph.png" border="0" usemap="#aclassNeuronGraph_a8ee6517767cd316da4474cb55c67307f_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_a8ee6517767cd316da4474cb55c67307f_icgraph" id="aclassNeuronGraph_a8ee6517767cd316da4474cb55c67307f_icgraph">
-<area shape="rect" title="Reads neuron data from an SWC file." alt="" coords="468,56,651,83"/>
-<area shape="rect" href="extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="303,5,354,32"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="22,57,173,84"/>
-<area shape="rect" href="classNeuronGraph.html#a1c8deb90cf431df071765a400ddb144c" title="Reads a neuron file, automatically detecting the format." alt="" coords="237,107,420,149"/>
-<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="58,112,137,139"/>
-<area shape="rect" href="classNeuronGraph.html#a8b2d5d03d0953e5cff1edc4e396d97c2" title="Constructor that loads a neuron from file." alt="" coords="5,163,189,189"/>
+<area shape="rect" title="Reads neuron data from an SWC file." alt="" coords="204,31,387,57"/>
+<area shape="rect" href="extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="55,5,106,32"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,56,156,83"/>
 </map>
 </div>
 
@@ -1810,11 +1854,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb_icgraph.png" border="0" usemap="#aclassNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb_icgraph" id="aclassNeuronGraph_a8742e842a6ce2eb1981d36ba9a8317fb_icgraph">
-<area shape="rect" title="Reads neuron data from a UGX file." alt="" coords="468,33,680,60"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="22,5,173,32"/>
-<area shape="rect" href="classNeuronGraph.html#a1c8deb90cf431df071765a400ddb144c" title="Reads a neuron file, automatically detecting the format." alt="" coords="237,55,420,97"/>
-<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="58,60,137,87"/>
-<area shape="rect" href="classNeuronGraph.html#a8b2d5d03d0953e5cff1edc4e396d97c2" title="Constructor that loads a neuron from file." alt="" coords="5,111,189,137"/>
+<area shape="rect" title="Reads neuron data from a UGX file." alt="" coords="204,5,416,32"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,5,156,32"/>
 </map>
 </div>
 
@@ -1867,17 +1908,6 @@ Here is the caller graph for this function:</div>
 <dd>
 <a class="el" href="classNeuronGraph.html#a8742e842a6ce2eb1981d36ba9a8317fb" title="Reads neuron data from a UGX file.">readFromFileUGX(const std::string&amp; filename)</a> for UGX format </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classNeuronGraph_a1c8deb90cf431df071765a400ddb144c_cgraph.png" border="0" usemap="#aclassNeuronGraph_a1c8deb90cf431df071765a400ddb144c_cgraph" alt=""/></div>
-<map name="aclassNeuronGraph_a1c8deb90cf431df071765a400ddb144c_cgraph" id="aclassNeuronGraph_a1c8deb90cf431df071765a400ddb144c_cgraph">
-<area shape="rect" title="Reads a neuron file, automatically detecting the format." alt="" coords="5,23,188,65"/>
-<area shape="rect" href="classNeuronGraph.html#a8ee6517767cd316da4474cb55c67307f" title="Reads neuron data from an SWC file." alt="" coords="251,5,433,32"/>
-<area shape="rect" href="classNeuronGraph.html#a8742e842a6ce2eb1981d36ba9a8317fb" title="Reads neuron data from a UGX file." alt="" coords="236,56,448,83"/>
-<area shape="rect" href="classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph." alt="" coords="496,5,655,32"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a1c8deb90cf431df071765a400ddb144c_icgraph.png" border="0" usemap="#aclassNeuronGraph_a1c8deb90cf431df071765a400ddb144c_icgraph" alt=""/></div>
@@ -1929,10 +1959,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a0d0ce27089a76553f8e4e109ffdf8183_icgraph.png" border="0" usemap="#aclassNeuronGraph_a0d0ce27089a76553f8e4e109ffdf8183_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_a0d0ce27089a76553f8e4e109ffdf8183_icgraph" id="aclassNeuronGraph_a0d0ce27089a76553f8e4e109ffdf8183_icgraph">
-<area shape="rect" title=" " alt="" coords="423,31,659,57"/>
-<area shape="rect" href="classNeuronGraph.html#a48d21c08d8a35dd270a0aa8032c4fe35" title="Applies standard preprocessing steps to a set of nodes." alt="" coords="204,5,375,32"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,56,156,83"/>
-<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="41,5,120,32"/>
+<area shape="rect" title=" " alt="" coords="204,29,440,56"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,29,156,56"/>
 </map>
 </div>
 
@@ -2044,15 +2072,6 @@ Here is the caller graph for this function:</div>
 <dl class="section note"><dt>Note</dt><dd>This is equivalent to reconstructing the graph with new data </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph.">addNode(const SWCNode&amp; node)</a> </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237_cgraph.png" border="0" usemap="#aclassNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237_cgraph" alt=""/></div>
-<map name="aclassNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237_cgraph" id="aclassNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237_cgraph">
-<area shape="rect" title="Replaces the current set of nodes in the graph." alt="" coords="5,5,168,32"/>
-<area shape="rect" href="classNeuronGraph.html#a453e31c723b0dc9d692d8663d93be51a" title="Adds a single node to the graph." alt="" coords="216,5,375,32"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237_icgraph.png" border="0" usemap="#aclassNeuronGraph_a4fbcfc32da26b3bc0fe7211ee0b08237_icgraph" alt=""/></div>
@@ -2105,10 +2124,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a6b0c1b97c8866106d3bb7f803b94f6f4_icgraph.png" border="0" usemap="#aclassNeuronGraph_a6b0c1b97c8866106d3bb7f803b94f6f4_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_a6b0c1b97c8866106d3bb7f803b94f6f4_icgraph" id="aclassNeuronGraph_a6b0c1b97c8866106d3bb7f803b94f6f4_icgraph">
-<area shape="rect" title=" " alt="" coords="423,31,581,57"/>
-<area shape="rect" href="classNeuronGraph.html#a48d21c08d8a35dd270a0aa8032c4fe35" title="Applies standard preprocessing steps to a set of nodes." alt="" coords="204,5,375,32"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,56,156,83"/>
-<area shape="rect" href="opgl__utils_8cpp.html#adda0a7f12116617440260139feb5ae46" title="Loads a neuron morphology from an SWC or UGX file." alt="" coords="41,5,120,32"/>
+<area shape="rect" title=" " alt="" coords="204,29,363,56"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,29,156,56"/>
 </map>
 </div>
 
@@ -2477,16 +2494,6 @@ Here is the caller graph for this function:</div>
 <dd>
 <a class="el" href="classNeuronGraph.html#a938d33cc1ee5a5abc291c555e0a60ad5" title="Writes a set of nodes to a UGX file.">writeToFileUGX()</a> for UGX output functionality </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6_cgraph.png" border="0" usemap="#aclassNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6_cgraph" alt=""/></div>
-<map name="aclassNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6_cgraph" id="aclassNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6_cgraph">
-<area shape="rect" title="Converts an SWC file to UGX format." alt="" coords="5,31,164,57"/>
-<area shape="rect" href="classNeuronGraph.html#aadf6c2dcb7cd1aa1d3664009eede14be" title="Returns a copy of all nodes in the graph." alt="" coords="230,5,393,32"/>
-<area shape="rect" href="classNeuronGraph.html#a938d33cc1ee5a5abc291c555e0a60ad5" title="Writes a set of nodes to a UGX file." alt="" coords="212,56,411,83"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6_icgraph.png" border="0" usemap="#aclassNeuronGraph_aedde45f3cf0e5a3bb8cec88b864580a6_icgraph" alt=""/></div>
@@ -2655,16 +2662,6 @@ Parent-child relationships are preserved but with new ID mappings</dd></dl>
 <dd>
 <a class="el" href="classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb" title="Writes a set of nodes to an SWC file.">writeToFile()</a> for SWC output functionality </dd></dl>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classNeuronGraph_a31ec77a2f3c9e69317c30366560761f5_cgraph.png" border="0" usemap="#aclassNeuronGraph_a31ec77a2f3c9e69317c30366560761f5_cgraph" alt=""/></div>
-<map name="aclassNeuronGraph_a31ec77a2f3c9e69317c30366560761f5_cgraph" id="aclassNeuronGraph_a31ec77a2f3c9e69317c30366560761f5_cgraph">
-<area shape="rect" title="Converts a UGX file to SWC format." alt="" coords="5,31,164,57"/>
-<area shape="rect" href="classNeuronGraph.html#aadf6c2dcb7cd1aa1d3664009eede14be" title="Returns a copy of all nodes in the graph." alt="" coords="216,5,379,32"/>
-<area shape="rect" href="classNeuronGraph.html#a4b1a573b34c20a37ec3ca5bdf530bdcb" title="Writes a set of nodes to an SWC file." alt="" coords="212,56,383,83"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a31ec77a2f3c9e69317c30366560761f5_icgraph.png" border="0" usemap="#aclassNeuronGraph_a31ec77a2f3c9e69317c30366560761f5_icgraph" alt=""/></div>
@@ -2730,12 +2727,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb_icgraph.png" border="0" usemap="#aclassNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb_icgraph" id="aclassNeuronGraph_a4b1a573b34c20a37ec3ca5bdf530bdcb_icgraph">
-<area shape="rect" title="Writes a set of nodes to an SWC file." alt="" coords="411,81,581,108"/>
-<area shape="rect" href="callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="236,5,331,32"/>
-<area shape="rect" href="extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="258,56,309,83"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,132,156,159"/>
-<area shape="rect" href="classNeuronGraph.html#a31ec77a2f3c9e69317c30366560761f5" title="Converts a UGX file to SWC format." alt="" coords="204,157,363,184"/>
-<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="55,5,106,32"/>
+<area shape="rect" title="Writes a set of nodes to an SWC file." alt="" coords="303,56,473,83"/>
+<area shape="rect" href="callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="132,5,227,32"/>
+<area shape="rect" href="extracttrunks_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="154,56,205,83"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="104,107,255,133"/>
+<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -2854,12 +2850,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5_icgraph.png" border="0" usemap="#aclassNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5_icgraph" alt=""/></div>
 <map name="aclassNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5_icgraph" id="aclassNeuronGraph_a938d33cc1ee5a5abc291c555e0a60ad5_icgraph">
-<area shape="rect" title="Writes a set of nodes to a UGX file." alt="" coords="411,81,609,108"/>
-<area shape="rect" href="callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="236,5,331,32"/>
-<area shape="rect" href="splitrefineSET_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="258,56,309,83"/>
-<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="5,132,156,159"/>
-<area shape="rect" href="classNeuronGraph.html#aedde45f3cf0e5a3bb8cec88b864580a6" title="Converts an SWC file to UGX format." alt="" coords="204,157,363,184"/>
-<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="55,5,106,32"/>
+<area shape="rect" title="Writes a set of nodes to a UGX file." alt="" coords="303,56,501,83"/>
+<area shape="rect" href="callbacks_8cpp.html#a0b9e239c8889734711f29fe45551605b" title="Handles keyboard input events for the neuron viewer." alt="" coords="132,5,227,32"/>
+<area shape="rect" href="splitrefineSET_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="154,56,205,83"/>
+<area shape="rect" href="bindings_8cpp.html#aae7648d27183e458e522ad3086719fde" title="Python module definition for neurongraph." alt="" coords="104,107,255,133"/>
+<area shape="rect" href="neuronviewer_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -2905,6 +2900,55 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,29,204,56"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae9cbc0c7feb5dcfbc415fb65ca5f782a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9cbc0c7feb5dcfbc415fb65ca5f782a">&#9670;&nbsp;</a></span>edges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int, std::vector&lt;int&gt; &gt; NeuronGraph::edges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adjacency list representation of the neuron graph. </p>
+
+</div>
+</div>
+<a id="a312adb405dceafb6b1a736bd8e4ded88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312adb405dceafb6b1a736bd8e4ded88">&#9670;&nbsp;</a></span>nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int,<a class="el" href="structSWCNode.html">SWCNode</a>&gt; NeuronGraph::nodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map of node IDs to <a class="el" href="structSWCNode.html" title="Structure representing a single node in an SWC neuron morphology.">SWCNode</a> objects. </p>
 
 </div>
 </div>

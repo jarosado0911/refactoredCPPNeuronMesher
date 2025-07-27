@@ -9,6 +9,7 @@ var classdoctest_1_1Context =
     [ "clearFilters", "classdoctest_1_1Context.html#aaa878723e89310d5aa3f516bc7ab3165", null ],
     [ "operator=", "classdoctest_1_1Context.html#a10db87d277d16217d732dc32b25adc11", null ],
     [ "operator=", "classdoctest_1_1Context.html#aad3c5d4999317a732f2128928b0c5226", null ],
+    [ "parseArgs", "classdoctest_1_1Context.html#a90b2f1bbf67ee4da8e8ff0cf7516a06a", null ],
     [ "run", "classdoctest_1_1Context.html#a8059b137ef41cbe6c5d8160806a3cc63", null ],
     [ "setAsDefaultForAssertsOutOfTestCases", "classdoctest_1_1Context.html#ae85cecc7689f009e23cba383484773b2", null ],
     [ "setAssertHandler", "classdoctest_1_1Context.html#a669dd0a596a611eeb0decdb78b661a90", null ],
@@ -16,5 +17,6 @@ var classdoctest_1_1Context =
     [ "setOption", "classdoctest_1_1Context.html#a7f7735caa75c60cdf8c8d86a75ce1d81", null ],
     [ "setOption", "classdoctest_1_1Context.html#a4352ffc196c4ba56045270e45baa2754", null ],
     [ "setOption", "classdoctest_1_1Context.html#a95e7a0230c5897f0eae36718f51d2f05", null ],
-    [ "shouldExit", "classdoctest_1_1Context.html#a219b10301380b81c84c0824a6876d9aa", null ]
+    [ "shouldExit", "classdoctest_1_1Context.html#a219b10301380b81c84c0824a6876d9aa", null ],
+    [ "p", "classdoctest_1_1Context.html#a1e22f778caf173478623e22546d7b493", null ]
 ];

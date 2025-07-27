@@ -83,6 +83,8 @@ $(document).ready(function(){initNavTree('classdoctest_1_1Context.html',''); ini
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classdoctest_1_1Context-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">doctest::Context Class Reference</div>  </div>
@@ -127,6 +129,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a503e7ebcc794a3cc67fa2e77873cafaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8059b137ef41cbe6c5d8160806a3cc63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1Context.html#a8059b137ef41cbe6c5d8160806a3cc63">run</a> ()</td></tr>
 <tr class="separator:a8059b137ef41cbe6c5d8160806a3cc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a90b2f1bbf67ee4da8e8ff0cf7516a06a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1Context.html#a90b2f1bbf67ee4da8e8ff0cf7516a06a">parseArgs</a> (int argc, const char *const *argv, bool withDefaults=false)</td></tr>
+<tr class="separator:a90b2f1bbf67ee4da8e8ff0cf7516a06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1e22f778caf173478623e22546d7b493"><td class="memItemLeft" align="right" valign="top">detail::ContextState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1Context.html#a1e22f778caf173478623e22546d7b493">p</a></td></tr>
+<tr class="separator:a1e22f778caf173478623e22546d7b493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a881bc2d0fe207d672e1debe830768a98"></a>
@@ -360,6 +372,48 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a90b2f1bbf67ee4da8e8ff0cf7516a06a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b2f1bbf67ee4da8e8ff0cf7516a06a">&#9670;&nbsp;</a></span>parseArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void doctest::Context::parseArgs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *const *&#160;</td>
+          <td class="paramname"><em>argv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withDefaults</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8059b137ef41cbe6c5d8160806a3cc63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8059b137ef41cbe6c5d8160806a3cc63">&#9670;&nbsp;</a></span>run()</h2>
 
@@ -527,6 +581,29 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1e22f778caf173478623e22546d7b493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e22f778caf173478623e22546d7b493">&#9670;&nbsp;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::ContextState* doctest::Context::p</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

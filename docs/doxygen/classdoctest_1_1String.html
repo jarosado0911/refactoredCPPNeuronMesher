@@ -86,6 +86,9 @@ $(document).ready(function(){initNavTree('classdoctest_1_1String.html',''); init
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdoctest_1_1String-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -100,10 +103,16 @@ Collaboration diagram for doctest::String:</div>
 <div class="center"><img src="classdoctest_1_1String__coll__graph.png" border="0" usemap="#adoctest_1_1String_coll__map" alt="Collaboration graph"/></div>
 <map name="adoctest_1_1String_coll__map" id="adoctest_1_1String_coll__map">
 <area shape="rect" title=" " alt="" coords="23,95,130,121"/>
-<area shape="rect" title=" " alt="" coords="5,5,148,32"/>
+<area shape="rect" href="structdoctest_1_1String_1_1view.html" title="OCLINT avoid private static members." alt="" coords="5,5,148,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdoctest_1_1String_1_1view.html">view</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCLINT avoid private static members.  <a href="structdoctest_1_1String_1_1view.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:afcf1caf7a50f91734aada0c79db5d22e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a> = unsigned</td></tr>
@@ -160,6 +169,39 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:ad5fced1b6920313fe44a9ea1f736a4ef"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#ad5fced1b6920313fe44a9ea1f736a4ef">npos</a> = static_cast&lt;<a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a>&gt;(-1)</td></tr>
 <tr class="separator:ad5fced1b6920313fe44a9ea1f736a4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a6f861e8ed006680f430dfc05844f44ca"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#a6f861e8ed006680f430dfc05844f44ca">allocate</a> (<a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a> sz)</td></tr>
+<tr class="separator:a6f861e8ed006680f430dfc05844f44ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0c1d8e0d27818235e0639f49d232e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#a3d0c1d8e0d27818235e0639f49d232e9">isOnStack</a> () const noexcept</td></tr>
+<tr class="separator:a3d0c1d8e0d27818235e0639f49d232e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81f4517c89c01eee8c750eddcf62197"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#ae81f4517c89c01eee8c750eddcf62197">setOnHeap</a> () noexcept</td></tr>
+<tr class="separator:ae81f4517c89c01eee8c750eddcf62197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62268e72280c4eff28d92fe47a76828c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#a62268e72280c4eff28d92fe47a76828c">setLast</a> (<a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a> in=<a class="el" href="classdoctest_1_1String.html#a7556e9dc0e91da4040218da3750d9da5">last</a>) noexcept</td></tr>
+<tr class="separator:a62268e72280c4eff28d92fe47a76828c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72dcec3321fa6dd19f0463b574b05e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#a72dcec3321fa6dd19f0463b574b05e8b">setSize</a> (<a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a> sz) noexcept</td></tr>
+<tr class="separator:a72dcec3321fa6dd19f0463b574b05e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9adde1fae310e0d1a394cc1383495572"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#a9adde1fae310e0d1a394cc1383495572">copy</a> (const <a class="el" href="classdoctest_1_1String.html">String</a> &amp;other)</td></tr>
+<tr class="separator:a9adde1fae310e0d1a394cc1383495572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab9310b7f606204c59b4dbcd112faa299"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a892fc1b1c8283898a5cc4ae49e590e61"><td class="memItemLeft" >&#160;&#160;&#160;char&#160;&#160;&#160;<a class="el" href="classdoctest_1_1String.html#a7e031ced488588936a540eba26facf67">buf</a> [<a class="el" href="classdoctest_1_1String.html#ab296aa939b5758284ab42ad4aa741725">len</a>]</td></tr>
+<tr class="separator:a892fc1b1c8283898a5cc4ae49e590e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae88c916c284c2a01e3d45f1269b8a39"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structdoctest_1_1String_1_1view.html">view</a>&#160;&#160;&#160;<a class="el" href="classdoctest_1_1String.html#a5c77ed634a1b81aea739a73fb01d986a">data</a></td></tr>
+<tr class="separator:aae88c916c284c2a01e3d45f1269b8a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9310b7f606204c59b4dbcd112faa299"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ab9310b7f606204c59b4dbcd112faa299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ab296aa939b5758284ab42ad4aa741725"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#ab296aa939b5758284ab42ad4aa741725">len</a> = 24</td></tr>
+<tr class="separator:ab296aa939b5758284ab42ad4aa741725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7556e9dc0e91da4040218da3750d9da5"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdoctest_1_1String.html#a7556e9dc0e91da4040218da3750d9da5">last</a> = <a class="el" href="classdoctest_1_1String.html#ab296aa939b5758284ab42ad4aa741725">len</a> - 1</td></tr>
+<tr class="memdesc:a7556e9dc0e91da4040218da3750d9da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCLINT avoid private static members.  <a href="classdoctest_1_1String.html#a7556e9dc0e91da4040218da3750d9da5">More...</a><br /></td></tr>
+<tr class="separator:a7556e9dc0e91da4040218da3750d9da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -343,6 +385,32 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6f861e8ed006680f430dfc05844f44ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f861e8ed006680f430dfc05844f44ca">&#9670;&nbsp;</a></span>allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* doctest::String::allocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a>&#160;</td>
+          <td class="paramname"><em>sz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a35df67f11652bcc568ad3af470c344c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35df67f11652bcc568ad3af470c344c0">&#9670;&nbsp;</a></span>c_str() <span class="overload">[1/2]</span></h2>
 
@@ -483,6 +551,32 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a9adde1fae310e0d1a394cc1383495572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9adde1fae310e0d1a394cc1383495572">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void doctest::String::copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdoctest_1_1String.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa7b27b07ca5bf081b3ec25a3224a7a05"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7b27b07ca5bf081b3ec25a3224a7a05">&#9670;&nbsp;</a></span>find()</h2>
 
@@ -517,6 +611,31 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacedoctest.html#ad4b29418fb58bb6c7cfdbefe2d8f7714" title=" " alt="" coords="5,5,124,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a3d0c1d8e0d27818235e0639f49d232e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0c1d8e0d27818235e0639f49d232e9">&#9670;&nbsp;</a></span>isOnStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool doctest::String::isOnStack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -642,6 +761,83 @@ Here is the caller graph for this function:</div>
           <td></td><td> const</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62268e72280c4eff28d92fe47a76828c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62268e72280c4eff28d92fe47a76828c">&#9670;&nbsp;</a></span>setLast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void doctest::String::setLast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a>&#160;</td>
+          <td class="paramname"><em>in</em> = <code><a class="el" href="classdoctest_1_1String.html#a7556e9dc0e91da4040218da3750d9da5">last</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae81f4517c89c01eee8c750eddcf62197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81f4517c89c01eee8c750eddcf62197">&#9670;&nbsp;</a></span>setOnHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void doctest::String::setOnHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72dcec3321fa6dd19f0463b574b05e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72dcec3321fa6dd19f0463b574b05e8b">&#9670;&nbsp;</a></span>setSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void doctest::String::setSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a>&#160;</td>
+          <td class="paramname"><em>sz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -775,6 +971,20 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab9310b7f606204c59b4dbcd112faa299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9310b7f606204c59b4dbcd112faa299">&#9670;&nbsp;</a></span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7e031ced488588936a540eba26facf67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e031ced488588936a540eba26facf67">&#9670;&nbsp;</a></span>buf</h2>
 
@@ -782,7 +992,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char doctest::String::buf[len]</td>
+          <td class="memname">char doctest::String::buf[<a class="el" href="classdoctest_1_1String.html#ab296aa939b5758284ab42ad4aa741725">len</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -796,9 +1006,55 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">view doctest::String::data</td>
+          <td class="memname"><a class="el" href="structdoctest_1_1String_1_1view.html">view</a> doctest::String::data</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7556e9dc0e91da4040218da3750d9da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7556e9dc0e91da4040218da3750d9da5">&#9670;&nbsp;</a></span>last</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a> doctest::String::last = <a class="el" href="classdoctest_1_1String.html#ab296aa939b5758284ab42ad4aa741725">len</a> - 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OCLINT avoid private static members. </p>
+
+</div>
+</div>
+<a id="ab296aa939b5758284ab42ad4aa741725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab296aa939b5758284ab42ad4aa741725">&#9670;&nbsp;</a></span>len</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classdoctest_1_1String.html#afcf1caf7a50f91734aada0c79db5d22e">size_type</a> doctest::String::len = 24</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
