@@ -62,6 +62,8 @@ Main features include:
 - Modular CMake build system with continuous integration and quality analysis.
 - Example scripts and utilities for advanced mesh and data manipulation.
 
+📘 [Project Plan (Windsurf)](docs/plan.md), this link contains the current status and actions with respect to the documentation of the code.
+
 ---
 
 ## Table of Contents
