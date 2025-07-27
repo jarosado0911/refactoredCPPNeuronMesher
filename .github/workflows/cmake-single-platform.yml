@@ -74,5 +74,5 @@ jobs:
           -Dsonar.cfamily.compile-commands=build/compile_commands.json
           -Dsonar.coverageReportPaths=coverage.xml
           -Dsonar.exclusions=src/tinyfiledialogs.c,src/viewercpp/**
-          -Dsonar.coverage.exclusions=coverage/**
+          -Dsonar.coverage.exclusions=coverage/**,src/bindings.cpp
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
