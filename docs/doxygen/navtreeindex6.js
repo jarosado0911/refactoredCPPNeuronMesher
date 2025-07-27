@@ -1,7 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"swc__viewer_8cpp.html#a4133cae619062843519ce2840ccf168d":[5,0,2,1,0,3],
-"swc__viewer_8cpp.html#a4cd2610187fe8068453e0567281fa5a8":[5,0,2,1,0,27],
 "swc__viewer_8cpp.html#a65598ae83871fad84212c90bbaec2667":[5,0,2,1,0,4],
 "swc__viewer_8cpp.html#a7071265e9ddc2adb4ecea405a7590355":[5,0,2,1,0,23],
 "swc__viewer_8cpp.html#a77c6a10a239fd28b973ebe8dfc7f08b5":[5,0,2,1,0,12],
