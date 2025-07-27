@@ -43,6 +43,9 @@ The Static Analysis Summary badges indicate the results of automated code analys
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jarosado0911_refactoredCPPNeuronMesher)](https://sonarcloud.io/summary/new_code?id=jarosado0911_refactoredCPPNeuronMesher)
+
+![Windsurf](https://img.shields.io/badge/documented%20with-Windsurf-1f8ceb?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iOCIgc3R5bGU9ImZpbGw6I2ZmZjsiLz48dGV4dCB4PSI0IiB5PSIxMiIgc3R5bGU9ImZpbGw6IzE4ODdmNTtmb250LXNpemU6NHB4O2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWYiPldTPC90ZXh0Pjwvc3ZnPg==)
+
 ## Overview
 
 **CPPNeuronMesher** is a C++ toolkit for analyzing neuron geometries and generating computational meshes from neuron morphology data (primarily in the `.swc` format). The project provides both command-line tools for mesh operations, and a lightweight OpenGL-based 3D viewer for visualizing neuron structures.
