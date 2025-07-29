@@ -1,4 +1,4 @@
-# Add the doctest-based test executable
+# ==== Add the doctest-based test executable for neurongraph
 add_executable(doctest 
     test_neurongraph_doctest.cpp
     ${PROJECT_SOURCE_DIR}/src/neurongraph.cpp
@@ -14,8 +14,27 @@ set_target_properties(doctest PROPERTIES
 
 target_link_libraries(doctest PRIVATE tinyxml2)
 add_test(NAME RunDocTest COMMAND doctest)
+# ==========================================================
 
+# ==== Add the doctest-based test executable for ugxobject
+add_executable(ugxobject_doctest 
+    test_ugxobject_doctest.cpp
+    ${PROJECT_SOURCE_DIR}/src/ugxobject.cpp
+    ${PROJECT_SOURCE_DIR}/src/utils.cpp
+)
 
+target_include_directories(ugxobject_doctest PRIVATE 
+    ${CMAKE_SOURCE_DIR}/include
+)
+
+set_target_properties(ugxobject_doctest PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../bin/"
+)
+
+target_link_libraries(ugxobject_doctest PRIVATE tinyxml2)
+add_test(NAME RunDocTestUGX COMMAND ugxobject_doctest)
+
+# ==========================================================
 add_executable(test_neurongraph 
 	       test_neurongraph.cpp
 	       ${PROJECT_SOURCE_DIR}/src/neurongraph.cpp
