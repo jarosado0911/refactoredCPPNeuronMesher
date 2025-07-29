@@ -9,6 +9,21 @@ TEST_CASE("UGXObject default constructor") {
     CHECK(u.getPoints().size() == 0);
 }
 
+TEST_CASE("UGXObject constructor overload 1"){
+    std::string filepath = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject u(filepath);
+    const auto& pts = u.getPoints();
+    CHECK(pts.size() > 0);
+}
+
+TEST_CASE("UGXObject constructor overload 2"){
+    std::string filepath = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject u(filepath);
+    const auto geom = u.getGeometry();
+    UgxObject u2(geom);
+    CHECK(u.getPoints().size() == u2.getPoints().size());
+}
+
 TEST_CASE("UGXObject read and print UGX") {
     std::string filepath = getExecutableDir() + "/../data/neuron.ugx";
     UgxObject u(filepath);
