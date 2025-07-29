@@ -99,6 +99,115 @@ void UgxObject::readUGX(const std::string& filename) {
 	}
 }
 
+void UgxObject::writeUGX(const std::string& filename) const {
+    XMLDocument doc;
+    doc.InsertFirstChild(doc.NewDeclaration());
+
+    XMLElement* root = doc.NewElement("grid");
+    root->SetAttribute("name", "defGrid");
+    doc.InsertEndChild(root);
+
+    // --- Write Vertices ---
+    XMLElement* vertsElem = doc.NewElement("vertices");
+    vertsElem->SetAttribute("coords", "3");
+
+    std::ostringstream coordStream;
+    for (const auto& [id, coord] : ugxg.points)
+        coordStream << coord.x << " " << coord.y << " " << coord.z << " ";
+
+    std::string coordStr = coordStream.str();
+    if (!coordStr.empty()) coordStr.pop_back();  // remove trailing space
+    vertsElem->SetText(coordStr.c_str());
+    root->InsertEndChild(vertsElem);
+
+    // --- Write Edges ---
+    if (!ugxg.edges.empty()) {
+        XMLElement* edgesElem = doc.NewElement("edges");
+        std::ostringstream edgeStream;
+        for (const auto& [v0, v1] : ugxg.edges)
+            edgeStream << v0 << " " << v1 << " ";
+        std::string edgeStr = edgeStream.str();
+        if (!edgeStr.empty()) edgeStr.pop_back();
+        edgesElem->SetText(edgeStr.c_str());
+        root->InsertEndChild(edgesElem);
+    }
+
+    // --- Write Faces ---
+    if (!ugxg.faces.empty()) {
+        XMLElement* faceElem = doc.NewElement("triangles");
+        std::ostringstream faceStream;
+        for (const auto& face : ugxg.faces)
+            faceStream << face[0] << " " << face[1] << " " << face[2] << " ";
+        std::string faceStr = faceStream.str();
+        if (!faceStr.empty()) faceStr.pop_back();
+        faceElem->SetText(faceStr.c_str());
+        root->InsertEndChild(faceElem);
+    }
+
+    // --- Write Subsets ---
+    if (!ugxg.subsetNames.empty()) {
+        XMLElement* shElem = doc.NewElement("subset_handler");
+        shElem->SetAttribute("name", "defSH");
+
+        for (const auto& [subsetId, subsetName] : ugxg.subsetNames) {
+            XMLElement* subset = doc.NewElement("subset");
+            subset->SetAttribute("name", subsetName.c_str());
+            subset->SetAttribute("state", "0");
+            subset->SetAttribute("color", "0.5 0.5 0.5");
+
+            // Vertices
+            std::ostringstream vi;
+            for (const auto& [vid, sid] : ugxg.vertexSubsets)
+                if (sid == subsetId) vi << vid << " ";
+            std::string vis = vi.str();
+            if (!vis.empty()) vis.pop_back();
+
+            if (!vis.empty()) {
+                XMLElement* verts = doc.NewElement("vertices");
+                verts->SetText(vis.c_str());
+                subset->InsertEndChild(verts);
+            }
+
+            // Edges
+            std::ostringstream ei;
+            for (const auto& [eid, sid] : ugxg.edgeSubsets)
+                if (sid == subsetId) ei << eid << " ";
+            std::string eis = ei.str();
+            if (!eis.empty()) eis.pop_back();
+
+            if (!eis.empty()) {
+                XMLElement* edges = doc.NewElement("edges");
+                edges->SetText(eis.c_str());
+                subset->InsertEndChild(edges);
+            }
+
+            // Faces
+            std::ostringstream fi;
+            for (const auto& [fid, sid] : ugxg.faceSubsets)
+                if (sid == subsetId) fi << fid << " ";
+            std::string fis = fi.str();
+            if (!fis.empty()) fis.pop_back();
+
+            if (!fis.empty()) {
+                XMLElement* faces = doc.NewElement("faces");
+                faces->SetText(fis.c_str());
+                subset->InsertEndChild(faces);
+            }
+
+            shElem->InsertEndChild(subset);
+        }
+
+        root->InsertEndChild(shElem);
+    }
+
+    // --- Save File ---
+    if (doc.SaveFile(filename.c_str()) != XML_SUCCESS) {
+        std::cerr << "[UGXObject Error] Failed to write: " << filename << std::endl;
+    } else {
+        std::cout << "[UGXObject] Successfully wrote: " << filename << std::endl;
+    }
+}
+
 void UgxObject::printCoordinates() const {
     if (ugxg.points.empty()) {
         std::cout << "No points to display.\n";

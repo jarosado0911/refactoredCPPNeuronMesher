@@ -46,7 +46,11 @@ public:
     UgxObject(const std::string& filename) {this->readUGX(filename);}
 	UgxObject(const UgxGeometry& ugxinput) {this->ugxg = ugxinput;}
 
+	// read ugx file
     void readUGX(const std::string& filename);
+
+	// write ugx file
+	void writeUGX(const std::string& filename) const;
 
 	// getter functions
     const UgxGeometry& getGeometry() const {return ugxg;}

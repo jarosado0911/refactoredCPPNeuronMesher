@@ -1,4 +1,5 @@
 #include "ugxobject.h"
+#include "utils.h"
 #include <iostream>
 #include <filesystem>
 
@@ -34,8 +35,13 @@ int main(int argc, char* argv[]) {
     obj2.printEdges();
     obj2.printFaces();
 
+    std::string execDir = getExecutableDir();
+    std::string outputfolder = execDir + "/../output/ugxmain_output/";
+    checkFolder(outputfolder);
+
     std::cout << "\n=== Looping over files in 'data/UGXMESHES/' ===\n" << std::endl;
     const std::filesystem::path meshDir = "data/UGXMESHES/";
+    int cnt = 1;
     for (const auto& entry : std::filesystem::directory_iterator(meshDir)) {
         if (entry.is_regular_file() && entry.path().extension() == ".ugx") {
             std::cout << "\n>> Loading: " << entry.path() << std::endl;
@@ -43,6 +49,9 @@ int main(int argc, char* argv[]) {
             objLoop.printCoordinates();
             objLoop.printEdges();
             objLoop.printFaces();
+            std::string outputfile = outputfolder+"mesh_"+std::to_string(cnt)+".ugx";
+            objLoop.writeUGX(outputfile);
+            cnt++;
         }
     }
 
