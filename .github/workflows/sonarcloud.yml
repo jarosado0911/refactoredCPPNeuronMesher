@@ -75,5 +75,5 @@ jobs:
           -Dsonar.cfamily.compile-commands=build/compile_commands.json
           -Dsonar.coverageReportPaths=coverage.xml
           -Dsonar.exclusions=**/*.html,docs/doxygen/**,src/tinyfiledialogs.c,src/viewercpp/**
-          -Dsonar.coverage.exclusions=coverage/**,src/bindings.cpp,python_package/test/test_bindings.py
+          -Dsonar.coverage.exclusions=coverage/**,src/bindings.cpp,python_package/test/test_bindings.pyscripts,src/ugxobject.cpp
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
