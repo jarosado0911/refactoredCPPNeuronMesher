@@ -61,3 +61,44 @@ TEST_CASE("UGX Print Faces"){
     u.printFaces();
     CHECK(true);
 }
+
+TEST_CASE("UGXObject loads a UGX file correctly") {
+    std::string input = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject u(input);
+
+    const auto& geom = u.getGeometry();
+    CHECK(!geom.points.empty());
+    CHECK(geom.points.size() > 0);
+}
+
+TEST_CASE("UGXObject writes a UGX file correctly") {
+    std::string output = getExecutableDir() + "/../output/test_output/";
+    UgxGeometry geom;
+    geom.points[0] = {0, 0, 0};
+    geom.points[1] = {1, 0, 0};
+    geom.edges.emplace_back(0, 1);
+    geom.subsetNames[0] = "test";
+
+    UgxObject u(geom);
+    u.writeUGX(output+"test_output.ugx");
+
+    // Read back
+    UgxObject u2(output+"test_output.ugx");
+    CHECK(u2.getGeometry().points.size() == 2);
+}
+
+TEST_CASE("UGXObject printing methods do not crash") {
+    UgxGeometry geom;
+    geom.points[0] = {0.1, 0.2, 0.3};
+    geom.points[1] = {1.0, 1.2, 1.3};
+    geom.edges.emplace_back(0, 1);
+    geom.faces.push_back({0, 1, 1});
+    geom.subsetNames[0] = "debug";
+
+    UgxObject u(geom);
+
+    u.printCoordinates();
+    u.printEdges();
+    u.printFaces();
+    CHECK(true);
+}
