@@ -42,6 +42,7 @@ doctest:
 	fi
 	
 	@cd $(BIN_DIR) && ./doctest --no-breaks --success --no-line-numbers --no-path-in-filenames
+	@cd $(BIN_DIR) && ./ugxobject_doctest --no-breaks --success --no-line-numbers --no-path-in-filenames
 
 # make all
 all: build doctest clean install
