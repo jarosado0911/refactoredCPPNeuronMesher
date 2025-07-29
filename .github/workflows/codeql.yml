@@ -3,8 +3,18 @@ name: "CodeQL"
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'ugxobject.cpp'
+      - 'ugxobject.h'
+      - 'ugxmain.cpp'
+      
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - 'ugxobject.cpp'
+      - 'ugxobject.h'
+      - 'ugxmain.cpp'
+      
   schedule:
     - cron: '0 0 * * 0'
 
