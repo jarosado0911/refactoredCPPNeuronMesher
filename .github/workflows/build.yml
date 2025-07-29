@@ -3,18 +3,8 @@ name: Build
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'ugxobject.cpp'
-      - 'ugxobject.h'
-      - 'ugxmain.cpp'
-      
   pull_request:
     branches: [main]
-    paths-ignore:
-      - 'ugxobject.cpp'
-      - 'ugxobject.h'
-      - 'ugxmain.cpp'
-
 env:
   BUILD_TYPE: Debug  # Use Debug for coverage instrumentation
 
