@@ -25,3 +25,24 @@ TEST_CASE("UGXObject write and read") {
     UgxObject u2(output);
     CHECK(u2.getPoints().size() == u.getPoints().size());
 }
+
+TEST_CASE("UGX Print Coordinates"){
+    std::string input = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject u(input);
+    u.printCoordinates();
+    CHECK(true);
+}
+
+TEST_CASE("UGX Print Edges"){
+    std::string input = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject u(input);
+    u.printEdges();
+    CHECK(true);
+}
+
+TEST_CASE("UGX Print Faces"){
+    std::string input = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject u(input);
+    u.printFaces();
+    CHECK(true);
+}
