@@ -102,3 +102,75 @@ TEST_CASE("UGXObject printing methods do not crash") {
     u.printFaces();
     CHECK(true);
 }
+
+TEST_CASE("UGXObject constructor from file") {
+    std::string filepath = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject u(filepath);
+    CHECK_FALSE(u.getPoints().empty());
+    CHECK_GE(u.getEdges().size(), 1);
+}
+
+TEST_CASE("UGXObject constructor from UgxGeometry") {
+    UgxGeometry g;
+    g.points[0] = {0.0, 0.0, 0.0};
+    g.points[1] = {1.0, 0.0, 0.0};
+    g.edges.emplace_back(0, 1);
+    g.faces.push_back({0, 1, 1});
+    g.subsetNames[0] = "debug";
+
+    UgxObject u(g);
+    CHECK(u.getPoints().size() == 2);
+    CHECK(u.getEdges().size() == 1);
+    CHECK(u.getFaces().size() == 1);
+    CHECK(u.getGeometry().subsetNames.at(0) == "debug");
+}
+
+TEST_CASE("UGXObject read/write consistency") {
+    std::string input = getExecutableDir() + "/../data/neuron.ugx";
+    std::string output = getExecutableDir() + "/../output/test_output/test_rw.ugx";
+    UgxObject u1(input);
+    u1.writeUGX(output);
+
+    UgxObject u2(output);
+    CHECK(u2.getPoints().size() == u1.getPoints().size());
+    CHECK(u2.getEdges().size() == u1.getEdges().size());
+}
+
+TEST_CASE("UGXObject print methods") {
+    UgxGeometry g;
+    g.points[0] = {1.0, 2.0, 3.0};
+    g.points[1] = {4.0, 5.0, 6.0};
+    g.edges.emplace_back(0, 1);
+    g.faces.push_back({0, 1, 1});
+    UgxObject u(g);
+    CHECK_NOTHROW(u.printCoordinates());
+    CHECK_NOTHROW(u.printEdges());
+    CHECK_NOTHROW(u.printFaces());
+}
+
+TEST_CASE("getGeometry returns consistent data") {
+    UgxGeometry g;
+    g.points[5] = {1.1, 2.2, 3.3};
+    g.points[8] = {3.3, 2.2, 1.1};
+    g.edges.emplace_back(5, 8);
+    g.faces.push_back({5, 8, 5});
+    UgxObject u(g);
+    const auto& returned = u.getGeometry();
+
+    CHECK(returned.points.size() == 2);
+    CHECK(returned.edges.size() == 1);
+    CHECK(returned.faces.size() == 1);
+}
+
+TEST_CASE("Subset names round trip") {
+    UgxGeometry g;
+    g.points[0] = {0, 0, 0};
+    g.points[1] = {1, 0, 0};
+    g.edges.emplace_back(0, 1);
+    g.subsetNames[0] = "default";
+
+    UgxObject u(g);
+    auto g2 = u.getGeometry();
+    CHECK(g2.subsetNames[0] == "default");
+}
+
