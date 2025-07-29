@@ -56,6 +56,8 @@ public:
 	// getter functions
     const UgxGeometry& getGeometry() const {return ugxg;}
 	const std::map<int,Coordinates>& getPoints() const {return ugxg.points;}
+    const std::vector<std::pair<int, int>>& getEdges() const {return ugxg.edges;}
+    const std::vector<std::array<int, 3>>& getFaces() const {return ugxg.faces;}
 
 	// printing functions
 	void printCoordinates() const;
