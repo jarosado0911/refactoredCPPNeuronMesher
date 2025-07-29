@@ -23,6 +23,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include/project)
 set(SHARED_SOURCES
     src/neurongraph.cpp
     src/utils.cpp
+    src/ugxobject.cpp
 )
 
 # === MAIN EXECUTABLE ===
@@ -76,6 +77,19 @@ set_target_properties(extracttrunks PROPERTIES
 
 target_include_directories(extracttrunks PRIVATE ${PROJECT_SOURCE_DIR}/include/project)
 target_link_libraries(extracttrunks PRIVATE tinyxml2)
+
+# === UGX Main EXECUTABLE ===
+add_executable(ugxmain
+    scripts/ugxmain.cpp
+    ${SHARED_SOURCES}
+)
+
+set_target_properties(ugxmain PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../bin/"
+)
+
+target_include_directories(ugxmain PRIVATE ${PROJECT_SOURCE_DIR}/include/project)
+target_link_libraries(ugxmain PRIVATE tinyxml2)
 
 # === TESTING ===
 add_subdirectory(tests)
