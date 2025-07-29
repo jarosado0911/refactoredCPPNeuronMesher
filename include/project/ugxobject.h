@@ -26,9 +26,15 @@ struct Coordinates {
 // Container for geometry data
 struct UgxGeometry {
     std::map<int, Coordinates> points;
-	std::vector<std::pair<int, int>> edges;           // edge = (vertexID0, vertexID1)
-    std::vector<std::array<int, 3>> faces;            // triangle face = (v0, v1, v2)
+    std::vector<std::pair<int, int>> edges;
+    std::vector<std::array<int, 3>> faces;
+
+    std::map<int, int> vertexSubsets;           // vertex index → subset ID
+    std::map<int, int> edgeSubsets;             // edge index   → subset ID
+    std::map<int, int> faceSubsets;             // face index   → subset ID
+    std::map<int, std::string> subsetNames;     // subset ID    → name
 };
+
 
 // Main object to manage UGX geometry
 class UgxObject {
