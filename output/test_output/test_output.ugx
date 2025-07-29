@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid name="defGrid">
+    <vertices coords="3">0 0 0 1 0 0</vertices>
+    <edges>0 1</edges>
+    <subset_handler name="defSH">
+        <subset name="test" state="0" color="0.5 0.5 0.5"/>
+    </subset_handler>
+</grid>
