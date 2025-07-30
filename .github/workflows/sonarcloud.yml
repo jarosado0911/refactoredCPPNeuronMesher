@@ -75,6 +75,6 @@ jobs:
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.cfamily.compile-commands=build/compile_commands.json
           -Dsonar.coverageReportPaths=coverage.xml
-          -Dsonar.exclusions=**/*.html,docs/doxygen/**,src/tinyfiledialogs.c,src/viewercpp/**
+          -Dsonar.exclusions=include/externals/doctest.h,**/*.html,docs/doxygen/**,src/tinyfiledialogs.c,src/viewercpp/**
           -Dsonar.coverage.exclusions=coverage/**,tests/test_ugxobject_doctest.cpp,include/project/ugxobject.h,src/bindings.cpp,src/ugxobject.cpp,scripts/ugxmain.cpp,python_package/test/test_bindings.py
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
