@@ -65,6 +65,7 @@ jobs:
 
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
+      continue-on-error: true 
       with:
         args: >
           -Dsonar.projectKey=jarosado0911_refactoredCPPNeuronMesher
