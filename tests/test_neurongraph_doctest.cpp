@@ -558,3 +558,53 @@ TEST_CASE("GenerateRefinements LINEAR"){
         CHECK (nodeSet.size() >= g.numberOfNodes());
     }
 }
+
+TEST_CASE("Get Neighbor Map"){
+    std::string inputfile = getExecutableDir() + "/../data/neuron.ugx";
+    NeuronGraph g(inputfile);
+    g.setNodes(g.removeSomaSegment());
+
+    auto neighbors = g.getNeighborMap();
+    CHECK(neighbors.size() == g.numberOfNodes());
+}
+
+TEST_CASE("Get Branch Subgraphs"){
+    std::string inputfile = getExecutableDir() + "/../data/neuron.ugx";
+    std::string outputfolder = getExecutableDir() + "/../output/test_branch_subgraphs";
+    checkFolder(outputfolder);
+
+    NeuronGraph g(inputfile);
+    g.setNodes(g.removeSomaSegment());
+    for(int i = 0; i<=4; ++i){g.setNodes(g.splitEdges());}
+
+    auto subgraphs = g.extractBranchSubgraphs();
+
+    for(auto& [id, subg] : subgraphs){
+        std::string outputfile = outputfolder + "/subgraph_"+std::to_string(id)+".swc";
+        g.writeToFile(subg,outputfile);
+    }
+}
+
+TEST_CASE("Get Bezier Subgraphs"){
+    std::string inputfile = getExecutableDir() + "/../data/neuron.ugx";
+    std::string outputfolder = getExecutableDir() + "/../output/test_bezier_subgraphs";
+    checkFolder(outputfolder);
+
+    NeuronGraph g(inputfile);
+    g.setNodes(g.removeSomaSegment());
+    for(int i = 0; i<=4; ++i){g.setNodes(g.splitEdges());}
+
+    auto subgraphs = g.extractBranchSubgraphs();
+    double insetFactor = 0.25;
+    int numberOfBezierPoints = 10;
+
+    for(auto& [bid,subg] : subgraphs){
+        auto beziercurves = g.smoothBranchWithBezier(subg,insetFactor,numberOfBezierPoints);
+        CHECK(beziercurves.size() > 0);
+        for(auto& [id,bez] : beziercurves){
+            std::string outputfile = outputfolder + "/subgraph_"+std::to_string(bid)+"_"+std::to_string(id)+".swc";
+            CHECK(bez.size()-1 == numberOfBezierPoints);
+            g.writeToFile(bez,outputfile);
+        }    
+    }
+}

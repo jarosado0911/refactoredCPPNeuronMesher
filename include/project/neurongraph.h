@@ -491,6 +491,18 @@ class NeuronGraph {
 																 std::string& method) {
 			return this->generateRefinements(this->nodes, delta, N, method); 
 		};
+
+
+		std::map<int, std::vector<int>> getNeighborMap(const std::map<int, SWCNode>& nodeSet);
+		std::map<int, std::vector<int>> getNeighborMap(){return this->getNeighborMap(this->getNodes());
+		};
+
+		std::map<int, std::map<int, SWCNode>> extractBranchSubgraphs(const std::map<int, SWCNode>& nodeSet);
+		std::map<int, std::map<int, SWCNode>> extractBranchSubgraphs(){return this->extractBranchSubgraphs(this->getNodes());};
+
+		std::map<int, std::map<int, SWCNode>> smoothBranchWithBezier(const std::map<int, SWCNode>& nodeSet,
+																	 double insetFactor,
+    																 int numberOfBezierPoints);
 };
 
 #endif // NEURONGRAPH_H
