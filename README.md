@@ -25,6 +25,7 @@ Written in the following programming languages:
 ![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-121011?style=for-the-badge&logo=gnubash&logoColor=white)
 
 The badges at the top of this README provide at-a-glance insights into the health, quality, and activity of the project. Build and test status badges (from GitHub Actions and Doctest) show whether the code compiles and passes its tests. Quality and analysis badges from Codacy and SonarCloud summarize code reliability, security, vulnerabilities, bugs, and code smells, while repository statistics badges reveal language usage, code volume, contributor activity, release status, and recent updates. Together, these metrics help users and contributors quickly assess the project's current state and ongoing maintenance.
 ### ✅ CI & Quality 
