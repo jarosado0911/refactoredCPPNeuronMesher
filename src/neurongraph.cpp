@@ -17,6 +17,17 @@
 
 namespace fs = std::filesystem;
 
+// Define Vec3 struct
+    struct Vec3 {
+        double x, y, z;
+        Vec3 operator+(const Vec3& other) const { return {x + other.x, y + other.y, z + other.z}; }
+        Vec3 operator-(const Vec3& other) const { return {x - other.x, y - other.y, z - other.z}; }
+        Vec3 operator*(double s) const { return {x * s, y * s, z * s}; }
+        Vec3 operator/(double s) const { return {x / s, y / s, z / s}; }
+    };
+
+Vec3 operator*(double s, const Vec3& v) {return v * s;}
+
 /**
  * @brief Constructor that initializes a NeuronGraph from a set of SWC nodes
  * @param nodeSet A map containing SWC nodes indexed by their IDs
@@ -376,4 +387,122 @@ bool NeuronGraph::isSomaMissing(const std::map<int, SWCNode>& nodeSet) const {
         }
     }
     return true; // No node of type 1 found
+}
+
+std::map<int, std::vector<int>> NeuronGraph::getNeighborMap(const std::map<int, SWCNode>& nodeSet){
+    std::map<int, std::vector<int>> neighbors;
+
+    for (const auto& [id, node] : nodeSet) {
+        if (node.pid != -1 && nodes.count(node.pid)) {
+            neighbors[id].push_back(node.pid);
+            neighbors[node.pid].push_back(id);
+        }
+    }
+
+    return neighbors;
+}
+
+std::map<int, std::map<int, SWCNode>> NeuronGraph::extractBranchSubgraphs(const std::map<int, SWCNode>& nodeSet) {
+    std::map<int, std::map<int, SWCNode>> subgraphs;
+
+    // Use the class method to get the neighbor map
+    std::map<int, std::vector<int>> neighbors = getNeighborMap(nodeSet);
+
+    // Identify branch points and soma
+    for (const auto& [id, nbrs] : neighbors) {
+        if (nbrs.size() >= 3 || nodeSet.at(id).type == 1) {
+            std::map<int, SWCNode> local;
+            std::map<int, int> oldToNew;
+            int counter = 1;
+
+            // Add the central node
+            SWCNode center = nodeSet.at(id);
+            center.id = counter;
+            center.pid = -1;
+            local[counter] = center;
+            oldToNew[id] = counter++;
+
+            // Add its neighbors
+            for (int nbr : nbrs) {
+                if (!nodeSet.count(nbr)) continue;
+                SWCNode n = nodeSet.at(nbr);
+                n.id = counter;
+                n.pid = oldToNew[id];
+                local[counter] = n;
+                ++counter;
+            }
+
+            subgraphs[id] = std::move(local);
+        }
+    }
+
+    return subgraphs;
+}
+
+std::map<int, std::map<int, SWCNode>> NeuronGraph::smoothBranchWithBezier(
+    const std::map<int, SWCNode>& nodeSet,
+    double insetFactor,
+    int numberOfBezierPoints
+) {
+    std::map<int, std::map<int, SWCNode>> bezierBranches;
+
+    // Use your NeuronGraph method to get the neighbor map
+    std::map<int, std::vector<int>> neighborMap = getNeighborMap(nodeSet);
+
+    // Identify the center (branch point)
+    int centerId = -1;
+    for (const auto& [id, nbrs] : neighborMap) {
+        if (nbrs.size() >= 3 || nodeSet.at(id).pid == -1) {
+            centerId = id;
+            break;
+        }
+    }
+    if (centerId == -1) return {};  // No valid center found
+
+    Vec3 O{nodeSet.at(centerId).x, nodeSet.at(centerId).y, nodeSet.at(centerId).z};
+    const auto& centerNeighbors = neighborMap.at(centerId);
+
+    for (size_t i = 0; i < centerNeighbors.size(); ++i) {
+        int id1 = centerNeighbors[i];
+        int id2 = centerNeighbors[(i + 1) % centerNeighbors.size()];
+
+        const SWCNode& n1 = nodeSet.at(id1);
+        const SWCNode& n2 = nodeSet.at(id2);
+        Vec3 W1{n1.x, n1.y, n1.z};
+        Vec3 W2{n2.x, n2.y, n2.z};
+        double r1 = n1.radius;
+        double r2 = n2.radius;
+        int t1 = n1.type;
+        int t2 = n2.type;
+
+        Vec3 U = (W1 + W2) / 2.0;
+        Vec3 control = O + insetFactor * (U - O);
+
+        std::map<int, SWCNode> newNodes;
+        int nextId = 1;
+        int parentId = -1;
+
+        for (int k = 0; k <= numberOfBezierPoints; ++k) {
+            double t = static_cast<double>(k) / numberOfBezierPoints;
+            Vec3 pt = (1 - t)*(1 - t)*W1 + 2*(1 - t)*t*control + t*t*W2;
+            double radius = (1 - t) * r1 + t * r2;
+            int type = (t < 0.5) ? t1 : t2;
+
+            SWCNode node;
+            node.id = nextId;
+            node.pid = parentId;
+            node.x = pt.x;
+            node.y = pt.y;
+            node.z = pt.z;
+            node.radius = radius;
+            node.type = type;
+
+            newNodes[nextId] = node;
+            parentId = nextId++;
+        }
+
+        bezierBranches[i] = std::move(newNodes);
+    }
+
+    return bezierBranches;
 }
