@@ -20,6 +20,7 @@ add_test(NAME RunDocTest COMMAND doctest)
 add_executable(ugxobject_doctest 
     test_ugxobject_doctest.cpp
     ${PROJECT_SOURCE_DIR}/src/ugxobject.cpp
+    ${PROJECT_SOURCE_DIR}/src/neurongraph.cpp
     ${PROJECT_SOURCE_DIR}/src/utils.cpp
 )
 

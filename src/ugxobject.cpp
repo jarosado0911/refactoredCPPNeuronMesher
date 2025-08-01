@@ -1,4 +1,5 @@
 #include "ugxobject.h"
+#include "neurongraph.h"
 #include <tinyxml2.h>
 #include <iomanip> // for std::setprecision
 
@@ -34,6 +35,31 @@ void UgxObject::readUGX(const std::string& filename) {
         std::cout << "[UGXObject] Loaded " << ugxg.points.size() << " points from " << filename << std::endl;
     } else {
         std::cerr << "[UGXObject Warning] No vertex data found in: " << filename << std::endl;
+    }
+
+    // Parse radius or diameter from vertex_attachment blocks (as flat value list)
+    for (tinyxml2::XMLElement* attach = root->FirstChildElement("vertex_attachment");
+        attach; attach = attach->NextSiblingElement("vertex_attachment")) {
+
+        const char* name = attach->Attribute("name");
+        if (!name) continue;
+
+        bool isDiameter = std::string(name) == "diameter";
+        bool isRadius   = std::string(name) == "radius";
+        if (!isDiameter && !isRadius) continue;
+
+        const char* rawText = attach->GetText();
+        if (!rawText) continue;
+
+        std::istringstream stream(rawText);
+        double value;
+        int index = 0;
+
+        while (stream >> value) {
+            ugxg.radii[index++] = isDiameter ? value / 2.0 : value;
+        }
+
+        std::cout << "[UGXObject] Parsed " << index << " values for " << name << std::endl;
     }
 
     // --- 2. Load Edges (if present) ---
@@ -142,6 +168,33 @@ void UgxObject::writeUGX(const std::string& filename) const {
         if (!faceStr.empty()) faceStr.pop_back();
         faceElem->SetText(faceStr.c_str());
         root->InsertEndChild(faceElem);
+    }
+
+
+    // --- Write Radii as Vertex Attachment ---
+    if (!ugxg.radii.empty()) {
+        XMLElement* attachElem = doc.NewElement("vertex_attachment");
+        attachElem->SetAttribute("name", "diameter");
+        attachElem->SetAttribute("type", "double");
+        attachElem->SetAttribute("passOn", "0");
+        attachElem->SetAttribute("global", "1");
+
+        // Create ordered output string by vertex index
+        std::ostringstream oss;
+        for (size_t i = 0; i < ugxg.points.size(); ++i) {
+            double radius = 0.0;
+            auto it = ugxg.radii.find(i);
+            if (it != ugxg.radii.end())
+                oss << (2.0 * it->second) << " ";  // write as diameter
+            else
+                oss << "0.0 ";  // fallback if missing
+        }
+
+        std::string radiiText = oss.str();
+        if (!radiiText.empty()) radiiText.pop_back();  // remove trailing space
+
+        attachElem->SetText(radiiText.c_str());
+        root->InsertEndChild(attachElem);
     }
 
     // --- Write Subsets ---
@@ -258,3 +311,53 @@ void UgxObject::printFaces() const {
     }
 }
 
+const UgxGeometry UgxObject::convertToUGX(const std::map<int, SWCNode>& nodeSet) {
+    UgxGeometry ugxout;
+
+    std::map<int, int> typeToSubsetIndex;           // SWC type → subset index
+    std::map<int, std::string> typeToSubsetName;    // SWC type → name
+    std::map<int, int> swcToUgxIndex;               // SWC id → UGX vertex index
+
+    int nextIndex = 0;
+    int nextSubsetIndex = 0;
+
+    // Step 1: Define subsets and points
+    for (const auto& [id, node] : nodeSet) {
+        int type = node.type;
+
+        // Create subset for new type
+        if (typeToSubsetIndex.count(type) == 0) {
+            typeToSubsetIndex[type] = nextSubsetIndex;
+            typeToSubsetName[type] = "type_" + std::to_string(type);
+            ugxout.subsetNames[nextSubsetIndex] = typeToSubsetName[type];
+            ++nextSubsetIndex;
+        }
+
+        int ugxIndex = nextIndex++;
+        swcToUgxIndex[id] = ugxIndex;
+        ugxout.points[ugxIndex] = {node.x, node.y, node.z};
+        ugxout.radii[ugxIndex] = node.radius;  // <-- NEW
+        ugxout.vertexSubsets[ugxIndex] = typeToSubsetIndex[type];
+    }
+
+    // Step 2: Add edges based on parent-child relationship
+    for (const auto& [id, node] : nodeSet) {
+        if (node.pid == -1) continue;
+
+        auto itFrom = swcToUgxIndex.find(node.pid);
+        auto itTo = swcToUgxIndex.find(id);
+
+        if (itFrom != swcToUgxIndex.end() && itTo != swcToUgxIndex.end()) {
+            int from = itFrom->second;
+            int to = itTo->second;
+
+            ugxout.edges.emplace_back(from, to);
+
+            // Assign edge to same subset as child node
+            int subset = typeToSubsetIndex[node.type];
+            ugxout.edgeSubsets[ugxout.edges.size() - 1] = subset;
+        }
+    }
+
+    return ugxout;
+}
