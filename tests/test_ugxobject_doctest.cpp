@@ -1,6 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "externals/doctest.h"
 #include "project/ugxobject.h"
+#include "project/neurongraph.h"
 #include "project/utils.h"
 #include <filesystem>
 
@@ -182,4 +183,32 @@ TEST_CASE("Set UGX object with UGX geometry"){
     g.setGeometry(g.getGeometry());
     auto after = g.getPoints().size();
     CHECK(after == before);
+}
+
+TEST_CASE("Convert SWC nodes to UGX Geometry"){
+    std::string inputswc = getExecutableDir() + "/../data/neuron.swc";
+    NeuronGraph g(inputswc);
+    UgxObject ug;
+    auto ugxgeom = ug.convertToUGX(g.getNodes());
+    CHECK(ugxgeom.radii.size() == g.getNodes().size());
+    ug.setGeometry(ugxgeom);
+    CHECK(ugxgeom.radii.size() == ug.getPoints().size());
+    CHECK(ug.getPoints().size()== ug.getGeometry().radii.size());
+    std::string output = getExecutableDir() + "/../output/test_output/test_swc_to_ugx.ugx";
+    ug.writeUGX(output);
+}
+
+TEST_CASE("Read .ugx containing radii"){
+    std::string inputugx = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject g(inputugx);
+    auto radii = g.getGeometry().radii;
+    CHECK(radii.size()==g.getGeometry().points.size());
+}
+
+TEST_CASE("Write .ugx containing radii"){
+    std::string inputugx = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject g(inputugx);
+    std::string outputugx = getExecutableDir() + "/../output/test_output/test_ugx_with_radius.ugx";
+    g.writeUGX(outputugx);
+    CHECK(true);
 }
