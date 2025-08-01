@@ -174,3 +174,12 @@ TEST_CASE("Subset names round trip") {
     CHECK(g2.subsetNames[0] == "default");
 }
 
+TEST_CASE("Set UGX object with UGX geometry"){
+    std::string input = getExecutableDir() + "/../data/neuron.ugx";
+    UgxObject g(input);
+    auto before = g.getPoints().size();
+
+    g.setGeometry(g.getGeometry());
+    auto after = g.getPoints().size();
+    CHECK(after == before);
+}

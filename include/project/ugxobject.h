@@ -59,6 +59,10 @@ public:
     const std::vector<std::pair<int, int>>& getEdges() const {return ugxg.edges;}
     const std::vector<std::array<int, 3>>& getFaces() const {return ugxg.faces;}
 
+    // setter functions
+    void setGeometry(const UgxGeometry& ugxinput){this->ugxg = ugxinput;};
+
+
 	// printing functions
 	void printCoordinates() const;
 	void printEdges() const;
