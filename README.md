@@ -1,10 +1,33 @@
 # `C++` Neuron Geometry Analyzer and Mesh Generator
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="40" height="40"/>
+</p>
+
+---
+
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=jarosado0911&show_icons=true&theme=default)
 
 CPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
 - GitHub Repository: [CPPNeuronMesher](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
 - GitHub Pages: [CPPNeuronMesher](https://jarosado0911.github.io/refactoredCPPNeuronMesher)
 - Doxygen: [API Docs (Doxygen)](https://jarosado0911.github.io/refactoredCPPNeuronMesher/doxygen/)
+
+Written in the following programming languages:
+
+![Makefile](https://img.shields.io/badge/Makefile-0779c1?style=for-the-badge&logo=gnubash&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![C](https://img.shields.io/badge/C-555555?style=for-the-badge&logo=c&logoColor=white)
+![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-121011?style=for-the-badge&logo=gnubash&logoColor=white)
 
 The badges at the top of this README provide at-a-glance insights into the health, quality, and activity of the project. Build and test status badges (from GitHub Actions and Doctest) show whether the code compiles and passes its tests. Quality and analysis badges from Codacy and SonarCloud summarize code reliability, security, vulnerabilities, bugs, and code smells, while repository statistics badges reveal language usage, code volume, contributor activity, release status, and recent updates. Together, these metrics help users and contributors quickly assess the project's current state and ongoing maintenance.
 ### ✅ CI & Quality 

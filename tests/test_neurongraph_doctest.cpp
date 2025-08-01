@@ -596,7 +596,7 @@ TEST_CASE("Get Bezier Subgraphs"){
 
     auto subgraphs = g.extractBranchSubgraphs();
     double insetFactor = 0.25;
-    int numberOfBezierPoints = 10;
+    int numberOfBezierPoints = 30;
 
     for(auto& [bid,subg] : subgraphs){
         auto beziercurves = g.smoothBranchWithBezier(subg,insetFactor,numberOfBezierPoints);
