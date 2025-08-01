@@ -257,3 +257,4 @@ void UgxObject::printFaces() const {
                   << "\t" << name << "\n";
     }
 }
+
