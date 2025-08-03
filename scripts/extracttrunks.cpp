@@ -63,8 +63,10 @@ int main(int argc, char* argv[]){
 
     outputfolder = execDir + "/../output/main_pft_geometries";
     checkFolder(outputfolder);
+     double delta = 0.5;
 
     for(auto& [id, path] : trunks){
+        path = atrunk.cubicSplineResampleTrunk(path,delta);
         auto pft = atrunk.pftFromPath(path,8);
         pft.writeUGX(outputfolder+"/pft_"+std::to_string(id)+".ugx");
     }
