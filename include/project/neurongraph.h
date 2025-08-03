@@ -31,6 +31,8 @@
 #include <algorithm>
 #include <filesystem>
 
+#include "ugxobject.h"
+
 /**
  * @brief Structure representing a single node in an SWC neuron morphology
  * 
@@ -503,6 +505,8 @@ class NeuronGraph {
 		std::map<int, std::map<int, SWCNode>> smoothBranchWithBezier(const std::map<int, SWCNode>& nodeSet,
 																	 double insetFactor,
     																 int numberOfBezierPoints);
+		
+		UgxObject pftFromPath(const std::map<int, SWCNode>& path, int segments);
 };
 
 #endif // NEURONGRAPH_H
