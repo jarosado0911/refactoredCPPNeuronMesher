@@ -12,7 +12,23 @@
 
 ---
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=jarosado0911&show_icons=true&theme=default)
+<table>
+  <tr>
+    <td style="vertical-align: top; padding-right: 20px;">
+      <h3>Neuron Viewer</h3>
+      <ul>
+        <li>This tool renders 3D neuron geometries in real time from SWC and UGX formats.</li>
+        <li>Built with C++, OpenGL, and ImGui.</li>
+        <li>Supports mouse interaction and file saving.</li>
+        <li>The viewer also allows refinements of the geometry using a cubic spline refinement strategy and can be saved.</li>
+      </ul>
+    </td>
+    <td>
+      <img src="docs/media/neuronviewer.gif" alt="Neuron Viewer Demo" width="400">
+    </td>
+  </tr>
+</table>
+
 
 CPPNeuronMesher is a C++ project designed for the geometric analysis and mesh generation of neuron morphologies, providing tools for advanced neuroscience modeling and simulation. The repository features robust CI/CD pipelines, extensive quality checks, and detailed documentation to support reproducibility and collaborative development.  
 - GitHub Repository: [CPPNeuronMesher](https://github.com/jarosado0911/refactoredCPPNeuronMesher)
