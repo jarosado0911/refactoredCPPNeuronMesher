@@ -74,5 +74,5 @@ jobs:
           -Dsonar.cfamily.compile-commands=build/compile_commands.json
           -Dsonar.coverageReportPaths=coverage.xml
           -Dsonar.exclusions=include/externals/doctest.h,**/*.html,docs/doxygen/**,src/tinyfiledialogs.c,src/viewercpp/**
-          -Dsonar.coverage.exclusions=coverage/**,tests/test_ugxobject_doctest.cpp,tests/test_neurongraph_doctest.cpp,include/project/neurongraph.h,src/neurongraph.cpp,include/project/ugxobject.h,src/bindings.cpp,src/ugxobject.cpp,scripts/ugxmain.cpp,python_package/test/test_bindings.py
+          -Dsonar.coverage.exclusions=coverage/**,tests/test_ugxobject_doctest.cpp,tests/test_neurongraph_doctest.cpp,include/project/neurongraph.h,src/neurongraph.cpp,include/project/ugxobject.h,src/bindings.cpp,src/ugxobject.cpp,src/neuronpft.cpp,scripts/ugxmain.cpp,scripts/extracttrunks.cpp,python_package/test/test_bindings.py
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
