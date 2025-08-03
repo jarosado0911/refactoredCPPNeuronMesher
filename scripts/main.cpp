@@ -22,6 +22,6 @@ int main(int argc, char* argv[]){
     std::string execDir = getExecutableDir();
     std::string outputfolder = execDir + "/../output/main_output/";
     graph.writeToFile(graph.getNodes(),outputfolder+"examplewrite.swc");    
-
+    
     return 0;
 }

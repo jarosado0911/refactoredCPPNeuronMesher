@@ -17,7 +17,8 @@
 #include <algorithm>
 #include <filesystem>
 
-#include "neurongraph.h"
+//#include "neurongraph.h"
+struct SWCNode;
 
 // 3D point representation
 struct Coordinates {

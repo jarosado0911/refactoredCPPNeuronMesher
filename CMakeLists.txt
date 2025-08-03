@@ -24,6 +24,7 @@ set(SHARED_SOURCES
     src/neurongraph.cpp
     src/utils.cpp
     src/ugxobject.cpp
+    src/neuronpft.cpp
 )
 
 # === MAIN EXECUTABLE ===

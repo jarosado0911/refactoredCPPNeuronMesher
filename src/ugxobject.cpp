@@ -1,5 +1,5 @@
-#include "ugxobject.h"
 #include "neurongraph.h"
+#include "ugxobject.h"
 #include <tinyxml2.h>
 #include <iomanip> // for std::setprecision
 

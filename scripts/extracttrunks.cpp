@@ -1,4 +1,5 @@
 #include "neurongraph.h"
+#include "ugxobject.h"
 #include "utils.h"
 #include <chrono>
 #include <functional> // for std::hash
@@ -53,6 +54,19 @@ int main(int argc, char* argv[]){
 
     for(auto& [id,trunk] : trunks){
         graph.writeToFile(trunk,outputfolder + "/trunk_"+std::to_string(id)+".swc");
+    }
+
+    std::string inputtrunk = outputfolder + "/trunk_4.swc";
+    NeuronGraph atrunk(inputtrunk);
+    auto path = atrunk.getNodes();
+    std::cout << "path has " << path.size() << " nodes" << std::endl;
+
+    outputfolder = execDir + "/../output/main_pft_geometries";
+    checkFolder(outputfolder);
+
+    for(auto& [id, path] : trunks){
+        auto pft = atrunk.pftFromPath(path,8);
+        pft.writeUGX(outputfolder+"/pft_"+std::to_string(id)+".ugx");
     }
 
     return 0;
