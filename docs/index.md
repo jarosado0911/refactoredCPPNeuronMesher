@@ -39,7 +39,7 @@ Real-time 3D rendering of .swc neuron files using OpenGL.
 - Dynamic help window showing usage instructions and current file metadata.
 
 🎥 Demonstration
-<video width="640" height="360" autoplay loop muted playsinline controls> <source src="media/neuronviewer.mp4" type="video/mp4"> Your browser does not support the video tag. </video> <p><em>Demonstration of the neuron viewer in action.</em></p>
+<img src="docs/media/neuronviewer.gif" width="500" alt="Neuron Viewer in Action">does not support the video tag. </video> <p><em>Demonstration of the neuron viewer in action.</em></p>
 🧰 Technical Highlights
 - Utilizes GLFW for window and input management.
 - Uses GLU to draw spheres and cylinders representing nodes and neurites.
