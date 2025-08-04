@@ -38,8 +38,10 @@ Real-time 3D rendering of .swc neuron files using OpenGL.
 - Automatic lighting, bounding box, and color-coded nodes by SWC type.
 - Dynamic help window showing usage instructions and current file metadata.
 
-🎥 Demonstration
-<video width="640" height="360" autoplay loop muted playsinline controls> <source src="media/neuronviewer.mp4" type="video/mp4"> Your browser does not support the video tag. </video> <p><em>Demonstration of the neuron viewer in action.</em></p>
+🎥 Demonstration of NeuronViewer
+<div align="center">
+<img src="https://raw.githubusercontent.com/jarosado0911/refactoredCPPNeuronMesher/main/docs/media/neuronviewer.gif" width="300" alt="Neuron Viewer in Action"> <p><em>Demonstration of the neuron viewer in action.</em></p>
+</div>
 🧰 Technical Highlights
 - Utilizes GLFW for window and input management.
 - Uses GLU to draw spheres and cylinders representing nodes and neurites.
