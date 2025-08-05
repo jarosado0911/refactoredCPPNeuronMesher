@@ -100,10 +100,12 @@ UgxObject NeuronGraph::pftFromPath(const std::map<int, SWCNode>& path, int segme
             geom.edges.push_back({a, c});
             geom.edges.push_back({a, b});
             geom.edges.push_back({c, d});
+            geom.edges.push_back({b, c}); // ← new diagonal edge
 
             geom.faces.push_back({a, b, c});
             geom.faces.push_back({b, d, c});
 
+            geom.edgeSubsets[geom.edges.size() - 4] = nodes[i].type;
             geom.edgeSubsets[geom.edges.size() - 3] = nodes[i].type;
             geom.edgeSubsets[geom.edges.size() - 2] = nodes[i].type;
             geom.edgeSubsets[geom.edges.size() - 1] = nodes[i].type;
