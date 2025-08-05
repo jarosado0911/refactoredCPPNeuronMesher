@@ -113,7 +113,31 @@ UgxObject NeuronGraph::pftFromPath(const std::map<int, SWCNode>& path, int segme
         }
     }
 
+    // Assign subset names
+    std::map<int, std::string> subsetTypeNames = {
+        {1, "Soma"},
+        {2, "Axon"},
+        {3, "Dendrite"},
+        {4, "ApicalDendrite"},
+        {5, "ForkPoint"},
+        {6, "EndPoint"},
+        {7, "Custom"}
+    };
+
+    std::set<int> usedTypes;
+    for (const auto& [_, node] : path) {
+        usedTypes.insert(node.type);
+    }
+
+    for (int typeId : usedTypes) {
+        if (subsetTypeNames.count(typeId))
+            geom.subsetNames[typeId] = subsetTypeNames[typeId];
+        else
+            geom.subsetNames[typeId] = "UnknownType_" + std::to_string(typeId);
+    }
+
     UgxObject obj;
     obj.setGeometry(geom);
+
     return obj;
 }
