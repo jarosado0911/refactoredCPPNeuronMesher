@@ -57,19 +57,27 @@ int main(int argc, char* argv[]){
     }
 
     std::string inputtrunk = outputfolder + "/trunk_4.swc";
-    NeuronGraph atrunk(inputtrunk);
-    auto path = atrunk.getNodes();
-    std::cout << "path has " << path.size() << " nodes" << std::endl;
-
+    NeuronGraph atrunk;
     outputfolder = execDir + "/../output/main_pft_geometries";
     checkFolder(outputfolder);
-     double delta = 0.5;
+    double delta = 2.0;
+
+    UgxGeometry combined;
+    UgxObject tempObj;
 
     for(auto& [id, path] : trunks){
         path = atrunk.cubicSplineResampleTrunk(path,delta);
         auto pft = atrunk.pftFromPath(path,8);
+        combined = tempObj.addUGXGeometry(combined,pft.getGeometry()); 
         pft.writeUGX(outputfolder+"/pft_"+std::to_string(id)+".ugx");
     }
+
+    //UgxObject g1(outputfolder+"/pft_"+std::to_string(1)+".ugx");
+    //UgxObject g2(outputfolder+"/pft_"+std::to_string(2)+".ugx");
+    //auto combined = g1.addUGXGeometry(g1.getGeometry(),g2.getGeometry());
+
+    tempObj.setGeometry(combined);
+    tempObj.writeUGX(outputfolder+"/ugxcombinedtest.ugx");
 
     return 0;
 }
