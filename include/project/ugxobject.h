@@ -60,6 +60,9 @@ public:
     // convert swc data (std::map<int,SWCNode>) to ugx geometry type
     const UgxGeometry convertToUGX(const std::map<int,SWCNode>& nodeSet);
 
+    // combine two geometries
+    UgxGeometry addUGXGeometry(const UgxGeometry& geometry1, const UgxGeometry& geometry2);
+
 	// getter functions
     const UgxGeometry& getGeometry() const {return ugxg;}
 	const std::map<int,Coordinates>& getPoints() const {return ugxg.points;}

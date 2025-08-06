@@ -361,3 +361,75 @@ const UgxGeometry UgxObject::convertToUGX(const std::map<int, SWCNode>& nodeSet)
 
     return ugxout;
 }
+
+UgxGeometry UgxObject::addUGXGeometry(const UgxGeometry& geometry1, const UgxGeometry& geometry2) {
+    UgxGeometry combined;
+
+    // Step 1: Copy and insert all points from geometry1
+    combined.points = geometry1.points;
+    combined.radii = geometry1.radii;
+    combined.vertexSubsets = geometry1.vertexSubsets;
+    combined.edges = geometry1.edges;
+    combined.edgeSubsets = geometry1.edgeSubsets;
+    combined.faces = geometry1.faces;
+    combined.faceSubsets = geometry1.faceSubsets;
+    combined.subsetNames = geometry1.subsetNames;  // Start with geometry1's subset names
+
+    // Determine current max indices
+    int vertexOffset = combined.points.empty() ? 0 : (combined.points.rbegin()->first + 1);
+    int edgeOffset = static_cast<int>(combined.edges.size());
+    int faceOffset = static_cast<int>(combined.faces.size());
+
+    // Step 2: Insert points from geometry2 with reindexed vertex IDs
+    std::map<int, int> pointRemap;
+    for (const auto& [id, coord] : geometry2.points) {
+        int newId = id + vertexOffset;
+        combined.points[newId] = coord;
+        pointRemap[id] = newId;
+    }
+
+    // Step 3: Insert radii with new vertex IDs
+    for (const auto& [id, r] : geometry2.radii) {
+        int newId = pointRemap.at(id);
+        combined.radii[newId] = r;
+    }
+
+    // Step 4: Insert vertex subsets
+    for (const auto& [id, subset] : geometry2.vertexSubsets) {
+        int newId = pointRemap.at(id);
+        combined.vertexSubsets[newId] = subset;
+    }
+
+    // Step 5: Append edges (with reindexed vertices)
+    for (size_t i = 0; i < geometry2.edges.size(); ++i) {
+        auto [from, to] = geometry2.edges[i];
+        combined.edges.emplace_back(pointRemap.at(from), pointRemap.at(to));
+
+        int newEdgeIndex = edgeOffset + static_cast<int>(i);
+        if (geometry2.edgeSubsets.count(static_cast<int>(i)))
+            combined.edgeSubsets[newEdgeIndex] = geometry2.edgeSubsets.at(static_cast<int>(i));
+    }
+
+    // Step 6: Append faces (with reindexed vertices)
+    for (size_t i = 0; i < geometry2.faces.size(); ++i) {
+        auto [v0, v1, v2] = geometry2.faces[i];
+        combined.faces.push_back({
+            pointRemap.at(v0),
+            pointRemap.at(v1),
+            pointRemap.at(v2)
+        });
+
+        int newFaceIndex = faceOffset + static_cast<int>(i);
+        if (geometry2.faceSubsets.count(static_cast<int>(i)))
+            combined.faceSubsets[newFaceIndex] = geometry2.faceSubsets.at(static_cast<int>(i));
+    }
+
+    // Step 7: Merge subset names (if subset IDs collide, we assume the names are consistent)
+    for (const auto& [subsetId, name] : geometry2.subsetNames) {
+        // If already exists, keep geometry1's label
+        if (combined.subsetNames.count(subsetId) == 0)
+            combined.subsetNames[subsetId] = name;
+    }
+
+    return combined;
+}
