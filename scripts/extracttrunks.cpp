@@ -60,7 +60,7 @@ int main(int argc, char* argv[]){
     NeuronGraph atrunk;
     outputfolder = execDir + "/../output/main_pft_geometries";
     checkFolder(outputfolder);
-    double delta = 2.0;
+    double delta = 0.75;
 
     UgxGeometry combined;
     UgxObject tempObj;
