@@ -24,7 +24,22 @@
       </ul>
     </td>
     <td>
-      <img src="docs/media/neuronviewer.gif" alt="Neuron Viewer Demo" width="400">
+      <img src="docs/media/neuronviewer.gif" alt="Neuron Viewer Demo" width="500">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td style="vertical-align: top; padding-right: 20px;">
+      <h3>Mesh Generation</h3>
+      <ul>
+        <li> I have been able to generate surface meshes for the geometry</li>
+        <li> Note: the branch points and soma point needs to be resolved nicely</li>
+      </ul>
+    </td>
+    <td>
+      <img src="docs/media/fullmesh.gif" alt="Neuron Viewer Demo" width="500">
     </td>
   </tr>
 </table>
