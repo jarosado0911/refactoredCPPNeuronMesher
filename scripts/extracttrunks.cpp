@@ -67,7 +67,7 @@ int main(int argc, char* argv[]){
 
     for(auto& [id, path] : trunks){
         path = atrunk.cubicSplineResampleTrunk(path,delta);
-        auto pft = atrunk.pftFromPath(path,8);
+        auto pft = atrunk.pftFromPath(path,16);
         combined = tempObj.addUGXGeometry(combined,pft.getGeometry()); 
         pft.writeUGX(outputfolder+"/pft_"+std::to_string(id)+".ugx");
     }
@@ -79,5 +79,22 @@ int main(int argc, char* argv[]){
     tempObj.setGeometry(combined);
     tempObj.writeUGX(outputfolder+"/ugxcombinedtest.ugx");
 
+    /*
+    UgxGeometry combinedBezierObj;
+    UgxObject tempBezierObj;
+
+    std::string inputBezier = execDir +  "/../output/test_bezier_subgraphs";
+    const auto fileNames = listFilesInDirectory(inputBezier);
+    for(auto f : fileNames)
+    {
+        NeuronGraph bezierPath(f);
+        auto pft = bezierPath.pftFromPath(bezierPath.getNodes(), 16);
+        combinedBezierObj = tempBezierObj.addUGXGeometry(combinedBezierObj,pft.getGeometry());    
+    }
+
+    outputfolder = execDir + "/../output";
+    tempBezierObj.setGeometry(combinedBezierObj);
+    tempBezierObj.writeUGX(outputfolder+"/branchBezierCombined.ugx");
+*/
     return 0;
 }
