@@ -56,11 +56,11 @@ int main(int argc, char* argv[]){
         graph.writeToFile(trunk,outputfolder + "/trunk_"+std::to_string(id)+".swc");
     }
 
-    std::string inputtrunk = outputfolder + "/trunk_4.swc";
+    //std::string inputtrunk = outputfolder + "/trunk_4.swc";
     NeuronGraph atrunk;
     outputfolder = execDir + "/../output/main_pft_geometries";
     checkFolder(outputfolder);
-    double delta = 0.75;
+    double delta = 0.5;
 
     UgxGeometry combined;
     UgxObject tempObj;
