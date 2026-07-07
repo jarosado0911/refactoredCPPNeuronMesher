@@ -76,6 +76,12 @@ public:
 	void printCoordinates() const;
 	void printEdges() const;
 	void printFaces() const;
+
+    // write obj file
+    void writeOBJ(const std::string& filename) const;
+
+    // write stl file
+	void writeSTL(const std::string& filename) const;
 };
 
 #endif // UGXOBJECT_H

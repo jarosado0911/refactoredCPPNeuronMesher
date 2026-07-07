@@ -79,6 +79,19 @@ set_target_properties(extracttrunks PROPERTIES
 target_include_directories(extracttrunks PRIVATE ${PROJECT_SOURCE_DIR}/include/project)
 target_link_libraries(extracttrunks PRIVATE tinyxml2)
 
+# === BezierStudy Executable ===
+add_executable(bezierstudy
+    scripts/bezierstudy.cpp
+    ${SHARED_SOURCES}
+)
+
+set_target_properties(bezierstudy PROPERTIES
+	RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../bin/"
+)
+
+target_include_directories(bezierstudy PRIVATE ${PROJECT_SOURCE_DIR}/include/project)
+target_link_libraries(bezierstudy PRIVATE tinyxml2)
+
 # === UGX Main EXECUTABLE ===
 add_executable(ugxmain
     scripts/ugxmain.cpp

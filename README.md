@@ -1,4 +1,7 @@
 # `C++` Neuron Geometry Analyzer and Mesh Generator
+
+![refactoredCPPNeuronMesher](https://socialify.git.ci/jarosado0911/refactoredCPPNeuronMesher/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie+Brown&pulls=1&stargazers=1&theme=Light)
+
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="40" height="40"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="40" height="40"/>

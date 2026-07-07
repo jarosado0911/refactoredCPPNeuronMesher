@@ -89,31 +89,39 @@ UgxObject NeuronGraph::pftFromPath(const std::map<int, SWCNode>& path, int segme
         }
     }
 
+
     int numRings = nodes.size();
     for (int i = 0; i < numRings - 1; ++i) {
-        for (int j = 0; j < segments; ++j) {
-            int a = i * segments + j;
-            int b = i * segments + (j + 1) % segments;
-            int c = (i + 1) * segments + j;
-            int d = (i + 1) * segments + (j + 1) % segments;
+    	for (int j = 0; j < segments; ++j) {
+	    	int a = i * segments + j;
+        	int b = i * segments + (j + 1) % segments;
+        	int c = (i + 1) * segments + j;
+        	int d = (i + 1) * segments + (j + 1) % segments;
+	        int t = nodes[i].type;
 
-            geom.edges.push_back({a, c});
-            geom.edges.push_back({a, b});
-            geom.edges.push_back({c, d});
-            geom.edges.push_back({b, c}); // ← new diagonal edge
+        	// Set subset BEFORE push so size() is the correct future index
+        	geom.edgeSubsets[geom.edges.size()] = t;
+        	geom.edges.push_back({a, c});
 
-            geom.faces.push_back({a, b, c});
-            geom.faces.push_back({b, d, c});
+        	geom.edgeSubsets[geom.edges.size()] = t;
+        	geom.edges.push_back({a, b});
 
-            geom.edgeSubsets[geom.edges.size() - 4] = nodes[i].type;
-            geom.edgeSubsets[geom.edges.size() - 3] = nodes[i].type;
-            geom.edgeSubsets[geom.edges.size() - 2] = nodes[i].type;
-            geom.edgeSubsets[geom.edges.size() - 1] = nodes[i].type;
+        	if (i == numRings - 2) {
+            	geom.edgeSubsets[geom.edges.size()] = t;
+            	geom.edges.push_back({c, d});
+        	}
 
-            geom.faceSubsets[geom.faces.size() - 2] = nodes[i].type;
-            geom.faceSubsets[geom.faces.size() - 1] = nodes[i].type;
-        }
-    }
+       	 	geom.edgeSubsets[geom.edges.size()] = t;
+        	geom.edges.push_back({b, c});
+
+        	geom.faceSubsets[geom.faces.size()] = t;
+        	geom.faces.push_back({a, b, c});
+
+        	geom.faceSubsets[geom.faces.size()] = t;
+        	geom.faces.push_back({b, d, c});
+    	}
+	}
+          
 
     // Assign subset names
     std::map<int, std::string> subsetTypeNames = {
