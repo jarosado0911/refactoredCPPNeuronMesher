@@ -393,7 +393,7 @@ std::map<int, std::vector<int>> NeuronGraph::getNeighborMap(const std::map<int, 
     std::map<int, std::vector<int>> neighbors;
 
     for (const auto& [id, node] : nodeSet) {
-        if (node.pid != -1 && nodes.count(node.pid)) {
+        if (node.pid != -1 && nodeSet.count(node.pid)) {
             neighbors[id].push_back(node.pid);
             neighbors[node.pid].push_back(id);
         }
@@ -449,9 +449,13 @@ std::map<int, std::map<int, SWCNode>> NeuronGraph::smoothBranchWithBezier(
     // Use your NeuronGraph method to get the neighbor map
     std::map<int, std::vector<int>> neighborMap = getNeighborMap(nodeSet);
 
+    //std::cout << "neighborMap zie: " << neighborMap.size() << "\n";
+    //std::cout << "Hello 0" << std::endl;
+
     // Identify the center (branch point)
     int centerId = -1;
     for (const auto& [id, nbrs] : neighborMap) {
+	std::cout << nbrs.size() << " " << id << std::endl;
         if (nbrs.size() >= 3 || nodeSet.at(id).pid == -1) {
             centerId = id;
             break;
@@ -461,10 +465,11 @@ std::map<int, std::map<int, SWCNode>> NeuronGraph::smoothBranchWithBezier(
 
     Vec3 O{nodeSet.at(centerId).x, nodeSet.at(centerId).y, nodeSet.at(centerId).z};
     const auto& centerNeighbors = neighborMap.at(centerId);
-
+    
     for (size_t i = 0; i < centerNeighbors.size(); ++i) {
         int id1 = centerNeighbors[i];
         int id2 = centerNeighbors[(i + 1) % centerNeighbors.size()];
+	std::cout << id1 << "  " << id2 << "\n";
 
         const SWCNode& n1 = nodeSet.at(id1);
         const SWCNode& n2 = nodeSet.at(id2);
@@ -477,15 +482,18 @@ std::map<int, std::map<int, SWCNode>> NeuronGraph::smoothBranchWithBezier(
 
         Vec3 U = (W1 + W2) / 2.0;
         Vec3 control = O + insetFactor * (U - O);
+	//double controlR = nodeSet.at(centerId).radius;
 
         std::map<int, SWCNode> newNodes;
         int nextId = 1;
         int parentId = -1;
 
         for (int k = 0; k <= numberOfBezierPoints; ++k) {
-            double t = static_cast<double>(k) / numberOfBezierPoints;
-            Vec3 pt = (1 - t)*(1 - t)*W1 + 2*(1 - t)*t*control + t*t*W2;
-            double radius = (1 - t) * r1 + t * r2;
+            double t = static_cast<double>(k) / static_cast<double>(numberOfBezierPoints);
+            Vec3 pt = (1.0 - t)*(1.0 - t)*W1 + 2.0*(1.0 - t)*t*control + t*t*W2;
+	    double radius =(1.0-t)*r1+t*r2;
+	    //double radius = (t < 0.5) ? r1 : r2;
+	    std::cout << "r1 " << r1 << " r2 " << r2 << " r " << radius << std::endl; 
             int type = (t < 0.5) ? t1 : t2;
 
             SWCNode node;
@@ -494,7 +502,7 @@ std::map<int, std::map<int, SWCNode>> NeuronGraph::smoothBranchWithBezier(
             node.x = pt.x;
             node.y = pt.y;
             node.z = pt.z;
-            node.radius = radius;
+            node.radius = radius*0.5;
             node.type = type;
 
             newNodes[nextId] = node;

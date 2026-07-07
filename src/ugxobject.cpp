@@ -433,3 +433,81 @@ UgxGeometry UgxObject::addUGXGeometry(const UgxGeometry& geometry1, const UgxGeo
 
     return combined;
 }
+
+void UgxObject::writeOBJ(const std::string& filename) const {
+    std::ofstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "[UGXObject Error] Failed to open for writing: " << filename << std::endl;
+        return;
+    }
+
+    file << "# OBJ file written by UgxObject\n";
+
+    // Write vertices in index order
+    // OBJ vertices are 1-based, so we need a remap from our 0-based keys
+    std::map<int, int> indexRemap; // ugxg index → OBJ 1-based index
+    int objIndex = 1;
+    for (const auto& [id, coord] : ugxg.points) {
+        file << "v " << coord.x << " " << coord.y << " " << coord.z << "\n";
+        indexRemap[id] = objIndex++;
+    }
+
+    // Write faces (OBJ faces are 1-based)
+    for (const auto& face : ugxg.faces) {
+        file << "f " << indexRemap.at(face[0])
+             << " "  << indexRemap.at(face[1])
+             << " "  << indexRemap.at(face[2]) << "\n";
+    }
+
+    std::cout << "[UGXObject] Wrote " << ugxg.points.size() << " vertices and "
+              << ugxg.faces.size() << " faces to " << filename << "\n";
+}
+
+void UgxObject::writeSTL(const std::string& filename) const {
+    if (ugxg.faces.empty()) {
+        std::cerr << "[UGXObject Error] No faces to write to STL: " << filename << "\n";
+        return;
+    }
+
+    std::ofstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "[UGXObject Error] Failed to open for writing: " << filename << "\n";
+        return;
+    }
+
+    file << std::fixed << std::setprecision(6);
+    file << "solid neuron\n";
+
+    for (size_t i = 0; i < ugxg.faces.size(); ++i) {
+        const auto& face = ugxg.faces[i];
+
+        // Get the three vertices
+        const Coordinates& v0 = ugxg.points.at(face[0]);
+        const Coordinates& v1 = ugxg.points.at(face[1]);
+        const Coordinates& v2 = ugxg.points.at(face[2]);
+
+        // Compute face normal via cross product
+        double ax = v1.x - v0.x,  ay = v1.y - v0.y,  az = v1.z - v0.z;
+        double bx = v2.x - v0.x,  by = v2.y - v0.y,  bz = v2.z - v0.z;
+
+        double nx = ay * bz - az * by;
+        double ny = az * bx - ax * bz;
+        double nz = ax * by - ay * bx;
+
+        double len = std::sqrt(nx*nx + ny*ny + nz*nz);
+        if (len > 1e-10) { nx /= len; ny /= len; nz /= len; }
+
+        file << "  facet normal " << nx << " " << ny << " " << nz << "\n";
+        file << "    outer loop\n";
+        file << "      vertex " << v0.x << " " << v0.y << " " << v0.z << "\n";
+        file << "      vertex " << v1.x << " " << v1.y << " " << v1.z << "\n";
+        file << "      vertex " << v2.x << " " << v2.y << " " << v2.z << "\n";
+        file << "    endloop\n";
+        file << "  endfacet\n";
+    }
+
+    file << "endsolid neuron\n";
+
+    std::cout << "[UGXObject] Wrote " << ugxg.faces.size()
+              << " triangles to " << filename << "\n";
+}

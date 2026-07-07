@@ -60,7 +60,7 @@ int main(int argc, char* argv[]){
     NeuronGraph atrunk;
     outputfolder = execDir + "/../output/main_pft_geometries";
     checkFolder(outputfolder);
-    double delta = 0.5;
+    double delta = 1.0;
 
     UgxGeometry combined;
     UgxObject tempObj;
@@ -79,7 +79,10 @@ int main(int argc, char* argv[]){
     tempObj.setGeometry(combined);
     tempObj.writeUGX(outputfolder+"/ugxcombinedtest.ugx");
 
-    /*
+    tempObj.writeOBJ(outputfolder+"/objcombinedtest.obj");
+    tempObj.writeSTL(outputfolder+"/objcombinedtest.stl");
+
+    
     UgxGeometry combinedBezierObj;
     UgxObject tempBezierObj;
 
@@ -95,6 +98,25 @@ int main(int argc, char* argv[]){
     outputfolder = execDir + "/../output";
     tempBezierObj.setGeometry(combinedBezierObj);
     tempBezierObj.writeUGX(outputfolder+"/branchBezierCombined.ugx");
-*/
+
+    std::string file1 = "/home/jarosado0911/projects/refactoredCPPNeuronMesher/output/test_bezier_subgraphs/subgraph_15681_0.swc";
+    std::string file2 = "/home/jarosado0911/projects/refactoredCPPNeuronMesher/output/test_bezier_subgraphs/subgraph_15681_1.swc";
+    std::string file3 = "/home/jarosado0911/projects/refactoredCPPNeuronMesher/output/test_bezier_subgraphs/subgraph_15681_2.swc";
+    
+    NeuronGraph bzpath1(file1);
+    NeuronGraph bzpath2(file2);
+    NeuronGraph bzpath3(file3);
+    UgxGeometry combine2;
+    UgxObject tempbz;
+
+    auto pftnew = bzpath1.pftFromPath(bzpath1.getNodes(),16);
+    combine2 = tempbz.addUGXGeometry(combine2, pftnew.getGeometry());
+    pftnew = bzpath2.pftFromPath(bzpath2.getNodes(),16);
+    combine2 = tempbz.addUGXGeometry(combine2, pftnew.getGeometry());
+    pftnew = bzpath3.pftFromPath(bzpath3.getNodes(),16);
+    combine2 = tempbz.addUGXGeometry(combine2, pftnew.getGeometry());
+    tempbz.setGeometry(combine2);
+    tempbz.writeUGX(outputfolder+"/newtest.ugx");
+
     return 0;
 }
